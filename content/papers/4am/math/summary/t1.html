@@ -1,0 +1,59 @@
+<!-- {"title":"ملخص دروس الفصل الأول في الرياضيات","duration":"للمراجعة","term":1,"topics":["PGCD","الجذور التربيعية","الحساب الحرفي","خاصية طالس","حساب المثلثات"]} -->
+
+<section class="paper">
+<div class="ex">
+<h2>1. القاسم المشترك الأكبر (PGCD)</h2>
+<ul>
+<li><b>خوارزمية إقليدس:</b> نقسم العدد الأكبر على الأصغر، ثم المقسوم عليه على الباقي، ونكرر. <b>آخر باقٍ غير معدوم</b> هو $\mathrm{PGCD}$.</li>
+<li><b>خوارزمية الطرح:</b> $\mathrm{PGCD}(a\,;b) = \mathrm{PGCD}(b\,;a-b)$ حيث $a > b$.</li>
+<li>عددان <b>أوليان فيما بينهما</b> إذا كان $\mathrm{PGCD}(a\,;b) = 1$.</li>
+<li>لجعل كسر غير قابل للاختزال: نقسم بسطه ومقامه على $\mathrm{PGCD}$ لهما.</li>
+</ul>
+<div class="box">مثال: $\mathrm{PGCD}(84\,;36)$: &nbsp; $84 = 2 \times 36 + 12$ ، $36 = 3 \times 12 + 0$ ← إذن $\mathrm{PGCD} = 12$ و $\dfrac{36}{84} = \dfrac{3}{7}$.</div>
+</div>
+
+<div class="ex">
+<h2>2. الجذور التربيعية</h2>
+<p>من أجل $a \geq 0$ و $b \geq 0$:</p>
+$$\left(\sqrt{a}\right)^2 = a \qquad \sqrt{a \times b} = \sqrt{a} \times \sqrt{b} \qquad \sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}}\;(b \neq 0)$$
+<ul>
+<li><b>انتبه:</b> $\sqrt{a + b} \neq \sqrt{a} + \sqrt{b}$ ، مثلًا $\sqrt{9 + 16} = 5$ بينما $\sqrt{9} + \sqrt{16} = 7$.</li>
+<li><b>التبسيط:</b> نبحث عن أكبر مربع تام يقسم العدد: $\sqrt{72} = \sqrt{36 \times 2} = 6\sqrt{2}$.</li>
+<li><b>جعل المقام ناطقًا:</b> $\dfrac{a}{\sqrt{b}} = \dfrac{a\sqrt{b}}{b}$.</li>
+<li>حلول المعادلة $x^2 = a$: إذا $a > 0$ حلان $\sqrt{a}$ و $-\sqrt{a}$ ، إذا $a = 0$ حل وحيد $0$ ، إذا $a < 0$ لا حلول.</li>
+</ul>
+</div>
+
+<div class="ex">
+<h2>3. الحساب الحرفي</h2>
+<p><b>المتطابقات الشهيرة:</b></p>
+$$(a+b)^2 = a^2 + 2ab + b^2 \qquad (a-b)^2 = a^2 - 2ab + b^2 \qquad (a+b)(a-b) = a^2 - b^2$$
+<ul>
+<li><b>النشر:</b> تحويل جداء إلى مجموع: $k(a + b) = ka + kb$.</li>
+<li><b>التحليل:</b> تحويل مجموع إلى جداء، بإخراج <b>عامل مشترك</b> أو باستعمال متطابقة شهيرة.</li>
+<li><b>معادلة جداء معدوم:</b> $A \times B = 0$ يعني $A = 0$ أو $B = 0$.</li>
+</ul>
+<div class="box">مثال: $x^2 - 25 = (x - 5)(x + 5)$ ، و $(x-5)(x+5) = 0$ حلاها $5$ و $-5$.</div>
+</div>
+
+<div class="ex">
+<h2>4. خاصية طالس وعكسها</h2>
+<ul>
+<li><b>مبرهنة طالس:</b> إذا كانت $M \in (AB)$ و $N \in (AC)$ و $(MN) \parallel (BC)$ فإن:
+$$\frac{AM}{AB} = \frac{AN}{AC} = \frac{MN}{BC}$$</li>
+<li><b>الخاصية العكسية:</b> إذا كانت النقط $A, M, B$ والنقط $A, N, C$ في استقامية <b>وبنفس الترتيب</b> و $\dfrac{AM}{AB} = \dfrac{AN}{AC}$ فإن $(MN) \parallel (BC)$.</li>
+<li>لإثبات أن المستقيمين <b>غير متوازيين</b> يكفي أن نجد $\dfrac{AM}{AB} \neq \dfrac{AN}{AC}$.</li>
+</ul>
+</div>
+
+<div class="ex">
+<h2>5. حساب المثلثات في المثلث القائم</h2>
+<p>في مثلث قائم، من أجل زاوية حادة $\alpha$:</p>
+$$\cos \alpha = \frac{\text{المجاور}}{\text{الوتر}} \qquad \sin \alpha = \frac{\text{المقابل}}{\text{الوتر}} \qquad \tan \alpha = \frac{\text{المقابل}}{\text{المجاور}}$$
+<ul>
+<li>$0 < \cos \alpha < 1$ و $0 < \sin \alpha < 1$.</li>
+<li>$\cos^2 \alpha + \sin^2 \alpha = 1$ و $\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha}$.</li>
+<li>لحساب طول: نختار النسبة التي تجمع الطول المعلوم والطول المطلوب. لحساب زاوية: نستعمل الآلة الحاسبة ($\cos^{-1}$ ، $\sin^{-1}$ ، $\tan^{-1}$) في وضع الدرجات <b>DEG</b>.</li>
+</ul>
+</div>
+</section>

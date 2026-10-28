@@ -1,0 +1,10 @@
+# Netlify يبني الموقع تلقائيًا عند كل إضافة من لوحة التحكم
+[build]
+  command = "npm run build:static"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+  # غيّر هذا عند ربط الدومين (مثلًا https://www.tafawoq.com)
+  NEXT_PUBLIC_SITE_URL = "https://tafawoq.netlify.app"

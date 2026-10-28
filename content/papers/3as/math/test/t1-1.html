@@ -1,0 +1,39 @@
+<!-- {"title":"فرض الفصل الأول في الرياضيات — شعبة علوم تجريبية","duration":"ساعة واحدة","term":1,"topics":["نهاية دالة ناطقة عند اللانهاية","إزالة حالة عدم التعيين","المرافق والنهاية","المستقيم المقارب المائل"]} -->
+
+<section class="paper">
+<div class="ex">
+<h2>التمرين الأول <span class="pts">(9 نقاط)</span></h2>
+<p>احسب النهايات التالية:</p>
+$$\lim_{x \to +\infty} \frac{3x^2 - x + 1}{x^2 + 2} \qquad \lim_{x \to 2} \frac{x^2 - 4}{x - 2} \qquad \lim_{x \to +\infty} \left(\sqrt{x + 1} - \sqrt{x}\right)$$
+</div>
+
+<div class="ex">
+<h2>التمرين الثاني <span class="pts">(11 نقطة)</span></h2>
+<p>$f$ الدالة المعرفة على $]1\,;+\infty[$ بـ: $f(x) = x + 1 + \dfrac{1}{x - 1}$ و $(C_f)$ تمثيلها البياني.</p>
+<ol>
+<li>احسب $\lim\limits_{x \to 1^+} f(x)$ وفسّر النتيجة بيانيًا.</li>
+<li>بيّن أن المستقيم $(\Delta): y = x + 1$ مقارب مائل لـ $(C_f)$ بجوار $+\infty$.</li>
+<li>ادرس الوضع النسبي لـ $(C_f)$ و $(\Delta)$.</li>
+</ol>
+</div>
+</section>
+
+<section class="solution">
+<div class="ex">
+<h2>حل التمرين الأول</h2>
+<ol>
+<li>$\lim\limits_{x \to +\infty} \dfrac{3x^2}{x^2} = 3$</li>
+<li>حالة $\dfrac{0}{0}$: $\dfrac{(x - 2)(x + 2)}{x - 2} = x + 2$ ، إذن النهاية <b>$4$</b>.</li>
+<li>حالة $\infty - \infty$: نضرب في المرافق:
+$$\sqrt{x + 1} - \sqrt{x} = \frac{(x + 1) - x}{\sqrt{x + 1} + \sqrt{x}} = \frac{1}{\sqrt{x + 1} + \sqrt{x}} \xrightarrow[x \to +\infty]{} 0$$</li>
+</ol>
+</div>
+<div class="ex">
+<h2>حل التمرين الثاني</h2>
+<ol>
+<li>$\lim\limits_{x \to 1^+} \dfrac{1}{x - 1} = +\infty$ إذن $\lim\limits_{x \to 1^+} f(x) = +\infty$: المستقيم $x = 1$ <b>مقارب عمودي</b>.</li>
+<li>$f(x) - (x + 1) = \dfrac{1}{x - 1} \xrightarrow[x \to +\infty]{} 0$ ، إذن $(\Delta)$ مقارب مائل.</li>
+<li>على $]1\,;+\infty[$: $\dfrac{1}{x - 1} &gt; 0$ ، إذن $(C_f)$ <b>فوق</b> $(\Delta)$.</li>
+</ol>
+</div>
+</section>

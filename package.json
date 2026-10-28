@@ -1,0 +1,35 @@
+{
+  "name": "tafawoq",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/index-files.mjs && next build",
+    "start": "next start",
+    "index": "node scripts/index-files.mjs",
+    "postinstall": "node scripts/copy-pdfjs.mjs",
+    "demo": "node scripts/make-demo-files.mjs",
+    "papers": "node scripts/build-papers.mjs",
+    "build:static": "npm run postinstall && STATIC_EXPORT=1 npm run build"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-sans-arabic": "^5.3.0",
+    "@fontsource/noto-naskh-arabic": "^5.3.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^18.1.1",
+    "next": "^16.4.3",
+    "pdfjs-dist": "^6.4.299",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "decap-cms": "^3.16.3",
+    "decap-server": "^3.11.6",
+    "katex": "^0.19.1",
+    "pdf-lib": "^1.17.1",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,140 @@
+# ============================================================
+#  لوحة التحكم — Decap CMS
+#  الرابط: https://موقعكم/admin/
+#  غيّر repo إلى اسم المستودع الحقيقي إذا اختلف
+# ============================================================
+backend:
+  name: github
+  repo: cbousnina9-alt/tafawoq
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  commit_messages:
+    create: "إضافة {{collection}}: {{slug}}"
+    update: "تعديل {{collection}}: {{slug}}"
+    delete: "حذف {{collection}}: {{slug}}"
+    uploadMedia: "رفع ملف {{path}}"
+    deleteMedia: "حذف ملف {{path}}"
+
+# للتجربة على الجهاز: npx decap-server ثم افتح http://localhost:3000/admin/
+local_backend: true
+
+site_url: https://tafawoq.netlify.app
+display_url: https://tafawoq.netlify.app
+logo_url: /icon-192.png
+
+media_folder: public/files/uploads
+public_folder: /files/uploads
+
+collections:
+  - name: papers
+    label: "المواضيع (PDF)"
+    label_singular: "موضوع"
+    description: "أضف فرضًا أو اختبارًا أو درسًا بصيغة PDF. يظهر في الموقع بعد دقيقتين أو ثلاث من الحفظ."
+    folder: content/uploads
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{year}}{{month}}{{day}}-{{hour}}{{minute}}{{second}}"
+    summary: "{{title}} — {{level}}"
+    sortable_fields: ["title", "level", "subject"]
+    fields:
+      - { label: "العنوان", name: title, widget: string, hint: "مثال: اختبار الفصل الأول في الرياضيات — السنة الرابعة متوسط" }
+      - label: "المستوى"
+        name: level
+        widget: select
+        options:
+          - { label: "القسم التحضيري", value: "0ap" }
+          - { label: "السنة الأولى ابتدائي", value: "1ap" }
+          - { label: "السنة الثانية ابتدائي", value: "2ap" }
+          - { label: "السنة الثالثة ابتدائي", value: "3ap" }
+          - { label: "السنة الرابعة ابتدائي", value: "4ap" }
+          - { label: "السنة الخامسة ابتدائي", value: "5ap" }
+          - { label: "السنة الأولى متوسط", value: "1am" }
+          - { label: "السنة الثانية متوسط", value: "2am" }
+          - { label: "السنة الثالثة متوسط", value: "3am" }
+          - { label: "السنة الرابعة متوسط", value: "4am" }
+          - { label: "شهادة التعليم المتوسط", value: "bem" }
+          - { label: "السنة الأولى ثانوي", value: "1as" }
+          - { label: "السنة الثانية ثانوي", value: "2as" }
+          - { label: "السنة الثالثة ثانوي", value: "3as" }
+          - { label: "شهادة البكالوريا", value: "bac" }
+      - label: "المادة"
+        name: subject
+        widget: select
+        options:
+          - { label: "اللغة العربية", value: "arabic" }
+          - { label: "الرياضيات", value: "math" }
+          - { label: "اللغة الفرنسية", value: "french" }
+          - { label: "اللغة الإنجليزية", value: "english" }
+          - { label: "التربية الإسلامية", value: "islamic" }
+          - { label: "التربية المدنية", value: "civic" }
+          - { label: "التربية العلمية والتكنولوجية", value: "scientific" }
+          - { label: "التاريخ", value: "history" }
+          - { label: "الجغرافيا", value: "geography" }
+          - { label: "التاريخ والجغرافيا", value: "history-geo" }
+          - { label: "علوم الطبيعة والحياة", value: "science" }
+          - { label: "العلوم الفيزيائية", value: "physics" }
+          - { label: "اللغة الأمازيغية", value: "tamazight" }
+          - { label: "الإعلام الآلي", value: "informatics" }
+          - { label: "الفلسفة", value: "philosophy" }
+          - { label: "الاقتصاد والمناجمنت", value: "economics" }
+          - { label: "التسيير المحاسبي والمالي", value: "accounting" }
+          - { label: "القانون", value: "law" }
+          - { label: "التكنولوجيا (هندسة)", value: "engineering" }
+          - { label: "اللغة الألمانية", value: "german" }
+          - { label: "اللغة الإسبانية", value: "spanish" }
+          - { label: "اللغة الإيطالية", value: "italian" }
+      - label: "النوع"
+        name: type
+        widget: select
+        default: exam
+        options:
+          - { label: "درس", value: "lesson" }
+          - { label: "ملخص", value: "summary" }
+          - { label: "سلسلة تمارين", value: "exercises" }
+          - { label: "فرض", value: "test" }
+          - { label: "اختبار", value: "exam" }
+          - { label: "موضوع تجريبي", value: "mock" }
+          - { label: "موضوع رسمي (BEM/BAC حقيقي فقط)", value: "official" }
+      - label: "الفصل"
+        name: trimester
+        widget: select
+        required: false
+        options:
+          - { label: "الفصل الأول", value: 1 }
+          - { label: "الفصل الثاني", value: 2 }
+          - { label: "الفصل الثالث", value: 3 }
+      - { label: "السنة", name: year, widget: number, value_type: int, required: false, hint: "مثال: 2025 (للمواضيع الرسمية خاصة)" }
+      - { label: "وصف قصير (يظهر في جوجل)", name: description, widget: text, required: false, hint: "سطران عن محتوى الموضوع: الدروس والتمارين التي يتناولها" }
+      - { label: "ملف الموضوع (PDF)", name: file, widget: file, media_library: { config: { multiple: false } }, pattern: ['\.pdf$', "يجب أن يكون الملف بصيغة PDF"] }
+      - { label: "ملف الحل (PDF)", name: solution, widget: file, required: false, pattern: ['\.pdf$', "يجب أن يكون الملف بصيغة PDF"] }
+
+  - name: articles
+    label: "المقالات"
+    label_singular: "مقال"
+    description: "مقالات النصائح والأخبار والقصص والألغاز."
+    folder: content/articles
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{year}}{{month}}{{day}}-{{hour}}{{minute}}"
+    summary: "{{title}}"
+    fields:
+      - { label: "العنوان", name: title, widget: string }
+      - { label: "وصف قصير (يظهر في جوجل)", name: description, widget: text }
+      - label: "القسم"
+        name: category
+        widget: select
+        options:
+          - { label: "نصائح وتوجيهات", value: "advice" }
+          - { label: "أخبار التربية", value: "news" }
+          - { label: "وثائق الأساتذة", value: "teachers" }
+          - { label: "قصص وحكايات", value: "stories" }
+          - { label: "ألغاز وفوازير", value: "enigmes" }
+          - { label: "الركن الإسلامي", value: "islam" }
+      - { label: "اللغة", name: lang, widget: select, default: ar, options: [{ label: "العربية", value: ar }, { label: "Français", value: fr }, { label: "English", value: en }] }
+      - { label: "التاريخ", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: "النص", name: body, widget: markdown }

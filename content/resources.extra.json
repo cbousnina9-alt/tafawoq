@@ -1,0 +1,50 @@
+{
+  "4am/math/test-t1-1": {
+    "title": {
+      "ar": "الفرض الأول للفصل الأول في الرياضيات — السنة الرابعة متوسط: PGCD، الجذور والحساب الحرفي",
+      "fr": "Devoir 1 du 1er trimestre de mathématiques 4AM : PGCD, racines carrées et calcul littéral",
+      "en": "4AM math term 1 test 1: GCD, square roots and algebra"
+    },
+    "description": {
+      "ar": "فرض مقترح مع الحل المفصل للسنة الرابعة متوسط في الرياضيات، الفصل الأول، مدته ساعة: حساب PGCD بخوارزمية إقليدس ووضعية توزيع، تبسيط عبارات بالجذور التربيعية وجعل المقام ناطقًا، نشر وتحليل عبارة جبرية وحل معادلة جداء معدوم.",
+      "fr": "Devoir corrigé de 4AM (1 h) : PGCD par l’algorithme d’Euclide, racines carrées, développement, factorisation et équation produit nul.",
+      "en": "One-hour 4AM practice test with full answers: Euclid’s algorithm, square roots, expanding, factoring and zero-product equations."
+    }
+  },
+  "4am/math/test-t1-2": {
+    "title": {
+      "ar": "الفرض الثاني للفصل الأول في الرياضيات — السنة الرابعة متوسط: خاصية طالس وحساب المثلثات",
+      "fr": "Devoir 2 du 1er trimestre de mathématiques 4AM : Thalès et trigonométrie",
+      "en": "4AM math term 1 test 2: Thales and trigonometry"
+    },
+    "description": {
+      "ar": "فرض مقترح مع الحل للسنة الرابعة متوسط في الرياضيات، الفصل الأول: الخاصية العكسية لطالس وحساب طول، حساب أطوال في مثلث قائم باستعمال الظل وجيب التمام، واستنتاج sin و tan من cos.",
+      "fr": "Devoir corrigé de 4AM : réciproque de Thalès, calcul de longueurs et relations trigonométriques dans le triangle rectangle.",
+      "en": "4AM practice test with answers: converse of Thales, right-triangle trigonometry and sin/cos/tan relations."
+    }
+  },
+  "4am/math/exam-t1-1": {
+    "title": {
+      "ar": "اختبار الفصل الأول في الرياضيات — السنة الرابعة متوسط مع الوضعية الإدماجية والحل",
+      "fr": "Examen du 1er trimestre de mathématiques 4AM avec situation d’intégration et corrigé",
+      "en": "4AM math term 1 exam with integration task and answers"
+    },
+    "description": {
+      "ar": "اختبار مقترح على نمط الاختبارات الرسمية (ساعتان): جزء أول من أربعة تمارين في PGCD، الجذور، الحساب الحرفي، فيثاغورس وطالس، ووضعية إدماجية حول منحدر للكراسي المتحركة باستعمال حساب المثلثات. مع التصحيح المفصل.",
+      "fr": "Examen type (2 h) : PGCD, racines, calcul littéral, Pythagore et Thalès, puis situation d’intégration sur une rampe d’accès (trigonométrie). Corrigé détaillé.",
+      "en": "Two-hour mock exam: GCD, roots, algebra, Pythagoras and Thales, plus a real-life ramp problem using trigonometry. Full answers."
+    }
+  },
+  "4am/math/summary-t1": {
+    "title": {
+      "ar": "ملخص دروس الفصل الأول في الرياضيات — السنة الرابعة متوسط",
+      "fr": "Résumé des cours du 1er trimestre de mathématiques 4AM",
+      "en": "4AM math term 1 summary sheet"
+    },
+    "description": {
+      "ar": "ملخص شامل في صفحتين لدروس الفصل الأول للسنة الرابعة متوسط: القاسم المشترك الأكبر، خواص الجذور التربيعية، المتطابقات الشهيرة والتحليل، خاصية طالس وعكسها، والنسب المثلثية في المثلث القائم، مع أمثلة.",
+      "fr": "Fiche de révision en deux pages : PGCD, racines carrées, identités remarquables, Thalès et trigonométrie, avec exemples.",
+      "en": "Two-page revision sheet: GCD, square roots, algebraic identities, Thales and trigonometry, with examples."
+    }
+  }
+}
