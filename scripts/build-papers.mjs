@@ -29,7 +29,7 @@ const katexCss = fs
   .replace(/url\(fonts\//g, `url(file://${path.join(ROOT, 'node_modules', 'katex', 'dist', 'fonts')}/`);
 
 const levelNames = { '0ap': 'القسم التحضيري', '1ap': 'السنة الأولى ابتدائي', '2ap': 'السنة الثانية ابتدائي', '3ap': 'السنة الثالثة ابتدائي', '4ap': 'السنة الرابعة ابتدائي', '5ap': 'السنة الخامسة ابتدائي', '1am': 'السنة الأولى متوسط', '2am': 'السنة الثانية متوسط', '3am': 'السنة الثالثة متوسط', '4am': 'السنة الرابعة متوسط', bem: 'شهادة التعليم المتوسط', '1as': 'السنة الأولى ثانوي', '2as': 'السنة الثانية ثانوي', '3as': 'السنة الثالثة ثانوي', bac: 'شهادة البكالوريا' };
-const subjectNames = { math: 'الرياضيات', physics: 'العلوم الفيزيائية', science: 'علوم الطبيعة والحياة', arabic: 'اللغة العربية', french: 'اللغة الفرنسية', english: 'اللغة الإنجليزية', philosophy: 'الفلسفة', islamic: 'التربية الإسلامية', 'history-geo': 'التاريخ والجغرافيا', civic: 'التربية المدنية' };
+const subjectNames = { math: 'الرياضيات', physics: 'العلوم الفيزيائية', science: 'علوم الطبيعة والحياة', arabic: 'اللغة العربية', french: 'اللغة الفرنسية', english: 'اللغة الإنجليزية', philosophy: 'الفلسفة', islamic: 'التربية الإسلامية', 'history-geo': 'التاريخ والجغرافيا', civic: 'التربية المدنية', scientific: 'التربية العلمية والتكنولوجية', history: 'التاريخ', geography: 'الجغرافيا', tamazight: 'اللغة الأمازيغية', informatics: 'الإعلام الآلي', economics: 'التسيير المحاسبي والمالي' };
 
 const SITE = process.env.SITE_NAME || 'تفوّق';
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || '').replace(/^https?:\/\//, '').replace(/\/$/, '');
