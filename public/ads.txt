@@ -1,2 +1,1 @@
-# بعد القبول في AdSense استبدل pub-XXXXXXXXXXXXXXXX برقم حسابك
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-3260934312737534, DIRECT, f08c47fec0942fa0
