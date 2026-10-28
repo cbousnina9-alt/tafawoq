@@ -19,7 +19,7 @@ npm run dev        # http://localhost:3000/ar
 الإعداد لأول مرة (مرة واحدة):
 1. الموقع على GitHub ومربوط بـ Netlify (Import from Git).
 2. أنشئ OAuth App في GitHub: https://github.com/settings/developers ← New OAuth App
-   - Homepage URL: `https://tafawoq.netlify.app`
+   - Homepage URL: `https://tafawoq-dz.netlify.app`
    - Authorization callback URL: `https://api.netlify.com/auth/done`
 3. في Netlify: Site configuration ← Access & security ← OAuth ← Install provider ← GitHub، وألصق Client ID و Client Secret.
 4. إذا تغيّر اسم المستودع، عدّل `repo` في `public/admin/config.yml`.

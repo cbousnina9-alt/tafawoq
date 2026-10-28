@@ -19,8 +19,8 @@ backend:
 # للتجربة على الجهاز: npx decap-server ثم افتح http://localhost:3000/admin/
 local_backend: true
 
-site_url: https://tafawoq.netlify.app
-display_url: https://tafawoq.netlify.app
+site_url: https://tafawoq-dz.netlify.app
+display_url: https://tafawoq-dz.netlify.app
 logo_url: /icon-192.png
 
 media_folder: public/files/uploads
