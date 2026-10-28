@@ -8,4 +8,4 @@
   NEXT_TELEMETRY_DISABLED = "1"
   # غيّر هذا عند ربط الدومين (مثلًا https://www.tafawoq.com)
   NEXT_PUBLIC_SITE_URL = "https://tafawoq-dz.netlify.app"
-  NEXT_PUBLIC_GOOGLE_VERIFICATION = "op6Pfxwc5ivJ43Zh4B-rN09AZVqklAZQs"
+  NEXT_PUBLIC_GOOGLE_VERIFICATION = "op6Pfxwc5ivJ43Zh4B-rN09AZVqklAZQs1MQ41n0QdA"
