@@ -287,6 +287,15 @@ aside .ad, aside .ad-placeholder { min-height: 250px; margin: 0; }
 .exam-paper .text-box[dir='ltr'] { font-family: Georgia, 'Times New Roman', serif; line-height: 1.8; }
 .exam-paper table.grid { border-collapse: collapse; margin: 8px auto; }
 .exam-paper table.grid td, .exam-paper table.grid th { border: 1px solid #9aa7a0; padding: 4px 10px; text-align: center; }
+.exam-paper .bareme-wrap { overflow-x: auto; }
+.exam-paper table.bareme { width: 100%; border-collapse: collapse; margin: 6px 0 14px; font-size: .97rem; }
+.exam-paper table.bareme th, .exam-paper table.bareme td { border: 1px solid #b9c2bc; padding: 6px 10px; vertical-align: middle; }
+.exam-paper table.bareme th { background: #eef3ef; font-size: .85rem; }
+.exam-paper table.bareme td.p, .exam-paper table.bareme td.t { width: 4.5em; text-align: center; white-space: nowrap; direction: ltr; color: var(--red); font-weight: 600; }
+.exam-paper table.bareme td.t { font-size: 1.15rem; color: var(--ink); }
+.exam-paper table.bareme td p, .exam-paper table.bareme td ol, .exam-paper table.bareme td ul { margin: 0; }
+.exam-paper h2 .pts::before { content: ''; }
+@media (max-width: 600px) { .exam-paper table.bareme { font-size: .9rem; } .exam-paper table.bareme th, .exam-paper table.bareme td { padding: 5px 5px; } .exam-paper table.bareme th { font-size: .72rem; } .exam-paper table.bareme td.p { width: 3.2em; font-size: .85rem; } .exam-paper table.bareme td.t { width: 2.4em; } }
 .solution-box summary { cursor: pointer; font-weight: 700; color: var(--red); font-size: 1.05rem; list-style: none; display: flex; align-items: center; gap: 8px; }
 .solution-box summary::before { content: '+'; display: inline-flex; width: 24px; height: 24px; align-items: center; justify-content: center; border: 1.5px solid var(--red); border-radius: 50%; font-size: 1rem; }
 .solution-box[open] summary::before { content: '−'; }
