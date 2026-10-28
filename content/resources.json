@@ -1,5 +1,26 @@
 [
  {
+  "id": "1am/arabic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1am",
+  "subject": "arabic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1am/arabic/exam/t1-2.pdf",
+  "solution": "/files/1am/arabic/exam/t1-2-sol.pdf",
+  "size": 79037,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) — السنة الأولى متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) للسنة الأولى متوسط (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: فهم نص: العلم نور، شرح المفردات والفكرة العامة، المبتدأ والخبر، الفعل المضارع المرفوع، الضمائر المنفصلة، الوضعية الإدماجية: فضل المطالعة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "1am/arabic/test-t1-1",
   "slug": "test-t1-1",
   "level": "1am",
@@ -42,6 +63,27 @@
   }
  },
  {
+  "id": "1am/english/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1am",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1am/english/exam/t1-2.pdf",
+  "solution": "/files/1am/english/exam/t1-2-sol.pdf",
+  "size": 78609,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 2) — السنة الأولى متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 2) للسنة الأولى متوسط (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: reading: My school، there is / there are، prepositions of place، the days of the week، plural of nouns، written expression: describe your school. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "1am/english/test-t1-1",
   "slug": "test-t1-1",
   "level": "1am",
@@ -60,6 +102,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في اللغة الإنجليزية للسنة الأولى متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: reading: My new friend، greetings and introducing someone، the verb to be in the present، possessive adjectives my, his, her، numbers and age، written expression: introduce your friend. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1am/french/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1am",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1am/french/exam/t1-2.pdf",
+  "solution": "/files/1am/french/exam/t1-2-sol.pdf",
+  "size": 77965,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) — السنة الأولى متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) للسنة الأولى متوسط (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: texte explicatif: L'eau, source de vie، compréhension، la définition et l'explication، les connecteurs de cause، le présent de l'indicatif، production: expliquer un phénomène. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -147,6 +210,27 @@
   }
  },
  {
+  "id": "1am/physics/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1am",
+  "subject": "physics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1am/physics/exam/t1-2.pdf",
+  "solution": "/files/1am/physics/exam/t1-2-sol.pdf",
+  "size": 83938,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية والتكنولوجيا (النموذج 2) — السنة الأولى متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية والتكنولوجيا (النموذج 2) للسنة الأولى متوسط (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: حالات المادة وخصائصها، تحولات الحالة: الانصهار والتجمد والتبخر والتكاثف، ثبات درجة حرارة الانصهار للمادة النقية، الكتلة والحجم، وضعية: دورة الماء في الطبيعة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "1am/physics/test-t1-1",
   "slug": "test-t1-1",
   "level": "1am",
@@ -186,6 +270,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في علوم الطبيعة والحياة للسنة الأولى متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: مجموعات الأغذية ودور كل مجموعة، الكشف عن المغذيات: النشاء والدسم، الوجبة المتوازنة، أمراض سوء التغذية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1ap/arabic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1ap",
+  "subject": "arabic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1ap/arabic/exam/t1-2.pdf",
+  "solution": "/files/1ap/arabic/exam/t1-2-sol.pdf",
+  "size": 66160,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) — السنة الأولى ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) للسنة الأولى ابتدائي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: قراءة نص قصير: في الحديقة، الفهم: أسئلة بسيطة، تمييز الحروف: ح، ج، خ، المد بالألف والواو والياء، الكتابة. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -336,6 +441,27 @@
   }
  },
  {
+  "id": "1as/math/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "1as",
+  "subject": "math",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/math/exam/t1-3.pdf",
+  "solution": "/files/1as/math/exam/t1-3-sol.pdf",
+  "size": 78882,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الرياضيات — جذع مشترك علوم وتكنولوجيا (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الرياضيات — جذع مشترك علوم وتكنولوجيا (النموذج 3) للسنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: متراجحات بالقيمة المطلقة، الشكل النموذجي واتجاه تغير دالة مربع، صورة مجال بدالة، مسألة: الربح والتكلفة بالدوال التآلفية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "1as/math/test-t1-2",
   "slug": "test-t1-2",
   "level": "1as",
@@ -354,6 +480,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في الرياضيات — جذع مشترك علوم وتكنولوجيا (النموذج 2) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: تقاطع واتحاد مجالين، القيمة المطلقة: معادلة ومتراجحة، الدوال الزوجية والفردية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/physics/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1as",
+  "subject": "physics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1as/physics/exam/t1-2.pdf",
+  "solution": "/files/1as/physics/exam/t1-2-sol.pdf",
+  "size": 85359,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية — جذع مشترك علوم وتكنولوجيا (النموذج 2) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية — جذع مشترك علوم وتكنولوجيا (النموذج 2) للسنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: المرجع ونسبية الحركة، المسار والسرعة المتوسطة، الحركة المستقيمة المنتظمة والمتسارعة بالتصوير المتعاقب، مبدأ العطالة، البنية الذرية: Z و A والتوزيع الإلكتروني. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -399,6 +546,27 @@
   }
  },
  {
+  "id": "2am/arabic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "2am",
+  "subject": "arabic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2am/arabic/exam/t1-2.pdf",
+  "solution": "/files/2am/arabic/exam/t1-2-sol.pdf",
+  "size": 78927,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) — السنة الثانية متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) للسنة الثانية متوسط (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: فهم نص: الهاتف بين النفع والضرر، الفكرة العامة والأفكار الأساسية، المفعول لأجله والمفعول فيه، الفعل المبني للمجهول، التعبير: الاستعمال الرشيد للهاتف. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "2am/arabic/test-t1-1",
   "slug": "test-t1-1",
   "level": "2am",
@@ -441,6 +609,27 @@
   }
  },
  {
+  "id": "2am/english/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "2am",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2am/english/exam/t1-2.pdf",
+  "solution": "/files/2am/english/exam/t1-2-sol.pdf",
+  "size": 78369,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 2) — السنة الثانية متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 2) للسنة الثانية متوسط (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: reading: A healthy lifestyle، the present simple and frequency adverbs، countable and uncountable nouns: some / any، pronunciation of final -s، written expression: your daily routine. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "2am/english/test-t1-1",
   "slug": "test-t1-1",
   "level": "2am",
@@ -459,6 +648,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في اللغة الإنجليزية للسنة الثانية متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: reading: Sami's daily routine، the present simple: affirmative and negative، adverbs of frequency، telling the time، written expression: your weekend. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2am/french/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "2am",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2am/french/exam/t1-2.pdf",
+  "solution": "/files/2am/french/exam/t1-2-sol.pdf",
+  "size": 77315,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) — السنة الثانية متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) للسنة الثانية متوسط (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: texte narratif: Le loup et l'agneau (d'après La Fontaine)، schéma narratif et morale، l'imparfait et le passé simple، le discours direct، production: écrire une petite fable. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -606,6 +816,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في علوم الطبيعة والحياة للسنة الثانية متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: النظام البيئي: الوسط والكائنات الحية، العلاقات الغذائية: السلسلة والشبكة الغذائية، المنتجون والمستهلكون والمحللون، أثر الإنسان على التوازن البيئي. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2ap/arabic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "2ap",
+  "subject": "arabic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2ap/arabic/exam/t1-2.pdf",
+  "solution": "/files/2ap/arabic/exam/t1-2-sol.pdf",
+  "size": 67470,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) — السنة الثانية ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) للسنة الثانية ابتدائي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: فهم نص: صديقي الجديد، المذكر والمؤنث، المفرد والمثنى، أسماء الإشارة، الكتابة: جملتان عن الصديق. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -777,6 +1008,48 @@
   }
  },
  {
+  "id": "2as/math/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "2as",
+  "subject": "math",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/math/test/t1-3.pdf",
+  "solution": "/files/2as/math/test/t1-3-sol.pdf",
+  "size": 72583,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الرياضيات — السنة الثانية ثانوي علوم تجريبية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الرياضيات — السنة الثانية ثانوي علوم تجريبية (النموذج 3) (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الدوال المرجعية والتحويلات النقطية، الانسحاب ومنحنى دالة مربع، دالة القيمة المطلقة، معادلة من الدرجة الثانية بوسيط. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/physics/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "2as",
+  "subject": "physics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2as/physics/exam/t1-2.pdf",
+  "solution": "/files/2as/physics/exam/t1-2-sol.pdf",
+  "size": 76647,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي علوم تجريبية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثانية ثانوي علوم تجريبية (النموذج 2) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: الطاقة الكامنة المرونية للنابض، انحفاظ الطاقة الميكانيكية، الطاقة الكامنة الثقالية والارتفاع الأعظمي، الحصيلة الطاقوية، الاستطاعة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "2as/physics/test-t1-2",
   "slug": "test-t1-2",
   "level": "2as",
@@ -819,6 +1092,27 @@
   }
  },
  {
+  "id": "3am/arabic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3am",
+  "subject": "arabic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3am/arabic/exam/t1-2.pdf",
+  "solution": "/files/3am/arabic/exam/t1-2-sol.pdf",
+  "size": 84289,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) للسنة الثالثة متوسط (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: فهم نص: الأمير عبد القادر رجل الدولة، النمط السردي، كان وأخواتها، إنّ وأخواتها، النعت، الوضعية الإدماجية: التعريف بشخصية وطنية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "3am/arabic/test-t1-1",
   "slug": "test-t1-1",
   "level": "3am",
@@ -858,6 +1152,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في التربية المدنية للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: رموز الدولة الجزائرية: العلم والنشيد الوطني والشعار، مكونات الهوية الوطنية: الإسلام والعروبة والأمازيغية، المواطنة: الحقوق والواجبات، وضعية: احترام رموز الدولة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/english/exam-t1-1",
+  "slug": "exam-t1-1",
+  "level": "3am",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 1,
+  "file": "/files/3am/english/exam/t1-1.pdf",
+  "solution": "/files/3am/english/exam/t1-1-sol.pdf",
+  "size": 80653,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية للسنة الثالثة متوسط (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: reading: The Casbah of Algiers، the past simple: regular and irregular verbs، used to، wh-questions in the past، written expression: a visit to a historical place. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -987,6 +1302,27 @@
   }
  },
  {
+  "id": "3am/physics/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3am",
+  "subject": "physics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3am/physics/exam/t1-2.pdf",
+  "solution": "/files/3am/physics/exam/t1-2-sol.pdf",
+  "size": 77215,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية والتكنولوجيا (النموذج 2) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية والتكنولوجيا (النموذج 2) للسنة الثالثة متوسط (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: قانون أوم ومميزة الناقل الأومي، قانون جمع التوترات في الدارة على التسلسل، قانون جمع الشدات في الدارة على التفرع، الاحتراق: احتراق غاز الميثان، وضعية: تركيب مصابيح الزينة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "3am/physics/test-t1-1",
   "slug": "test-t1-1",
   "level": "3am",
@@ -1029,6 +1365,27 @@
   }
  },
  {
+  "id": "3ap/arabic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3ap",
+  "subject": "arabic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/arabic/exam/t1-2.pdf",
+  "solution": "/files/3ap/arabic/exam/t1-2-sol.pdf",
+  "size": 69753,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) للسنة الثالثة ابتدائي (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: فهم نص: السوق الأسبوعي، الفعل الماضي والمضارع، الجملة الاسمية والفعلية، الجمع، الوضعية الإدماجية: زيارة السوق. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "3ap/arabic/test-t1-1",
   "slug": "test-t1-1",
   "level": "3ap",
@@ -1068,6 +1425,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في التربية المدنية للسنة الثالثة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: الحقوق والواجبات في المدرسة، حقوق الطفل: التعليم واللعب والرعاية، التعاون والتضامن، وضعية: زميل جديد في القسم. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/french/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3ap",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/french/exam/t1-2.pdf",
+  "solution": "/files/3ap/french/exam/t1-2-sol.pdf",
+  "size": 70689,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) للسنة الثالثة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: se présenter، les couleurs، les nombres de 1 à 10، les objets de la classe، un / une. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -1176,6 +1554,27 @@
   }
  },
  {
+  "id": "3as/french/test-t1-1",
+  "slug": "test-t1-1",
+  "level": "3as",
+  "subject": "french",
+  "type": "test",
+  "trimester": 1,
+  "n": 1,
+  "file": "/files/3as/french/test/t1-1.pdf",
+  "solution": "/files/3as/french/test/t1-1-sol.pdf",
+  "size": 76512,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الفرنسية — السنة الثالثة ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الفرنسية — السنة الثالثة ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: texte historique: la nuit du 1er novembre 1954، l'objectivité du discours historique، les temps du récit historique، les indicateurs de temps et de lieu، le résumé de texte. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "3as/history-geo/test-t1-1",
   "slug": "test-t1-1",
   "level": "3as",
@@ -1194,6 +1593,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في التاريخ والجغرافيا — السنة الثالثة ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الحرب الباردة ومظاهرها، مشروع مارشال ومبدأ ترومان ومبدأ جدانوف، الأحلاف العسكرية، أزمة كوبا 1962، الجغرافيا: مظاهر القوة الاقتصادية للولايات المتحدة الأمريكية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/math/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "3as",
+  "subject": "math",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3as/math/exam/t1-3.pdf",
+  "solution": "/files/3as/math/exam/t1-3-sol.pdf",
+  "size": 78378,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الرياضيات — السنة الثالثة ثانوي علوم تجريبية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الرياضيات — السنة الثالثة ثانوي علوم تجريبية (النموذج 3) (المدة: ثلاث ساعات). موضوع مقترح مع الحل المفصل يتناول: متتالية حسابية-هندسية ومتتالية مساعدة، المجموع والنهاية، دراسة دالة ناطقة: المستقيمان المقاربان العمودي والمائل، مركز التناظر، القيم الحدية المحلية والمماس. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -1236,6 +1656,48 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في الفلسفة — السنة الثالثة ثانوي علوم تجريبية (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: الذاكرة: هل هي ظاهرة بيولوجية أم اجتماعية؟، مقالة جدلية: الأطروحة ونقيضها والتركيب، موقف ريبو (التفسير المادي)، موقف هالبواكس (التفسير الاجتماعي)، موقف برغسون. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/physics/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3as",
+  "subject": "physics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3as/physics/exam/t1-2.pdf",
+  "solution": "/files/3as/physics/exam/t1-2-sol.pdf",
+  "size": 92223,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي علوم تجريبية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية — السنة الثالثة ثانوي علوم تجريبية (النموذج 2) (المدة: ثلاث ساعات). موضوع مقترح مع الحل المفصل يتناول: النشاط الإشعاعي β⁻ لليود 131 واستعماله الطبي، قانون التناقص الإشعاعي وثابت النشاط، المتابعة الزمنية لتفاعل شوارد اليود مع بيروكسوديكبريتات، جدول التقدم والمتفاعل المحد، زمن نصف التفاعل والسرعة الحجمية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/science/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3as",
+  "subject": "science",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3as/science/exam/t1-2.pdf",
+  "solution": "/files/3as/science/exam/t1-2-sol.pdf",
+  "size": 76136,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في علوم الطبيعة والحياة — السنة الثالثة ثانوي علوم تجريبية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في علوم الطبيعة والحياة — السنة الثالثة ثانوي علوم تجريبية (النموذج 2) (المدة: ثلاث ساعات). موضوع مقترح مع الحل المفصل يتناول: الأحماض الأمينية: الصيغة العامة والسلوك الكهربائي، نقطة التعادل الكهربائي pHi والهجرة الكهربائية، الرابطة الببتيدية، البنية الفراغية للبروتين وعلاقتها بالوظيفة، التخصص الوظيفي للإنزيمات. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -1302,6 +1764,27 @@
   }
  },
  {
+  "id": "4am/english/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4am",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4am/english/exam/t1-2.pdf",
+  "solution": "/files/4am/english/exam/t1-2-sol.pdf",
+  "size": 80472,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 2) — السنة الرابعة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 2) للسنة الرابعة متوسط (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: reading: My tastes and hobbies، like / love / enjoy / hate + verb-ing، the present simple vs the present continuous، adjectives of personality، pronunciation of final -ing / silent letters، written expression: your hobbies. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "4am/english/test-t1-1",
   "slug": "test-t1-1",
   "level": "4am",
@@ -1320,6 +1803,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في اللغة الإنجليزية للسنة الرابعة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: reading: Me and my personality، personality adjectives، like / love / hate + verb-ing، the present simple and adverbs of frequency، prefixes un- and im-، written expression: describe your personality. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4am/french/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4am",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4am/french/exam/t1-2.pdf",
+  "solution": "/files/4am/french/exam/t1-2-sol.pdf",
+  "size": 77762,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) — السنة الرابعة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) للسنة الرابعة متوسط (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: texte argumentatif: Protégeons nos forêts، thèse, arguments, exemples، les articulateurs logiques، la phrase passive، l'expression du but، production: texte argumentatif. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -1470,6 +1974,27 @@
   }
  },
  {
+  "id": "4ap/arabic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4ap",
+  "subject": "arabic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/arabic/exam/t1-2.pdf",
+  "solution": "/files/4ap/arabic/exam/t1-2-sol.pdf",
+  "size": 69219,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 2) للسنة الرابعة ابتدائي (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: فهم نص: الطبيب الصغير، الفاعل والمفعول به، المثنى والجمع، حروف الجر، الوضعية الإدماجية: مهنة المستقبل. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "4ap/arabic/test-t1-1",
   "slug": "test-t1-1",
   "level": "4ap",
@@ -1488,6 +2013,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في اللغة العربية للسنة الرابعة ابتدائي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: فهم نص: الفلاح النشيط، الفعل الماضي والمضارع، الفاعل، المفرد والمثنى، التعبير: وصف فصل الخريف. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/french/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4ap",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/french/exam/t1-2.pdf",
+  "solution": "/files/4ap/french/exam/t1-2-sol.pdf",
+  "size": 73661,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) للسنة الرابعة ابتدائي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: compréhension: La famille de Rayan، le verbe avoir au présent، le pluriel des noms، les membres de la famille، écrire deux phrases. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -1617,6 +2163,27 @@
   }
  },
  {
+  "id": "5ap/french/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "5ap",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/5ap/french/exam/t1-2.pdf",
+  "solution": "/files/5ap/french/exam/t1-2-sol.pdf",
+  "size": 72380,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) — السنة الخامسة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) للسنة الخامسة ابتدائي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: compréhension: Le jardin de l'école، le présent des verbes du 1er groupe، les adjectifs qualificatifs: accord، les déterminants possessifs، production: décrire un lieu. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "5ap/french/test-t1-1",
   "slug": "test-t1-1",
   "level": "5ap",
@@ -1656,6 +2223,27 @@
   },
   "description": {
    "ar": "فرض الفصل الأول في الجغرافيا للسنة الخامسة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: موقع الجزائر في إفريقيا، حدود الجزائر والدول المجاورة، مساحة الجزائر، الأقاليم التضاريسية: التل والهضاب العليا والصحراء. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "5ap/islamic/exam-t1-1",
+  "slug": "exam-t1-1",
+  "level": "5ap",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 1,
+  "file": "/files/5ap/islamic/exam/t1-1.pdf",
+  "solution": "/files/5ap/islamic/exam/t1-1-sol.pdf",
+  "size": 65654,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية — السنة الخامسة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية للسنة الخامسة ابتدائي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: سورة الفيل، أركان الوضوء ونواقضه، آداب المسجد، السيرة: مولد النبي ﷺ ونشأته، وضعية: آداب الطريق. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -1722,6 +2310,106 @@
   }
  },
  {
+  "id": "bac/arabic/mock-sujet-2",
+  "slug": "mock-sujet-2",
+  "level": "bac",
+  "subject": "arabic",
+  "type": "mock",
+  "n": 2,
+  "file": "/files/bac/arabic/mock/sujet-2.pdf",
+  "solution": "/files/bac/arabic/mock/sujet-2-sol.pdf",
+  "size": 74801,
+  "pages": 2,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة العربية وآدابها — الشعب العلمية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة العربية وآدابها — الشعب العلمية (النموذج 2) (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: فهم نص: إرادة الحياة لأبي القاسم الشابي، الشعر الوجداني والوطني والنزعة التحررية، إعراب الكلمات والجمل، أسلوب الشرط بـ«إذا» و«مَن»، البحر المتقارب، الاتساق والانسجام، التقويم النقدي: الرومانسية في الشعر العربي. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/english/mock-sujet-2",
+  "slug": "mock-sujet-2",
+  "level": "bac",
+  "subject": "english",
+  "type": "mock",
+  "n": 2,
+  "file": "/files/bac/english/mock/sujet-2.pdf",
+  "solution": "/files/bac/english/mock/sujet-2-sol.pdf",
+  "size": 84813,
+  "pages": 2,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة الإنجليزية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة الإنجليزية (النموذج 2) (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: reading: Safety first — food additives and consumer safety، general and detailed comprehension، reference and synonyms، the passive voice and modals of obligation، connectors of contrast and result، word formation، written expression: an article about advertising and safety. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/french/mock-sujet-2",
+  "slug": "mock-sujet-2",
+  "level": "bac",
+  "subject": "french",
+  "type": "mock",
+  "n": 2,
+  "file": "/files/bac/french/mock/sujet-2.pdf",
+  "solution": "/files/bac/french/mock/sujet-2-sol.pdf",
+  "size": 77840,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة الفرنسية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة الفرنسية (النموذج 2) (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: texte de vulgarisation scientifique: le sommeil des adolescents، la visée du texte et les procédés explicatifs، l'énonciation: objectivité، la reformulation et la définition، compte rendu objectif. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/history-geo/mock-sujet-2",
+  "slug": "mock-sujet-2",
+  "level": "bac",
+  "subject": "history-geo",
+  "type": "mock",
+  "n": 2,
+  "file": "/files/bac/history-geo/mock/sujet-2.pdf",
+  "solution": "/files/bac/history-geo/mock/sujet-2-sol.pdf",
+  "size": 69503,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في التاريخ والجغرافيا — الشعب العلمية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في التاريخ والجغرافيا — الشعب العلمية (النموذج 2) (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: التاريخ: بروز العالم الثالث وحركة عدم الانحياز، مؤتمر باندونغ 1955 وقمة الجزائر 1973، النظام الدولي الجديد، الجغرافيا: الصين قوة اقتصادية صاعدة، المقالة الجغرافية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/islamic/mock-sujet-2",
+  "slug": "mock-sujet-2",
+  "level": "bac",
+  "subject": "islamic",
+  "type": "mock",
+  "n": 2,
+  "file": "/files/bac/islamic/mock/sujet-2.pdf",
+  "solution": "/files/bac/islamic/mock/sujet-2-sol.pdf",
+  "size": 81486,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في العلوم الإسلامية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في العلوم الإسلامية (النموذج 2) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: مقاصد الشريعة: حفظ النفس وحفظ العقل، آية: ولا تلقوا بأيديكم إلى التهلكة، آية تحريم الخمر والميسر، قاعدة لا ضرر ولا ضرار، الوضعية: المخدرات وحوادث المرور. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "bac/math/mock-sujet-2",
   "slug": "mock-sujet-2",
   "level": "bac",
@@ -1739,6 +2427,66 @@
   },
   "description": {
    "ar": "موضوع تجريبي لشهادة البكالوريا في الرياضيات — شعبة علوم تجريبية (النموذج 2) (المدة: ثلاث ساعات ونصف). موضوع مقترح مع الحل المفصل يتناول: المتتاليات العددية: البرهان بالتراجع، الرتابة، المتتالية الهندسية المساعدة والمجموع، الأعداد المركبة: حل معادلة من الدرجة الثانية، الشكل الأسي، طبيعة مثلث، الدوران، الاحتمالات: السحب في آن واحد والمتغير العشوائي والأمل الرياضياتي، دراسة دالة أسية: النهايات، المستقيم المقارب، المماس، مبرهنة القيم المتوسطة، حساب مساحة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/math/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bac",
+  "subject": "math",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bac/math/mock/sujet-3.pdf",
+  "solution": "/files/bac/math/mock/sujet-3-sol.pdf",
+  "size": 90859,
+  "pages": 2,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في الرياضيات — شعبة علوم تجريبية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في الرياضيات — شعبة علوم تجريبية (النموذج 3) (المدة: ثلاث ساعات ونصف). موضوع مقترح مع الحل المفصل يتناول: الاحتمالات الشرطية ودستور الاحتمالات الكلية، متتالية مساعدة هندسية واللوغاريتم، الأعداد المركبة: الشكل الأسي والدوران والمربع، دراسة دالة أسية (x+1)e^-x وحساب مساحة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/math/mock-sujet-4",
+  "slug": "mock-sujet-4",
+  "level": "bac",
+  "subject": "math",
+  "type": "mock",
+  "n": 4,
+  "file": "/files/bac/math/mock/sujet-4.pdf",
+  "solution": "/files/bac/math/mock/sujet-4-sol.pdf",
+  "size": 91991,
+  "pages": 2,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في الرياضيات — شعبة علوم تجريبية (النموذج 4) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في الرياضيات — شعبة علوم تجريبية (النموذج 4) (المدة: ثلاث ساعات ونصف). موضوع مقترح مع الحل المفصل يتناول: الهندسة في الفضاء: معادلة مستوٍ والمسافة والمسقط العمودي، الاحتمالات: قانون متغير عشوائي والأمل الرياضياتي، متتالية u(n+1)=√(2+u(n)): الحصر والرتابة والنهاية، دراسة الدالة ln(x)/x ومناقشة بيانية وحساب مساحة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/philosophy/mock-sujet-2",
+  "slug": "mock-sujet-2",
+  "level": "bac",
+  "subject": "philosophy",
+  "type": "mock",
+  "n": 2,
+  "file": "/files/bac/philosophy/mock/sujet-2.pdf",
+  "solution": "/files/bac/philosophy/mock/sujet-2-sol.pdf",
+  "size": 63023,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في الفلسفة — شعبة علوم تجريبية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في الفلسفة — شعبة علوم تجريبية (النموذج 2) (المدة: ثلاث ساعات ونصف). موضوع مقترح مع الحل المفصل يتناول: مقالة جدلية: هل يمكن تطبيق المنهج التجريبي على المادة الحية؟، عوائق التجريب في البيولوجيا: كوفييه، موقف كلود برنار: ثبات القوانين في المادة الحية، التركيب: خصوصية الكائن الحي وتكيّف المنهج. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -1762,6 +2510,46 @@
   }
  },
  {
+  "id": "bac/physics/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bac",
+  "subject": "physics",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bac/physics/mock/sujet-3.pdf",
+  "solution": "/files/bac/physics/mock/sujet-3-sol.pdf",
+  "size": 92805,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في العلوم الفيزيائية — شعبة علوم تجريبية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في العلوم الفيزيائية — شعبة علوم تجريبية (النموذج 3) (المدة: ثلاث ساعات ونصف). موضوع مقترح مع الحل المفصل يتناول: الأحماض والأسس: نسبة التقدم النهائي وثابت الحموضة pKa، حركة قمر اصطناعي: السرعة والدور وقانون كبلر الثالث، ثنائي القطب RL: المعادلة التفاضلية وثابت الزمن والطاقة المخزنة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/science/mock-sujet-2",
+  "slug": "mock-sujet-2",
+  "level": "bac",
+  "subject": "science",
+  "type": "mock",
+  "n": 2,
+  "file": "/files/bac/science/mock/sujet-2.pdf",
+  "solution": "/files/bac/science/mock/sujet-2-sol.pdf",
+  "size": 92522,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في علوم الطبيعة والحياة — شعبة علوم تجريبية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في علوم الطبيعة والحياة — شعبة علوم تجريبية (النموذج 2) (المدة: أربع ساعات ونصف). موضوع مقترح مع الحل المفصل يتناول: النشاط الإنزيمي: الموقع الفعال والتخصص، تأثير درجة الحرارة والـ pH على سرعة التفاعل الإنزيمي، الاستجابة المناعية ذات الوساطة الخلوية: دور LT4 و LTc، فيروس VIH وانهيار الجهاز المناعي، الاتصال العصبي: المشبك وتأثير المخدرات. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "bem/arabic/mock-sujet-2",
   "slug": "mock-sujet-2",
   "level": "bem",
@@ -1779,6 +2567,46 @@
   },
   "description": {
    "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة العربية (النموذج 2) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: فهم نص: التلميذ والتكنولوجيا، النمط الحجاجي ومؤشراته، إعراب الكلمات والجمل التي لها محل من الإعراب، أسلوب الشرط والممنوع من الصرف، التشبيه البليغ، وضعية إدماجية: نصيحة حول الاستعمال المفرط للهاتف. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/arabic/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bem",
+  "subject": "arabic",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bem/arabic/mock/sujet-3.pdf",
+  "solution": "/files/bem/arabic/mock/sujet-3-sol.pdf",
+  "size": 84693,
+  "pages": 2,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة العربية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة العربية (النموذج 3) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: فهم نص: الشهيد والذاكرة، النمط السردي ومؤشراته، الجملة الواقعة حالًا ومفعولًا به، إعراب الفعل المضارع المنصوب، اسم المفعول، الاستعارة، الوضعية الإدماجية: زيارة متحف المجاهد. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/civic/mock-sujet-1",
+  "slug": "mock-sujet-1",
+  "level": "bem",
+  "subject": "civic",
+  "type": "mock",
+  "n": 1,
+  "file": "/files/bem/civic/mock/sujet-1.pdf",
+  "solution": "/files/bem/civic/mock/sujet-1-sol.pdf",
+  "size": 69635,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التربية المدنية مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التربية المدنية (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الدستور والسلطات الثلاث، حقوق الإنسان والمواثيق الدولية، المجتمع المدني والجمعيات، المواطنة والمشاركة، وضعية: تأسيس جمعية حي. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -1802,6 +2630,26 @@
   }
  },
  {
+  "id": "bem/english/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bem",
+  "subject": "english",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bem/english/mock/sujet-3.pdf",
+  "solution": "/files/bem/english/mock/sujet-3-sol.pdf",
+  "size": 87948,
+  "pages": 2,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة الإنجليزية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة الإنجليزية (النموذج 3) (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: reading comprehension: a famous Algerian scientist، reference words and synonyms، the past simple and the past continuous، comparatives and superlatives، pronunciation of final -s، written expression: a biography. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "bem/french/mock-sujet-2",
   "slug": "mock-sujet-2",
   "level": "bem",
@@ -1819,6 +2667,26 @@
   },
   "description": {
    "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة الفرنسية (النموذج 2) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: texte argumentatif: le gaspillage alimentaire، thèse, arguments, exemple et réfutation، articulateurs logiques، l'impératif présent، l'expression du but et de la conséquence، production écrite: article pour le journal du collège. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/french/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bem",
+  "subject": "french",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bem/french/mock/sujet-3.pdf",
+  "solution": "/files/bem/french/mock/sujet-3-sol.pdf",
+  "size": 81911,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة الفرنسية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة الفرنسية (النموذج 3) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: texte argumentatif: Pour l'uniforme scolaire ?، thèse, arguments, concession، les articulateurs d'opposition et de concession، l'expression de la conséquence، le subjonctif présent après il faut que، production: lettre au directeur. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -1842,6 +2710,26 @@
   }
  },
  {
+  "id": "bem/history-geo/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bem",
+  "subject": "history-geo",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bem/history-geo/mock/sujet-3.pdf",
+  "solution": "/files/bem/history-geo/mock/sujet-3-sol.pdf",
+  "size": 75947,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التاريخ والجغرافيا (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التاريخ والجغرافيا (النموذج 3) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: مؤتمر الصومام والحكومة المؤقتة، مظاهرات 11 ديسمبر 1960 و 17 أكتوبر 1961، الجغرافيا: السياحة في الجزائر، الطاقة في الجزائر: المحروقات والطاقات المتجددة، الوضعية الإدماجية: دور الجالية الجزائرية في الثورة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "bem/islamic/mock-sujet-2",
   "slug": "mock-sujet-2",
   "level": "bem",
@@ -1859,6 +2747,26 @@
   },
   "description": {
    "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التربية الإسلامية (النموذج 2) (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: بر الوالدين: آيتا الإسراء 23 و 24، حديث: من أحق الناس بحسن صحابتي، مظاهر بر الوالدين وثمراته، حكم عقوق الوالدين، وضعية إدماجية: نصيحة لصديق يعقّ أمه. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/islamic/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bem",
+  "subject": "islamic",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bem/islamic/mock/sujet-3.pdf",
+  "solution": "/files/bem/islamic/mock/sujet-3-sol.pdf",
+  "size": 74240,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التربية الإسلامية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التربية الإسلامية (النموذج 3) (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: حماية البيئة في الإسلام، آية الأعراف 56: النهي عن الإفساد في الأرض، حديث: ما من مسلم يغرس غرسًا، النظافة والمحافظة على الماء، وضعية: الإسراف في الماء ورمي النفايات. للمعاينة والتحميل المجاني PDF."
   }
  },
  {
@@ -1902,6 +2810,46 @@
   }
  },
  {
+  "id": "bem/math/mock-sujet-5",
+  "slug": "mock-sujet-5",
+  "level": "bem",
+  "subject": "math",
+  "type": "mock",
+  "n": 5,
+  "file": "/files/bem/math/mock/sujet-5.pdf",
+  "solution": "/files/bem/math/mock/sujet-5-sol.pdf",
+  "size": 99888,
+  "pages": 2,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في الرياضيات (النموذج 5) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في الرياضيات (النموذج 5) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: الجذور التربيعية، النشر والتحليل والمعادلة الجداء والمتراجحة، المتوسط الحسابي المتوازن، المعلم: متوازي الأضلاع والمنتصف والمسافة، وضعية إدماجية: مقارنة تسعيرتين وميل منحدر. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/math/mock-sujet-6",
+  "slug": "mock-sujet-6",
+  "level": "bem",
+  "subject": "math",
+  "type": "mock",
+  "n": 6,
+  "file": "/files/bem/math/mock/sujet-6.pdf",
+  "solution": "/files/bem/math/mock/sujet-6-sol.pdf",
+  "size": 90110,
+  "pages": 2,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في الرياضيات (النموذج 6) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في الرياضيات (النموذج 6) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: القاسم المشترك الأكبر والكسر غير القابل للاختزال، جملة معادلتين من الدرجة الأولى بمجهولين، الخاصية العكسية لفيثاغورس وجيب التمام، الدوال الخطية والتآلفية، وضعية إدماجية: حجم المخروط والكرة والتخفيض. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "bem/physics/mock-sujet-2",
   "slug": "mock-sujet-2",
   "level": "bem",
@@ -1922,6 +2870,46 @@
   }
  },
  {
+  "id": "bem/physics/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bem",
+  "subject": "physics",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bem/physics/mock/sujet-3.pdf",
+  "solution": "/files/bem/physics/mock/sujet-3-sol.pdf",
+  "size": 81338,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في العلوم الفيزيائية والتكنولوجيا (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في العلوم الفيزيائية والتكنولوجيا (النموذج 3) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: الكتلة والثقل: الثقل على الأرض وعلى القمر، العدسة المقربة: البعد البؤري والتقارب، تشكل الصورة بعدسة مقربة، دافعة أرخميدس والطفو. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/physics/mock-sujet-4",
+  "slug": "mock-sujet-4",
+  "level": "bem",
+  "subject": "physics",
+  "type": "mock",
+  "n": 4,
+  "file": "/files/bem/physics/mock/sujet-4.pdf",
+  "solution": "/files/bem/physics/mock/sujet-4-sol.pdf",
+  "size": 84990,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في العلوم الفيزيائية والتكنولوجيا (النموذج 4) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في العلوم الفيزيائية والتكنولوجيا (النموذج 4) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: تفاعل حمض كلور الهيدروجين مع الحديد، الكشف عن غاز ثنائي الهيدروجين وشوارد الحديد الثنائي، المعادلة الشاردية المبسطة، التيار المتناوب: التواتر والتوتر المنتج والأعظمي، المنوب: مبدأ إنتاج التيار المتناوب (دينامو الدراجة). للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "bem/science/mock-sujet-2",
   "slug": "mock-sujet-2",
   "level": "bem",
@@ -1939,6 +2927,46 @@
   },
   "description": {
    "ar": "موضوع تجريبي لشهادة التعليم المتوسط في علوم الطبيعة والحياة (النموذج 2) (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: الاستجابة المناعية: التلقيح والاستمصال، المستضد والجسم المضاد، الصبغيات والنمط النووي عند الإنسان، الإلقاح وثبات عدد الصبغيات، وضعية إدماجية: زلزال بومرداس وتكتونية الصفائح. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/science/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bem",
+  "subject": "science",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bem/science/mock/sujet-3.pdf",
+  "solution": "/files/bem/science/mock/sujet-3-sol.pdf",
+  "size": 70631,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في علوم الطبيعة والحياة (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في علوم الطبيعة والحياة (النموذج 3) (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: الإحساس الشعوري: المستقبل والعصب الحسي والمركز الحسي، الحركة الإرادية والباحات الحركية، بنية ADN وتكامل القواعد، تأثير الكحول والمخدرات على الجهاز العصبي. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/science/mock-sujet-4",
+  "slug": "mock-sujet-4",
+  "level": "bem",
+  "subject": "science",
+  "type": "mock",
+  "n": 4,
+  "file": "/files/bem/science/mock/sujet-4.pdf",
+  "solution": "/files/bem/science/mock/sujet-4-sol.pdf",
+  "size": 77677,
+  "pages": 1,
+  "added": "2026-10-28",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في علوم الطبيعة والحياة (النموذج 4) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في علوم الطبيعة والحياة (النموذج 4) (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: البراكين: الطفوح والانفجارية، لزوجة الصهارة ونوع النشاط البركاني، النمط النووي غير العادي: متلازمة تيرنر، نقل الدم والأمراض المنقولة: الوقاية. للمعاينة والتحميل المجاني PDF."
   }
  },
  {

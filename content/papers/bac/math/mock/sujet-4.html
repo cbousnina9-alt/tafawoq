@@ -1,0 +1,82 @@
+<!-- {"title":"موضوع تجريبي لشهادة البكالوريا في الرياضيات — شعبة علوم تجريبية (النموذج 4)","duration":"ثلاث ساعات ونصف","stream":"علوم تجريبية","topics":["الهندسة في الفضاء: معادلة مستوٍ والمسافة والمسقط العمودي","الاحتمالات: قانون متغير عشوائي والأمل الرياضياتي","متتالية u(n+1)=√(2+u(n)): الحصر والرتابة والنهاية","دراسة الدالة ln(x)/x ومناقشة بيانية وحساب مساحة"]} -->
+
+<section class="paper">
+<div class="ex">
+<h2>التمرين الأول <span class="pts">(04 نقاط)</span></h2>
+<p>في الفضاء المنسوب إلى معلم متعامد ومتجانس: $A(1\,;\,0\,;\,2)$ ، $B(2\,;\,1\,;\,0)$ ، $C(0\,;\,1\,;\,1)$.</p>
+<ol>
+<li>بيّن أن النقط $A$ ، $B$ ، $C$ ليست على استقامة واحدة.</li>
+<li>تحقق أن $\vec{n}(1\,;\,3\,;\,2)$ ناظمي للمستوي $(ABC)$ ، ثم اكتب معادلة ديكارتية له.</li>
+<li>احسب المسافة بين المبدأ $O$ والمستوي $(ABC)$.</li>
+<li>عيّن إحداثيات $H$ المسقط العمودي للنقطة $O$ على $(ABC)$.</li>
+</ol>
+</div>
+
+<div class="ex">
+<h2>التمرين الثاني <span class="pts">(04 نقاط)</span></h2>
+<p>كيس به $6$ قريصات: اثنتان تحملان الرقم $1$ ، ثلاث تحمل الرقم $2$ ، وواحدة تحمل الرقم $3$. نسحب عشوائيًا وفي آن واحد قريصتين. $X$ مجموع الرقمين.</p>
+<ol>
+<li>عيّن قيم $X$.</li>
+<li>عرّف قانون احتمال $X$.</li>
+<li>احسب $E(X)$.</li>
+</ol>
+</div>
+
+<div class="ex">
+<h2>التمرين الثالث <span class="pts">(05 نقاط)</span></h2>
+<p>$u_0 = 0$ و $u_{n+1} = \sqrt{2 + u_n}$.</p>
+<ol>
+<li>برهن بالتراجع أن $0 \leq u_n &lt; 2$.</li>
+<li>بيّن أن $(u_n)$ متزايدة، واستنتج أنها متقاربة.</li>
+<li>بيّن أن $2 - u_{n+1} \leq \dfrac{1}{2}(2 - u_n)$ ، ثم استنتج أن $0 &lt; 2 - u_n \leq 2\left(\dfrac{1}{2}\right)^n$.</li>
+<li>احسب $\lim\limits_{n \to +\infty} u_n$.</li>
+</ol>
+</div>
+
+<div class="ex">
+<h2>التمرين الرابع <span class="pts">(07 نقاط)</span></h2>
+<p>$f(x) = \dfrac{\ln x}{x}$ على $]0\,;\,+\infty[$.</p>
+<ol>
+<li>احسب نهايتي $f$ عند $0$ و $+\infty$ وفسّرهما بيانيًا.</li>
+<li>بيّن أن $f'(x) = \dfrac{1 - \ln x}{x^2}$ ، وشكّل جدول التغيرات.</li>
+<li>اكتب معادلة المماس عند النقطة ذات الفاصلة $1$.</li>
+<li>ناقش بيانيًا حسب قيم $m$ عدد حلول المعادلة $f(x) = m$.</li>
+<li>احسب $\displaystyle\int_1^e f(x)\,dx$ وفسّر النتيجة.</li>
+</ol>
+</div>
+</section>
+
+<section class="solution">
+<div class="ex" data-total="4">
+<h2>التمرين الأول</h2>
+<p data-pts="0.75">1) $\overrightarrow{AB}(1\,;\,1\,;\,-2)$ ، $\overrightarrow{AC}(-1\,;\,1\,;\,-1)$ غير مرتبطين خطيًا (المركبات غير متناسبة).</p>
+<p data-pts="0.75">2) $\vec{n} \cdot \overrightarrow{AB} = 1 + 3 - 4 = 0$ ، $\vec{n} \cdot \overrightarrow{AC} = -1 + 3 - 2 = 0$</p>
+<p data-pts="0.75">$(ABC): x + 3y + 2z - 5 = 0$</p>
+<p data-pts="0.75">3) $d = \dfrac{|-5|}{\sqrt{1 + 9 + 4}} = \dfrac{5}{\sqrt{14}}$</p>
+<p data-pts="1">4) $H(t\,;\,3t\,;\,2t)$ و $14t = 5$ ، إذن $H\left(\dfrac{5}{14}\,;\,\dfrac{15}{14}\,;\,\dfrac{5}{7}\right)$</p>
+</div>
+<div class="ex" data-total="4">
+<h2>التمرين الثاني</h2>
+<p data-pts="0.5">1) $C_6^2 = 15$ ؛ قيم $X$: $\{2\,;\,3\,;\,4\,;\,5\}$</p>
+<p data-pts="4×0.5">2) $P(X = 2) = \dfrac{C_2^2}{15} = \dfrac{1}{15}$ ؛ $P(X = 3) = \dfrac{2 \times 3}{15} = \dfrac{6}{15}$ ؛ $P(X = 4) = \dfrac{2 \times 1 + C_3^2}{15} = \dfrac{5}{15}$ ؛ $P(X = 5) = \dfrac{3 \times 1}{15} = \dfrac{3}{15}$</p>
+<p data-pts="1.5">3) $E(X) = \dfrac{2 + 18 + 20 + 15}{15} = \dfrac{55}{15} = \dfrac{11}{3}$</p>
+</div>
+<div class="ex" data-total="5">
+<h2>التمرين الثالث</h2>
+<p data-pts="1.25">1) $u_0 = 0$ يحقق. إذا كان $0 \leq u_n &lt; 2$ فإن $2 \leq 2 + u_n &lt; 4$ ومنه $\sqrt{2} \leq u_{n+1} &lt; 2$.</p>
+<p data-pts="1.25">2) $u_{n+1} - u_n = \dfrac{2 + u_n - u_n^2}{\sqrt{2 + u_n} + u_n} = \dfrac{(2 - u_n)(1 + u_n)}{\sqrt{2 + u_n} + u_n} &gt; 0$ ؛ متزايدة ومحدودة من الأعلى فهي متقاربة.</p>
+<p data-pts="1">3) $2 - u_{n+1} = \dfrac{4 - (2 + u_n)}{2 + \sqrt{2 + u_n}} = \dfrac{2 - u_n}{2 + \sqrt{2 + u_n}} \leq \dfrac{2 - u_n}{2}$</p>
+<p data-pts="0.75">بالتكرار: $2 - u_n \leq \left(\dfrac{1}{2}\right)^n (2 - u_0) = 2\left(\dfrac{1}{2}\right)^n$</p>
+<p data-pts="0.75">4) بالحصر: $\lim (2 - u_n) = 0$ ، إذن $\lim u_n = 2$</p>
+</div>
+<div class="ex" data-total="7">
+<h2>التمرين الرابع</h2>
+<p data-pts="1">1) $\lim\limits_{x \to 0^+} f(x) = -\infty$: المستقيم $x = 0$ مقارب عمودي.</p>
+<p data-pts="1">$\lim\limits_{x \to +\infty} f(x) = 0$: المستقيم $y = 0$ مقارب أفقي.</p>
+<p data-pts="1">2) $f'(x) = \dfrac{\frac{1}{x} \cdot x - \ln x}{x^2} = \dfrac{1 - \ln x}{x^2}$</p>
+<p data-pts="1">$f$ متزايدة على $]0\,;\,e]$ ، متناقصة على $[e\,;\,+\infty[$ ، و $f(e) = \dfrac{1}{e}$.</p>
+<p data-pts="0.75">3) $f(1) = 0$ ، $f'(1) = 1$: $y = x - 1$</p>
+<p data-pts="1.25">4) $m \leq 0$: حل واحد ؛ $0 &lt; m &lt; \dfrac{1}{e}$: حلان ؛ $m = \dfrac{1}{e}$: حل واحد ($x = e$) ؛ $m &gt; \dfrac{1}{e}$: لا حلول.</p>
+<p data-pts="1">5) $\displaystyle\int_1^e \dfrac{\ln x}{x}dx = \left[\dfrac{(\ln x)^2}{2}\right]_1^e = \dfrac{1}{2}$ ، وهي مساحة الحيز تحت $(C_f)$ بين $1$ و $e$ (لأن $f \geq 0$ عليه).</p>
+</div>
+</section>
