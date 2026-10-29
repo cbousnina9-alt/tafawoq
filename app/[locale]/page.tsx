@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import AdSlot from '@/components/AdSlot';
 import ResourceList from '@/components/ResourceList';
+import SubjectIcon from '@/components/SubjectIcon';
+import HeroArt from '@/components/HeroArt';
+import { SearchIcon } from '@/components/Icons';
 import { JsonLd } from '@/components/Seo';
 import { categories, levelById, stages, stageIds, subjects } from '@/lib/catalog';
 import { articlesOf, countOf, resources } from '@/lib/content';
@@ -33,12 +36,13 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
 export default async function Home({ params }: P) {
   const { locale } = await params;
   const d = t(locale);
+  const L = (ar: string, fr: string, en: string) => ({ ar, fr, en })[locale];
   // الأكثر طلبًا أولًا: الشهادات ثم الأقسام النهائية
   const priority = ['bac', 'bem', '4am', '3as', '5ap', '1as', '2as', '3am', '2am', '1am', '4ap', '3ap', '2ap', '1ap', '0ap'];
   const rank = (lv: string) => (priority.indexOf(lv) + 1 || 99);
   const latest = [...resources].sort((a, b) => (b.added || '').localeCompare(a.added || '') || rank(a.level) - rank(b.level)).slice(0, 10);
   const arts = articlesOf(locale).slice(0, 3);
-  const examSubjects = (id: string) => levelById(id)!.subjects.filter((s) => countOf(id, s) > 0);
+  const examSubjects = (id: string) => levelById(id)!.subjects.filter((s) => countOf(id, s) > 0).sort((a, b) => countOf(id, b) - countOf(id, a));
 
   return (
     <>
@@ -56,32 +60,44 @@ export default async function Home({ params }: P) {
         ]}
       />
 
-      <section className="board">
+      <section className="board hero-band">
         <div className="wrap hero">
-          <h1>{d.heroTitle}</h1>
-          <p className="lead">{d.heroText}</p>
-          <form className="search-form" role="search" action={`/${locale}/search`} method="get">
-            <label className="visually-hidden" htmlFor="hq">{d.search}</label>
-            <input id="hq" name="q" type="search" placeholder={d.searchPlaceholder} />
-            <button type="submit">{d.search}</button>
-          </form>
+          <div className="hero-copy">
+            <h1>{d.heroTitle}</h1>
+            <p className="lead">{d.heroText}</p>
+            <form className="search-form" role="search" action={`/${locale}/search`} method="get">
+              <label className="visually-hidden" htmlFor="hq">{d.search}</label>
+              <SearchIcon />
+              <input id="hq" name="q" type="search" placeholder={d.searchPlaceholder} />
+              <button type="submit">{d.search}</button>
+            </form>
+            <ul className="stats">
+              <li><b>{resources.length}</b><span>{L('موضوع بالحل', 'sujets corrigés', 'papers with answers')}</span></li>
+              <li><b>15</b><span>{L('مستوى دراسي', 'niveaux', 'school levels')}</span></li>
+              <li><b>{L('مجاني', 'Gratuit', 'Free')}</b><span>{L('قراءة وتحميل PDF', 'lecture et PDF', 'read online or PDF')}</span></li>
+            </ul>
+          </div>
+          <HeroArt />
+        </div>
+      </section>
 
-          <nav className="path" aria-label={locale === 'ar' ? 'المستويات الدراسية' : locale === 'fr' ? 'Niveaux scolaires' : 'School levels'}>
+      <div className="wrap">
+        <section className="section">
+          <div className="section-head"><h2>{L('اختر سنتك الدراسية', 'Choisis ton année', 'Choose your school year')}</h2></div>
+          <nav className="path" aria-label={L('المستويات الدراسية', 'Niveaux scolaires', 'School levels')}>
             {stageIds.map((s) => (
               <div className="path-stage" key={s}>
-                <h2><Link href={`/${locale}/${s}`}>{stages[s].name[locale]}</Link></h2>
+                <h3><Link href={`/${locale}/${s}`}>{stages[s].name[locale]}</Link></h3>
                 <div className="path-row">
                   {stages[s].levels.map((id) => {
                     const lv = levelById(id)!;
                     const label = lv.short[locale];
                     const m = label.match(/^(\d+)\s*(.*)$/);
-                    const n = countOf(id);
-                    const unit = locale === 'ar' ? 'موضوع' : locale === 'fr' ? 'sujets' : 'papers';
                     return (
                       <Link key={id} href={`/${locale}/${id}`} className={`step${lv.exam ? ' exam' : ''}${m ? '' : ' word'}`} aria-label={lv.name[locale]}>
                         <span className="num">{m ? m[1] : label}</span>
                         {m && <span className="lbl">{m[2]}</span>}
-                        <span className="cnt">{n} {unit}</span>
+                        <span className="cnt">{countOf(id)} {L('موضوع', 'sujets', 'papers')}</span>
                       </Link>
                     );
                   })}
@@ -89,11 +105,41 @@ export default async function Home({ params }: P) {
               </div>
             ))}
           </nav>
-        </div>
-      </section>
+        </section>
 
-      <div className="wrap">
         <AdSlot pos="top" format="horizontal" />
+
+        <section className="section">
+          <div className="section-head"><h2>{L('استعد للشهادات الرسمية', 'Prépare les examens officiels', 'Prepare for the national exams')}</h2></div>
+          <div className="cert-grid">
+            {['bem', 'bac'].map((id) => {
+              const lv = levelById(id)!;
+              const subs = examSubjects(id);
+              return (
+                <div className="cert" key={id}>
+                  <div className="cert-top">
+                    <span className="cert-badge">{lv.short[locale]}</span>
+                    <div>
+                      <h3><Link href={`/${locale}/${id}`}>{lv.name[locale]}</Link></h3>
+                      <p>{countOf(id)} {L('موضوعًا تجريبيًا مع التصحيح', 'sujets types corrigés', 'mock papers with answers')}</p>
+                    </div>
+                  </div>
+                  <ul className="cert-subjects">
+                    {subs.map((s) => (
+                      <li key={s}>
+                        <Link href={`/${locale}/${id}/${s}`}>
+                          <SubjectIcon subject={s} size={34} />
+                          <span>{subjects[s].name[locale]}</span>
+                          <small>{countOf(id, s)}</small>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </section>
 
         <section className="section">
           <div className="section-head">
@@ -101,26 +147,6 @@ export default async function Home({ params }: P) {
             <Link href={`/${locale}/search`}>{d.seeAll}</Link>
           </div>
           <ResourceList locale={locale} list={latest} showContext />
-        </section>
-
-        <section className="section">
-          <div className="section-head"><h2>{d.officialExams} BEM / BAC</h2></div>
-          <div style={{ display: 'grid', gap: 18, gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-            {['bem', 'bac'].map((id) => {
-              const lv = levelById(id)!;
-              const subs = examSubjects(id);
-              return (
-                <div className="sheet" key={id}>
-                  <h3><Link href={`/${locale}/${id}`}>{lv.name[locale]}</Link></h3>
-                  <ul className="link-list">
-                    {(subs.length ? subs : lv.subjects.slice(0, 5)).map((s) => (
-                      <li key={s}><Link href={`/${locale}/${id}/${s}`}>{subjects[s].name[locale]}</Link></li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
         </section>
 
         {arts.length > 0 && (

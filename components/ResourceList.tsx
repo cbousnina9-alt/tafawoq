@@ -3,9 +3,11 @@ import { levelById, subjects, trimesters, types } from '@/lib/catalog';
 import { pagesLabel, resourceTitle, resourceUrl, type Resource } from '@/lib/content';
 import { t } from '@/lib/i18n';
 import type { Locale } from '@/lib/site';
+import SubjectIcon from './SubjectIcon';
 
 export type Row = {
   id: string;
+  subject: string;
   href: string;
   title: string;
   type: Resource['type'];
@@ -27,6 +29,7 @@ export function toRows(locale: Locale, list: Resource[], showContext = false): R
     ].filter(Boolean);
     return {
       id: r.id,
+      subject: r.subject,
       href: resourceUrl(locale, r),
       title: resourceTitle(locale, r),
       type: r.type,
@@ -46,11 +49,11 @@ export function RowList({ rows, locale }: { rows: Row[]; locale: Locale }) {
       {rows.map((r) => (
         <li key={r.id}>
           <Link className="row" href={r.href}>
-            <span className="type-tag" data-type={r.type}>{r.typeLabel}</span>
+            <SubjectIcon subject={r.subject} size={40} />
             <span>
               <span className="title">{r.title}</span>
               {r.sample && <span className="demo-tag">{d.sample}</span>}
-              {r.meta && <span className="meta">{r.meta}</span>}
+              <span className="meta"><span className="type-tag" data-type={r.type}>{r.typeLabel}</span>{r.meta}</span>
             </span>
             {r.solution ? <span className="stamp">{d.withSolution}</span> : <span />}
           </Link>

@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import type { Row } from './ResourceList';
+import SubjectIcon from './SubjectIcon';
 
 type Labels = { all: string; type: string; term: string; withSolution: string; sample: string; terms: Record<number, string>; types: Record<string, string> };
 
@@ -38,11 +39,11 @@ export default function FilterableList({ rows, labels }: { rows: Row[]; labels: 
         {shown.map((r) => (
           <li key={r.id}>
             <Link className="row" href={r.href}>
-              <span className="type-tag" data-type={r.type}>{r.typeLabel}</span>
+              <SubjectIcon subject={r.subject} size={40} />
               <span>
                 <span className="title">{r.title}</span>
                 {r.sample && <span className="demo-tag">{labels.sample}</span>}
-                {r.meta && <span className="meta">{r.meta}</span>}
+                <span className="meta"><span className="type-tag" data-type={r.type}>{r.typeLabel}</span>{r.meta}</span>
               </span>
               {r.solution ? <span className="stamp">{labels.withSolution}</span> : <span />}
             </Link>

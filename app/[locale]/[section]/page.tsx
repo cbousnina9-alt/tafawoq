@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import AdSlot from '@/components/AdSlot';
+import SubjectIcon from '@/components/SubjectIcon';
 import ResourceList from '@/components/ResourceList';
 import { Breadcrumbs, JsonLd } from '@/components/Seo';
 import { categories, categoryIds, levelById, levels, stages, stageIds, subjects, type StageId } from '@/lib/catalog';
@@ -182,13 +183,16 @@ function SubjectGrid({ locale, levelId }: { locale: Locale; levelId: string }) {
   const lv = levelById(levelId)!;
   const d = t(locale);
   return (
-    <div className="subject-grid">
+    <div className="subj-grid">
       {[...lv.subjects].sort((a, b) => countOf(levelId, b) - countOf(levelId, a)).map((s) => {
         const n = countOf(levelId, s);
         return (
-          <Link key={s} href={`/${locale}/${levelId}/${s}`} className={n ? '' : 'empty'}>
-            {subjects[s].name[locale]}
-            <span className="count">{n ? `${n} ${d.files}` : '—'}</span>
+          <Link key={s} href={`/${locale}/${levelId}/${s}`} className={`subj-card${n ? '' : ' empty'}`}>
+            <SubjectIcon subject={s} />
+            <span className="subj-txt">
+              <span className="subj-name">{subjects[s].name[locale]}</span>
+              <span className="count">{n ? `${n} ${d.files}` : (locale === 'ar' ? 'قريبًا' : locale === 'fr' ? 'Bientôt' : 'Soon')}</span>
+            </span>
           </Link>
         );
       })}
