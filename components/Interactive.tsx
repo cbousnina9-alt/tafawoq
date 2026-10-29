@@ -4,16 +4,16 @@ import { useEffect, useMemo, useState } from 'react';
 import { StarIcon } from './Icons';
 
 // ---------- المفضلة (تُحفظ في متصفح الزائر) ----------
-type Fav = { href: string; title: string };
+export type Fav = { href: string; title: string };
 const KEY = 'favorites:v1';
-const readFavs = (): Fav[] => {
+export const readFavs = (): Fav[] => {
   try {
     return JSON.parse(localStorage.getItem(KEY) || '[]');
   } catch {
     return [];
   }
 };
-const writeFavs = (f: Fav[]) => {
+export const writeFavs = (f: Fav[]) => {
   try {
     localStorage.setItem(KEY, JSON.stringify(f));
   } catch {}

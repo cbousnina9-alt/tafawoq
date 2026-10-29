@@ -16,7 +16,35 @@ export type Row = {
   solution: boolean;
   sample: boolean;
   trimester?: number;
+  short: string;
+  file: string;
+  solutionFile?: string;
+  n?: number;
+  level: string;
+  added: string;
 };
+
+export function shortTitle(l: Locale, r: Resource): string {
+  const lv0 = levelById(r.level)!;
+  if (r.title?.[l]) {
+    const esc = lv0.name[l].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return r.title[l]!
+      .replace(/\s*\((النموذج|n°)\s*\d+\)/, '')
+      .replace(new RegExp(`\\s*[—–-]\\s*${esc}`), '')
+      .replace(/\s+(مع الحل|avec corrigé|with answers)\s*$/, '')
+      .trim();
+  }
+  const sub = subjects[r.subject].name[l];
+  const ty = types[r.type].one[l];
+  const term = r.trimester ? trimesters[r.trimester][l] : '';
+  const lv = levelById(r.level)!;
+  if (l === 'ar') {
+    if (r.type === 'mock' || r.type === 'official') return `${ty} ل${lv.name.ar.replace(/^ال/, 'ل')} في ${sub}`;
+    return [ty, term, `في ${sub}`].filter(Boolean).join(' ');
+  }
+  if (l === 'fr') return [ty, `de ${sub}`, term && `– ${term}`].filter(Boolean).join(' ');
+  return [sub, ty.toLowerCase(), term && `– ${term}`].filter(Boolean).join(' ');
+}
 
 export function toRows(locale: Locale, list: Resource[], showContext = false): Row[] {
   return list.map((r) => {
@@ -38,6 +66,12 @@ export function toRows(locale: Locale, list: Resource[], showContext = false): R
       solution: !!r.solution,
       sample: !!r.sample,
       trimester: r.trimester,
+      short: shortTitle(locale, r),
+      file: r.file,
+      solutionFile: r.solution,
+      n: r.n,
+      level: lv.name[locale],
+      added: r.added || '',
     };
   });
 }

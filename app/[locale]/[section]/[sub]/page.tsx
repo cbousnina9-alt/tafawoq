@@ -5,6 +5,8 @@ import AdSlot from '@/components/AdSlot';
 import FilterableList from '@/components/FilterableList';
 import { toRows } from '@/components/ResourceList';
 import { Breadcrumbs, JsonLd } from '@/components/Seo';
+import SubjectIcon from '@/components/SubjectIcon';
+import { ArrowIcon, CapIcon } from '@/components/Icons';
 import { categories, levelById, levels, stages, subjects, trimesters, types } from '@/lib/catalog';
 import { articles, articlesOf, resourcesOf } from '@/lib/content';
 import { t } from '@/lib/i18n';
@@ -50,65 +52,96 @@ export default async function SubPage({ params }: P) {
     const s = subjectSeo(locale, lv, sub);
     const list = resourcesOf(lv.id, sub);
     const rows = toRows(locale, list);
-    const others = lv.subjects.filter((x) => x !== sub);
     const url = `/${locale}/${lv.id}/${sub}`;
     const pair = lv.examFor ? levelById(lv.examFor) : lv.exam ? levels.find((x) => x.examFor === lv.id) : undefined;
+    const L = (ar: string, fr: string, en: string) => ({ ar, fr, en })[locale];
+    const subName = subjects[sub].name[locale];
     const labels = {
       all: d.all,
-      type: d.type,
-      term: d.term,
+      type: L('نوع الموضوع', 'Type', 'Type'),
+      term: L('الفصل الدراسي', 'Trimestre', 'Term'),
       withSolution: d.withSolution,
       sample: d.sample,
       terms: { 1: trimesters[1][locale], 2: trimesters[2][locale], 3: trimesters[3][locale] },
       types: Object.fromEntries(Object.entries(types).map(([k, v]) => [k, v.many[locale]])),
+      filterTitle: L('تصفية المواضيع', 'Filtrer', 'Filter'),
+      allTerms: L('جميع الفصول', 'Tous', 'All terms'),
+      solOnly: L('مواضيع مع الحل فقط', 'Avec corrigé seulement', 'With answers only'),
+      reset: L('إعادة ضبط', 'Réinitialiser', 'Reset'),
+      available: L('المواضيع المتاحة', 'Sujets disponibles', 'Available papers'),
+      searchPh: L(`ابحث داخل مواضيع ${subName}...`, `Chercher dans ${subName}...`, `Search ${subName} papers...`),
+      sortNew: L('الأحدث أولًا', 'Plus récents', 'Newest first'),
+      sortOld: L('الأقدم أولًا', 'Plus anciens', 'Oldest first'),
+      sortTerm: L('حسب الفصل', 'Par trimestre', 'By term'),
+      preview: L('معاينة الموضوع', 'Voir le sujet', 'Preview'),
+      download: L('تحميل PDF', 'Télécharger PDF', 'Download PDF'),
+      showSolution: L('عرض الحل', 'Voir le corrigé', 'Answers'),
+      model: L('النموذج', 'Modèle', 'Model'),
+      prev: L('السابق', 'Précédent', 'Previous'),
+      next: L('التالي', 'Suivant', 'Next'),
+      none: L('لا توجد مواضيع مطابقة لهذا الاختيار.', 'Aucun sujet ne correspond.', 'No matching papers.'),
+      save: L('حفظ في المفضلة', 'Ajouter aux favoris', 'Save'),
     };
+    const hero = sub === 'math' ? '/img/home/subj-math.webp' : '/img/home/hero.webp';
+    const asideNode = (
+      <>
+        {pair && pair.subjects.includes(sub) && (
+          <Link className="promo-card" href={`/${locale}/${pair.id}/${sub}`}>
+            <b>{lv.examFor ? L(`تستعد ل${pair.name.ar}؟`, `Tu prépares le ${pair.short.fr} ?`, `Preparing for the ${pair.short.en}?`) : L(`راجع ${subName} للسنة النهائية`, 'Révise l’année finale', 'Review the final year')}</b>
+            <span>{L(`اكتشف جميع مواضيع ${subName} ل${pair.name.ar} مع الحلول النموذجية.`, `Tous les sujets de ${subName} avec corrigés.`, `All ${subName} papers with answers.`)}</span>
+            <span className="promo-btn">{L('مواضيع', 'Sujets', 'Papers')} {pair.short[locale]} <ArrowIcon /></span>
+          </Link>
+        )}
+        <AdSlot pos="sidebar" format="rectangle" />
+      </>
+    );
     return (
       <>
-        <section className="board">
-          <div className="wrap page-head">
-            <Breadcrumbs items={[home, { name: stages[lv.stage].name[locale], href: `/${locale}/${lv.stage}` }, { name: lv.name[locale], href: `/${locale}/${lv.id}` }, { name: subjects[sub].name[locale], href: url }]} />
-            <h1>{s.h1}</h1>
-            <p>{s.description}</p>
+        <section className="sp-hero">
+          <div className="wrap sp-hero-in">
+            <div className="sp-hero-copy">
+              <Breadcrumbs items={[home, { name: stages[lv.stage].name[locale], href: `/${locale}/${lv.stage}` }, { name: lv.name[locale], href: `/${locale}/${lv.id}` }, { name: subName, href: url }]} />
+              <Link className="lv-pill" href={`/${locale}/${lv.id}`}><CapIcon /> {lv.name[locale]}</Link>
+              <h1>{s.h1}</h1>
+              <p>{L('راجع، تدرّب، وتحقّق من الحل خطوة بخطوة', 'Révise, entraîne-toi et vérifie le corrigé pas à pas', 'Review, practise and check the answers step by step')} · {rows.length} {L('موضوع', 'sujets', 'papers')}</p>
+            </div>
+            <div className="sp-hero-art"><img src={hero} alt="" width={1096} height={504} fetchPriority="high" /></div>
+          </div>
+          <div className="wrap">
+            <nav className="subj-tabs" aria-label={d.otherSubjects}>
+              {lv.subjects.map((x) => (
+                <Link key={x} href={`/${locale}/${lv.id}/${x}`} aria-current={x === sub ? 'page' : undefined}>
+                  <SubjectIcon subject={x} size={34} />
+                  <span>{subjects[x].name[locale]}</span>
+                </Link>
+              ))}
+            </nav>
           </div>
         </section>
-        <div className="wrap layout">
-          <div>
-            {rows.length ? (
-              <FilterableList rows={rows} labels={labels} />
-            ) : (
-              <div className="empty-state">
-                <p>{d.noFiles}</p>
-                <Link className="btn btn-primary" href={`/${locale}/upload`}>{d.sendFile}</Link>
-              </div>
-            )}
-            <AdSlot pos="inContent" />
-            {locale === 'ar' && rows.length > 0 && (
-              <section className="seo-text" style={{ marginTop: 24 }}>
-                <h2>حول {lv.exam ? 'مواضيع' : 'فروض واختبارات'} {subjects[sub].name.ar} — {lv.name.ar}</h2>
-                <p>
-                  تضم هذه الصفحة {rows.length} {rows.length > 10 ? 'ملفًا' : 'ملفات'} في مادة {subjects[sub].name.ar} {lv.exam ? `للتحضير ل${lv.name.ar}` : `في ${lv.name.ar}`}، مطابقة لمحتوى المنهاج الجزائري.
-                  استعمل الأزرار أعلاه لتصفية الملفات حسب النوع أو الفصل، وافتح أي موضوع لتقرأه مباشرة على الصفحة أو تحمّله مجانًا بصيغة PDF. الملفات التي تحمل ختم «مع الحل» مرفقة بتصحيح نموذجي يساعدك على تقييم نفسك بعد المحاولة.
-                </p>
-              </section>
-            )}
-          </div>
-          <aside>
-            <AdSlot pos="sidebar" format="rectangle" />
-            <div className="sheet">
-              <h3>{d.otherSubjects}</h3>
-              <ul className="link-list">
-                {others.map((x) => (
-                  <li key={x}><Link href={`/${locale}/${lv.id}/${x}`}>{subjects[x].name[locale]}</Link></li>
-                ))}
-              </ul>
+        <div className="wrap sp-wrap">
+          {rows.length ? (
+            <FilterableList rows={rows} labels={labels} aside={asideNode} />
+          ) : (
+            <div className="empty-state">
+              <p>{d.noFiles}</p>
+              <Link className="btn btn-primary" href={`/${locale}/upload`}>{d.sendFile}</Link>
             </div>
-            {pair && pair.subjects.includes(sub) && (
-              <div className="sheet">
-                <h3>{lv.examFor ? `${d.prepareFor} ${pair.short[locale]}` : pair.name[locale]}</h3>
-                <Link href={`/${locale}/${pair.id}/${sub}`}>{subjects[sub].name[locale]} — {pair.name[locale]}</Link>
-              </div>
-            )}
-          </aside>
+          )}
+          <div className="tip-banner">
+            <span className="bulb" aria-hidden>💡</span>
+            <b>{L('نصيحة للمراجعة', 'Conseil', 'Study tip')}</b>
+            <span>{L('حاول حلّ الموضوع بنفسك قبل الاطلاع على التصحيح، ثم قيّم إجابتك بسلم التنقيط.', 'Essaie de résoudre le sujet seul avant de consulter le corrigé.', 'Try the paper on your own before checking the answers.')}</span>
+          </div>
+          <AdSlot pos="inContent" />
+          {locale === 'ar' && rows.length > 0 && (
+            <section className="seo-text" style={{ marginTop: 24 }}>
+              <h2>حول {lv.exam ? 'مواضيع' : 'فروض واختبارات'} {subjects[sub].name.ar} — {lv.name.ar}</h2>
+              <p>
+                تضم هذه الصفحة {rows.length} {rows.length > 10 ? 'ملفًا' : 'ملفات'} في مادة {subjects[sub].name.ar} {lv.exam ? `للتحضير ل${lv.name.ar}` : `في ${lv.name.ar}`}، مطابقة لمحتوى المنهاج الجزائري.
+                استعمل خانة التصفية لاختيار الفصل أو نوع الموضوع، وافتح أي موضوع لتقرأه مباشرة على الصفحة أو تحمّله مجانًا بصيغة PDF. المواضيع التي تحمل علامة «مع الحل» مرفقة بتصحيح نموذجي وسلم تنقيط يساعدك على تقييم نفسك بعد المحاولة.
+              </p>
+            </section>
+          )}
         </div>
         {list.length > 0 && (
           <JsonLd

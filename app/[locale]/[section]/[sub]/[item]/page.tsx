@@ -96,10 +96,11 @@ export default async function ResourcePage({ params }: P) {
               {rendered.solution && (
                 <>
                   <AdSlot pos="inContent" />
-                  <details className="sheet exam-paper solution-box" lang="ar" dir="rtl">
+                  <details id="solution" className="sheet exam-paper solution-box" lang="ar" dir="rtl">
                     <summary>{locale === 'ar' ? 'إظهار الحل المفصل' : locale === 'fr' ? 'Afficher le corrigé' : 'Show the answers'}</summary>
                     <div dangerouslySetInnerHTML={{ __html: rendered.solution }} />
                   </details>
+                  <script dangerouslySetInnerHTML={{ __html: "if(location.hash==='#solution'){var s=document.getElementById('solution');if(s){s.open=true;s.scrollIntoView();}}" }} />
                 </>
               )}
             </>
