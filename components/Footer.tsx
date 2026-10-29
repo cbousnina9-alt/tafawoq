@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { categories, levelById } from '@/lib/catalog';
 import { t } from '@/lib/i18n';
 import { site, type Locale } from '@/lib/site';
+import LogoMark from './Logo';
 
 export default function Footer({ locale }: { locale: Locale }) {
   const d = t(locale);
@@ -11,7 +12,7 @@ export default function Footer({ locale }: { locale: Locale }) {
       <div className="wrap">
         <div className="cols">
           <div>
-            <h3>{site.name[locale]}</h3>
+            <Link href={`/${locale}`} className="f-logo"><LogoMark size={44} /><span>{site.name[locale]}<small>{locale === 'ar' ? 'معك في كل خطوة نحو النجاح' : locale === 'fr' ? 'Avec toi à chaque étape' : 'With you at every step'}</small></span></Link>
             <p>{d.footerAbout}</p>
             <p style={{ display: 'flex', gap: 14 }}>
               {site.social.facebook && <a href={site.social.facebook} rel="noopener">Facebook</a>}
@@ -49,7 +50,8 @@ export default function Footer({ locale }: { locale: Locale }) {
         </div>
         <div className="bottom">
           <span>© {new Date().getFullYear()} {site.name[locale]} — {d.rights}</span>
-          <span>{d.tagline}</span>
+          <span className="f-links"><Link href={`/${locale}/privacy-policy`}>{d.privacy}</Link><Link href={`/${locale}/contact`}>{d.contact}</Link><Link href={`/${locale}/about`}>{d.about}</Link></span>
+          <span dir="ltr">tafawoq.site</span>
         </div>
       </div>
     </footer>

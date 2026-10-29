@@ -1,13 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AdSlot from '@/components/AdSlot';
-import ResourceList from '@/components/ResourceList';
 import SubjectIcon from '@/components/SubjectIcon';
-import HeroArt from '@/components/HeroArt';
-import { SearchIcon } from '@/components/Icons';
+import { ArrowIcon, CapIcon, CloudIcon, DocIcon, DownloadIcon, EyeIcon, SearchIcon } from '@/components/Icons';
 import { JsonLd } from '@/components/Seo';
-import { categories, levelById, stages, stageIds, subjects } from '@/lib/catalog';
-import { articlesOf, countOf, resources } from '@/lib/content';
+import { levelById, stages, stageIds, subjects, trimesters, types } from '@/lib/catalog';
+import { articlesOf, countOf, resources, resourceUrl } from '@/lib/content';
 import { t } from '@/lib/i18n';
 import { abs, alternates, site, type Locale } from '@/lib/site';
 
@@ -41,8 +39,9 @@ export default async function Home({ params }: P) {
   const priority = ['bac', 'bem', '4am', '3as', '5ap', '1as', '2as', '3am', '2am', '1am', '4ap', '3ap', '2ap', '1ap', '0ap'];
   const rank = (lv: string) => (priority.indexOf(lv) + 1 || 99);
   const latest = [...resources].sort((a, b) => (b.added || '').localeCompare(a.added || '') || rank(a.level) - rank(b.level)).slice(0, 10);
-  const arts = articlesOf(locale).slice(0, 3);
-  const examSubjects = (id: string) => levelById(id)!.subjects.filter((s) => countOf(id, s) > 0).sort((a, b) => countOf(id, b) - countOf(id, a));
+  const tipImg: Record<string, string> = { 'khotat-muraja3a-ikhtibarat': 'tip-time', 'istighlal-mawadi3-sabiqa-bem-bac': 'tip-exam', 'nasaih-lil-awliya': 'tip-parents' };
+  const all = articlesOf(locale);
+  const tips = [...all.filter((a) => tipImg[a.slug]), ...all.filter((a) => !tipImg[a.slug])].slice(0, 3).map((a, i) => ({ a, img: `/img/home/${tipImg[a.slug] || ['tip-time', 'tip-exam', 'tip-parents'][i]}.webp` }));
 
   return (
     <>
@@ -60,108 +59,122 @@ export default async function Home({ params }: P) {
         ]}
       />
 
-      <section className="board hero-band">
-        <div className="wrap hero">
-          <div className="hero-copy">
-            <h1>{d.heroTitle}</h1>
-            <p className="lead">{d.heroText}</p>
+      <section className="hx">
+        <div className="wrap hx-in">
+          <div className="hx-copy">
+            <h1>{L('خطوتك الأولى نحو ', 'Ton premier pas vers ', 'Your first step to ')}<span className="hx-mark">{L('التفوّق', 'la réussite', 'success')}</span></h1>
+            <p className="lead">{L('فروض، اختبارات ودروس مع الحلول من التحضيري إلى البكالوريا', 'Devoirs, examens et cours corrigés, du préscolaire au BAC', 'Tests, exams and lessons with answers, from preschool to BAC')}</p>
             <form className="search-form" role="search" action={`/${locale}/search`} method="get">
               <label className="visually-hidden" htmlFor="hq">{d.search}</label>
               <SearchIcon />
-              <input id="hq" name="q" type="search" placeholder={d.searchPlaceholder} />
+              <input id="hq" name="q" type="search" placeholder={L('ابحث عن مادة أو موضوع...', 'Cherche une matière ou un sujet...', 'Search a subject or a paper...')} />
               <button type="submit">{d.search}</button>
             </form>
-            <ul className="stats">
-              <li><b>{resources.length}</b><span>{L('موضوع بالحل', 'sujets corrigés', 'papers with answers')}</span></li>
-              <li><b>15</b><span>{L('مستوى دراسي', 'niveaux', 'school levels')}</span></li>
-              <li><b>{L('مجاني', 'Gratuit', 'Free')}</b><span>{L('قراءة وتحميل PDF', 'lecture et PDF', 'read online or PDF')}</span></li>
+            <ul className="hx-stats">
+              <li><span className="ic"><DocIcon /></span><span><b>{resources.length}</b>{L('موضوع بالحل', 'sujets corrigés', 'papers with answers')}</span></li>
+              <li><span className="ic"><CapIcon /></span><span><b>15</b>{L('مستوى دراسي', 'niveaux', 'school levels')}</span></li>
+              <li><span className="ic"><CloudIcon /></span><span><b>{L('مجاني', 'Gratuit', 'Free')}</b>{L('تحميل PDF', 'PDF', 'PDF download')}</span></li>
             </ul>
           </div>
-          <HeroArt />
+          <div className="hx-art"><img src="/img/home/hero.webp" alt="" width={1052} height={680} fetchPriority="high" /></div>
         </div>
       </section>
 
       <div className="wrap">
         <section className="section">
-          <div className="section-head"><h2>{L('اختر سنتك الدراسية', 'Choisis ton année', 'Choose your school year')}</h2></div>
-          <nav className="path" aria-label={L('المستويات الدراسية', 'Niveaux scolaires', 'School levels')}>
+          <div className="sec-title">
+            <h2>{L('اختر مستواك الدراسي', 'Choisis ton niveau', 'Choose your level')}</h2>
+            <p>{L('كل ما تحتاجه، منظم حسب سنتك', 'Tout ce qu’il te faut, classé par année', 'Everything you need, sorted by year')}</p>
+          </div>
+          <div className="stage-cards">
             {stageIds.map((s) => (
-              <div className="path-stage" key={s}>
-                <h3><Link href={`/${locale}/${s}`}>{stages[s].name[locale]}</Link></h3>
-                <div className="path-row">
-                  {stages[s].levels.map((id) => {
+              <div className={`stage-card st-${s}`} key={s}>
+                <div className="stage-top">
+                  <h3><Link href={`/${locale}/${s}`}>{stages[s].name[locale]}</Link></h3>
+                  <img src={`/img/home/stage-${s}.webp`} alt="" width={380} height={292} loading="lazy" />
+                </div>
+                <div className="stage-years">
+                  {stages[s].levels.filter((id) => !levelById(id)!.exam).map((id) => {
                     const lv = levelById(id)!;
-                    const label = lv.short[locale];
-                    const m = label.match(/^(\d+)\s*(.*)$/);
+                    const m = lv.short[locale].match(/^(\d+)/);
                     return (
-                      <Link key={id} href={`/${locale}/${id}`} className={`step${lv.exam ? ' exam' : ''}${m ? '' : ' word'}`} aria-label={lv.name[locale]}>
-                        <span className="num">{m ? m[1] : label}</span>
-                        {m && <span className="lbl">{m[2]}</span>}
-                        <span className="cnt">{countOf(id)} {L('موضوع', 'sujets', 'papers')}</span>
+                      <Link key={id} href={`/${locale}/${id}`} title={`${lv.name[locale]} — ${countOf(id)} ${L('موضوع', 'sujets', 'papers')}`} className={m ? '' : 'word'}>
+                        {m ? m[1] : lv.short[locale]}
                       </Link>
                     );
                   })}
                 </div>
               </div>
             ))}
-          </nav>
+          </div>
         </section>
 
         <AdSlot pos="top" format="horizontal" />
 
         <section className="section">
-          <div className="section-head"><h2>{L('استعد للشهادات الرسمية', 'Prépare les examens officiels', 'Prepare for the national exams')}</h2></div>
-          <div className="cert-grid">
-            {['bem', 'bac'].map((id) => {
+          <div className="sec-title"><h2>{L('استعد للشهادات الرسمية', 'Prépare les examens officiels', 'Prepare for the national exams')}</h2></div>
+          <div className="cert-banners">
+            {['bac', 'bem'].map((id) => {
               const lv = levelById(id)!;
-              const subs = examSubjects(id);
               return (
-                <div className="cert" key={id}>
-                  <div className="cert-top">
-                    <span className="cert-badge">{lv.short[locale]}</span>
-                    <div>
-                      <h3><Link href={`/${locale}/${id}`}>{lv.name[locale]}</Link></h3>
-                      <p>{countOf(id)} {L('موضوعًا تجريبيًا مع التصحيح', 'sujets types corrigés', 'mock papers with answers')}</p>
-                    </div>
-                  </div>
-                  <ul className="cert-subjects">
-                    {subs.map((s) => (
-                      <li key={s}>
-                        <Link href={`/${locale}/${id}/${s}`}>
-                          <SubjectIcon subject={s} size={34} />
-                          <span>{subjects[s].name[locale]}</span>
-                          <small>{countOf(id, s)}</small>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <Link className={`cert-banner cb-${id}`} key={id} href={`/${locale}/${id}`}>
+                  <span className="cb-text">
+                    <b>{lv.name[locale]}</b>
+                    <span>{L(`جميع فروض واختبارات ${id === 'bac' ? 'البكالوريا' : 'شهادة التعليم المتوسط'} مع الحلول`, 'Tous les sujets types avec corrigés', 'All mock papers with answers')} · {countOf(id)} {L('موضوع', 'sujets', 'papers')}</span>
+                    <span className="cb-btn">{L('تصفّح المواضيع', 'Voir les sujets', 'Browse papers')} <ArrowIcon /></span>
+                  </span>
+                  <img src={`/img/home/cert-${id}.webp`} alt="" width={490} height={328} loading="lazy" />
+                </Link>
               );
             })}
           </div>
         </section>
 
         <section className="section">
-          <div className="section-head">
+          <div className="sec-title with-link">
             <h2>{d.latest}</h2>
-            <Link href={`/${locale}/search`}>{d.seeAll}</Link>
+            <Link className="pill-link" href={`/${locale}/search`}>{d.seeAll} <ArrowIcon /></Link>
           </div>
-          <ResourceList locale={locale} list={latest} showContext />
+          <div className="file-cards">
+            {latest.slice(0, 6).map((r) => {
+              const lv = levelById(r.level)!;
+              return (
+                <article className="file-card" key={r.id}>
+                  <Link href={resourceUrl(locale, r)} className="fc-main">
+                    <SubjectIcon subject={r.subject} size={64} />
+                    <span className="fc-body">
+                      <b>{types[r.type].one[locale]} {L('في', 'de', 'in')} {subjects[r.subject].name[locale]}</b>
+                      <span className="fc-lvl">{lv.name[locale]}</span>
+                      <span className="fc-tags">
+                        {r.solution && <span className="ok">✓ {d.withSolution}</span>}
+                        {r.trimester && <span>{trimesters[r.trimester][locale]}</span>}
+                      </span>
+                    </span>
+                    <span className="pdf-badge">PDF</span>
+                  </Link>
+                  <div className="fc-foot">
+                    <Link href={resourceUrl(locale, r)}><EyeIcon /> {L('قراءة', 'Lire', 'Read')}</Link>
+                    <a href={r.file} download><DownloadIcon /> {L('تحميل', 'Télécharger', 'Download')}</a>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
         </section>
 
-        {arts.length > 0 && (
+        {tips.length > 0 && (
           <section className="section">
-            <div className="section-head">
-              <h2>{d.articles}</h2>
-              <Link href={`/${locale}/library`}>{d.seeAll}</Link>
-            </div>
-            <div className="article-list">
-              {arts.map((a) => (
-                <article className="article-item" key={a.slug}>
-                  <span className="cat">{categories[a.category]?.name[locale]}</span>
-                  <h3><Link href={`/${locale}/${a.category}/${a.slug}`}>{a.title}</Link></h3>
-                  <p>{a.description}</p>
-                </article>
+            <div className="sec-title"><h2>{L('نصائح تساعدك على النجاح', 'Conseils pour réussir', 'Tips for success')}</h2></div>
+            <div className="tip-cards">
+              {tips.map(({ a, img }) => (
+                <Link className="tip-card" key={a.slug} href={`/${locale}/${a.category}/${a.slug}`}>
+                  <img src={img} alt="" width={634} height={244} loading="lazy" />
+                  <span className="tc-body">
+                    <b>{a.title}</b>
+                    <span>{a.description}</span>
+                    <span className="more">{L('اقرأ المزيد', 'Lire la suite', 'Read more')} <ArrowIcon /></span>
+                  </span>
+                </Link>
               ))}
             </div>
           </section>

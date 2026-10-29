@@ -4,7 +4,7 @@ import { countOf } from '@/lib/content';
 import { t } from '@/lib/i18n';
 import { site, type Locale } from '@/lib/site';
 import { LangSwitch, MobileMenu } from './HeaderClient';
-import { SearchIcon, StarIcon } from './Icons';
+import { BookmarkIcon, SearchIcon } from './Icons';
 import LogoMark from './Logo';
 
 export default function Header({ locale }: { locale: Locale }) {
@@ -24,7 +24,7 @@ export default function Header({ locale }: { locale: Locale }) {
       <a className="skip" href="#main">{L('انتقل إلى المحتوى', 'Aller au contenu', 'Skip to content')}</a>
       <div className="wrap">
         <Link href={`/${locale}`} className="logo" aria-label={site.name[locale]}>
-          <LogoMark />
+          <LogoMark size={44} />
           <span className="logo-text">
             {site.name[locale]}
             <small>{L('فروض واختبارات بالحل', 'Devoirs et examens corrigés', 'Tests & exams with answers')}</small>
@@ -57,11 +57,10 @@ export default function Header({ locale }: { locale: Locale }) {
           <Link href={`/${locale}/bem`}>{L('شهادة التعليم المتوسط', 'BEM', 'BEM')}</Link>
           <Link href={`/${locale}/bac`}>{L('البكالوريا', 'BAC', 'BAC')}</Link>
           <Link href={`/${locale}/library`}>{d.library}</Link>
-          <Link href={`/${locale}/upload`}>{d.upload}</Link>
         </nav>
         <div className="header-tools">
           <Link className="icon-btn" href={`/${locale}/search`} aria-label={d.search}><SearchIcon /></Link>
-          <Link className="icon-btn fav-link" href={`/${locale}/favorites`} aria-label={d.favorites}><StarIcon /></Link>
+          <Link className="icon-btn fav-link" href={`/${locale}/favorites`} aria-label={d.favorites}><BookmarkIcon /></Link>
           <LangSwitch locale={locale} />
         </div>
         <MobileMenu label={d.menu} closeLabel={d.close} groups={groups.map((g) => ({ title: g.title, links: g.links }))} extra={[{ href: `/${locale}/library`, label: d.library }, { href: `/${locale}/upload`, label: d.upload }]} />
