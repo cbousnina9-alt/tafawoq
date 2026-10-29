@@ -1,5 +1,325 @@
 [
  {
+  "id": "bac/arabic/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bac",
+  "subject": "arabic",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bac/arabic/mock/sujet-3.pdf",
+  "solution": "/files/bac/arabic/mock/sujet-3-sol.pdf",
+  "size": 66895,
+  "pages": 1,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة العربية وآدابها — الشعب العلمية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة العربية وآدابها — الشعب العلمية (النموذج 3) (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: فهم نص نثري: الغربة والحنين إلى الوطن، المقارنة والشرح والتلخيص، النمط الغالب ومؤشراته، الإعراب ومحل الجمل من الإعراب، التشبيه البليغ وأثره، التقويم النقدي: خصائص أدب المهجر. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/english/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bac",
+  "subject": "english",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bac/english/mock/sujet-3.pdf",
+  "solution": "/files/bac/english/mock/sujet-3-sol.pdf",
+  "size": 83863,
+  "pages": 2,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة الإنجليزية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة الإنجليزية (النموذج 3) (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: reading: ancient civilizations — the Numidian kingdom، general and detailed comprehension، reference words and synonyms / opposites، the past perfect and time connectors، relative pronouns and word formation، written expression: a short article about an ancient site in Algeria. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/french/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bac",
+  "subject": "french",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bac/french/mock/sujet-3.pdf",
+  "solution": "/files/bac/french/mock/sujet-3-sol.pdf",
+  "size": 81307,
+  "pages": 2,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة الفرنسية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في اللغة الفرنسية (النموذج 3) (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: texte historique: le 5 juillet 1962 à Alger، le discours historique: faits, dates, témoignages، l'énonciation et les indices de subjectivité، les rapports logiques: cause et conséquence، le passé simple et l'imparfait، compte rendu objectif du texte. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/history-geo/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bac",
+  "subject": "history-geo",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bac/history-geo/mock/sujet-3.pdf",
+  "solution": "/files/bac/history-geo/mock/sujet-3-sol.pdf",
+  "size": 76762,
+  "pages": 2,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في التاريخ والجغرافيا — الشعب العلمية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في التاريخ والجغرافيا — الشعب العلمية (النموذج 3) (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: التاريخ: تدويل القضية الجزائرية في الأمم المتحدة 1955–1960، الحكومة المؤقتة ومظاهرات 11 ديسمبر 1960، الجغرافيا: الولايات المتحدة الأمريكية قوة اقتصادية عالمية، عوامل القوة والمشاكل، المقالة الجغرافية: الاتحاد الأوروبي تكتل اقتصادي. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/islamic/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bac",
+  "subject": "islamic",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bac/islamic/mock/sujet-3.pdf",
+  "solution": "/files/bac/islamic/mock/sujet-3-sol.pdf",
+  "size": 63121,
+  "pages": 1,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في العلوم الإسلامية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في العلوم الإسلامية (النموذج 3) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: المعاملات المالية: الربا تعريفه وأنواعه، آية البقرة 275: وأحل الله البيع وحرم الربا، حديث لعن آكل الربا وموكله وكاتبه وشاهديه، أضرار الربا الاقتصادية والاجتماعية، البدائل الإسلامية: القرض الحسن والمضاربة والمرابحة، الوضعية: قرض ربوي لشراء سيارة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/math/mock-sujet-5",
+  "slug": "mock-sujet-5",
+  "level": "bac",
+  "subject": "math",
+  "type": "mock",
+  "n": 5,
+  "file": "/files/bac/math/mock/sujet-5.pdf",
+  "solution": "/files/bac/math/mock/sujet-5-sol.pdf",
+  "size": 90708,
+  "pages": 2,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في الرياضيات — شعبة علوم تجريبية (النموذج 5) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في الرياضيات — شعبة علوم تجريبية (النموذج 5) (المدة: ثلاث ساعات ونصف). موضوع مقترح مع الحل المفصل يتناول: الاحتمالات: تكرار تجربة وقانون ثنائي الحد والأمل الرياضياتي، المتتاليات: متتالية مساعدة هندسية والنهاية والمجموع، الأعداد المركبة: معادلة من الدرجة الثانية والشكل الأسي والدوران، دراسة الدالة x-1-ln(x)/x: دالة مساعدة ومستقيم مقارب مائل وحساب مساحة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/philosophy/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bac",
+  "subject": "philosophy",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bac/philosophy/mock/sujet-3.pdf",
+  "solution": "/files/bac/philosophy/mock/sujet-3-sol.pdf",
+  "size": 62928,
+  "pages": 1,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في الفلسفة — شعبة علوم تجريبية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في الفلسفة — شعبة علوم تجريبية (النموذج 3) (المدة: ثلاث ساعات ونصف). موضوع مقترح مع الحل المفصل يتناول: مقالة جدلية: هل اللغة تعبر عن الفكر بأمانة؟، موقف برغسون: عجز اللغة عن التعبير، موقف هيغل وميرلوبونتي: وحدة اللغة والفكر، مقالة استقصائية بالوضع: الذاكرة ظاهرة اجتماعية، موقف هالبواكس ونقد الطرح النفسي والمادي. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/physics/mock-sujet-4",
+  "slug": "mock-sujet-4",
+  "level": "bac",
+  "subject": "physics",
+  "type": "mock",
+  "n": 4,
+  "file": "/files/bac/physics/mock/sujet-4.pdf",
+  "solution": "/files/bac/physics/mock/sujet-4-sol.pdf",
+  "size": 88884,
+  "pages": 2,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في العلوم الفيزيائية — شعبة علوم تجريبية (النموذج 4) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في العلوم الفيزيائية — شعبة علوم تجريبية (النموذج 4) (المدة: ثلاث ساعات ونصف). موضوع مقترح مع الحل المفصل يتناول: الانشطار النووي: قانونا الانحفاظ وطاقة الربط لكل نوية والطاقة المحررة، تفاعل الأسترة والإماهة: ثابت التوازن والمردود وتأثير الزيادة في أحد المتفاعلين، السقوط الشاقولي لجسم في مائع: المعادلة التفاضلية والسرعة الحدية والزمن المميز. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bac/science/mock-sujet-3",
+  "slug": "mock-sujet-3",
+  "level": "bac",
+  "subject": "science",
+  "type": "mock",
+  "n": 3,
+  "file": "/files/bac/science/mock/sujet-3.pdf",
+  "solution": "/files/bac/science/mock/sujet-3-sol.pdf",
+  "size": 84067,
+  "pages": 2,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في علوم الطبيعة والحياة — شعبة علوم تجريبية (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة البكالوريا في علوم الطبيعة والحياة — شعبة علوم تجريبية (النموذج 3) (المدة: أربع ساعات ونصف). موضوع مقترح مع الحل المفصل يتناول: التنفس الخلوي: الميتوكوندري وتركيب ATP، التركيب الضوئي: المرحلة الكيموضوئية والمرحلة الكيموحيوية، تجارب الإضاءة والقتامة وتثبيت CO2، التكتونية العامة: الغوص والسلاسل الجبلية والنشاط الزلزالي. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/arabic/mock-sujet-4",
+  "slug": "mock-sujet-4",
+  "level": "bem",
+  "subject": "arabic",
+  "type": "mock",
+  "n": 4,
+  "file": "/files/bem/arabic/mock/sujet-4.pdf",
+  "solution": "/files/bem/arabic/mock/sujet-4-sol.pdf",
+  "size": 66077,
+  "pages": 1,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة العربية (النموذج 4) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة العربية (النموذج 4) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: فهم نص: المطالعة في زمن الهاتف، النمط الحجاجي ومؤشراته، الإعراب ومحل الجمل من الإعراب، اسم التفضيل، الاستعارة المكنية، الوضعية الإدماجية: الدعوة إلى نادي المطالعة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/civic/mock-sujet-2",
+  "slug": "mock-sujet-2",
+  "level": "bem",
+  "subject": "civic",
+  "type": "mock",
+  "n": 2,
+  "file": "/files/bem/civic/mock/sujet-2.pdf",
+  "solution": "/files/bem/civic/mock/sujet-2-sol.pdf",
+  "size": 65907,
+  "pages": 1,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التربية المدنية (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التربية المدنية (النموذج 2) (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: المؤسسات الدستورية: رئيس الجمهورية والبرلمان، الانتخابات: شروط الناخب ومراحل العملية الانتخابية، البلدية والمجلس الشعبي البلدي، المشاركة في الحياة العامة، وضعية: انتخاب ممثلي القسم. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/english/mock-sujet-4",
+  "slug": "mock-sujet-4",
+  "level": "bem",
+  "subject": "english",
+  "type": "mock",
+  "n": 4,
+  "file": "/files/bem/english/mock/sujet-4.pdf",
+  "solution": "/files/bem/english/mock/sujet-4-sol.pdf",
+  "size": 84250,
+  "pages": 2,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة الإنجليزية (النموذج 4) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة الإنجليزية (النموذج 4) (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: reading comprehension: a visit to the Casbah of Algiers، true or false, reference words, synonyms and opposites، the past simple of regular and irregular verbs، the passive voice (present and past)، pronunciation of final -ed، written expression: an email about a heritage site. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/french/mock-sujet-4",
+  "slug": "mock-sujet-4",
+  "level": "bem",
+  "subject": "french",
+  "type": "mock",
+  "n": 4,
+  "file": "/files/bem/french/mock/sujet-4.pdf",
+  "solution": "/files/bem/french/mock/sujet-4-sol.pdf",
+  "size": 78760,
+  "pages": 2,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة الفرنسية (النموذج 4) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في اللغة الفرنسية (النموذج 4) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: texte argumentatif: les jeux vidéo, amis ou ennemis ?، thèse, arguments, exemples et conclusion، les articulateurs logiques d'addition et d'opposition، l'expression de la cause، le futur simple، production écrite: conseils à un camarade. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/history-geo/mock-sujet-4",
+  "slug": "mock-sujet-4",
+  "level": "bem",
+  "subject": "history-geo",
+  "type": "mock",
+  "n": 4,
+  "file": "/files/bem/history-geo/mock/sujet-4.pdf",
+  "solution": "/files/bem/history-geo/mock/sujet-4-sol.pdf",
+  "size": 74928,
+  "pages": 1,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التاريخ والجغرافيا (النموذج 4) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التاريخ والجغرافيا (النموذج 4) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: اتجاهات الحركة الوطنية 1919–1945، نجم شمال إفريقيا وحزب الشعب وجمعية العلماء المسلمين، الجغرافيا: الصناعة في الجزائر: الأقطاب والعوائق، الوضعية الإدماجية: دور جمعية العلماء في الحفاظ على الهوية الوطنية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/islamic/mock-sujet-4",
+  "slug": "mock-sujet-4",
+  "level": "bem",
+  "subject": "islamic",
+  "type": "mock",
+  "n": 4,
+  "file": "/files/bem/islamic/mock/sujet-4.pdf",
+  "solution": "/files/bem/islamic/mock/sujet-4-sol.pdf",
+  "size": 67843,
+  "pages": 1,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التربية الإسلامية (النموذج 4) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في التربية الإسلامية (النموذج 4) (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: الزكاة: تعريفها وحكمها ومكانتها، آية التوبة 60: مصارف الزكاة، شروط وجوب الزكاة والنصاب، حكمة مشروعية الزكاة، وضعية: حساب زكاة مال ونصيحة لتاجر. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "bem/math/mock-sujet-7",
+  "slug": "mock-sujet-7",
+  "level": "bem",
+  "subject": "math",
+  "type": "mock",
+  "n": 7,
+  "file": "/files/bem/math/mock/sujet-7.pdf",
+  "solution": "/files/bem/math/mock/sujet-7-sol.pdf",
+  "size": 89107,
+  "pages": 2,
+  "added": "2026-10-29",
+  "html": true,
+  "title": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في الرياضيات (النموذج 7) مع الحل"
+  },
+  "description": {
+   "ar": "موضوع تجريبي لشهادة التعليم المتوسط في الرياضيات (النموذج 7) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: القوى والكتابة العلمية، النشر والتحليل والمعادلة الجداء، المتراجحات وتمثيل الحلول، الخاصية العكسية لفيثاغورس وجيب التمام والدائرة المحيطة، وضعية إدماجية: مقارنة عرضين بالدوال وحجم الأسطوانة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "1am/arabic/exam-t1-2",
   "slug": "exam-t1-2",
   "level": "1am",
