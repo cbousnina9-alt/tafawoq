@@ -7,8 +7,8 @@ backend:
   name: github
   repo: cbousnina9-alt/tafawoq
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
+  base_url: https://tafawoq.site
+  auth_endpoint: api/auth
   commit_messages:
     create: "إضافة {{collection}}: {{slug}}"
     update: "تعديل {{collection}}: {{slug}}"
