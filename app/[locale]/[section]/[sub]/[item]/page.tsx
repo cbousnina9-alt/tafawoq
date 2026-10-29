@@ -65,7 +65,7 @@ export default async function ResourcePage({ params }: P) {
             {r.pages && <span>{pagesLabel(locale, r.pages)}</span>}
             <span>PDF {formatSize(r.size)}</span>
             {r.solution && <span className="stamp">{d.withSolution}</span>}
-            {r.sample && <span className="demo-tag" style={{ color: 'var(--chalk-dim)', borderColor: 'var(--chalk-dim)' }}>{d.sample}</span>}
+            {r.sample && <span className="demo-tag">{d.sample}</span>}
           </div>
         </div>
       </section>

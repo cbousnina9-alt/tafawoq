@@ -66,23 +66,29 @@ export default async function Home({ params }: P) {
             <button type="submit">{d.search}</button>
           </form>
 
-          <div className="stage-columns">
+          <nav className="path" aria-label={locale === 'ar' ? 'المستويات الدراسية' : locale === 'fr' ? 'Niveaux scolaires' : 'School levels'}>
             {stageIds.map((s) => (
-              <div className="stage-col" key={s}>
+              <div className="path-stage" key={s}>
                 <h2><Link href={`/${locale}/${s}`}>{stages[s].name[locale]}</Link></h2>
-                <div className="chips">
+                <div className="path-row">
                   {stages[s].levels.map((id) => {
                     const lv = levelById(id)!;
+                    const label = lv.short[locale];
+                    const m = label.match(/^(\d+)\s*(.*)$/);
+                    const n = countOf(id);
+                    const unit = locale === 'ar' ? 'موضوع' : locale === 'fr' ? 'sujets' : 'papers';
                     return (
-                      <Link key={id} href={`/${locale}/${id}`} className={`chip${lv.exam ? ' exam' : ''}`}>
-                        {lv.short[locale]}
+                      <Link key={id} href={`/${locale}/${id}`} className={`step${lv.exam ? ' exam' : ''}${m ? '' : ' word'}`} aria-label={lv.name[locale]}>
+                        <span className="num">{m ? m[1] : label}</span>
+                        {m && <span className="lbl">{m[2]}</span>}
+                        <span className="cnt">{n} {unit}</span>
                       </Link>
                     );
                   })}
                 </div>
               </div>
             ))}
-          </div>
+          </nav>
         </div>
       </section>
 

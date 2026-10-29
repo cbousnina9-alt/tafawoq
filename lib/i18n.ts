@@ -2,7 +2,7 @@ import type { Locale } from './site';
 
 const ar = {
   tagline: 'فروض، اختبارات ودروس لكل المستويات — مع الحلول',
-  heroTitle: 'كل ما تحتاجه للمراجعة، مرتّب حسب مستواك ومادتك',
+  heroTitle: 'فروض واختبارات بالحل، من التحضيري إلى البكالوريا',
   heroText: 'فروض واختبارات مع الحل المفصل لكل المستويات، مواضيع تجريبية للتحضير لـ BEM و BAC، وملخصات دروس. اقرأ الموضوع مباشرة على الصفحة أو حمّله PDF مجانًا.',
   searchPlaceholder: 'ابحث: اختبار رياضيات 4 متوسط الفصل الأول…',
   search: 'بحث',
@@ -59,7 +59,7 @@ export type Dict = typeof ar;
 
 const fr: Dict = {
   tagline: 'Devoirs, examens et cours pour tous les niveaux — avec corrigés',
-  heroTitle: 'Tout pour réviser, classé par niveau et par matière',
+  heroTitle: 'Devoirs et examens corrigés, du préscolaire au BAC',
   heroText: 'Devoirs et examens corrigés pour tous les niveaux, sujets types pour préparer le BEM et le BAC, et résumés de cours. Lisez le sujet en ligne ou téléchargez-le en PDF.',
   searchPlaceholder: 'Rechercher : examen maths 4AM 1er trimestre…',
   search: 'Rechercher',
@@ -114,7 +114,7 @@ const fr: Dict = {
 
 const en: Dict = {
   tagline: 'Tests, exams and lessons for every level — with answers',
-  heroTitle: 'Everything you need to revise, sorted by level and subject',
+  heroTitle: 'Algerian tests and exams with answers, from preschool to BAC',
   heroText: 'Tests and exams with full answers for every level, mock papers to prepare for the BEM and BAC, and lesson summaries. Read online or download the PDF for free.',
   searchPlaceholder: 'Search: math exam 4AM term 1…',
   search: 'Search',
