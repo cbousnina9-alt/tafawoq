@@ -64,6 +64,7 @@ export default function FilterableList({ rows, labels, aside }: { rows: Row[]; l
   const [q, setQ] = useState('');
   const [sort, setSort] = useState<'new' | 'old' | 'term'>('term');
   const [page, setPage] = useState(1);
+  const [open, setOpen] = useState(false);
 
   const typeOptions = useMemo(() => Array.from(new Set(rows.map((r) => r.type))), [rows]);
   const termOptions = useMemo(() => Array.from(new Set(rows.map((r) => r.trimester).filter(Boolean) as number[])).sort(), [rows]);
@@ -95,35 +96,41 @@ export default function FilterableList({ rows, labels, aside }: { rows: Row[]; l
     setSort('term');
   };
 
+  const controls = (p: string) => (
+    <>
+          {termOptions.length > 0 && (
+        <fieldset>
+          <legend>{labels.term}</legend>
+          <label className="radio"><input type="radio" name={`term-${p}`} checked={term === 0} onChange={() => setTerm(0)} /> {labels.allTerms}</label>
+          {[1, 2, 3].map((o) => (
+            <label className="radio" key={o}>
+              <input type="radio" name={`term-${p}`} checked={term === o} disabled={!termOptions.includes(o)} onChange={() => setTerm(o)} /> {labels.terms[o]}
+            </label>
+          ))}
+        </fieldset>
+      )}
+      {typeOptions.length > 1 && (
+        <fieldset>
+          <legend>{labels.type}</legend>
+          <label className="radio"><input type="radio" name={`type-${p}`} checked={type === 'all'} onChange={() => setType('all')} /> {labels.all}</label>
+          {typeOptions.map((o) => (
+            <label className="radio" key={o}><input type="radio" name={`type-${p}`} checked={type === o} onChange={() => setType(o)} /> {labels.types[o]}</label>
+          ))}
+        </fieldset>
+      )}
+      <fieldset>
+        <label className="check"><input type="checkbox" checked={sol} onChange={(e) => setSol(e.target.checked)} /> {labels.solOnly}</label>
+      </fieldset>
+      <button type="button" className="reset-btn" onClick={reset}>↻ {labels.reset}</button>
+    </>
+  );
+
   return (
     <div className="sp-layout">
       <aside className="sp-aside">
-        <div className="filter-card">
+        <div className="filter-card desk-filter">
           <h2 className="gold-h">{labels.filterTitle}</h2>
-          {termOptions.length > 0 && (
-            <fieldset>
-              <legend>{labels.term}</legend>
-              <label className="radio"><input type="radio" name="term" checked={term === 0} onChange={() => setTerm(0)} /> {labels.allTerms}</label>
-              {[1, 2, 3].map((o) => (
-                <label className="radio" key={o}>
-                  <input type="radio" name="term" checked={term === o} disabled={!termOptions.includes(o)} onChange={() => setTerm(o)} /> {labels.terms[o]}
-                </label>
-              ))}
-            </fieldset>
-          )}
-          {typeOptions.length > 1 && (
-            <fieldset>
-              <legend>{labels.type}</legend>
-              <label className="radio"><input type="radio" name="type" checked={type === 'all'} onChange={() => setType('all')} /> {labels.all}</label>
-              {typeOptions.map((o) => (
-                <label className="radio" key={o}><input type="radio" name="type" checked={type === o} onChange={() => setType(o)} /> {labels.types[o]}</label>
-              ))}
-            </fieldset>
-          )}
-          <fieldset>
-            <label className="check"><input type="checkbox" checked={sol} onChange={(e) => setSol(e.target.checked)} /> {labels.solOnly}</label>
-          </fieldset>
-          <button type="button" className="reset-btn" onClick={reset}>↻ {labels.reset}</button>
+          {controls('d')}
         </div>
         {aside}
       </aside>
@@ -135,12 +142,20 @@ export default function FilterableList({ rows, labels, aside }: { rows: Row[]; l
             <span className="visually-hidden">{labels.searchPh}</span>
             <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder={labels.searchPh} />
           </label>
+          <div className="sp-row">
+          <button type="button" className="mob-filter-btn" aria-expanded={open} onClick={() => setOpen(!open)}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" /><circle cx="16" cy="6" r="2" /><circle cx="10" cy="12" r="2" /><circle cx="18" cy="18" r="2" /></svg>
+            {labels.filterTitle}
+            <svg className="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden><path d="m6 9 6 6 6-6" /></svg>
+          </button>
           <select value={sort} onChange={(e) => setSort(e.target.value as 'new' | 'old' | 'term')} aria-label="sort">
             <option value="term">{labels.sortTerm}</option>
             <option value="new">{labels.sortNew}</option>
             <option value="old">{labels.sortOld}</option>
           </select>
+          </div>
         </div>
+        {open && <div className="filter-card mob-filter">{controls('m')}</div>}
 
         <h2 className="gold-h" id="available">{labels.available} <small>({shown.length})</small></h2>
 

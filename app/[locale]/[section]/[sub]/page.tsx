@@ -102,7 +102,7 @@ export default async function SubPage({ params }: P) {
             <div className="sp-hero-copy">
               <Breadcrumbs items={[home, { name: stages[lv.stage].name[locale], href: `/${locale}/${lv.stage}` }, { name: lv.name[locale], href: `/${locale}/${lv.id}` }, { name: subName, href: url }]} />
               <Link className="lv-pill" href={`/${locale}/${lv.id}`}><CapIcon /> {lv.name[locale]}</Link>
-              <h1>{s.h1}</h1>
+              <h1>{L(`فروض واختبارات ${subName}`, `Devoirs et examens de ${subName}`, `${subName} tests and exams`)}<span className="h1-lv"> — {lv.name[locale]}</span></h1>
               <p>{L('راجع، تدرّب، وتحقّق من الحل خطوة بخطوة', 'Révise, entraîne-toi et vérifie le corrigé pas à pas', 'Review, practise and check the answers step by step')} · {rows.length} {L('موضوع', 'sujets', 'papers')}</p>
             </div>
             <div className="sp-hero-art"><img src={hero} alt="" width={1096} height={504} fetchPriority="high" /></div>

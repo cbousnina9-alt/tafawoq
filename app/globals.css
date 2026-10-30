@@ -747,3 +747,58 @@ aside .ad, aside .ad-placeholder { min-height: 250px; margin: 0; }
 .rel-sec { padding-inline: 16px; }
 .rc-body b .model { margin-inline-start: 8px; font-size: .72rem; vertical-align: 2px; }
 @media (max-width: 600px) { .rel-card .doc-thumb { display: block; width: 84px; height: 84px; flex: none; } .rel-card .doc-thumb .subj-icon { width: 40px !important; height: 40px !important; } }
+
+/* ---------- صفحة المادة: الهاتف (حسب نموذج المستخدم) ---------- */
+.sp-row { display: contents; }
+.mob-filter-btn, .mob-filter { display: none; }
+.tip-banner { background: linear-gradient(90deg, #fff8e1, #fffbef); border-color: #f6e7b5; }
+@media (max-width: 980px) {
+  .desk-filter { display: none; }
+  .sp-aside { order: 2; }
+  .sp-aside .promo-card { display: flex; }
+  .sp-tools { flex-direction: column; }
+  .sp-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .mob-filter-btn { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: #fff; border-radius: 12px; padding: 12px 14px; font: inherit; font-weight: 700; color: var(--text); cursor: pointer; }
+  .mob-filter-btn > svg:first-child { color: var(--ink); }
+  .mob-filter-btn .chev { margin-inline-start: auto; transition: transform .15s; }
+  .mob-filter-btn[aria-expanded='true'] .chev { transform: rotate(180deg); }
+  .sp-tools select { padding: 12px 14px; min-width: 0; }
+  .mob-filter { display: block; margin-bottom: 18px; }
+  .mob-filter fieldset { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+}
+@media (max-width: 860px) {
+  .sp-hero-in { position: relative; display: block; min-height: 220px; }
+  .sp-hero-art { display: block; position: absolute; inset: 0 auto 0 0; width: 58%; margin: 0; z-index: 0; }
+  .sp-hero-art img { object-position: left center; -webkit-mask-image: linear-gradient(to left, transparent 0, #000 45%); mask-image: linear-gradient(to left, transparent 0, #000 45%); opacity: .95; }
+  .sp-hero-copy { position: relative; z-index: 1; padding-inline-start: 0; }
+  .sp-hero-copy h1, .sp-hero-copy .lv-pill { max-width: 62%; }
+  .sp-hero-copy h1 { font-size: 1.55rem; }
+  .sp-hero-copy p { font-size: .95rem; }
+  .subj-tabs { display: grid; grid-template-columns: 1fr 1fr; overflow: visible; gap: 10px; }
+  .subj-tabs a { justify-content: center; padding: 10px; }
+}
+@media (max-width: 600px) {
+  .doc-card { flex-direction: row; gap: 12px; }
+  .doc-thumb { display: block; width: 92px; height: 104px; flex: none; }
+  .doc-thumb .paper { inset: 12px 16px 18px 20px; padding-top: 16px; gap: 5px; }
+  .doc-thumb .subj-icon { width: 44px !important; height: 44px !important; }
+  .doc-top h3 { font-size: 1rem; }
+  .doc-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .doc-actions .act.primary { grid-column: 1 / -1; }
+  .doc-actions .act:only-child, .doc-actions .act.primary:nth-last-child(2) ~ .act { grid-column: auto; }
+  .pager button:first-child, .pager button:last-child { font-size: 0; min-width: 42px; }
+  .pager button:first-child::before { content: '›'; font-size: 1.2rem; }
+  .pager button:last-child::after { content: '‹'; font-size: 1.2rem; }
+  [dir='ltr'] .pager button:first-child::before { content: '‹'; }
+  [dir='ltr'] .pager button:last-child::after { content: '›'; }
+  .promo-card { flex-direction: column; }
+}
+@media (max-width: 860px) {
+  .h1-lv { display: none; }
+  .mob-filter-btn { white-space: nowrap; font-size: .9rem; padding: 12px 10px; }
+  .sp-hero-copy .crumbs { max-width: 70%; }
+}
+@media (max-width: 600px) {
+  .doc-top { flex-wrap: wrap; gap: 4px; }
+  .doc-badges { order: -1; width: 100%; justify-content: space-between; }
+}
