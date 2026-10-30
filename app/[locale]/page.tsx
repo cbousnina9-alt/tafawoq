@@ -96,10 +96,10 @@ export default async function Home({ params }: P) {
                 <div className="stage-years">
                   {stages[s].levels.filter((id) => !levelById(id)!.exam).map((id) => {
                     const lv = levelById(id)!;
-                    const m = lv.short[locale].match(/^(\d+)/);
+                    const full = locale === 'ar' ? lv.name.ar.replace(/^السنة\s+/, '').replace(/^القسم\s+/, '') : lv.short[locale];
                     return (
-                      <Link key={id} href={`/${locale}/${id}`} title={`${lv.name[locale]} — ${countOf(id)} ${L('موضوع', 'sujets', 'papers')}`} className={m ? '' : 'word'}>
-                        {m ? m[1] : lv.short[locale]}
+                      <Link key={id} href={`/${locale}/${id}`} title={`${lv.name[locale]} — ${countOf(id)} ${L('موضوع', 'sujets', 'papers')}`}>
+                        {full}
                       </Link>
                     );
                   })}
