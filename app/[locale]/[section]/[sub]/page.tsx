@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     title: a.title,
     description: a.description,
     alternates: alternates(locale, `/${section}/${sub}`, [a.lang]),
-    openGraph: { type: 'article', title: a.title, description: a.description, publishedTime: a.date, modifiedTime: a.updated || a.date },
+    openGraph: { type: 'article', title: a.title, description: a.description, publishedTime: a.date, modifiedTime: a.updated || a.date , siteName: 'تفوّق', images: [{ url: '/og-tafawoq.png', width: 1200, height: 630 }] },
   };
 }
 

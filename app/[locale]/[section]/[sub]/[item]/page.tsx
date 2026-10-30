@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     description: resourceDescription(locale, r),
     alternates: alternates(locale, `/${section}/${sub}/${item}`),
     robots: r.sample ? { index: false, follow: true } : undefined,
-    openGraph: { title, description: resourceDescription(locale, r), type: 'article' },
+    openGraph: { title, description: resourceDescription(locale, r), type: 'article' , siteName: 'تفوّق', images: [{ url: '/og-tafawoq.png', width: 1200, height: 630 }] },
   };
 }
 
