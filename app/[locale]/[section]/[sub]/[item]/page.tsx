@@ -49,25 +49,25 @@ export default async function ResourcePage({ params }: P) {
   const subName = subjects[r.subject].name[locale];
   const short = shortTitle(locale, r);
   const relRows = toRows(locale, related.slice(0, 3));
-  const paperNode = rendered ? (
-    <article className="exam-paper" lang="ar" dir="rtl">
-      {r.sample && <span className="demo-tag sample-pill">{d.sample}</span>}
-      <h2 className="exam-title">{rendered.meta.title}</h2>
-      <p className="exam-sub">{lv.name.ar}</p>
-      {rendered.meta.duration && <p className="exam-duration">{locale === 'ar' ? 'المدة' : locale === 'fr' ? 'Durée' : 'Duration'}: {rendered.meta.duration}</p>}
-      <div dangerouslySetInnerHTML={{ __html: rendered.paper }} />
-    </article>
-  ) : (
-    <PdfViewer src={r.file} title={title} labels={{ loading: d.loadingPreview, error: d.previewHelp, more: d.morePages }} />
-  );
-  const solutionNode = rendered?.solution ? (
-    <article className="exam-paper solution-paper" lang="ar" dir="rtl">
-      <h2 className="exam-title">{L('الإجابة النموذجية وسلم التنقيط', 'Corrigé type et barème', 'Model answers and marking scheme')}</h2>
-      <div dangerouslySetInnerHTML={{ __html: rendered.solution }} />
-    </article>
-  ) : r.solution ? (
-    <PdfViewer src={r.solution} title={title} labels={{ loading: d.loadingPreview, error: d.previewHelp, more: d.morePages }} />
-  ) : undefined;
+  const pv = { loading: d.loadingPreview, error: d.previewHelp, more: d.morePages };
+  const paperNode = <PdfViewer src={r.file} title={title} labels={pv} all />;
+  const solutionNode = r.solution ? <PdfViewer src={r.solution} title={title} labels={pv} all /> : undefined;
+  const textNode = rendered ? (
+    <details className="text-version">
+      <summary>{L('نص الموضوع (نسخة نصية)', 'Version texte du sujet', 'Text version')}</summary>
+      <article className="exam-paper" lang="ar" dir="rtl">
+        <h2 className="exam-title">{rendered.meta.title}</h2>
+        {rendered.meta.duration && <p className="exam-duration">{locale === 'ar' ? 'المدة' : locale === 'fr' ? 'Durée' : 'Duration'}: {rendered.meta.duration}</p>}
+        <div dangerouslySetInnerHTML={{ __html: rendered.paper }} />
+        {rendered.solution && (
+          <>
+            <h2 className="exam-title">{L('الإجابة النموذجية', 'Corrigé', 'Answers')}</h2>
+            <div dangerouslySetInnerHTML={{ __html: rendered.solution }} />
+          </>
+        )}
+      </article>
+    </details>
+  ) : null;
   const info: [ReactNode, string, string][] = [
     [<SubjectIcon key="s" subject={r.subject} size={30} />, L('المادة', 'Matière', 'Subject'), subName],
     [<span key="l" className="ii-ic"><CapIcon /></span>, L('المستوى', 'Niveau', 'Level'), lv.name[locale]],
@@ -145,7 +145,7 @@ export default async function ResourcePage({ params }: P) {
             <summary>ⓘ {L('معلومات الموضوع', 'Infos du sujet', 'Paper details')}</summary>
             {infoCard}
           </details>
-          <ItemViewer paper={paperNode} solution={solutionNode} labels={{ paper: L('الموضوع', 'Sujet', 'Paper'), solution: L('الحل النموذجي', 'Corrigé', 'Answers'), fullscreen: L('ملء الشاشة', 'Plein écran', 'Full screen'), noSolution: L('الحل غير متوفر', 'Pas de corrigé', 'No answers') }} />
+          <ItemViewer sheets paper={paperNode} solution={solutionNode} labels={{ paper: L('الموضوع', 'Sujet', 'Paper'), solution: L('الحل النموذجي', 'Corrigé', 'Answers'), fullscreen: L('ملء الشاشة', 'Plein écran', 'Full screen'), noSolution: L('الحل غير متوفر', 'Pas de corrigé', 'No answers') }} />
           {solutionNode && (
             <div className="ready-banner">
               <span className="ok-dot"><CheckIcon /></span>
@@ -157,6 +157,7 @@ export default async function ResourcePage({ params }: P) {
             <p className="sol-dl"><a href={r.solution} download><DownloadIcon /> {d.downloadSolution}</a></p>
           )}
           <AdSlot pos="afterDownload" format="horizontal" />
+          {textNode}
           <p className="it-desc">{resourceDescription(locale, r)}</p>
         </div>
       </div>

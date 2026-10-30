@@ -60,13 +60,30 @@ function page({ meta, level, subject, type, body, solution }) {
   const L = examLabel(meta, level, type);
   const subj = subjectNames[subject] || subject;
   const what = { exam: 'اختبار في مادة', test: 'فرض في مادة', mock: 'اختبار في مادة', official: 'اختبار في مادة' }[type] || 'المادة';
+  const lvName = levelNames[level] || level;
+  const t = TERM[meta.term] ? ` الفصل ${TERM[meta.term]}` : '';
+  const examName = level === 'bac' ? 'شهادة البكالوريا' : level === 'bem' ? 'شهادة التعليم المتوسط' : '';
+  let kind = { exam: `اختبار${t}`, test: `فرض${t}`, mock: `موضوع تجريبي ل${examName}`, official: `امتحان ${examName}` }[type] || meta.title;
+  if (solution) kind = 'الإجابة النموذجية وسلم التنقيط';
+  const left = ['mock', 'official'].includes(type) ? `دورة: ${SESSION}${type === 'mock' ? ' (تجريبية)' : ''}` : `السنة الدراسية: ${SCHOOL_YEAR}`;
   const head = `
+<div class="frame"></div>
+<div class="side" dir="ltr">${SITE_URL || 'tafawoq.site'}</div>
+<div class="pfoot"><span>${solution ? 'تصحيح ' : ''}${kind === meta.title ? '' : kind + ' — '}${subj}</span><span>${lvName}</span><span dir="ltr">${SITE_URL || 'tafawoq.site'}</span></div>
 <header class="head">
-  <div class="brand"><span class="mark"></span>${SITE}${SITE_URL ? ` <small dir="ltr">${SITE_URL}</small>` : ''}</div>
-  <div class="row"><b>${L.right}</b><b>${L.left}</b></div>
-  ${L.sub ? `<div class="row"><span>${L.sub}</span><span></span></div>` : ''}
-  <div class="row subj"><b>${solution ? 'الإجابة النموذجية وسلم التنقيط — ' : ''}${what}: ${subj}</b><b>${solution ? '' : meta.duration ? `المدة: ${meta.duration}` : ''}</b></div>
-  ${['lesson', 'summary', 'exercises'].includes(type) || !['exam', 'test', 'mock', 'official'].includes(type) ? `<h1>${meta.title}</h1>` : ''}
+  <div class="banner">
+    <div class="b-main">
+      <div class="b-kind">${kind}</div>
+      <div class="b-sub">${solution ? `${what}: ${subj}` : `${what}: ${subj}${L.sub && ['mock', 'official'].includes(type) ? ` — ${L.sub}` : ''}`}</div>
+    </div>
+    <div class="b-side">
+      <div class="brand"><span class="mark"></span>${SITE}</div>
+      ${!solution && meta.duration ? `<div class="dur">المدة: ${meta.duration}</div>` : ''}
+    </div>
+    <div class="stripe"></div>
+  </div>
+  <div class="meta-row"><span><b>المستوى:</b> ${lvName}</span><span>${left}</span></div>
+  ${(['lesson', 'summary', 'exercises'].includes(type) || !['exam', 'test', 'mock', 'official'].includes(type)) && kind !== meta.title ? `<h1>${meta.title}</h1>` : ''}
 </header>`;
   return `<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><style>
 @font-face{font-family:Plex;font-weight:400;src:url(file://${fontFile('ibm-plex-sans-arabic', 400)})}
@@ -74,21 +91,31 @@ function page({ meta, level, subject, type, body, solution }) {
 @font-face{font-family:Plex;font-weight:700;src:url(file://${fontFile('ibm-plex-sans-arabic', 700)})}
 @font-face{font-family:Naskh;font-weight:700;src:url(file://${fontFile('noto-naskh-arabic', 700)})}
 ${katexCss}
-@page{size:A4;margin:14mm 14mm 16mm}
+@page{size:A4;margin:10mm 10mm 14mm}
 *{box-sizing:border-box}
 body{font-family:Plex,sans-serif;font-size:11.5pt;line-height:1.75;color:#1f2428;margin:0}
-.head{border-bottom:3pt double #1f2428;padding:0 0 5pt;margin-bottom:12pt;font-family:Naskh;font-size:12.5pt;line-height:1.7}
-.brand{font-family:Naskh;font-size:14pt;color:#1f2428;display:flex;align-items:baseline;justify-content:center;gap:7pt;margin-bottom:2pt}
-.brand small{font-family:Plex;font-size:8.5pt;color:#5b656d}
-.head .row{display:flex;justify-content:space-between;gap:12pt}
-.head .subj{border-top:0.8pt solid #1f2428;margin-top:3pt;padding-top:3pt}
-.mark{width:8pt;height:8pt;background:#e0b92c;transform:rotate(45deg);display:inline-block}
+.frame{position:fixed;top:0;bottom:0;left:0;right:0;border:1.1pt solid #24314f;border-radius:2.5mm;pointer-events:none}
+.side{position:fixed;left:1.2mm;top:150mm;transform:rotate(-90deg);transform-origin:left top;font-size:7.5pt;color:#8a94a6;letter-spacing:.5pt}
+.pfoot{position:fixed;bottom:2mm;left:6mm;right:6mm;display:flex;justify-content:space-between;gap:8pt;font-size:7.5pt;color:#5b6577;border-top:0.6pt solid #24314f;padding-top:1.5mm}
+.wrapc{padding:6mm 7mm 13mm 9mm;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.head{margin-bottom:10pt}
+.banner{position:relative;display:flex;align-items:stretch;justify-content:space-between;border:1.2pt solid #24314f;border-radius:3mm;overflow:hidden;background:linear-gradient(90deg,#f4f7ff,#fff 60%)}
+.b-main{padding:6pt 12pt 6pt 8pt;flex:1}
+.b-kind{font-family:Naskh;font-size:19pt;font-weight:700;color:#1a2a5c;line-height:1.35}
+.b-sub{font-size:10.5pt;color:#24314f;font-weight:600}
+.b-side{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:3pt;padding:6pt 14pt 6pt 30pt;font-size:10pt;position:relative;z-index:1}
+.b-side .dur{background:#24314f;color:#fff;font-weight:700;border-radius:2mm;padding:1pt 8pt}
+.stripe{position:absolute;left:0;top:0;bottom:0;width:26pt;background:repeating-linear-gradient(115deg,#2251e3 0 5pt,transparent 5pt 9pt);opacity:.9}
+.brand{font-family:Naskh;font-size:13pt;color:#1f2428;display:flex;align-items:center;gap:5pt}
+.mark{width:7pt;height:7pt;background:#e0b92c;transform:rotate(45deg);display:inline-block}
+.meta-row{display:flex;justify-content:space-between;gap:12pt;font-size:10pt;padding:4pt 4pt 0;border-bottom:0.8pt solid #24314f;padding-bottom:3pt}
+.meta-row b{color:#1a2a5c}
 .info{width:100%;border-collapse:collapse;font-size:10pt;margin-top:4pt}
 .info td{padding:2pt 0}
 h1{font-family:Naskh;font-size:14pt;text-align:center;margin:6pt 0 0;color:#1d3c91}
-h2{font-family:Naskh;font-size:13pt;margin:12pt 0 3pt;text-decoration:underline;text-underline-offset:3pt;break-after:avoid}
+h2{font-family:Naskh;font-size:12.5pt;margin:12pt 0 4pt;break-after:avoid;display:inline-block;background:#e8eefc;color:#1a2a5c;border-radius:2.5pt;padding:0 10pt;border-inline-start:3pt solid #2251e3}
 h2 .pts{font-weight:700}
-h2 .pts::before{content:': '}
+h2 .pts{font-size:10pt;color:#3a4a75;margin-inline-start:4pt}
 [dir=ltr] h2{font-family:Plex,sans-serif}
 .text-box{border:1pt solid #c9d3cd;border-radius:5pt;padding:8pt 12pt;margin:4pt 0 10pt;background:#fbfcfb;font-family:Naskh,serif;font-size:13pt;line-height:2}
 .text-box[dir=ltr]{font-family:Georgia,'Times New Roman',serif;font-size:12pt;line-height:1.7}
@@ -101,7 +128,7 @@ li{margin-bottom:3pt}
 .m{unicode-bidi:isolate;white-space:nowrap}
 .katex{font-size:1.08em}
 .math-block{margin:4pt 0;text-align:center}
-.part{font-family:Naskh;font-size:13pt;text-align:center;margin:14pt 0 2pt;color:#1e4636}
+.part{font-family:Naskh;font-size:13pt;text-align:center;margin:14pt 0 2pt;color:#1a2a5c;border-top:0.6pt dashed #9aa6c4;border-bottom:0.6pt dashed #9aa6c4;padding:1pt 0;break-after:avoid}
 .fig{float:left;margin:0 12pt 6pt 0}
 .fig svg{display:block;overflow:visible}
 .fig svg text{direction:ltr;unicode-bidi:plaintext}
@@ -111,7 +138,7 @@ li{margin-bottom:3pt}
 table.grid{border-collapse:collapse;margin:4pt auto}
 table.grid td,table.grid th{border:0.8pt solid #888;padding:2pt 8pt;text-align:center}
 .foot{position:fixed;bottom:-10mm;left:0;right:0;text-align:center;font-size:8.5pt;color:#7b858c}
-.good{text-align:center;font-family:Naskh;font-size:12pt;margin-top:16pt;color:#1e4636}
+.good{text-align:center;font-family:Naskh;font-size:13pt;margin-top:18pt;color:#1a2a5c}
 section{break-inside:auto}
 .ex{break-inside:avoid}
 .ex:has(table.bareme){break-inside:auto}
@@ -122,7 +149,7 @@ table.bareme td.p,table.bareme td.t{width:13%;text-align:center;white-space:nowr
 table.bareme td.t{width:9%;font-weight:700;font-size:13pt}
 table.bareme td p,table.bareme td ol,table.bareme td ul{margin:0}
 table.bareme tr{break-inside:avoid}
-</style></head><body>${head}<main id="content">${body}</main></body></html>`;
+</style></head><body><div class="wrapc">${head}<main id="content">${body}</main></div></body></html>`;
 }
 
 function* walk(dir) {
@@ -218,7 +245,7 @@ for (const file of walk(SRC)) {
       preferCSSPageSize: true,
       displayHeaderFooter: true,
       headerTemplate: '<span></span>',
-      footerTemplate: `<div style="width:100%;text-align:center;font-size:8.5px;color:#555;font-family:sans-serif" dir="rtl">صفحة <span class="pageNumber"></span> من <span class="totalPages"></span> &nbsp;—&nbsp; <span dir="ltr">${SITE_URL || 'Tafawoq'}</span></div>`,
+      footerTemplate: `<div style="width:100%;text-align:center;font-size:8px;color:#555;font-family:sans-serif;padding-top:6px" dir="rtl">صفحة <span class="pageNumber"></span> / <span class="totalPages"></span></div>`,
     });
     fs.unlinkSync(tmp);
     await pg.close();

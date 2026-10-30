@@ -6,7 +6,7 @@ import { readFavs, writeFavs } from './Interactive';
 type VLabels = { paper: string; solution: string; fullscreen: string; noSolution: string };
 
 /** تبويبا «الموضوع / الحل النموذجي» مع تكبير وتصغير وملء الشاشة */
-export function ItemViewer({ paper, solution, labels }: { paper: ReactNode; solution?: ReactNode; labels: VLabels }) {
+export function ItemViewer({ paper, solution, labels, sheets }: { paper: ReactNode; solution?: ReactNode; labels: VLabels; sheets?: boolean }) {
   const [tab, setTab] = useState<'paper' | 'solution'>('paper');
   const [zoom, setZoom] = useState(100);
   const box = useRef<HTMLDivElement>(null);
@@ -51,9 +51,9 @@ export function ItemViewer({ paper, solution, labels }: { paper: ReactNode; solu
         </div>
       </div>
       <div className="iv-stage">
-        <div className="iv-page" style={{ zoom: zoom / 100 }}>
+        <div className={`iv-page${sheets ? ' sheets' : ''}`} style={{ zoom: zoom / 100 }}>
           <div hidden={tab !== 'paper'}>{paper}</div>
-          {solution && <div hidden={tab !== 'solution'}>{solution}</div>}
+          {solution && tab === 'solution' && <div>{solution}</div>}
         </div>
       </div>
     </div>

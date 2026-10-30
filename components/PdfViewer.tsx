@@ -2,11 +2,11 @@
 import { useEffect, useRef, useState } from 'react';
 
 /** يعرض صفحات PDF كصور داخل الصفحة — يعمل على كل الهواتف */
-export default function PdfViewer({ src, title, labels }: { src: string; title: string; labels: { loading: string; error: string; more: string } }) {
+export default function PdfViewer({ src, title, labels, all }: { src: string; title: string; labels: { loading: string; error: string; more: string }; all?: boolean }) {
   const box = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<'loading' | 'ok' | 'error'>('loading');
   const [total, setTotal] = useState(0);
-  const [limit, setLimit] = useState(3);
+  const [limit, setLimit] = useState(all ? 99 : 3);
   const docRef = useRef<unknown>(null);
 
   useEffect(() => {
