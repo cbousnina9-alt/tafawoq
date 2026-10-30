@@ -188,7 +188,7 @@ function SubjectGrid({ locale, levelId }: { locale: Locale; levelId: string }) {
         const n = countOf(levelId, s);
         return (
           <Link key={s} href={`/${locale}/${levelId}/${s}`} className={`subj-card${n ? '' : ' empty'}`}>
-            <SubjectIcon subject={s} />
+            <SubjectIcon subject={s} size={104} />
             <span className="subj-txt">
               <span className="subj-name">{subjects[s].name[locale]}</span>
               <span className="count">{n ? `${n} ${d.files}` : (locale === 'ar' ? 'قريبًا' : locale === 'fr' ? 'Bientôt' : 'Soon')}</span>

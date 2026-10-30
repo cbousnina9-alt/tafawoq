@@ -65,8 +65,23 @@ export function subjectColor(s: string) {
   return { fg: x.fg, bg: x.bg };
 }
 
+// أيقونات ثلاثية الأبعاد (public/img/subj)
+const IMG: Record<string, string> = {
+  math: 'math', physics: 'physics', arabic: 'arabic', science: 'science', scientific: 'science', english: 'english', french: 'french',
+  islamic: 'islamic', 'history-geo': 'history-geo', history: 'history-geo', geography: 'history-geo', informatics: 'informatics',
+  economics: 'economics', engineering: 'engineering', tamazight: 'tamazight', law: 'law', accounting: 'accounting',
+  german: 'german', spanish: 'spanish', italian: 'italian', philosophy: 'philosophy',
+};
+
 export default function SubjectIcon({ subject, size = 44 }: { subject: string; size?: number }) {
   const x = defs[subject] || fallback;
+  const img = IMG[subject];
+  if (img)
+    return (
+      <span className="subj-icon subj-img" style={{ width: size, height: size }} aria-hidden>
+        <img src={`/img/subj/${img}.webp`} alt="" width={size} height={size} loading="lazy" decoding="async" />
+      </span>
+    );
   return (
     <span className="subj-icon" style={{ width: size, height: size, background: x.bg, color: x.fg }} aria-hidden>
       {x.text ? (

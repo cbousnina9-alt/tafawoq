@@ -826,3 +826,14 @@ aside .ad, aside .ad-placeholder { min-height: 250px; margin: 0; }
   .header-tools { gap: 2px; }
   .header-tools .icon-btn { min-width: 34px; padding: 0 6px; }
 }
+/* أيقونات المواد ثلاثية الأبعاد */
+.subj-icon.subj-img { background: #fff !important; overflow: hidden; }
+.subj-icon.subj-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.subj-tabs a[aria-current='page'] .subj-icon.subj-img { background: #fff !important; }
+/* بطاقات المواد بأيقونة كبيرة (صفحة المستوى) */
+.subj-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.subj-card { flex-direction: column; text-align: center; gap: 6px; padding: 14px 10px 16px; border-radius: 18px; }
+.subj-card .subj-icon { width: 104px !important; height: 104px !important; border-radius: 20px; }
+.subj-card .subj-txt { align-items: center; }
+.subj-card .subj-name { font-size: 1.05rem; }
+@media (max-width: 520px) { .subj-grid { grid-template-columns: 1fr 1fr; } .subj-card { align-items: center; } .subj-card .subj-icon { width: 92px !important; height: 92px !important; } }
