@@ -1,0 +1,60 @@
+<!-- {"title":"فرض الفصل الأول في الإعلام الآلي (النموذج 2)","duration":"ساعة","term":1,"topics":["المجدول: الدوال MAX و MIN","الدالة SI (IF) للشرط","فرز البيانات","المخطط البياني"]} -->
+
+<section class="paper">
+<div class="ex">
+<h2>التمرين الأول <span class="pts">(06 نقاط)</span></h2>
+<p>صِل كل دالة بوظيفتها:</p>
+<table class="grid" dir="ltr" style="direction:ltr">
+<tr><td>MAX</td><td style="width:25%"></td><td>تحسب المجموع</td></tr>
+<tr><td>MIN</td><td style="width:25%"></td><td>تعطي أكبر قيمة</td></tr>
+<tr><td>SOMME (SUM)</td><td style="width:25%"></td><td>تعطي أصغر قيمة</td></tr>
+</table>
+</div>
+
+<div class="ex">
+<h2>التمرين الثاني <span class="pts">(10 نقاط)</span></h2>
+<p>الجدول التالي يمثل معدلات أربعة تلاميذ:</p>
+<table class="grid" dir="ltr" style="direction:ltr">
+<tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+<tr><th>1</th><td>الاسم</td><td>المعدل</td><td>القرار</td></tr>
+<tr><th>2</th><td>سارة</td><td>15</td><td></td></tr>
+<tr><th>3</th><td>أيوب</td><td>9</td><td></td></tr>
+<tr><th>4</th><td>منال</td><td>12</td><td></td></tr>
+<tr><th>5</th><td>رياض</td><td>8</td><td></td></tr>
+</table>
+<ol>
+<li>اكتب الصيغة التي تعطي أعلى معدل في الخلية $\text{B6}$، وما نتيجتها؟</li>
+<li>نريد أن يظهر في $\text{C2}$ الكلمة <span dir="ltr">Admis</span> (ناجح) إذا كان المعدل أكبر من أو يساوي 10، و<span dir="ltr">Ajourné</span> (راسب) في الحالة الأخرى. اكتب الصيغة.</li>
+<li>ما القرار الذي يظهر لكل من أيوب ومنال؟</li>
+<li>كيف نرتّب التلاميذ من أعلى معدل إلى أدناه؟</li>
+</ol>
+</div>
+
+<div class="ex">
+<h2>التمرين الثالث <span class="pts">(04 نقاط)</span></h2>
+<p>أراد الأستاذ تمثيل معدلات التلاميذ بشكل مرئي.</p>
+<ol>
+<li>ماذا يستعمل في المجدول؟</li>
+<li>اذكر نوعين من المخططات البيانية.</li>
+</ol>
+</div>
+</section>
+
+<section class="solution">
+<div class="ex" data-total="6">
+<h2>التمرين الأول</h2>
+<p data-pts="3×2">MAX ← أكبر قيمة ؛ MIN ← أصغر قيمة ؛ SOMME ← المجموع.</p>
+</div>
+<div class="ex" data-total="10">
+<h2>التمرين الثاني</h2>
+<p data-pts="3">1) $\texttt{=MAX(B2:B5)}$ ، والنتيجة $15$.</p>
+<p data-pts="3">2) $\texttt{=SI(B2>=10;"Admis";"Ajourné")}$</p>
+<p data-pts="2×1">3) أيوب: Ajourné (راسب) ؛ منال: Admis (ناجح).</p>
+<p data-pts="2">4) نحدّد الجدول ثم نستعمل الأمر «فرز» (Trier) حسب عمود المعدل ترتيبًا تنازليًا.</p>
+</div>
+<div class="ex" data-total="4">
+<h2>التمرين الثالث</h2>
+<p data-pts="2">1) يُدرج مخططًا بيانيًا (Graphique) انطلاقًا من البيانات المحددة.</p>
+<p data-pts="2×1">2) مخطط بالأعمدة ، مخطط دائري (قطاعات) ، مخطط خطي (يقبل نوعان).</p>
+</div>
+</section>
