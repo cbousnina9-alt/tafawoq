@@ -4,7 +4,7 @@ import { abs } from '@/lib/site';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: '*', allow: '/', disallow: ['/*/search', '/*/favorites', '/api/', '/admin/'] }],
+    rules: [{ userAgent: '*', allow: '/', disallow: ['/*/search', '/*/favorites', '/api/', '/admin/', '/inbox/'] }],
     sitemap: abs('/sitemap.xml'),
   };
 }

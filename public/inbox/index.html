@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>صندوق المواضيع — تفوّق</title>
+<style>
+  :root { --ink:#2251e3; --deep:#1a3fb8; --gold:#f6c21c; --bg:#f3f5f9; --line:#e2e6ee; --text:#1a2233; --muted:#5c6577; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: 'IBM Plex Sans Arabic', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif; }
+  header { background: var(--ink); color: #fff; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  header h1 { margin: 0; font-size: 1.15rem; }
+  header button { background: rgba(255,255,255,.15); color: #fff; border: 0; border-radius: 999px; padding: 6px 12px; font: inherit; cursor: pointer; }
+  main { max-width: 860px; margin: 0 auto; padding: 16px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin-bottom: 14px; }
+  .login { max-width: 380px; margin: 40px auto; display: grid; gap: 10px; }
+  input { font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; width: 100%; }
+  .btn { font: inherit; font-weight: 700; border: 0; border-radius: 10px; padding: 10px 14px; background: var(--ink); color: #fff; cursor: pointer; text-decoration: none; display: inline-block; }
+  .btn.ghost { background: #eef2ff; color: var(--deep); }
+  .btn.danger { background: #fdecec; color: #a4231a; }
+  .btn.danger.sure { background: #c62828; color: #fff; }
+  .msg { color: #a4231a; font-weight: 600; min-height: 1.2em; margin: 0; }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .count { color: var(--muted); }
+  .item h2 { margin: 0 0 4px; font-size: 1.05rem; color: var(--deep); }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .chip { background: #f3f6ff; border: 1px solid #dfe6fb; border-radius: 999px; padding: 3px 10px; font-size: .85rem; }
+  .chip.sol { background: #e7f6ec; border-color: #bfe5cb; color: #16803c; }
+  .note { background: #fffbea; border-inline-start: 3px solid var(--gold); padding: 8px 10px; border-radius: 8px; margin: 8px 0; white-space: pre-wrap; }
+  .who { font-size: .9rem; color: var(--muted); }
+  .files { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin: 10px 0; }
+  .files a { display: block; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); background: #fafbff; }
+  .files img { width: 100%; height: 160px; object-fit: cover; display: block; }
+  .files .pdf { height: 160px; display: grid; place-items: center; font-size: 2.2rem; }
+  .files span { display: block; padding: 6px 8px; font-size: .78rem; direction: ltr; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
+  a.link { color: var(--ink); word-break: break-all; }
+</style>
+</head>
+<body>
+<header>
+  <h1>📥 صندوق المواضيع الواردة</h1>
+  <button id="logout" hidden>خروج</button>
+</header>
+<main id="app"><p class="empty">جارٍ التحميل…</p></main>
+
+<script>
+const LEVELS = { '0ap':'التحضيري','1ap':'1 ابتدائي','2ap':'2 ابتدائي','3ap':'3 ابتدائي','4ap':'4 ابتدائي','5ap':'5 ابتدائي','1am':'1 متوسط','2am':'2 متوسط','3am':'3 متوسط','4am':'4 متوسط','bem':'BEM','1as':'1 ثانوي','2as':'2 ثانوي','3as':'3 ثانوي','bac':'BAC' };
+const SUBJ = { arabic:'العربية', math:'الرياضيات', french:'الفرنسية', english:'الإنجليزية', islamic:'الإسلامية', civic:'المدنية', scientific:'التربية العلمية', history:'التاريخ', geography:'الجغرافيا', 'history-geo':'التاريخ والجغرافيا', science:'العلوم الطبيعية', physics:'الفيزياء', tamazight:'الأمازيغية', informatics:'الإعلام الآلي', philosophy:'الفلسفة', economics:'الاقتصاد', accounting:'المحاسبة', law:'القانون', engineering:'التكنولوجيا', german:'الألمانية', spanish:'الإسبانية', italian:'الإيطالية' };
+const TYPES = { test:'فرض', exam:'اختبار', exercises:'تمارين', lesson:'درس / ملخص', official:'موضوع رسمي' };
+const app = document.getElementById('app');
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+const kb = (n) => n > 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB';
+
+function loginView(msg = '') {
+  document.getElementById('logout').hidden = true;
+  app.innerHTML = `<form class="card login" id="lf">
+    <b>أدخل كلمة سر الصندوق</b>
+    <input type="password" id="key" autocomplete="current-password" required>
+    <p class="msg">${esc(msg)}</p>
+    <button class="btn" type="submit">دخول</button>
+  </form>`;
+  document.getElementById('lf').onsubmit = async (e) => {
+    e.preventDefault();
+    const r = await fetch('/api/inbox', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'login', key: document.getElementById('key').value }) });
+    if (r.ok) load(); else loginView('كلمة السر غير صحيحة.');
+  };
+}
+
+async function load() {
+  const r = await fetch('/api/inbox', { cache: 'no-store' });
+  if (r.status === 401) return loginView();
+  if (r.status === 503) { app.innerHTML = '<p class="card empty">الصندوق غير مفعّل بعد: يجب ربط حاوية R2 باسم INBOX وإضافة المتغير INBOX_KEY في إعدادات Cloudflare.</p>'; return; }
+  const { items = [] } = await r.json();
+  document.getElementById('logout').hidden = false;
+  if (!items.length) { app.innerHTML = '<p class="card empty">لا توجد مواضيع جديدة حاليًا.</p>'; return; }
+  app.innerHTML = `<div class="top"><span class="count">${items.length} موضوع</span><button class="btn ghost" onclick="load()">تحديث</button></div>` +
+    items.map((it) => {
+      const date = new Date(it.received).toLocaleString('ar-DZ', { dateStyle: 'medium', timeStyle: 'short' });
+      const files = (it.stored || []).map((f) => {
+        const u = '/api/inbox?file=' + encodeURIComponent(f.key);
+        const name = f.key.split('/').pop();
+        const isImg = /\.(jpe?g|png|webp|heic|heif)$/i.test(name);
+        return `<a href="${u}" target="_blank" rel="noopener">${isImg ? `<img loading="lazy" src="${u}" alt="">` : '<div class="pdf">📄</div>'}<span>${esc(name)} · ${kb(f.size)}</span></a>`;
+      }).join('');
+      return `<article class="card item" id="i-${esc(it.id)}">
+        <h2>${esc(TYPES[it.type] || it.type || 'موضوع')} — ${esc(SUBJ[it.subject] || it.subject)} · ${esc(LEVELS[it.level] || it.level)}</h2>
+        <div class="who">${esc(date)} · <span dir="ltr">${esc(it.id)}</span></div>
+        <div class="meta">
+          <span class="chip">الفصل ${esc(it.term || '—')}</span>
+          <span class="chip">${esc(it.year || '—')}</span>
+          ${it.wilaya ? `<span class="chip">${esc(it.wilaya)}</span>` : ''}
+          ${it.school ? `<span class="chip">${esc(it.school)}</span>` : ''}
+          ${it.solution === 'نعم' ? '<span class="chip sol">معه الحل</span>' : ''}
+        </div>
+        <div class="who">المرسل: ${esc(it.name || '—')}${it.credit === 'نعم' ? ' (يريد ذكر اسمه)' : ''}${it.email ? ' · <span dir="ltr">' + esc(it.email) + '</span>' : ''}</div>
+        ${it.note ? `<div class="note">${esc(it.note)}</div>` : ''}
+        ${it.link ? `<p>رابط: <a class="link" href="${esc(it.link)}" target="_blank" rel="noopener nofollow">${esc(it.link)}</a></p>` : ''}
+        <div class="files">${files}</div>
+        <div class="actions"><button class="btn danger" data-del="${esc(it.id)}">حذف بعد النشر</button></div>
+      </article>`;
+    }).join('');
+  app.querySelectorAll('[data-del]').forEach((b) => {
+    b.onclick = async () => {
+      if (!b.classList.contains('sure')) { b.classList.add('sure'); b.textContent = 'تأكيد الحذف النهائي'; setTimeout(() => { b.classList.remove('sure'); b.textContent = 'حذف بعد النشر'; }, 4000); return; }
+      b.disabled = true;
+      const r = await fetch('/api/inbox', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'delete', id: b.dataset.del }) });
+      if (r.ok) document.getElementById('i-' + b.dataset.del)?.remove(); else b.disabled = false;
+    };
+  });
+}
+
+document.getElementById('logout').onclick = async () => {
+  await fetch('/api/inbox', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ action: 'logout' }) });
+  loginView();
+};
+load();
+</script>
+</body>
+</html>

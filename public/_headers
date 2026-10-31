@@ -4,3 +4,6 @@
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+/inbox/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
