@@ -7,3 +7,4 @@ public/pdfjs
 tsconfig.tsbuildinfo
 next-env.d.ts
 public/admin/cms
+.wrangler/

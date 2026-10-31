@@ -136,6 +136,11 @@ export default async function ResourcePage({ params }: P) {
               <a className="sol-btn" href="#solution"><EyeIcon /> {L('عرض الحل النموذجي', 'Voir le corrigé', 'Show answers')}</a>
             </div>
           )}
+          <Link className="share-card desk-only" href={`/${locale}/upload`}>
+            <b>{L('عندك موضوع جاء في مؤسستك؟', 'Tu as un sujet de ton établissement ?', 'Have a paper from your school?')}</b>
+            <span>{L('أرسله لنا وننشره مع الحل باسمك.', 'Envoie-le, nous le publions avec ton nom.', 'Send it — we publish it with your name.')}</span>
+            <span className="share-btn">{L('أرسل موضوعًا', 'Envoyer', 'Send')}</span>
+          </Link>
           <AdSlot pos="sidebar" format="rectangle" />
           <Link className="report-btn desk-only" href={`/${locale}/contact`}>⚑ {L('الإبلاغ عن مشكلة', 'Signaler un problème', 'Report a problem')}</Link>
         </aside>

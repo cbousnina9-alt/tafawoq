@@ -92,6 +92,11 @@ export default async function SubPage({ params }: P) {
             <span className="promo-btn">{L('مواضيع', 'Sujets', 'Papers')} {pair.short[locale]} <ArrowIcon /></span>
           </Link>
         )}
+        <Link className="share-card" href={`/${locale}/upload`}>
+          <b>{L(`جاءك فرض في ${subName}؟`, 'Tu as eu un devoir ?', 'Had a test at school?')}</b>
+          <span>{L('صوّره وأرسله لنا، ننشره مع الحل ونذكر اسمك ليستفيد منه زملاؤك في كل الولايات.', 'Envoie-le-nous : nous le publions avec le corrigé.', 'Send it to us: we publish it with answers.')}</span>
+          <span className="share-btn">{L('أرسل موضوعًا', 'Envoyer un sujet', 'Send a paper')}</span>
+        </Link>
         <AdSlot pos="sidebar" format="rectangle" />
       </>
     );
