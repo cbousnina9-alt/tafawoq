@@ -14,8 +14,8 @@ export function LangSwitch({ locale }: { locale: Locale }) {
     <div className="lang-switch" role="navigation" aria-label="language">
       {locales.map((l) => {
         let rest = parts.slice(1);
-        // المقالات موجودة بلغة واحدة: نوجّه إلى صفحة القسم
-        if (l !== locale && rest.length >= 2 && categoryIds.includes(rest[0])) rest = rest.slice(0, 1);
+        // المقالات والمنوعات موجودة بلغة واحدة: نوجّه إلى الصفحة الرئيسية للغة الأخرى
+        if (l !== locale && rest.length >= 1 && (categoryIds.includes(rest[0]) || rest[0] === 'library')) rest = [];
         const href = `/${[l, ...rest].join('/')}`;
         return (
           <a key={l} href={href} hrefLang={l} lang={l} aria-current={l === locale ? 'true' : undefined}>

@@ -52,21 +52,31 @@ export default async function ResourcePage({ params }: P) {
   const pv = { loading: d.loadingPreview, error: d.previewHelp, more: d.morePages };
   const paperNode = <PdfViewer src={r.file} title={title} labels={pv} all />;
   const solutionNode = r.solution ? <PdfViewer src={r.solution} title={title} labels={pv} all /> : undefined;
+  const topics: string[] = rendered?.meta?.topics || [];
+  const topicsNode = topics.length ? (
+    <section className="it-topics">
+      <h2 className="gold-h">{L('ماذا يتضمن هذا الموضوع؟', 'Contenu du sujet', 'What this paper covers')}</h2>
+      <ul>
+        {topics.map((x) => <li key={x}>{x}</li>)}
+      </ul>
+      {rendered?.meta?.duration && <p className="it-dur">{L('المدة المقترحة', 'Durée conseillée', 'Suggested time')}: {rendered.meta.duration}</p>}
+    </section>
+  ) : null;
   const textNode = rendered ? (
-    <details className="text-version">
-      <summary>{L('نص الموضوع (نسخة نصية)', 'Version texte du sujet', 'Text version')}</summary>
+    <section className="text-version">
+      <h2 className="gold-h">{L('نص الموضوع مكتوبًا', 'Le sujet en texte', 'The paper as text')}</h2>
       <article className="exam-paper" lang="ar" dir="rtl">
-        <h2 className="exam-title">{rendered.meta.title}</h2>
+        <h3 className="exam-title">{rendered.meta.title}</h3>
         {rendered.meta.duration && <p className="exam-duration">{locale === 'ar' ? 'المدة' : locale === 'fr' ? 'Durée' : 'Duration'}: {rendered.meta.duration}</p>}
         <div dangerouslySetInnerHTML={{ __html: rendered.paper }} />
         {rendered.solution && (
-          <>
-            <h2 className="exam-title">{L('الإجابة النموذجية', 'Corrigé', 'Answers')}</h2>
+          <details className="text-sol">
+            <summary>{L('الإجابة النموذجية وسلم التنقيط (اضغط للعرض)', 'Corrigé et barème (cliquer pour afficher)', 'Answers and marking scheme (tap to show)')}</summary>
             <div dangerouslySetInnerHTML={{ __html: rendered.solution }} />
-          </>
+          </details>
         )}
       </article>
-    </details>
+    </section>
   ) : null;
   const info: [ReactNode, string, string][] = [
     [<SubjectIcon key="s" subject={r.subject} size={30} />, L('المادة', 'Matière', 'Subject'), subName],
@@ -162,8 +172,9 @@ export default async function ResourcePage({ params }: P) {
             <p className="sol-dl"><a href={r.solution} download><DownloadIcon /> {d.downloadSolution}</a></p>
           )}
           <AdSlot pos="afterDownload" format="horizontal" />
-          {textNode}
           <p className="it-desc">{resourceDescription(locale, r)}</p>
+          {topicsNode}
+          {textNode}
         </div>
       </div>
 

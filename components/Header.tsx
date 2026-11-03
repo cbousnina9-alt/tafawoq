@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { levelById, stages, stageIds } from '@/lib/catalog';
-import { countOf } from '@/lib/content';
+import { articlesOf, countOf } from '@/lib/content';
 import { t } from '@/lib/i18n';
 import { site, type Locale } from '@/lib/site';
 import { LangSwitch, MobileMenu } from './HeaderClient';
@@ -56,14 +56,14 @@ export default function Header({ locale }: { locale: Locale }) {
           </div>
           <Link href={`/${locale}/bem`}>{L('شهادة التعليم المتوسط', 'BEM', 'BEM')}</Link>
           <Link href={`/${locale}/bac`}>{L('البكالوريا', 'BAC', 'BAC')}</Link>
-          <Link href={`/${locale}/library`}>{d.library}</Link>
+          {articlesOf(locale).length > 0 && <Link href={`/${locale}/library`}>{d.library}</Link>}
         </nav>
         <div className="header-tools">
           <Link className="icon-btn" href={`/${locale}/search`} aria-label={d.search}><SearchIcon /></Link>
           <Link className="icon-btn fav-link" href={`/${locale}/favorites`} aria-label={d.favorites}><BookmarkIcon /></Link>
           <LangSwitch locale={locale} />
         </div>
-        <MobileMenu label={d.menu} closeLabel={d.close} groups={groups.map((g) => ({ title: g.title, links: g.links }))} extra={[{ href: `/${locale}/library`, label: d.library }, { href: `/${locale}/upload`, label: d.upload }]} />
+        <MobileMenu label={d.menu} closeLabel={d.close} groups={groups.map((g) => ({ title: g.title, links: g.links }))} extra={[...(articlesOf(locale).length > 0 ? [{ href: `/${locale}/library`, label: d.library }] : []), { href: `/${locale}/upload`, label: d.upload }]} />
       </div>
     </header>
   );

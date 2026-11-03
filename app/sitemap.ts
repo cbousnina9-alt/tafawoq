@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const s of lv.subjects) if (countOf(lv.id, s)) add(`/${lv.id}/${s}`, 0.8, 'daily');
   }
   for (const r of resources) if (!r.sample) add(`/${r.level}/${r.subject}/${r.slug}`, 0.6, 'monthly', new Date(r.added));
-  add('/library', 0.5, 'weekly');
+  add('/library', 0.5, 'weekly', now, locales.filter((l) => articlesOf(l).length > 0));
   for (const c of categoryIds) for (const l of locales) if (articlesOf(l, c).length) add(`/${c}`, 0.5, 'weekly', now, [l]);
   for (const a of articles()) add(`/${a.category}/${a.slug}`, 0.6, 'monthly', new Date(a.updated || a.date), [a.lang]);
   ['/about', '/contact', '/faqs', '/privacy-policy', '/terms', '/upload'].forEach((p) => add(p, 0.3, 'monthly'));

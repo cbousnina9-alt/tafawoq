@@ -7,6 +7,7 @@ import '../globals.css';
 import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
+import AdsScript from '@/components/AdsScript';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { t } from '@/lib/i18n';
@@ -44,9 +45,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         <Header locale={l} />
         <main id="main">{children}</main>
         <Footer locale={l} />
-        {site.adsenseClient && (
-          <Script async strategy="afterInteractive" crossOrigin="anonymous" src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${site.adsenseClient}`} />
-        )}
+        {site.adsenseClient && <AdsScript client={site.adsenseClient} />}
         {site.gaId && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${site.gaId}`} strategy="afterInteractive" />

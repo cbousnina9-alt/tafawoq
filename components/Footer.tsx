@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { categories, levelById } from '@/lib/catalog';
+import { articlesOf } from '@/lib/content';
 import { t } from '@/lib/i18n';
 import { site, type Locale } from '@/lib/site';
 import LogoMark from './Logo';
@@ -28,14 +29,16 @@ export default function Footer({ locale }: { locale: Locale }) {
               ))}
             </ul>
           </div>
-          <div>
-            <h3>{d.library}</h3>
-            <ul>
-              {Object.entries(categories).map(([id, c]) => (
-                <li key={id}><Link href={`/${locale}/${id}`}>{c.name[locale]}</Link></li>
-              ))}
-            </ul>
-          </div>
+          {articlesOf(locale).length > 0 && (
+            <div>
+              <h3>{d.library}</h3>
+              <ul>
+                {Object.entries(categories).filter(([id]) => articlesOf(locale, id).length > 0).map(([id, c]) => (
+                  <li key={id}><Link href={`/${locale}/${id}`}>{c.name[locale]}</Link></li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div>
             <h3>{site.name[locale]}</h3>
             <ul>

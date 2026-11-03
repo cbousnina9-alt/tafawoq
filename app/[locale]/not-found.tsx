@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <section className="board">
+    <section className="board" data-no-ads>
       <div className="wrap page-head" style={{ padding: '60px 16px' }}>
         <h1>الصفحة غير موجودة — Page introuvable</h1>
         <p>ربما تغيّر الرابط أو حُذف الملف. ابدأ من الصفحة الرئيسية أو استعمل البحث.</p>

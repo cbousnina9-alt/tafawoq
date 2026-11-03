@@ -15,8 +15,13 @@ type P = { params: Promise<{ locale: Locale; section: string }> };
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  const sections = [...stageIds, ...levels.map((l) => l.id), 'library', ...categoryIds];
-  return locales.flatMap((locale) => sections.map((section) => ({ locale, section })));
+  // لا نولّد إلا الصفحات التي فيها محتوى فعلي (لا صفحات فارغة أو «قريبًا»)
+  return locales.flatMap((locale) => [
+    ...stageIds,
+    ...levels.filter((l) => countOf(l.id)).map((l) => l.id),
+    ...(articlesOf(locale).length ? ['library'] : []),
+    ...categoryIds.filter((c) => articlesOf(locale, c).length),
+  ].map((section) => ({ locale, section })));
 }
 
 const libraryText = {
@@ -36,10 +41,10 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const s = levelSeo(locale, lv);
     return { title: s.title, description: s.description, alternates: alternates(locale, `/${section}`), robots: countOf(lv.id) ? undefined : { index: false, follow: true } };
   }
-  if (section === 'library') return { title: libraryText[locale].h1, description: libraryText[locale].desc, alternates: alternates(locale, '/library') };
+  if (section === 'library') return { title: libraryText[locale].h1, description: libraryText[locale].desc, alternates: alternates(locale, '/library', locales.filter((x) => articlesOf(x).length > 0)) };
   const c = categories[section];
   const has = articlesOf(locale, section).length > 0;
-  return { title: c.name[locale], description: c.desc[locale], alternates: alternates(locale, `/${section}`), robots: has ? undefined : { index: false, follow: true } };
+  return { title: c.name[locale], description: c.desc[locale], alternates: alternates(locale, `/${section}`, locales.filter((x) => articlesOf(x, section).length > 0)), robots: has ? undefined : { index: false, follow: true } };
 }
 
 export default async function SectionPage({ params }: P) {
@@ -142,8 +147,8 @@ export default async function SectionPage({ params }: P) {
         <div className="wrap">
           <section className="section">
             <div className="subject-grid">
-              {categoryIds.map((c) => (
-                <Link key={c} href={`/${locale}/${c}`} className={articlesOf(locale, c).length ? '' : 'empty'}>
+              {categoryIds.filter((c) => articlesOf(locale, c).length).map((c) => (
+                <Link key={c} href={`/${locale}/${c}`}>
                   {categories[c].name[locale]}
                   <span className="count">{articlesOf(locale, c).length}</span>
                 </Link>
@@ -184,14 +189,14 @@ function SubjectGrid({ locale, levelId }: { locale: Locale; levelId: string }) {
   const d = t(locale);
   return (
     <div className="subj-grid">
-      {[...lv.subjects].sort((a, b) => countOf(levelId, b) - countOf(levelId, a)).map((s) => {
+      {lv.subjects.filter((s) => countOf(levelId, s) > 0).sort((a, b) => countOf(levelId, b) - countOf(levelId, a)).map((s) => {
         const n = countOf(levelId, s);
         return (
-          <Link key={s} href={`/${locale}/${levelId}/${s}`} className={`subj-card${n ? '' : ' empty'}`}>
+          <Link key={s} href={`/${locale}/${levelId}/${s}`} className="subj-card">
             <SubjectIcon subject={s} size={104} />
             <span className="subj-txt">
               <span className="subj-name">{subjects[s].name[locale]}</span>
-              <span className="count">{n ? `${n} ${d.files}` : (locale === 'ar' ? 'قريبًا' : locale === 'fr' ? 'Bientôt' : 'Soon')}</span>
+              <span className="count">{`${n} ${d.files}`}</span>
             </span>
           </Link>
         );

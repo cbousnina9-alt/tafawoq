@@ -17,7 +17,7 @@ type P = { params: Promise<{ locale: Locale; section: string; sub: string }> };
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  const subjectPages = locales.flatMap((locale) => levels.flatMap((lv) => lv.subjects.map((sub) => ({ locale, section: lv.id, sub }))));
+  const subjectPages = locales.flatMap((locale) => levels.flatMap((lv) => lv.subjects.filter((sub) => resourcesOf(lv.id, sub).length > 0).map((sub) => ({ locale, section: lv.id, sub }))));
   const articlePages = articles().map((a) => ({ locale: a.lang, section: a.category, sub: a.slug }));
   return [...subjectPages, ...articlePages];
 }
@@ -85,7 +85,7 @@ export default async function SubPage({ params }: P) {
     const hero = sub === 'math' ? '/img/home/subj-math.webp' : '/img/home/hero.webp';
     const asideNode = (
       <>
-        {pair && pair.subjects.includes(sub) && (
+        {pair && pair.subjects.includes(sub) && resourcesOf(pair.id, sub).length > 0 && (
           <Link className="promo-card" href={`/${locale}/${pair.id}/${sub}`}>
             <b>{lv.examFor ? L(`تستعد ل${pair.name.ar}؟`, `Tu prépares le ${pair.short.fr} ?`, `Preparing for the ${pair.short.en}?`) : L(`راجع ${subName} للسنة النهائية`, 'Révise l’année finale', 'Review the final year')}</b>
             <span>{L(`اكتشف جميع مواضيع ${subName} ل${pair.name.ar} مع الحلول النموذجية.`, `Tous les sujets de ${subName} avec corrigés.`, `All ${subName} papers with answers.`)}</span>
@@ -114,7 +114,7 @@ export default async function SubPage({ params }: P) {
           </div>
           <div className="wrap">
             <nav className="subj-tabs" aria-label={d.otherSubjects}>
-              {lv.subjects.map((x) => (
+              {lv.subjects.filter((x) => resourcesOf(lv.id, x).length > 0).map((x) => (
                 <Link key={x} href={`/${locale}/${lv.id}/${x}`} aria-current={x === sub ? 'page' : undefined}>
                   <SubjectIcon subject={x} size={34} />
                   <span>{subjects[x].name[locale]}</span>

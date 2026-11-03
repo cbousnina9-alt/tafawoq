@@ -1,9 +1,9 @@
 import type { Locale } from './site';
 
 const ar = {
-  tagline: 'فروض، اختبارات ودروس لكل المستويات — مع الحلول',
+  tagline: 'فروض واختبارات لكل المستويات — مع الحلول',
   heroTitle: 'فروض واختبارات بالحل، من التحضيري إلى البكالوريا',
-  heroText: 'فروض واختبارات مع الحل المفصل لكل المستويات، مواضيع تجريبية للتحضير لـ BEM و BAC، وملخصات دروس. اقرأ الموضوع مباشرة على الصفحة أو حمّله PDF مجانًا.',
+  heroText: 'فروض واختبارات مع الحل المفصل لكل المستويات، ومواضيع تجريبية للتحضير لـ BEM و BAC. اقرأ الموضوع مباشرة على الصفحة أو حمّله PDF مجانًا.',
   searchPlaceholder: 'ابحث: اختبار رياضيات 4 متوسط الفصل الأول…',
   search: 'بحث',
   chooseLevel: 'اختر مستواك',
@@ -44,7 +44,7 @@ const ar = {
   year: 'سنة',
   type: 'النوع',
   term: 'الفصل',
-  footerAbout: 'منصة جزائرية مجانية للدعم المدرسي، تجمع الفروض والاختبارات والدروس لكل الأطوار وفق المنهاج الوطني.',
+  footerAbout: 'منصة جزائرية مجانية للدعم المدرسي، تجمع الفروض والاختبارات مع الحلول لكل الأطوار وفق المنهاج الوطني.',
   rights: 'جميع الحقوق محفوظة',
   menu: 'القائمة',
   close: 'إغلاق',
@@ -58,9 +58,9 @@ const ar = {
 export type Dict = typeof ar;
 
 const fr: Dict = {
-  tagline: 'Devoirs, examens et cours pour tous les niveaux — avec corrigés',
+  tagline: 'Devoirs et examens pour tous les niveaux — avec corrigés',
   heroTitle: 'Devoirs et examens corrigés, du préscolaire au BAC',
-  heroText: 'Devoirs et examens corrigés pour tous les niveaux, sujets types pour préparer le BEM et le BAC, et résumés de cours. Lisez le sujet en ligne ou téléchargez-le en PDF.',
+  heroText: 'Devoirs et examens corrigés pour tous les niveaux, et sujets types pour préparer le BEM et le BAC. Lisez le sujet en ligne ou téléchargez-le en PDF.',
   searchPlaceholder: 'Rechercher : examen maths 4AM 1er trimestre…',
   search: 'Rechercher',
   chooseLevel: 'Choisissez votre niveau',
@@ -101,7 +101,7 @@ const fr: Dict = {
   year: 'Année',
   type: 'Type',
   term: 'Trimestre',
-  footerAbout: 'Plateforme algérienne gratuite de soutien scolaire : devoirs, examens et cours pour tous les cycles, conformes au programme national.',
+  footerAbout: 'Plateforme algérienne gratuite de soutien scolaire : devoirs et examens corrigés pour tous les cycles, conformes au programme national.',
   rights: 'Tous droits réservés',
   menu: 'Menu',
   close: 'Fermer',
@@ -113,9 +113,9 @@ const fr: Dict = {
 };
 
 const en: Dict = {
-  tagline: 'Tests, exams and lessons for every level — with answers',
+  tagline: 'Tests and exams for every level — with answers',
   heroTitle: 'Algerian tests and exams with answers, from preschool to BAC',
-  heroText: 'Tests and exams with full answers for every level, mock papers to prepare for the BEM and BAC, and lesson summaries. Read online or download the PDF for free.',
+  heroText: 'Tests and exams with full answers for every level, and mock papers to prepare for the BEM and BAC. Read online or download the PDF for free.',
   searchPlaceholder: 'Search: math exam 4AM term 1…',
   search: 'Search',
   chooseLevel: 'Choose your level',
@@ -156,7 +156,7 @@ const en: Dict = {
   year: 'Year',
   type: 'Type',
   term: 'Term',
-  footerAbout: 'A free Algerian study-support platform with tests, exams and lessons for every school level, following the national curriculum.',
+  footerAbout: 'A free Algerian study-support platform with tests and exams with answers for every school level, following the national curriculum.',
   rights: 'All rights reserved',
   menu: 'Menu',
   close: 'Close',

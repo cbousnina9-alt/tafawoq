@@ -14,15 +14,15 @@ type P = { params: Promise<{ locale: Locale }> };
 const meta = {
   ar: {
     title: 'فروض واختبارات مع الحلول لكل المستويات — ابتدائي، متوسط، ثانوي، BEM و BAC',
-    description: 'بنك فروض واختبارات الفصول الثلاثة مع الحلول، مواضيع شهادة التعليم المتوسط والبكالوريا، دروس وملخصات لكل المواد وفق المنهاج الجزائري. تحميل مجاني PDF.',
+    description: 'بنك فروض واختبارات مع الحلول المفصلة وسلم التنقيط لكل المستويات، ومواضيع تجريبية للتحضير لشهادة التعليم المتوسط والبكالوريا، وفق المنهاج الجزائري. تحميل مجاني PDF.',
   },
   fr: {
     title: 'Devoirs et examens corrigés — primaire, moyen, secondaire, BEM et BAC',
-    description: 'Banque de devoirs et d’examens corrigés des trois trimestres, sujets du BEM et du BAC, cours et résumés conformes au programme algérien. Téléchargement PDF gratuit.',
+    description: 'Banque de devoirs et d’examens corrigés avec barème pour tous les niveaux, et sujets types pour préparer le BEM et le BAC, conformes au programme algérien. PDF gratuit.',
   },
   en: {
     title: 'Algerian tests and exams with answers — primary, middle, secondary, BEM & BAC',
-    description: 'Term tests and exams with answers, official BEM and BAC papers, lessons and summaries following the Algerian curriculum. Free PDF downloads.',
+    description: 'Tests and exams with full answers for every level, plus practice papers for the BEM and BAC, following the Algerian curriculum. Free PDF downloads.',
   },
 };
 
@@ -63,7 +63,7 @@ export default async function Home({ params }: P) {
         <div className="wrap hx-in">
           <div className="hx-copy">
             <h1>{L('خطوتك الأولى نحو ', 'Ton premier pas vers ', 'Your first step to ')}<span className="hx-mark">{L('التفوّق', 'la réussite', 'success')}</span></h1>
-            <p className="lead">{L('فروض، اختبارات ودروس مع الحلول من التحضيري إلى البكالوريا', 'Devoirs, examens et cours corrigés, du préscolaire au BAC', 'Tests, exams and lessons with answers, from preschool to BAC')}</p>
+            <p className="lead">{L('فروض واختبارات مع الحلول من التحضيري إلى البكالوريا', 'Devoirs et examens corrigés, du préscolaire au BAC', 'Tests and exams with answers, from preschool to BAC')}</p>
             <form className="search-form" role="search" action={`/${locale}/search`} method="get">
               <label className="visually-hidden" htmlFor="hq">{d.search}</label>
               <SearchIcon />
@@ -188,19 +188,19 @@ export default async function Home({ params }: P) {
               <h2>منصة {site.name.ar} للدعم المدرسي في الجزائر</h2>
               <p>
                 يجمع {site.name.ar} فروضًا واختبارات مع الحل المفصل في كل المواد، من القسم التحضيري إلى السنة الثالثة ثانوي، مكتوبة وفق المنهاج الجزائري. تجد أيضًا مواضيع تجريبية
-                على نمط شهادة التعليم المتوسط وشهادة البكالوريا، وملخصات دروس تساعدك على الفهم قبل التدرّب.
+                على نمط شهادة التعليم المتوسط وشهادة البكالوريا، وسلاسل تمارين ومقالات في طرق المراجعة.
               </p>
               <p>كل المواضيع مرتبة حسب المستوى ثم المادة ثم الفصل. تقرأ الموضوع مباشرة على الصفحة، وتُظهر الحل عند الحاجة، أو تحمّلهما مجانًا بصيغة PDF للطباعة. إذا كنت أستاذًا أو تلميذًا وعندك موضوع غير موجود، شاركه معنا ليستفيد منه الجميع.</p>
             </>
           ) : locale === 'fr' ? (
             <>
               <h2>{site.name.fr}, plateforme de soutien scolaire en Algérie</h2>
-              <p>{site.name.fr} rassemble des devoirs et examens des trois trimestres dans toutes les matières, du préscolaire à la 3e année secondaire, avec corrigés lorsqu’ils sont disponibles, ainsi que les sujets du BEM et du BAC des années précédentes.</p>
+              <p>{site.name.fr} rassemble des devoirs et examens corrigés avec barème dans toutes les matières, du préscolaire à la 3e année secondaire, ainsi que des sujets types pour préparer le BEM et le BAC. Chaque sujet se lit en ligne ou se télécharge en PDF.</p>
             </>
           ) : (
             <>
               <h2>{site.name.en}: study support for Algerian students</h2>
-              <p>{site.name.en} collects term tests and exams in every subject, from preschool to the final year of secondary school, with answer keys when available, plus past BEM and BAC papers.</p>
+              <p>{site.name.en} offers tests and exams with full answers and marking schemes in every subject, from preschool to the final year of secondary school, plus practice papers for the BEM and BAC. Every paper can be read online or downloaded as a PDF.</p>
             </>
           )}
         </section>
