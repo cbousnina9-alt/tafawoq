@@ -1,22 +1,5 @@
 [
  {
-  "id": "4am/math/test-u20261101-223920",
-  "slug": "test-u20261101-223920",
-  "level": "4am",
-  "subject": "math",
-  "type": "test",
-  "trimester": 1,
-  "year": 2026,
-  "file": "/files/uploads/fb_img_1793566484944-1-.pdf",
-  "solution": "/files/uploads/fb_img_1793566500307.pdf",
-  "size": 77567,
-  "pages": 1,
-  "added": "2026-11-01",
-  "title": {
-   "ar": "الفرض الفصل الأول في الرياضيات - السنةالرابعة متوسط"
-  }
- },
- {
   "id": "0ap/arabic/exercises-t1-4",
   "slug": "exercises-t1-4",
   "level": "0ap",
