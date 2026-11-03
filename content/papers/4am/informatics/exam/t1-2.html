@@ -1,0 +1,55 @@
+<!-- {"title":"اختبار الفصل الأول في الإعلام الآلي (النموذج 2)","duration":"ساعة","term":1,"topics":["مكونات الحاسوب ودورها","المجدول: كشف النقاط","الدوال MOYENNE و MAX و MIN","الدالة SI","المخطط البياني"]} -->
+
+<section class="paper">
+<div class="ex">
+<h2>التمرين الأول <span class="pts">(06 نقاط)</span></h2>
+<ol>
+<li>ما دور: المعالج (CPU) – الذاكرة الحية (RAM) – اللوحة الأم؟</li>
+<li>لماذا تُفقد المعطيات المحفوظة في الذاكرة الحية عند إطفاء الحاسوب؟ وأين يجب حفظ العمل؟</li>
+</ol>
+</div>
+
+<div class="ex">
+<h2>التمرين الثاني <span class="pts">(10 نقاط)</span></h2>
+<p>كشف نقاط تلاميذ في ثلاث مواد:</p>
+<table class="grid" dir="ltr" style="direction:ltr">
+<tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
+<tr><td>1</td><td>Nom</td><td>Maths</td><td>Arabe</td><td>Sciences</td><td>Moyenne</td><td>Décision</td></tr>
+<tr><td>2</td><td>Yacine</td><td>14</td><td>12</td><td>13</td><td></td><td></td></tr>
+<tr><td>3</td><td>Nour</td><td>9</td><td>11</td><td>7</td><td></td><td></td></tr>
+<tr><td>4</td><td>Rayan</td><td>16</td><td>15</td><td>17</td><td></td><td></td></tr>
+</table>
+<ol>
+<li>اكتب الصيغة في E2 لحساب معدل Yacine باستعمال دالة، ثم احسب معدلات التلاميذ الثلاثة.</li>
+<li>اكتب في F2 صيغة تُظهر «Admis» إذا كان المعدل أكبر من أو يساوي 10، و«Ajourné» في الحالة الأخرى. ما النتيجة لكل تلميذ؟</li>
+<li>اكتب صيغة تُظهر أعلى معدل، وأخرى تُظهر أدنى نقطة في الرياضيات.</li>
+<li>ما نوع المخطط المناسب لمقارنة معدلات التلاميذ؟</li>
+</ol>
+</div>
+
+<div class="ex">
+<h2>التمرين الثالث <span class="pts">(04 نقاط)</span></h2>
+<p>ما الخطوات اللازمة لترتيب التلاميذ تنازليًا حسب المعدل؟</p>
+</div>
+</section>
+
+<section class="solution">
+<div class="ex" data-total="6">
+<h2>التمرين الأول</h2>
+<p data-pts="3×1">1) المعالج: ينفّذ التعليمات ويعالج المعطيات. الذاكرة الحية: تخزن مؤقتًا البرامج والمعطيات قيد الاستعمال. اللوحة الأم: تربط كل مكونات الحاسوب ببعضها.</p>
+<p data-pts="3">2) لأنها ذاكرة مؤقتة (متطايرة) تحتاج إلى التيار الكهربائي؛ يجب حفظ العمل في وحدة تخزين دائمة (القرص الصلب، مفتاح USB).</p>
+</div>
+<div class="ex" data-total="10">
+<h2>التمرين الثاني</h2>
+<p data-pts="1" dir="ltr" style="text-align:left">1) E2: =MOYENNE(B2:D2)  (ou =AVERAGE(B2:D2))</p>
+<p data-pts="3×0.5">Yacine = 13 ؛ Nour = 9 ؛ Rayan = 16</p>
+<p data-pts="2" dir="ltr" style="text-align:left">2) F2: =SI(E2>=10;"Admis";"Ajourné")</p>
+<p data-pts="1.5">Yacine: Admis ؛ Nour: Ajourné ؛ Rayan: Admis</p>
+<p data-pts="2×1" dir="ltr" style="text-align:left">3) =MAX(E2:E4) → 16 ; =MIN(B2:B4) → 9</p>
+<p data-pts="2">4) مخطط بالأعمدة (Histogramme).</p>
+</div>
+<div class="ex" data-total="4">
+<h2>التمرين الثالث</h2>
+<p data-pts="4">تحديد الجدول A1:F4 (مع العناوين) ← تبويب «Données» ← «Trier» ← اختيار العمود «Moyenne» ← الترتيب «Décroissant» (من الأكبر إلى الأصغر) ← موافق.</p>
+</div>
+</section>

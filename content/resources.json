@@ -1,5 +1,971 @@
 [
  {
+  "id": "1ap/arabic/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "1ap",
+  "subject": "arabic",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1ap/arabic/test/t1-3.pdf",
+  "solution": "/files/1ap/arabic/test/t1-3-sol.pdf",
+  "size": 82447,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 3) — السنة الأولى ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 3) للسنة الأولى ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: قراءة جمل قصيرة: في السوق، تمييز الحروف: ت، ث، ف، ق، إكمال الكلمة بالحرف الناقص، ترتيب كلمات لتكوين جملة، نقل جملة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1ap/civic/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "1ap",
+  "subject": "civic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1ap/civic/exam/t1-3.pdf",
+  "solution": "/files/1ap/civic/exam/t1-3-sol.pdf",
+  "size": 72582,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية المدنية (النموذج 3) — السنة الأولى ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية المدنية (النموذج 3) للسنة الأولى ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: الحي الذي أسكن فيه، المرافق العامة في الحي، المحافظة على نظافة الحي، احترام الجيران. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1ap/civic/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "1ap",
+  "subject": "civic",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1ap/civic/test/t1-3.pdf",
+  "solution": "/files/1ap/civic/test/t1-3-sol.pdf",
+  "size": 76223,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التربية المدنية (النموذج 3) — السنة الأولى ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التربية المدنية (النموذج 3) للسنة الأولى ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: أنا تلميذ: الأدوات المدرسية، المحافظة على الأدوات، احترام المعلم والزملاء، النظافة في القسم. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1ap/math/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "1ap",
+  "subject": "math",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1ap/math/test/t1-3.pdf",
+  "solution": "/files/1ap/math/test/t1-3-sol.pdf",
+  "size": 71206,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الرياضيات (النموذج 3) — السنة الأولى ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الرياضيات (النموذج 3) للسنة الأولى ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: كتابة الأعداد من 0 إلى 20 بالأرقام والحروف، الجمع والطرح، المقارنة، مسألة: البالونات. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1ap/scientific/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "1ap",
+  "subject": "scientific",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1ap/scientific/exam/t1-3.pdf",
+  "solution": "/files/1ap/scientific/exam/t1-3-sol.pdf",
+  "size": 77036,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية العلمية والتكنولوجية (النموذج 3) — السنة الأولى ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية العلمية والتكنولوجية (النموذج 3) للسنة الأولى ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: النبات: أجزاء النبتة، ماذا تحتاج النبتة لتنمو، الغذاء الصحي، نظافة اليدين والأسنان. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/arabic/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "1as",
+  "subject": "arabic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/arabic/exam/t1-3.pdf",
+  "solution": "/files/1as/arabic/exam/t1-3-sol.pdf",
+  "size": 86676,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 3) للسنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: الشعر الجاهلي: حاتم الطائي — الكرم، شرح المفردات والأفكار، أسلوب النداء، الإعراب: المبتدأ والخبر وإنّ، البحر الطويل، التقويم النقدي: القيم الجاهلية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/arabic/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "1as",
+  "subject": "arabic",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/arabic/test/t1-3.pdf",
+  "solution": "/files/1as/arabic/test/t1-3-sol.pdf",
+  "size": 85689,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة العربية — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة العربية — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الشعر المخضرم: من رثاء الخنساء لأخيها صخر، غرض الرثاء، شرح المفردات والأفكار، أسلوب التوكيد بإنّ واللام، البحر البسيط، التشبيه. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/english/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1as",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1as/english/exam/t1-2.pdf",
+  "solution": "/files/1as/english/exam/t1-2-sol.pdf",
+  "size": 91528,
+  "pages": 2,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية — جذع مشترك (النموذج 2) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية — جذع مشترك (النموذج 2) للسنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: reading: A letter from a pen friend in Canada، comprehension and reference words، the present simple and the present continuous، asking for information، written expression: a reply letter. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/english/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "1as",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/english/exam/t1-3.pdf",
+  "solution": "/files/1as/english/exam/t1-3-sol.pdf",
+  "size": 89517,
+  "pages": 2,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: reading: The legend of the Lady of the Lake (a folk tale)، narrative: the past simple and the past continuous، linkers: when, while, as soon as، pronunciation، written expression: a short story. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/english/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "1as",
+  "subject": "english",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/english/test/t1-3.pdf",
+  "solution": "/files/1as/english/test/t1-3-sol.pdf",
+  "size": 84712,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: reading: A survey about pupils and reading، comprehension and reference، expressing quantity: most, many, a few، percentages and fractions، written expression: reporting survey results. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/french/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1as",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1as/french/exam/t1-2.pdf",
+  "solution": "/files/1as/french/exam/t1-2-sol.pdf",
+  "size": 95066,
+  "pages": 2,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية — السنة الأولى ثانوي (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية — السنة الأولى ثانوي (النموذج 2) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: texte explicatif: Le palmier dattier, arbre de vie du Sahara، les procédés explicatifs: définition, énumération, chiffres، les connecteurs logiques، la nominalisation، production: texte explicatif. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/french/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "1as",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/french/exam/t1-3.pdf",
+  "solution": "/files/1as/french/exam/t1-3-sol.pdf",
+  "size": 93601,
+  "pages": 2,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية — السنة الأولى ثانوي (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية — السنة الأولى ثانوي (النموذج 3) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: texte explicatif: Pourquoi faut-il recycler le plastique ?، le rapport de cause et de conséquence، les procédés explicatifs: exemple, comparaison، la phrase passive، production: rédiger un dépliant explicatif. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/french/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "1as",
+  "subject": "french",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/french/test/t1-3.pdf",
+  "solution": "/files/1as/french/test/t1-3-sol.pdf",
+  "size": 85546,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الفرنسية — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الفرنسية — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: texte de vulgarisation: Comment se forment les dunes ?، les procédés explicatifs، le présent de vérité générale، les connecteurs chronologiques، production: expliquer un phénomène. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/history-geo/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1as",
+  "subject": "history-geo",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1as/history-geo/exam/t1-2.pdf",
+  "solution": "/files/1as/history-geo/exam/t1-2-sol.pdf",
+  "size": 77848,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا — جذع مشترك (النموذج 2) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا — جذع مشترك (النموذج 2) للسنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الدولة الرستمية والدولة الفاطمية، العلاقات بين دول المغرب الإسلامي، الجغرافيا: الخريطة ومقياس الرسم، حساب المسافات الحقيقية، الوضعية الإدماجية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/history-geo/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "1as",
+  "subject": "history-geo",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/history-geo/exam/t1-3.pdf",
+  "solution": "/files/1as/history-geo/exam/t1-3-sol.pdf",
+  "size": 77179,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الدولة الزيانية وعاصمتها تلمسان، العلاقات بين الزيانيين والمرينيين والحفصيين، تلمسان مركز علمي وتجاري، الجغرافيا: الموارد الطبيعية وتوزيعها في العالم، الوضعية الإدماجية: التراث المعماري. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/history-geo/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "1as",
+  "subject": "history-geo",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/history-geo/test/t1-3.pdf",
+  "solution": "/files/1as/history-geo/test/t1-3-sol.pdf",
+  "size": 73402,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التاريخ والجغرافيا — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التاريخ والجغرافيا — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الدولة الحمادية، قلعة بني حماد وبجاية، المظاهر الحضارية للدولة الحمادية، الجغرافيا: الإحداثيات الجغرافية: خطوط الطول ودوائر العرض. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/informatics/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1as",
+  "subject": "informatics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1as/informatics/exam/t1-2.pdf",
+  "solution": "/files/1as/informatics/exam/t1-2-sol.pdf",
+  "size": 79910,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي (النموذج 2) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي (النموذج 2) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: التحويل بين الأنظمة العددية، وحدات قياس السعة والحسابات، وحدات الإدخال والإخراج والتخزين، معالجة النصوص: التنسيق. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/informatics/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "1as",
+  "subject": "informatics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/informatics/exam/t1-3.pdf",
+  "solution": "/files/1as/informatics/exam/t1-3-sol.pdf",
+  "size": 78819,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي (النموذج 3) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: المعلومة وأنواعها، الترميز الثنائي للصور: البكسل، حساب حجم صورة، الإنترنت: المتصفح ومحرك البحث، الأمن الرقمي. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/informatics/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "1as",
+  "subject": "informatics",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1as/informatics/test/t1-2.pdf",
+  "solution": "/files/1as/informatics/test/t1-2-sol.pdf",
+  "size": 82630,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الإعلام الآلي — جذع مشترك (النموذج 2) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الإعلام الآلي — جذع مشترك (النموذج 2) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: النظام الست عشري، التحويل بين الأنظمة: العشري والثنائي والست عشري، الجمع في النظام الثنائي، ترميز الحروف ASCII. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/informatics/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "1as",
+  "subject": "informatics",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/informatics/test/t1-3.pdf",
+  "solution": "/files/1as/informatics/test/t1-3-sol.pdf",
+  "size": 78855,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الإعلام الآلي — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الإعلام الآلي — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: نظام التشغيل ووظائفه، تسيير الملفات والمجلدات، امتدادات الملفات، المسار (Chemin) والشجرة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/islamic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "1as",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/1as/islamic/exam/t1-2.pdf",
+  "solution": "/files/1as/islamic/exam/t1-2-sol.pdf",
+  "size": 79431,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الإسلامية — جذع مشترك (النموذج 2) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الإسلامية — جذع مشترك (النموذج 2) للسنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: وسائل القرآن الكريم في تثبيت العقيدة، التأمل في الكون: آيات آل عمران 190-191، ضرب الأمثال والقصص القرآني، الصدق ومجالاته، الوضعية الإدماجية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/islamic/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "1as",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/islamic/exam/t1-3.pdf",
+  "solution": "/files/1as/islamic/exam/t1-3-sol.pdf",
+  "size": 76384,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الإسلامية — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الإسلامية — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: مصادر التشريع الإسلامي: القرآن والسنة، حجية السنة: آية الحشر 7، أنواع السنة: قولية وفعلية وتقريرية، الأمانة ومجالاتها، الوضعية الإدماجية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/islamic/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "1as",
+  "subject": "islamic",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/islamic/test/t1-3.pdf",
+  "solution": "/files/1as/islamic/test/t1-3-sol.pdf",
+  "size": 77666,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في العلوم الإسلامية — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في العلوم الإسلامية — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: مكانة العلم في الإسلام، آية الزمر 9 وآية المجادلة 11، حديث: من سلك طريقًا يلتمس فيه علمًا، آداب طالب العلم، وضعية: تلميذ يهمل دراسته. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/science/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "1as",
+  "subject": "science",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/science/exam/t1-3.pdf",
+  "solution": "/files/1as/science/exam/t1-3-sol.pdf",
+  "size": 84793,
+  "pages": 2,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في علوم الطبيعة والحياة — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في علوم الطبيعة والحياة — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التنفس والتخمر عند فطر الخميرة، التجريب بالوسط الهوائي واللاهوائي، مقارنة المردود الطاقوي، الهضم وتحول الأغذية، الوضعية الإدماجية: صناعة الخبز. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/science/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "1as",
+  "subject": "science",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/1as/science/test/t1-3.pdf",
+  "solution": "/files/1as/science/test/t1-3-sol.pdf",
+  "size": 78049,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في علوم الطبيعة والحياة — جذع مشترك (النموذج 3) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في علوم الطبيعة والحياة — جذع مشترك (النموذج 3) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الحاجات الغذائية للإنسان، المجموعات الغذائية وأدوارها، الوجبة المتوازنة، حساب الطاقة الناتجة عن الأغذية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/arabic/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "3am",
+  "subject": "arabic",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3am/arabic/test/t1-2.pdf",
+  "solution": "/files/3am/arabic/test/t1-2-sol.pdf",
+  "size": 93922,
+  "pages": 2,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 2) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 2) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: فهم نص: يوم العيد في بيت جدّي، الفكرة العامة وشرح المفردات، الفعل المضارع المرفوع والمنصوب، الأفعال الخمسة، التعبير: صلة الرحم. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/arabic/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "3am",
+  "subject": "arabic",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3am/arabic/test/t1-3.pdf",
+  "solution": "/files/3am/arabic/test/t1-3-sol.pdf",
+  "size": 94762,
+  "pages": 2,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 3) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 3) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: فهم نص: المخترع الصغير، الفكرة العامة والأفكار الأساسية، إنّ وأخواتها، الفعل المضارع المجزوم، التعبير: الاكتشافات العلمية في حياتنا. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/english/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3am",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3am/english/exam/t1-2.pdf",
+  "solution": "/files/3am/english/exam/t1-2-sol.pdf",
+  "size": 91984,
+  "pages": 2,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 2) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 2) للسنة الثالثة متوسط (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: reading: The ruins of Timgad، the past simple and the past continuous، when / while، pronunciation of final -ed، written expression: a school trip. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/english/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "3am",
+  "subject": "english",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3am/english/test/t1-3.pdf",
+  "solution": "/files/3am/english/test/t1-3-sol.pdf",
+  "size": 84138,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية (النموذج 3) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية (النموذج 3) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: reading: My grandmother's childhood، used to، the past simple، asking questions in the past، written expression: life in the past and today. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/french/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "3am",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3am/french/exam/t1-3.pdf",
+  "solution": "/files/3am/french/exam/t1-3-sol.pdf",
+  "size": 93423,
+  "pages": 2,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 3) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 3) للسنة الثالثة متوسط (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: fait divers: Un randonneur perdu retrouvé dans le Djurdjura، les questions de l'information، le passé composé، la voix passive، les indicateurs de temps، production: rédiger un fait divers. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/french/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "3am",
+  "subject": "french",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3am/french/test/t1-3.pdf",
+  "solution": "/files/3am/french/test/t1-3-sol.pdf",
+  "size": 87988,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الفرنسية (النموذج 3) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الفرنسية (النموذج 3) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: fait divers: Une tortue sauvée sur la plage، les questions de l'information، le passé composé، la voix passive، production: compléter un fait divers. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/history-geo/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3am",
+  "subject": "history-geo",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3am/history-geo/exam/t1-2.pdf",
+  "solution": "/files/3am/history-geo/exam/t1-2-sol.pdf",
+  "size": 77579,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 2) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 2) للسنة الثالثة متوسط (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الاحتلال الفرنسي للجزائر 1830، أسباب الاحتلال، المقاومات الشعبية: الأمير عبد القادر وأحمد باي، الجغرافيا: الفلاحة في الجزائر، الوضعية الإدماجية: الأمن الغذائي. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/history-geo/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "3am",
+  "subject": "history-geo",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3am/history-geo/exam/t1-3.pdf",
+  "solution": "/files/3am/history-geo/exam/t1-3-sol.pdf",
+  "size": 77512,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 3) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 3) للسنة الثالثة متوسط (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الجزائر في العهد العثماني: النظام السياسي والإداري، الدايات والبايلكات، العلاقات الخارجية للجزائر، الجغرافيا: الموارد الطاقوية في الجزائر، الوضعية الإدماجية: الطاقات المتجددة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/history-geo/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "3am",
+  "subject": "history-geo",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3am/history-geo/test/t1-2.pdf",
+  "solution": "/files/3am/history-geo/test/t1-2-sol.pdf",
+  "size": 75569,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التاريخ والجغرافيا (النموذج 2) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التاريخ والجغرافيا (النموذج 2) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: التاريخ: المقاومة الشعبية: مقاومة الأمير عبد القادر، معاهدتا دي ميشال والتافنة، الدولة الجزائرية الحديثة، الجغرافيا: السكان في الجزائر وتوزيعهم. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/islamic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3am",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3am/islamic/exam/t1-2.pdf",
+  "solution": "/files/3am/islamic/exam/t1-2-sol.pdf",
+  "size": 77818,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية (النموذج 2) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية (النموذج 2) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الزكاة: تعريفها وحكمها، الأموال التي تجب فيها الزكاة، مستحقو الزكاة: آية التوبة 60، حكمة الزكاة، الوضعية الإدماجية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/islamic/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "3am",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3am/islamic/exam/t1-3.pdf",
+  "solution": "/files/3am/islamic/exam/t1-3-sol.pdf",
+  "size": 78659,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية (النموذج 3) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية (النموذج 3) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الأخوّة في الإسلام، آية الحجرات 10، حديث: المسلم أخو المسلم، حقوق الأخوّة، الوضعية الإدماجية: نزاع بين زميلين. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/islamic/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "3am",
+  "subject": "islamic",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3am/islamic/test/t1-3.pdf",
+  "solution": "/files/3am/islamic/test/t1-3-sol.pdf",
+  "size": 77840,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التربية الإسلامية (النموذج 3) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التربية الإسلامية (النموذج 3) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: بر الوالدين، آية الإسراء 23، مظاهر بر الوالدين، عقوق الوالدين وآثاره، وضعية: تلميذ يرفع صوته على أمه. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/math/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "3am",
+  "subject": "math",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3am/math/test/t1-3.pdf",
+  "solution": "/files/3am/math/test/t1-3-sol.pdf",
+  "size": 75416,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الرياضيات (النموذج 3) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الرياضيات (النموذج 3) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: العمليات على الكسور، ضرب وقسمة الأعداد النسبية، الحساب الحرفي: النشر والتبسيط، مبرهنة مستقيم المنتصفين. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/science/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3am",
+  "subject": "science",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3am/science/exam/t1-2.pdf",
+  "solution": "/files/3am/science/exam/t1-2-sol.pdf",
+  "size": 82895,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في علوم الطبيعة والحياة (النموذج 2) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في علوم الطبيعة والحياة (النموذج 2) للسنة الثالثة متوسط (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: التنفس عند الإنسان، التبادلات الغازية في الحويصلات الرئوية، نقل الغازات بالدم، التنفس الخلوي وإنتاج الطاقة، الوضعية الإدماجية: التلوث والتدخين. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/science/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "3am",
+  "subject": "science",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3am/science/test/t1-3.pdf",
+  "solution": "/files/3am/science/test/t1-3-sol.pdf",
+  "size": 78699,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في علوم الطبيعة والحياة (النموذج 3) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في علوم الطبيعة والحياة (النموذج 3) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الدوران الدموي: القلب والأوعية، الدورة الدموية الكبرى والصغرى، مكونات الدم ودورها، نقل المغذيات والغازات. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/history-geo/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3as",
+  "subject": "history-geo",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3as/history-geo/exam/t1-2.pdf",
+  "solution": "/files/3as/history-geo/exam/t1-2-sol.pdf",
+  "size": 75202,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا — السنة الثالثة ثانوي (النموذج 2) مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا — السنة الثالثة ثانوي (النموذج 2) (المدة: ثلاث ساعات). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الثورة التحريرية الجزائرية: التنظيم والتدويل، مؤتمر الصومام 1956، القضية الجزائرية في الأمم المتحدة، الجغرافيا: الاتحاد الأوروبي قوة اقتصادية، مقال جغرافي: عوامل قوة الاتحاد الأوروبي وعراقيله. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/philosophy/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "3as",
+  "subject": "philosophy",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3as/philosophy/exam/t1-3.pdf",
+  "solution": "/files/3as/philosophy/exam/t1-3-sol.pdf",
+  "size": 69605,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الفلسفة — السنة الثالثة ثانوي (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الفلسفة — السنة الثالثة ثانوي (النموذج 3) (المدة: ثلاث ساعات). موضوع مقترح مع الحل المفصل يتناول: الإحساس والإدراك، مقالة مقارنة: الإحساس والإدراك، أوجه الاختلاف والتشابه والتداخل، الشعور واللاشعور، مقالة استقصاء بالوضع: الدفاع عن أطروحة اللاشعور. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/philosophy/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "3as",
+  "subject": "philosophy",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3as/philosophy/test/t1-3.pdf",
+  "solution": "/files/3as/philosophy/test/t1-3-sol.pdf",
+  "size": 66151,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الفلسفة — السنة الثالثة ثانوي (النموذج 3) مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الفلسفة — السنة الثالثة ثانوي (النموذج 3) (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: الذاكرة والنسيان، مقالة جدلية: هل النسيان ظاهرة مرضية أم ظاهرة طبيعية مفيدة؟، موقف ريبو والتفسير المرضي، موقف فرويد ونيتشه وبرغسون، التركيب. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4am/informatics/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4am",
+  "subject": "informatics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4am/informatics/exam/t1-2.pdf",
+  "solution": "/files/4am/informatics/exam/t1-2-sol.pdf",
+  "size": 78463,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي (النموذج 2) — السنة الرابعة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي (النموذج 2) للسنة الرابعة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: مكونات الحاسوب ودورها، المجدول: كشف النقاط، الدوال MOYENNE و MAX و MIN، الدالة SI، المخطط البياني. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4am/informatics/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "4am",
+  "subject": "informatics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/4am/informatics/exam/t1-3.pdf",
+  "solution": "/files/4am/informatics/exam/t1-3-sol.pdf",
+  "size": 80002,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي (النموذج 3) — السنة الرابعة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي (النموذج 3) للسنة الرابعة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الشبكات والإنترنت: المفاهيم الأساسية، عنوان الموقع URL، البريد الإلكتروني، الاستعمال الآمن والمسؤول للإنترنت، المجدول: حساب الفاتورة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4am/informatics/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "4am",
+  "subject": "informatics",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/4am/informatics/test/t1-3.pdf",
+  "solution": "/files/4am/informatics/test/t1-3-sol.pdf",
+  "size": 78994,
+  "pages": 1,
+  "added": "2026-11-03",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الإعلام الآلي (النموذج 3) — السنة الرابعة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الإعلام الآلي (النموذج 3) للسنة الرابعة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: المجدول: المراجع النسبية والمطلقة، نسخ الصيغ، حساب النسبة المئوية، تنسيق الخلايا. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "0ap/arabic/exercises-t1-4",
   "slug": "exercises-t1-4",
   "level": "0ap",

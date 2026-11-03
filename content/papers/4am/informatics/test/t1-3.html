@@ -1,0 +1,56 @@
+<!-- {"title":"فرض الفصل الأول في الإعلام الآلي (النموذج 3)","duration":"ساعة","term":1,"topics":["المجدول: المراجع النسبية والمطلقة","نسخ الصيغ","حساب النسبة المئوية","تنسيق الخلايا"]} -->
+
+<section class="paper">
+<div class="ex">
+<h2>التمرين الأول <span class="pts">(06 نقاط)</span></h2>
+<ol>
+<li>ما الفرق بين المرجع النسبي <span dir="ltr">A1</span> والمرجع المطلق <span dir="ltr">&#36;A&#36;1</span>؟</li>
+<li>كتبنا في الخلية C2 الصيغة <span dir="ltr">=A2*B2</span> ثم نسخناها إلى C3. ما الصيغة التي تظهر في C3؟</li>
+<li>كتبنا في D2 الصيغة <span dir="ltr">=C2*&#36;F&#36;1</span> ثم نسخناها إلى D3. ما الصيغة التي تظهر في D3؟</li>
+</ol>
+</div>
+
+<div class="ex">
+<h2>التمرين الثاني <span class="pts">(10 نقاط)</span></h2>
+<p>جدول مبيعات متجر أدوات مدرسية (نسبة التخفيض في الخلية F1 = 10%):</p>
+<table class="grid" dir="ltr" style="direction:ltr">
+<tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+<tr><td>1</td><td>Article</td><td>Prix (DA)</td><td>Quantité</td><td>Total</td></tr>
+<tr><td>2</td><td>Cahier</td><td>60</td><td>50</td><td></td></tr>
+<tr><td>3</td><td>Stylo</td><td>25</td><td>120</td><td></td></tr>
+<tr><td>4</td><td>Cartable</td><td>1800</td><td>6</td><td></td></tr>
+<tr><td>5</td><td colspan="2">Total général</td><td></td><td></td></tr>
+</table>
+<ol>
+<li>اكتب الصيغة في D2 لحساب ثمن الكراريس، ثم احسب النتائج D2 و D3 و D4.</li>
+<li>اكتب الصيغة في D5 لحساب المجموع العام باستعمال دالة، واحسب النتيجة.</li>
+<li>اكتب في E2 صيغة تحسب الثمن بعد التخفيض باستعمال الخلية F1، بحيث يمكن نسخها إلى E3 و E4.</li>
+</ol>
+</div>
+
+<div class="ex">
+<h2>التمرين الثالث <span class="pts">(04 نقاط)</span></h2>
+<p>اذكر الأداة أو الأمر المناسب لـ: دمج الخلايا A5 و B5 – إظهار الأرقام بصيغة نقدية (DA) – إضافة حدود للجدول – تغيير لون خلفية السطر الأول.</p>
+</div>
+</section>
+
+<section class="solution">
+<div class="ex" data-total="6">
+<h2>التمرين الأول</h2>
+<p data-pts="2">1) المرجع النسبي يتغيّر عند نسخ الصيغة حسب اتجاه النسخ، أما المرجع المطلق فيبقى ثابتًا.</p>
+<p data-pts="2" dir="ltr" style="text-align:left">2) =A3*B3</p>
+<p data-pts="2" dir="ltr" style="text-align:left">3) =C3*&#36;F&#36;1</p>
+</div>
+<div class="ex" data-total="10">
+<h2>التمرين الثاني</h2>
+<p data-pts="1" dir="ltr" style="text-align:left">1) D2: =B2*C2</p>
+<p data-pts="3×1">D2 = 3000 ؛ D3 = 3000 ؛ D4 = 10800</p>
+<p data-pts="1.5" dir="ltr" style="text-align:left">2) D5: =SOMME(D2:D4)  (ou =SUM(D2:D4))</p>
+<p data-pts="1.5">D5 = 16800 DA</p>
+<p data-pts="3" dir="ltr" style="text-align:left">3) E2: =D2-D2*&#36;F&#36;1  (ou =D2*(1-&#36;F&#36;1))  → E2 = 2700</p>
+</div>
+<div class="ex" data-total="4">
+<h2>التمرين الثالث</h2>
+<p data-pts="4×1" dir="ltr" style="text-align:left">Fusionner et centrer ; Format de cellule → Monétaire ; Bordures ; Couleur de remplissage</p>
+</div>
+</section>
