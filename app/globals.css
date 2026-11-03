@@ -891,3 +891,8 @@ aside .ad, aside .ad-placeholder { min-height: 250px; margin: 0; }
 }
 .up-form input:not([type=checkbox]):not([type=file]), .up-form select, .up-form textarea { width: 100%; min-width: 0; box-sizing: border-box; }
 .up-grid > label { min-width: 0; }
+.prose table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95rem; }
+.prose th, .prose td { border: 1px solid var(--line); padding: 7px 9px; text-align: center; }
+.prose th { background: var(--ink-soft); color: var(--ink-deep); }
+.prose tr:last-child td { background: #fff8dc; font-weight: 700; }
+.prose blockquote { margin: 12px 0; padding: 10px 14px; border-inline-start: 4px solid var(--marker); background: var(--marker-soft); border-radius: 8px; }
