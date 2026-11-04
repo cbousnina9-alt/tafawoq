@@ -1,5 +1,257 @@
 [
  {
+  "id": "4ap/civic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4ap",
+  "subject": "civic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/civic/exam/t1-2.pdf",
+  "solution": "/files/4ap/civic/exam/t1-2-sol.pdf",
+  "size": 73795,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية المدنية — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية المدنية للسنة الرابعة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: الحقوق والواجبات في المدرسة، المحافظة على الممتلكات العامة، الحوار لحل الخلافات، وضعية: طاولة مكسورة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/civic/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "4ap",
+  "subject": "civic",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/civic/test/t1-2.pdf",
+  "solution": "/files/4ap/civic/test/t1-2-sol.pdf",
+  "size": 74002,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التربية المدنية — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التربية المدنية للسنة الرابعة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: انتخاب مندوب القسم، شروط الانتخاب: السرية والحرية، احترام النتيجة، التعاون في القسم. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/english/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4ap",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/english/exam/t1-2.pdf",
+  "solution": "/files/4ap/english/exam/t1-2-sol.pdf",
+  "size": 79171,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية للسنة الرابعة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: reading: My classroom، school things، colours، prepositions: in / on / under، written expression: my school bag. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/english/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "4ap",
+  "subject": "english",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/english/test/t1-2.pdf",
+  "solution": "/files/4ap/english/test/t1-2-sol.pdf",
+  "size": 67610,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية للسنة الرابعة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: greetings: hello, good morning, goodbye، introducing yourself: my name is, I am … years old، colours، numbers 1 to 20. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/geography/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4ap",
+  "subject": "geography",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/geography/exam/t1-2.pdf",
+  "solution": "/files/4ap/geography/exam/t1-2-sol.pdf",
+  "size": 73001,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الجغرافيا — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الجغرافيا للسنة الرابعة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: تحديد الاتجاهات بالشمس، البوصلة، الاتجاهات الفرعية، وضعية: وصف طريق. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/geography/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "4ap",
+  "subject": "geography",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/geography/test/t1-2.pdf",
+  "solution": "/files/4ap/geography/test/t1-2-sol.pdf",
+  "size": 72199,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الجغرافيا — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الجغرافيا للسنة الرابعة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: المخطط والخريطة، مفتاح الخريطة ورموزه، البلدية والولاية والوطن، موقع الجزائر. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/history/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4ap",
+  "subject": "history",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/history/exam/t1-2.pdf",
+  "solution": "/files/4ap/history/exam/t1-2-sol.pdf",
+  "size": 71871,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ للسنة الرابعة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: تحديد القرن الذي تنتمي إليه سنة، حساب المدة بين حدثين، ترتيب الأحداث على خط زمني، مصادر التاريخ. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/history/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "4ap",
+  "subject": "history",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/history/test/t1-2.pdf",
+  "solution": "/files/4ap/history/test/t1-2-sol.pdf",
+  "size": 71986,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التاريخ — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التاريخ للسنة الرابعة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: التقويم الهجري: بدايته، التقويم الميلادي: بدايته، الأشهر الهجرية، مصادر التاريخ. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/islamic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4ap",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/islamic/exam/t1-2.pdf",
+  "solution": "/files/4ap/islamic/exam/t1-2-sol.pdf",
+  "size": 73029,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية للسنة الرابعة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: سورة الإخلاص، أركان الإسلام، فرائض الوضوء، بر الوالدين. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/islamic/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "4ap",
+  "subject": "islamic",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/islamic/test/t1-2.pdf",
+  "solution": "/files/4ap/islamic/test/t1-2-sol.pdf",
+  "size": 71035,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التربية الإسلامية — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التربية الإسلامية للسنة الرابعة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: سورة الفلق، أركان الإيمان، آداب الطعام. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/scientific/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "4ap",
+  "subject": "scientific",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/scientific/exam/t1-2.pdf",
+  "solution": "/files/4ap/scientific/exam/t1-2-sol.pdf",
+  "size": 75542,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية العلمية والتكنولوجية — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية العلمية والتكنولوجية للسنة الرابعة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: مجموعات الأغذية، الوجبة المتوازنة، صحة الأسنان، وضعية: فطور غير متوازن. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/scientific/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "4ap",
+  "subject": "scientific",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/4ap/scientific/test/t1-2.pdf",
+  "solution": "/files/4ap/scientific/test/t1-2-sol.pdf",
+  "size": 71903,
+  "pages": 1,
+  "added": "2026-11-04",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التربية العلمية والتكنولوجية — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التربية العلمية والتكنولوجية للسنة الرابعة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: المواد الذوّابة وغير الذوّابة في الماء، المخلوط، الترشيح، التجربة العلمية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "1ap/arabic/test-t1-3",
   "slug": "test-t1-3",
   "level": "1ap",
