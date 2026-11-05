@@ -1,5 +1,257 @@
 [
  {
+  "id": "3ap/civic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3ap",
+  "subject": "civic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/civic/exam/t1-2.pdf",
+  "solution": "/files/3ap/civic/exam/t1-2-sol.pdf",
+  "size": 74547,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية المدنية — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية المدنية للسنة الثالثة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: النظافة: نظافة الجسم والمحيط، قواعد المرور للراجل، إشارة المرور، وضعية: قطع الطريق. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/civic/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "3ap",
+  "subject": "civic",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/civic/test/t1-2.pdf",
+  "solution": "/files/3ap/civic/test/t1-2-sol.pdf",
+  "size": 71250,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التربية المدنية — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التربية المدنية للسنة الثالثة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: الأسرة وأفرادها، حقوق الطفل في الأسرة، واجبات الطفل في الأسرة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/english/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3ap",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/english/exam/t1-2.pdf",
+  "solution": "/files/3ap/english/exam/t1-2-sol.pdf",
+  "size": 77186,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية للسنة الثالثة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: reading: This is my family، family members: father, mother, brother, sister، numbers 1 to 10، colours. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/english/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "3ap",
+  "subject": "english",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/english/test/t1-2.pdf",
+  "solution": "/files/3ap/english/test/t1-2-sol.pdf",
+  "size": 66980,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية للسنة الثالثة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: school things: a pen, a book, a bag, a ruler، It's a …، colours. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/geography/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3ap",
+  "subject": "geography",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/geography/exam/t1-2.pdf",
+  "solution": "/files/3ap/geography/exam/t1-2-sol.pdf",
+  "size": 73996,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الجغرافيا — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الجغرافيا للسنة الثالثة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: مخطط المنزل، رموز المخطط ومفتاحه، الاتجاهات الأصلية الأربعة، وضعية: الطريق إلى المدرسة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/geography/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "3ap",
+  "subject": "geography",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/geography/test/t1-2.pdf",
+  "solution": "/files/3ap/geography/test/t1-2-sol.pdf",
+  "size": 71418,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الجغرافيا — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الجغرافيا للسنة الثالثة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: التموقع: فوق، تحت، يمين، يسار، أمام، خلف، الاتجاهات بالشمس، مخطط القسم. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/history/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3ap",
+  "subject": "history",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/history/exam/t1-2.pdf",
+  "solution": "/files/3ap/history/exam/t1-2-sol.pdf",
+  "size": 72109,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ للسنة الثالثة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: الأسرة عبر الأجيال، شجرة العائلة، الماضي والحاضر، ترتيب الأحداث. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/history/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "3ap",
+  "subject": "history",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/history/test/t1-2.pdf",
+  "solution": "/files/3ap/history/test/t1-2-sol.pdf",
+  "size": 69259,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التاريخ — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التاريخ للسنة الثالثة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: أيام الأسبوع، أشهر السنة الميلادية، فصول السنة، الرزنامة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/islamic/exam-t1-1",
+  "slug": "exam-t1-1",
+  "level": "3ap",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 1,
+  "file": "/files/3ap/islamic/exam/t1-1.pdf",
+  "solution": "/files/3ap/islamic/exam/t1-1-sol.pdf",
+  "size": 72824,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية للسنة الثالثة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: سورة الفاتحة، الصلوات الخمس، خلق الصدق، وضعية: مزهرية مكسورة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/islamic/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "3ap",
+  "subject": "islamic",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/islamic/test/t1-2.pdf",
+  "solution": "/files/3ap/islamic/test/t1-2-sol.pdf",
+  "size": 71716,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التربية الإسلامية — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التربية الإسلامية للسنة الثالثة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: سورة الإخلاص، سيرة الرسول ﷺ: مولده ونسبه، آداب السلام. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/scientific/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3ap",
+  "subject": "scientific",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/scientific/exam/t1-2.pdf",
+  "solution": "/files/3ap/scientific/exam/t1-2-sol.pdf",
+  "size": 74755,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية العلمية والتكنولوجية — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية العلمية والتكنولوجية للسنة الثالثة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: أجزاء النبتة، دور كل جزء، شروط الإنبات، وضعية: تجربة إنبات الفاصولياء. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/scientific/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "3ap",
+  "subject": "scientific",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3ap/scientific/test/t1-2.pdf",
+  "solution": "/files/3ap/scientific/test/t1-2-sol.pdf",
+  "size": 70537,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التربية العلمية والتكنولوجية — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التربية العلمية والتكنولوجية للسنة الثالثة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: طرق تنقل الحيوانات، الحيوانات البيوضة والولودة، أوساط عيش الحيوانات. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "4ap/civic/exam-t1-2",
   "slug": "exam-t1-2",
   "level": "4ap",
