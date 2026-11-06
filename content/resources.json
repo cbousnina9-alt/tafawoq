@@ -1,5 +1,257 @@
 [
  {
+  "id": "2as/arabic/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "2as",
+  "subject": "arabic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/arabic/exam/t1-3.pdf",
+  "solution": "/files/2as/arabic/exam/t1-3-sol.pdf",
+  "size": 83748,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة العربية (النموذج 3) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: الشعر العباسي: المتنبي — على قدر أهل العزم، مدح سيف الدولة وشعر الفتوحات، الفكرة العامة والشرح، الطباق والمقابلة، إعراب ما تحته خط، التقطيع: بحر الطويل. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/arabic/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "2as",
+  "subject": "arabic",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2as/arabic/test/t1-2.pdf",
+  "solution": "/files/2as/arabic/test/t1-2-sol.pdf",
+  "size": 82347,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 2) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 2) للسنة الثانية ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الشعر العباسي: الزهد عند أبي العتاهية، الحنين إلى الشباب والشكوى من الشيب، التشبيه وأسلوب التمني، بحر الوافر. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/english/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "2as",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2as/english/exam/t1-2.pdf",
+  "solution": "/files/2as/english/exam/t1-2-sol.pdf",
+  "size": 96798,
+  "pages": 2,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 2) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 2) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: reading: Waste not, want not — food waste، comprehension and reference، the conditional type 1، synonyms and opposites، written expression: tips to reduce waste. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/english/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "2as",
+  "subject": "english",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/english/test/t1-3.pdf",
+  "solution": "/files/2as/english/test/t1-3-sol.pdf",
+  "size": 94269,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية (النموذج 3) للسنة الثانية ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: reading: Sami's budget — managing pocket money، comprehension، should / had better for advice، suffixes -ful / -less، written expression: advice email. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/french/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "2as",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2as/french/exam/t1-2.pdf",
+  "solution": "/files/2as/french/exam/t1-2-sol.pdf",
+  "size": 87202,
+  "pages": 2,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 2) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: le texte explicatif: pourquoi la mer est salée، le plan du texte explicatif، les procédés explicatifs، cause et conséquence، production: texte explicatif. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/french/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "2as",
+  "subject": "french",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/french/test/t1-3.pdf",
+  "solution": "/files/2as/french/test/t1-3-sol.pdf",
+  "size": 81220,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الفرنسية (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الفرنسية (النموذج 3) للسنة الثانية ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: texte explicatif: les énergies renouvelables، la définition et l'exemple، l'opposition et la concession، la nominalisation، le résumé. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/history-geo/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "2as",
+  "subject": "history-geo",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2as/history-geo/exam/t1-2.pdf",
+  "solution": "/files/2as/history-geo/exam/t1-2-sol.pdf",
+  "size": 76816,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 2) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 2) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: التوسع الاستعماري الأوروبي في القرن 19، مؤتمر برلين 1884–1885، احتلال المغرب العربي: الجزائر 1830، تونس 1881، المغرب 1912، الجغرافيا: الموارد الطاقوية والطاقات المتجددة، وضعية إدماجية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/history-geo/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "2as",
+  "subject": "history-geo",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/history-geo/test/t1-3.pdf",
+  "solution": "/files/2as/history-geo/test/t1-3-sol.pdf",
+  "size": 72227,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التاريخ والجغرافيا (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التاريخ والجغرافيا (النموذج 3) للسنة الثانية ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الأزمة الاقتصادية العالمية 1929، الخميس الأسود وسياسة الصفقة الجديدة، الجغرافيا: الهجرة الريفية والتحضّر، آثار التحضّر السريع. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/islamic/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "2as",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2as/islamic/exam/t1-2.pdf",
+  "solution": "/files/2as/islamic/exam/t1-2-sol.pdf",
+  "size": 76267,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الإسلامية (النموذج 2) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الإسلامية (النموذج 2) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: مكانة العقل في الإسلام، آية آل عمران 190، مجالات عمل العقل وحدوده، وضعية: الخرافة والشعوذة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/islamic/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "2as",
+  "subject": "islamic",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/islamic/test/t1-3.pdf",
+  "solution": "/files/2as/islamic/test/t1-3-sol.pdf",
+  "size": 75105,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في العلوم الإسلامية (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في العلوم الإسلامية (النموذج 3) للسنة الثانية ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الأمانة والعدل، آية النساء 58، مجالات الأمانة، وضعية: الغش في الامتحان. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/philosophy/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "2as",
+  "subject": "philosophy",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/2as/philosophy/exam/t1-2.pdf",
+  "solution": "/files/2as/philosophy/exam/t1-2-sol.pdf",
+  "size": 65369,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الفلسفة (النموذج 2) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الفلسفة (النموذج 2) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: مقالة جدلية: هل الحواس هي مصدر المعرفة؟، الموقف التجريبي: جون لوك ودافيد هيوم، الموقف العقلي: ديكارت وأفلاطون، التركيب: كانط. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/philosophy/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "2as",
+  "subject": "philosophy",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/philosophy/test/t1-3.pdf",
+  "solution": "/files/2as/philosophy/test/t1-3-sol.pdf",
+  "size": 64264,
+  "pages": 1,
+  "added": "2026-11-05",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الفلسفة (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الفلسفة (النموذج 3) للسنة الثانية ثانوي (المدة: ساعة ونصف). موضوع مقترح مع الحل المفصل يتناول: مقالة مقارنة: الإحساس والإدراك، أوجه الاختلاف، أوجه الاتفاق، طبيعة العلاقة بينهما. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "3ap/civic/exam-t1-2",
   "slug": "exam-t1-2",
   "level": "3ap",
