@@ -1,5 +1,299 @@
 [
  {
+  "id": "2as/arabic/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "2as",
+  "subject": "arabic",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/arabic/test/t1-3.pdf",
+  "solution": "/files/2as/arabic/test/t1-3-sol.pdf",
+  "size": 83910,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 3) للسنة الثانية ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الشعر العباسي: بشار بن برد — في الصداقة، شعر الحكمة، الشرط والأسلوب الإنشائي، بحر الطويل. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/english/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "2as",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/english/exam/t1-3.pdf",
+  "solution": "/files/2as/english/exam/t1-3-sol.pdf",
+  "size": 90655,
+  "pages": 2,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 3) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: reading: Make peace — peer mediation at school، comprehension and reference، the conditional type 2، prefixes: un-, dis-, im-، written expression: solving a conflict. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/french/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "2as",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/french/exam/t1-3.pdf",
+  "solution": "/files/2as/french/exam/t1-3-sol.pdf",
+  "size": 81871,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 3) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: le plaidoyer: défendre la forêt، thèse et arguments، les articulateurs logiques، l'impératif et l'exhortation، production: écrire un plaidoyer. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/history-geo/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "2as",
+  "subject": "history-geo",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/history-geo/exam/t1-3.pdf",
+  "solution": "/files/2as/history-geo/exam/t1-3-sol.pdf",
+  "size": 74098,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 3) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الحرب العالمية الأولى 1914–1918، معاهدة فرساي وعصبة الأمم، الجغرافيا: الاتحاد الأوروبي كتكتل اقتصادي، وضعية إدماجية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/islamic/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "2as",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/islamic/exam/t1-3.pdf",
+  "solution": "/files/2as/islamic/exam/t1-3-sol.pdf",
+  "size": 74166,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الإسلامية (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الإسلامية (النموذج 3) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: المعاملات المالية: البيع والربا، آية البقرة 275، أضرار الربا، وضعية: قرض بفائدة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/philosophy/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "2as",
+  "subject": "philosophy",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/philosophy/exam/t1-3.pdf",
+  "solution": "/files/2as/philosophy/exam/t1-3-sol.pdf",
+  "size": 63336,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الفلسفة (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الفلسفة (النموذج 3) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: مقالة مقارنة: الاستقراء والاستنتاج، المنطق الصوري والمنطق المادي، أوجه الاختلاف والاتفاق، طبيعة العلاقة: التكامل. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/science/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "2as",
+  "subject": "science",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/science/exam/t1-3.pdf",
+  "solution": "/files/2as/science/exam/t1-3-sol.pdf",
+  "size": 74028,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في علوم الطبيعة والحياة (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في علوم الطبيعة والحياة (النموذج 3) للسنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: الانقسام المنصف والإلقاح، ثبات عدد الصبغيات عبر الأجيال، الصيغة الصبغية 2n و n، دورة حياة ثنائية الصيغة الصبغية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/science/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "2as",
+  "subject": "science",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2as/science/test/t1-3.pdf",
+  "solution": "/files/2as/science/test/t1-3-sol.pdf",
+  "size": 76010,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في علوم الطبيعة والحياة (النموذج 3) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في علوم الطبيعة والحياة (النموذج 3) للسنة الثانية ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: تضاعف ADN نصف المحافظ، تجربة ميسلسون وستال 1958، الآزوت الثقيل N15، تفسير نتائج الطرد المركزي. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/economics/exam-t1-1",
+  "slug": "exam-t1-1",
+  "level": "3as",
+  "subject": "economics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 1,
+  "file": "/files/3as/economics/exam/t1-1.pdf",
+  "solution": "/files/3as/economics/exam/t1-1-sol.pdf",
+  "size": 74538,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الاقتصاد والمناجمنت — السنة الثالثة ثانوي تسيير واقتصاد مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الاقتصاد والمناجمنت — السنة الثالثة ثانوي تسيير واقتصاد (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: البطالة: مفهومها وأنواعها، حساب معدل البطالة، التضخم: حساب معدله وآثاره، النقود ووظائفها. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/economics/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3as",
+  "subject": "economics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3as/economics/exam/t1-2.pdf",
+  "solution": "/files/3as/economics/exam/t1-2-sol.pdf",
+  "size": 74336,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الاقتصاد والمناجمنت (النموذج 2) — تسيير واقتصاد — السنة الثالثة ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الاقتصاد والمناجمنت (النموذج 2) — تسيير واقتصاد للسنة الثالثة ثانوي (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: البنك المركزي ووظائفه، البنوك التجارية ووظائفها، خلق النقود والاحتياطي القانوني، حساب مضاعف الائتمان. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/economics/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "3as",
+  "subject": "economics",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3as/economics/test/t1-2.pdf",
+  "solution": "/files/3as/economics/test/t1-2-sol.pdf",
+  "size": 71503,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الاقتصاد والمناجمنت (النموذج 2) — تسيير واقتصاد — السنة الثالثة ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الاقتصاد والمناجمنت (النموذج 2) — تسيير واقتصاد للسنة الثالثة ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: السوق: مفهومه وأنواعه، قانون العرض والطلب، تحديد سعر التوازن، أثر تغيّر الطلب على السعر. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/law/exam-t1-1",
+  "slug": "exam-t1-1",
+  "level": "3as",
+  "subject": "law",
+  "type": "exam",
+  "trimester": 1,
+  "n": 1,
+  "file": "/files/3as/law/exam/t1-1.pdf",
+  "solution": "/files/3as/law/exam/t1-1-sol.pdf",
+  "size": 72072,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في القانون — السنة الثالثة ثانوي تسيير واقتصاد مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في القانون — السنة الثالثة ثانوي تسيير واقتصاد (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: عقد البيع: آثاره، التزامات البائع: التسليم والضمان، ضمان العيوب الخفية، التزامات المشتري، حالة تطبيقية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/law/exam-t1-2",
+  "slug": "exam-t1-2",
+  "level": "3as",
+  "subject": "law",
+  "type": "exam",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3as/law/exam/t1-2.pdf",
+  "solution": "/files/3as/law/exam/t1-2-sol.pdf",
+  "size": 74112,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في القانون (النموذج 2) — تسيير واقتصاد — السنة الثالثة ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في القانون (النموذج 2) — تسيير واقتصاد للسنة الثالثة ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: الشركة: تعريفها وأركانها، شركات الأشخاص: شركة التضامن، شركات الأموال: شركة المساهمة، الشركة ذات المسؤولية المحدودة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/law/test-t1-2",
+  "slug": "test-t1-2",
+  "level": "3as",
+  "subject": "law",
+  "type": "test",
+  "trimester": 1,
+  "n": 2,
+  "file": "/files/3as/law/test/t1-2.pdf",
+  "solution": "/files/3as/law/test/t1-2-sol.pdf",
+  "size": 70519,
+  "pages": 1,
+  "added": "2026-11-07",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في القانون (النموذج 2) — تسيير واقتصاد — السنة الثالثة ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في القانون (النموذج 2) — تسيير واقتصاد للسنة الثالثة ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: علاقة العمل وعقد العمل، عناصر عقد العمل: العمل، الأجر، التبعية، التزامات العامل وحقوقه، التزامات المستخدم. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "2as/arabic/exam-t1-3",
   "slug": "exam-t1-3",
   "level": "2as",
@@ -9485,7 +9779,7 @@
   "n": 1,
   "file": "/files/3as/economics/test/t1-1.pdf",
   "solution": "/files/3as/economics/test/t1-1-sol.pdf",
-  "size": 75668,
+  "size": 75054,
   "pages": 1,
   "added": "2026-10-28",
   "html": true,
@@ -9863,7 +10157,7 @@
   "n": 1,
   "file": "/files/3as/law/test/t1-1.pdf",
   "solution": "/files/3as/law/test/t1-1-sol.pdf",
-  "size": 71565,
+  "size": 71478,
   "pages": 1,
   "added": "2026-10-28",
   "html": true,
