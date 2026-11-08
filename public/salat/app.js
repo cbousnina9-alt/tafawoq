@@ -434,7 +434,7 @@ function showAdhan(k, friday) {
   const ov = document.createElement('div');
   ov.className = 'adhan-ov';
   ov.setAttribute('role', 'alertdialog');
-  ov.innerHTML = `<div>
+  ov.innerHTML = `<div class="skyline">${skylineSvg()}</div>${starsSvg()}<div>
     <p>حان الآن موعد أذان</p>
     <div class="big">${esc(pName(k, friday))}</div>
     <p>${esc(fmtTime(new Date()))} · ${esc(S.loc.name)}</p>
@@ -576,7 +576,7 @@ function renderPlayer() {
   if (!P.s) { if (bar) bar.remove(); return; }
   if (!bar) { bar = document.createElement('div'); bar.className = 'player'; document.body.appendChild(bar); }
   const rec = RECITERS.find((r) => r[0] === S.reciter) || RECITERS[0];
-  bar.innerHTML = `<div class="inner wrap">
+  bar.innerHTML = `<div class="inner">
     <button class="round" id="pToggle" type="button" aria-label="${P.playing ? 'إيقاف مؤقت' : 'تشغيل'}">${P.playing ? I.pause : I.play}</button>
     <div class="info"><b>سورة ${esc(surahName(P.s))} — الآية ${arNum(P.a)}</b><span>${esc(rec[1])}</span></div>
     <button class="icon-btn" id="pStop" type="button" aria-label="إغلاق المشغل">${I.close}</button>
@@ -606,41 +606,138 @@ function setTab(name) {
   $$('.tabbar a').forEach((a) => { if (a.dataset.tab === name) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
 }
 
+/* ---------- ornament & scenery ---------- */
+let patId = 0;
+function patternSvg() {
+  const id = 'kh' + (++patId);
+  return `<svg class="pattern" aria-hidden="true" width="100%" height="100%"><defs><pattern id="${id}" width="44" height="44" patternUnits="userSpaceOnUse"><g fill="none" stroke="currentColor" stroke-width="1.1"><rect x="12" y="12" width="20" height="20"/><rect x="12" y="12" width="20" height="20" transform="rotate(45 22 22)"/><circle cx="22" cy="22" r="4"/><path d="M22 0v5.9M22 38.1V44M0 22h5.9M38.1 22H44M0 0l7.9 7.9M44 0l-7.9 7.9M0 44l7.9-7.9M44 44l-7.9-7.9"/></g></pattern></defs><rect width="100%" height="100%" fill="url(#${id})"/></svg>`;
+}
+const STAR8 = '<svg viewBox="0 0 44 44" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="9" width="26" height="26" rx="2"/><rect x="9" y="9" width="26" height="26" rx="2" transform="rotate(45 22 22)"/></g></svg>';
+const ROSETTE = '<svg viewBox="0 0 20 20" aria-hidden="true"><g fill="var(--paper)" stroke="currentColor" stroke-width="1.2"><rect x="4" y="4" width="12" height="12"/><rect x="4" y="4" width="12" height="12" transform="rotate(45 10 10)"/></g><circle cx="10" cy="10" r="2" fill="currentColor"/></svg>';
+function skylineSvg() {
+  const win = (x) => `<path d="M${x} 122V113a5 5 0 0 1 10 0V122Z"/>`;
+  return `<svg viewBox="0 0 600 130" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path fill="currentColor" opacity=".55" d="M0 130V108H30V100H52V96C52 86 62 80 68 78C74 80 84 86 84 96V100H100V108H112V60L116 46L120 60V108H140V114H160V130ZM440 130V114H462V104H474V98C474 88 484 82 490 80C496 82 506 88 506 98V104H520V110H532V64L536 50L540 64V110H560V102H600V130Z"/>
+    <g fill="currentColor">
+      <rect x="230" y="88" width="140" height="42"/>
+      <rect x="246" y="84" width="108" height="6"/>
+      <path d="M240 86C240 58 270 44 300 36C330 44 360 58 360 86Z"/>
+      <rect x="298.6" y="22" width="2.8" height="16"/>
+      <path d="M303.5 12.5a6.5 6.5 0 1 0 0 10.6a5 5 0 1 1 0-10.6Z"/>
+      <rect x="195" y="100" width="40" height="30"/>
+      <path d="M197 102C197 86 207 80 215 76C223 80 233 86 233 102Z"/>
+      <rect x="214" y="66" width="2" height="11"/>
+      <rect x="365" y="100" width="40" height="30"/>
+      <path d="M367 102C367 86 377 80 385 76C393 80 403 86 403 102Z"/>
+      <rect x="384" y="66" width="2" height="11"/>
+      <rect x="171" y="40" width="10" height="90"/><rect x="167" y="62" width="18" height="4" rx="1"/><rect x="168" y="90" width="16" height="3" rx="1"/>
+      <path d="M171 40L176 18L181 40Z"/><rect x="175.4" y="8" width="1.2" height="11"/>
+      <rect x="419" y="40" width="10" height="90"/><rect x="415" y="62" width="18" height="4" rx="1"/><rect x="416" y="90" width="16" height="3" rx="1"/>
+      <path d="M419 40L424 18L429 40Z"/><rect x="423.4" y="8" width="1.2" height="11"/>
+      <rect x="0" y="126" width="600" height="4"/>
+    </g>
+    <g fill="var(--win, transparent)" opacity=".9">
+      ${[244, 262, 328, 346].map(win).join('')}
+      <path d="M291 130V111a9 9 0 0 1 18 0V130Z"/>
+      ${[205, 375].map((x) => win(x)).join('')}
+      <rect x="174" y="72" width="4" height="8" rx="2"/><rect x="422" y="72" width="4" height="8" rx="2"/>
+    </g>
+  </svg>`;
+}
+let starsCache = '';
+function starsSvg() {
+  if (starsCache) return starsCache;
+  let seed = 7; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  let c = '';
+  for (let i = 0; i < 46; i++) c += `<circle cx="${(rnd() * 100).toFixed(1)}%" cy="${(rnd() * 62).toFixed(1)}%" r="${(0.5 + rnd() * 1.1).toFixed(2)}" fill="#fff" opacity="${(0.35 + rnd() * 0.6).toFixed(2)}"/>`;
+  starsCache = `<svg class="stars" width="100%" height="100%" aria-hidden="true">${c}</svg>`;
+  return starsCache;
+}
+function phaseOf(now, st) {
+  const T = st.today, m = 60000;
+  if (now < T.fajr || now >= T.isha) return 'night';
+  if (now < T.sunrise) return 'dawn';
+  if (now < T.dhuhr - 90 * m) return 'morning';
+  if (now < T.asr) return 'day';
+  if (now < T.maghrib - 35 * m) return 'afternoon';
+  if (now < T.maghrib.getTime() + 20 * m) return 'sunset';
+  return 'dusk';
+}
+function placeOrb(now, st) {
+  const orb = $('#orb'); if (!orb) return;
+  const T = st.today;
+  if (now >= T.sunrise && now < T.maghrib) {
+    const f = (now - T.sunrise) / (T.maghrib - T.sunrise);
+    orb.className = 'orb sun';
+    orb.style.left = '14%';
+    orb.style.top = (54 - Math.sin(Math.PI * f) * 22).toFixed(1) + '%';
+  } else {
+    orb.className = 'orb moon';
+    orb.style.left = '14%'; orb.style.top = '40%';
+  }
+}
+function verseOfDay(t) {
+  if (!Q) return null;
+  const total = OFF[113] + Q[113][2].length;
+  let n = ((t.y * 372 + t.m * 31 + t.d) * 7919) % total;
+  for (let tries = 0; tries < 400; tries++, n = (n + 1) % total) {
+    let s = 1; while (s < 114 && OFF[s] <= n) s++;
+    const a = n - OFF[s - 1] + 1;
+    const txt = Q[s - 1][2][a - 1];
+    if (txt.length > 40 && txt.length < 150) return { s, a, txt };
+  }
+  return null;
+}
+
 /* ---------- Home ---------- */
 function renderHome() {
   const st = state();
+  const now = new Date();
   const showArm = FARD.some((k) => S.adhan[k]) && !audioArmed && !(navigator.userActivation && navigator.userActivation.hasBeenActive);
   app.innerHTML = `
-  <header class="topbar wrap">
-    <h1>مواقيت الصلاة</h1>
-    <button class="icon-btn" id="monthBtn" type="button" aria-label="جدول الشهر" title="جدول الشهر">${I.cal}</button>
-  </header>
-  <main class="view wrap">
-    <section class="hero" aria-live="polite">
-      <div class="hero-top">
-        <button class="place" id="placeBtn" type="button">${I.pin}<span>${esc(S.loc.name)}</span></button>
-        <div class="dates"><b id="hijri">${esc(fmt('hijri', new Date()))}</b><span id="greg">${esc(fmt('greg', new Date()))}</span></div>
+  <section class="sky" id="sky" data-phase="${phaseOf(now, st)}" aria-live="polite">
+    ${starsSvg()}
+    <div class="orb" id="orb"></div>
+    <div class="skyline">${skylineSvg()}</div>
+    <div class="wrap">
+      <div class="sky-bar">
+        <button class="chip" id="placeBtn" type="button" aria-label="تغيير الموقع: ${esc(S.loc.name)}">${I.pin}<span>${esc(S.loc.name)}</span></button>
+        <span class="spacer"></span>
+        <button class="glass-btn" id="monthBtn" type="button" aria-label="جدول مواقيت الشهر">${I.cal}</button>
       </div>
-      <div class="label" id="nextLabel"></div>
-      <div class="next-name" id="nextName"></div>
-      <div class="next-row"><div class="countdown" id="countdown">--:--:--</div><div class="at" id="nextAt"></div></div>
-      <div class="progress" aria-hidden="true"><i id="prog"></i></div>
-    </section>
-    ${S.loc.auto ? `<div class="banner">${I.pin}<span>المواقيت محسوبة لمدينة ${esc(S.loc.name)}. حدّد موقعك لدقة أكبر.</span><button class="btn small primary" id="locateBtn" type="button">موقعي</button></div>` : ''}
-    ${showArm ? `<div class="banner" id="armBanner">${I.bellOn}<span>اضغط في أي مكان لتفعيل صوت الأذان، وأبقِ التطبيق مفتوحًا.</span></div>` : ''}
-    <section class="card"><ul class="times" id="times"></ul></section>
-    <div class="row-actions">
-      <button class="tile" id="contRead" type="button">${I.book}<div><b>${lastRead ? 'متابعة القراءة' : 'المصحف الشريف'}</b><span id="contReadSub">${lastRead ? '…' : 'ابدأ من سورة الفاتحة'}</span></div></button>
-      <button class="tile" id="qiblaTile" type="button">${I.compass}<div><b>اتجاه القبلة</b><span>${Math.round(qiblaBearing())}° من الشمال</span></div></button>
+      <div class="sky-main">
+        <div class="sky-date"><b id="hijri">${esc(fmt('hijri', now))}</b><i>|</i><span id="greg">${esc(fmt('greg', now))}</span></div>
+        <div class="sky-label" id="nextLabel"></div>
+        <div class="sky-name" id="nextName"></div>
+        <div class="sky-count"><span>بعد</span><output id="countdown">--:--:--</output></div>
+        <div class="sky-at" id="nextAt"></div>
+      </div>
     </div>
+  </section>
+  <main class="wrap sheet-up">
+    <ul class="ptimes" id="times" aria-label="مواقيت اليوم"></ul>
+    ${S.loc.auto ? `<div class="banner">${I.pin}<span>المواقيت محسوبة لمدينة ${esc(S.loc.name)}. حدّد موقعك لدقة أكبر.</span><button class="btn small primary" id="locateBtn" type="button">موقعي</button></div>` : ''}
+    ${showArm ? `<div class="banner" id="armBanner">${I.bellOn}<span>المس الشاشة مرة لتفعيل صوت الأذان، وأبقِ التطبيق مفتوحًا.</span></div>` : ''}
+    <div class="quick">
+      <button class="q-btn" id="contRead" type="button"><span class="q-ic">${I.book}</span>${lastRead ? 'متابعة القراءة' : 'المصحف'}</button>
+      <button class="q-btn" id="qiblaTile" type="button"><span class="q-ic">${I.compass}</span>القبلة ${Math.round(qiblaBearing())}°</button>
+      <button class="q-btn" id="monthTile" type="button"><span class="q-ic">${I.cal}</span>جدول الشهر</button>
+    </div>
+    <div id="verseSlot"></div>
   </main>`;
   renderTimes(st);
+  placeOrb(now, st);
   $('#monthBtn').onclick = () => openMonth();
+  $('#monthTile').onclick = () => openMonth();
   $('#placeBtn').onclick = () => { location.hash = 'prefs'; };
   $('#qiblaTile').onclick = () => { location.hash = 'qibla'; };
   $('#contRead').onclick = () => { loadQuran().then(() => openSurah(lastRead ? lastRead.s : 1, lastRead ? lastRead.a : 1)).catch(quranErr); };
-  if (lastRead) loadQuran().then(() => { const el = $('#contReadSub'); if (el) el.textContent = `سورة ${surahName(lastRead.s)} · الآية ${arNum(lastRead.a)}`; }).catch(() => {});
   const lb = $('#locateBtn'); if (lb) lb.onclick = () => locate();
+  loadQuran().then(() => {
+    const v = verseOfDay(st.t); const slot = $('#verseSlot'); if (!v || !slot) return;
+    slot.innerHTML = `<section class="verse">${patternSvg()}<h3>آية اليوم</h3><p>${esc(v.txt)}</p><div class="ref">سورة ${esc(surahName(v.s))} · الآية ${arNum(v.a)}</div><button class="btn small" id="verseGo" type="button">${I.book} اقرأ في المصحف</button></section>`;
+    $('#verseGo').onclick = () => openSurah(v.s, v.a);
+  }).catch(() => {});
   updateHero(st);
 }
 function renderTimes(st) {
@@ -651,11 +748,11 @@ function renderTimes(st) {
     const isNext = !st.next.tomorrow && st.next.key === p.key;
     const past = t <= now && !isNext;
     const on = !p.noAdhan && S.adhan[p.key];
-    const sub = p.key === 'dhuhr' && st.friday ? '<small>صلاة الجمعة</small>' : (p.key === 'sunrise' ? '<small>نهاية وقت الفجر</small>' : '');
+    const sub = p.key === 'dhuhr' && st.friday ? '<small>صلاة الجمعة</small>' : (isNext ? '<small>الصلاة القادمة</small>' : '');
     return `<li class="${isNext ? 'is-next' : ''} ${past ? 'is-past' : ''}">
-      <span class="t-ico">${ICONS[p.key]}</span>
-      <span class="t-name">${esc(pName(p.key, st.friday))}${sub}</span>
-      <span class="t-time">${esc(fmtTime(t))}</span>
+      <span class="p-ico">${ICONS[p.key]}</span>
+      <span class="p-name">${esc(pName(p.key, st.friday))}${sub}</span>
+      <span class="p-time">${esc(fmtTime(t))}</span>
       <button class="bell" type="button" data-k="${p.key}" ${p.noAdhan ? 'disabled aria-label="لا أذان للشروق"' : `aria-pressed="${on}" aria-label="أذان ${esc(p.name)}: ${on ? 'مفعل' : 'متوقف'}"`}>${on ? I.bellOn : I.bellOff}</button>
     </li>`;
   }).join('');
@@ -673,15 +770,14 @@ function updateHero(st) {
   $('#nextLabel').textContent = st.next.tomorrow ? 'الصلاة القادمة (غدًا)' : 'الصلاة القادمة';
   nn.textContent = pName(st.next.key, st.next.tomorrow ? isFriday(addDays(st.t, 1)) : st.friday);
   $('#countdown').textContent = fmtLeft(left);
-  $('#nextAt').textContent = `الأذان ${fmtTime(st.next.time)}`;
-  const span = st.next.time - st.prev.time;
-  const pct = Math.min(100, Math.max(0, ((now - st.prev.time) / span) * 100));
-  $('#prog').style.width = pct.toFixed(1) + '%';
+  $('#nextAt').textContent = `الأذان عند ${fmtTime(st.next.time)}`;
   if (now.getMinutes() !== lastMinute) {
     lastMinute = now.getMinutes();
     renderTimes(st);
     $('#hijri').textContent = fmt('hijri', now);
     $('#greg').textContent = fmt('greg', now);
+    const sky = $('#sky'); if (sky) sky.dataset.phase = phaseOf(now, st);
+    placeOrb(now, st);
   }
 }
 
@@ -696,14 +792,14 @@ function openMonth(offset = 0) {
     const t = { y, m, d };
     const tt = dayTimes(t);
     const isToday = y === base.y && m === base.m && d === base.d;
-    rows += `<tr class="${isToday ? 'today' : ''}"><td>${esc(fmt('wd', tt.dhuhr))} ${d}<small>${esc(fmt('hijriShort', tt.dhuhr))}</small></td>${PRAYERS.map((p) => `<td>${esc(fmtTime(tt[p.key]))}</td>`).join('')}</tr>`;
+    rows += `<tr class="${isToday ? 'today' : ''} ${isFriday(t) ? 'fri' : ''}"><td>${esc(fmt('wd', tt.dhuhr))} ${d}<small>${esc(fmt('hijriShort', tt.dhuhr))}</small></td>${PRAYERS.map((p) => `<td>${esc(fmtTime(tt[p.key]))}</td>`).join('')}</tr>`;
   }
-  sheet(`<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+  sheet(`<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
       <button class="icon-btn" id="mPrev" type="button" aria-label="الشهر السابق">${I.prev}</button>
       <h3 style="flex:1;text-align:center;margin:0">${esc(monthName)}</h3>
       <button class="icon-btn" id="mNext" type="button" aria-label="الشهر التالي">${I.next}</button>
     </div>
-    <p class="muted" style="margin:0 0 8px;font-size:13px">${esc(S.loc.name)} · ${esc(METHODS[S.method].label)}</p>
+    <p class="muted" style="margin:0 0 10px;font-size:13px;text-align:center">${esc(S.loc.name)} · ${esc(METHODS[S.method].label)}</p>
     <div class="table-wrap"><table class="month"><thead><tr><th>اليوم</th>${PRAYERS.map((p) => `<th>${p.name}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`,
   (el) => {
     $('#mPrev', el).onclick = () => openMonth(offset - 1);
@@ -718,43 +814,43 @@ let qsearch = '';
 function quranErr() { toast('تعذر تحميل نص المصحف. أعد المحاولة.'); }
 function renderQuran() {
   app.innerHTML = `
-  <header class="topbar wrap"><h1>المصحف الشريف</h1></header>
+  <header class="pagehead wrap"><h1>القرآن الكريم</h1></header>
   <main class="view wrap">
     <div id="contWrap"></div>
-    <div class="tabs" role="tablist">
+    <div class="seg" role="tablist" aria-label="فهرس المصحف">
       ${[['surah', 'السور'], ['juz', 'الأجزاء'], ['marks', 'العلامات'], ['search', 'بحث']].map(([k, l]) => `<button role="tab" type="button" data-t="${k}" aria-selected="${qtab === k}">${l}</button>`).join('')}
     </div>
-    <section class="card" id="qbody"><div class="empty">جارٍ تحميل المصحف…</div></section>
+    <section id="qbody"><div class="empty">جارٍ تحميل المصحف…</div></section>
   </main>`;
-  $$('.tabs button').forEach((b) => b.onclick = () => { qtab = b.dataset.t; LS.set('qtab', qtab); $$('.tabs button').forEach((x) => x.setAttribute('aria-selected', x === b)); renderQBody(); });
+  $$('.seg button[data-t]').forEach((b) => b.onclick = () => { qtab = b.dataset.t; LS.set('qtab', qtab); $$('.seg button[data-t]').forEach((x) => x.setAttribute('aria-selected', x === b)); renderQBody(); });
   loadQuran().then(() => {
-    if (lastRead) {
-      $('#contWrap').innerHTML = `<button class="continue" id="contBtn" type="button">${I.mark}<div><b>متابعة القراءة</b><span>سورة ${esc(surahName(lastRead.s))} · الآية ${arNum(lastRead.a)} · الجزء ${JUZ_NAMES[juzOf(lastRead.s, lastRead.a) - 1]}</span></div></button>`;
-      $('#contBtn').onclick = () => openSurah(lastRead.s, lastRead.a);
-    }
+    const r = lastRead || { s: 1, a: 1 };
+    $('#contWrap').innerHTML = `<button class="cover" id="contBtn" type="button">${patternSvg()}<div class="c-text"><small>${lastRead ? 'متابعة القراءة' : 'ابدأ القراءة'}</small><b>سورة ${esc(surahName(r.s))}</b><span>الآية ${arNum(r.a)} · الجزء ${JUZ_NAMES[juzOf(r.s, r.a) - 1]}</span></div><span class="c-go">${I.next}</span></button>`;
+    $('#contBtn').onclick = () => openSurah(r.s, r.a);
     renderQBody();
   }).catch(() => { $('#qbody').innerHTML = '<div class="empty">تعذر تحميل نص المصحف. تحقق من الاتصال ثم أعد فتح الصفحة.</div>'; });
 }
+const starBadge = (n) => `<span class="star">${STAR8}<em>${arNum(n)}</em></span>`;
 function renderQBody() {
   const body = $('#qbody'); if (!body || !Q) return;
   if (qtab === 'surah') {
-    body.innerHTML = `<ul class="list">${Q.map((s, i) => `<li><button type="button" data-s="${i + 1}"><span class="star">${arNum(i + 1)}</span><span><span class="s-name">${esc(s[0])}</span><br><span class="s-meta">${s[1] === 'm' ? 'مكية' : 'مدنية'} · ${ayahWord(s[2].length)}</span></span><span class="s-count">ج ${arNum(juzOf(i + 1, 1))}</span></button></li>`).join('')}</ul>`;
+    body.innerHTML = `<ul class="list">${Q.map((s, i) => `<li><button type="button" data-s="${i + 1}">${starBadge(i + 1)}<span><span class="s-title">سورة ${esc(s[0])}</span><span class="s-meta">${s[1] === 'm' ? 'مكية' : 'مدنية'} · ${ayahWord(s[2].length)}</span></span><span class="s-ar">${esc(s[0])}</span></button></li>`).join('')}</ul>`;
   } else if (qtab === 'juz') {
-    body.innerHTML = `<ul class="list">${JUZ.map(([s, a], i) => `<li><button type="button" data-s="${s}" data-a="${a}"><span class="star">${arNum(i + 1)}</span><span><span class="s-meta">الجزء ${JUZ_NAMES[i]}</span><br><span class="s-name" style="font-size:19px">${esc(Q[s - 1][2][a - 1].split(' ').slice(0, 5).join(' '))}</span></span><span class="s-count">${esc(Q[s - 1][0])} ${arNum(a)}</span></button></li>`).join('')}</ul>`;
+    body.innerHTML = `<ul class="list">${JUZ.map(([s, a], i) => `<li><button type="button" data-s="${s}" data-a="${a}">${starBadge(i + 1)}<span style="min-width:0"><span class="s-title">الجزء ${JUZ_NAMES[i]}</span><span class="s-snip">${esc(Q[s - 1][2][a - 1].split(' ').slice(0, 6).join(' '))}</span></span><span class="s-meta">${esc(Q[s - 1][0])} ${arNum(a)}</span></button></li>`).join('')}</ul>`;
   } else if (qtab === 'marks') {
     body.innerHTML = bookmarks.length
-      ? `<ul class="list">${bookmarks.map((b) => `<li><button type="button" data-s="${b.s}" data-a="${b.a}"><span class="star">${I.mark.replace('<svg', '<svg width="18" height="18"')}</span><span><span class="s-name" style="font-size:19px">${esc(Q[b.s - 1][2][b.a - 1].split(' ').slice(0, 6).join(' '))}…</span><br><span class="s-meta">سورة ${esc(Q[b.s - 1][0])} · الآية ${arNum(b.a)}</span></span><span></span></button></li>`).join('')}</ul>`
-      : '<div class="empty">لا توجد علامات بعد. اضغط على أي آية أثناء القراءة واختر «إضافة علامة».</div>';
+      ? `<ul class="list">${bookmarks.map((b) => `<li><button type="button" data-s="${b.s}" data-a="${b.a}"><span class="star" style="color:var(--emerald)">${I.mark}</span><span style="min-width:0"><span class="s-title">سورة ${esc(Q[b.s - 1][0])} · الآية ${arNum(b.a)}</span><span class="s-snip">${esc(Q[b.s - 1][2][b.a - 1])}</span></span><span></span></button></li>`).join('')}</ul>`
+      : `<div class="empty">${I.mark}لا توجد علامات بعد.<br>المس أي آية أثناء القراءة واختر «إضافة علامة».</div>`;
   } else {
-    body.innerHTML = `<div style="padding:12px"><div class="field"><label for="qsearch">ابحث عن كلمة أو جزء من آية</label><input class="input" id="qsearch" type="search" placeholder="مثال: الصابرين" value="${esc(qsearch)}" autocomplete="off"></div></div><div id="qres"></div>`;
+    body.innerHTML = `<div class="search-box">${I.search}<input class="input" id="qsearch" type="search" placeholder="ابحث في القرآن، مثل: الصابرين" value="${esc(qsearch)}" autocomplete="off" aria-label="البحث في القرآن"></div><div id="qres" style="margin-top:14px"></div>`;
     const inp = $('#qsearch'); let tm;
     const run = () => {
       qsearch = inp.value;
-      const res = searchQuran(qsearch);
       const box = $('#qres');
-      if (norm(qsearch).length < 2) { box.innerHTML = '<div class="empty">اكتب حرفين على الأقل. البحث لا يتأثر بالتشكيل.</div>'; return; }
+      if (norm(qsearch).length < 2) { box.innerHTML = `<div class="empty">${I.search}اكتب كلمة من حرفين على الأقل.<br>البحث لا يتأثر بالتشكيل ولا بالهمزات.</div>`; return; }
+      const res = searchQuran(qsearch);
       box.innerHTML = res.length
-        ? `<p class="muted" style="margin:0 14px 4px;font-size:13px">${res.length >= 150 ? 'أول ١٥٠ نتيجة' : `${arNum(res.length)} نتيجة`}</p>` + res.map(([s, a]) => `<button class="result" type="button" data-s="${s}" data-a="${a}"><span class="ref">${esc(Q[s - 1][0])} · ${arNum(a)}</span><div class="txt">${esc(Q[s - 1][2][a - 1])}</div></button>`).join('')
+        ? `<p class="muted" style="margin:0 6px 8px;font-size:13px">${res.length >= 150 ? 'أول ١٥٠ نتيجة' : `${arNum(res.length)} نتيجة`}</p><div class="list">` + res.map(([s, a]) => `<button class="result" type="button" data-s="${s}" data-a="${a}"><span class="ref">${esc(Q[s - 1][0])} · ${arNum(a)}</span><div class="txt">${esc(Q[s - 1][2][a - 1])}</div></button>`).join('') + '</div>'
         : '<div class="empty">لا توجد نتائج مطابقة.</div>';
     };
     inp.addEventListener('input', () => { clearTimeout(tm); tm = setTimeout(run, 220); });
@@ -768,7 +864,7 @@ function renderQBody() {
 
 /* ---------- Reader ---------- */
 const reader = { open: false, s: 1, el: null, scrollT: 0 };
-function openSurah(s, a = 1, opts = {}) {
+function openSurah(s, a = 1) {
   reader.s = s; reader.target = a;
   if (location.hash !== '#read') { location.hash = 'read'; } else { showReader(); }
 }
@@ -780,30 +876,38 @@ function showReader() {
     reader.el.innerHTML = `<div class="reader-bar"><div class="inner wrap">
         <button class="icon-btn" id="rBack" type="button" aria-label="رجوع إلى الفهرس">${I.back}</button>
         <div class="ttl"><b id="rTitle"></b><span id="rSub"></span></div>
-        <button class="icon-btn" id="rMenu" type="button" aria-label="خيارات القراءة"><span style="font-family:var(--f-quran);font-size:18px;line-height:1">أ</span></button>
+        <button class="icon-btn" id="rPlay" type="button" aria-label="تشغيل تلاوة السورة">${I.play}</button>
+        <button class="icon-btn" id="rMenu" type="button" aria-label="إعدادات القراءة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></button>
       </div></div>
       <div class="reader-scroll" id="rScroll"><div class="wrap"><article class="page" id="rPage"></article></div></div>`;
     document.body.appendChild(reader.el);
-    $('#rBack').onclick = () => history.length > 1 ? history.back() : (location.hash = 'quran');
+    $('#rBack').onclick = () => (history.length > 1 ? history.back() : (location.hash = 'quran'));
     $('#rMenu').onclick = readerMenu;
-    const sc = $('#rScroll');
-    sc.addEventListener('scroll', () => {
-      clearTimeout(reader.scrollT);
-      reader.scrollT = setTimeout(trackPosition, 350);
-    }, { passive: true });
+    $('#rPlay').onclick = () => playAyah(reader.s, lastRead && lastRead.s === reader.s ? lastRead.a : 1);
+    $('#rScroll').addEventListener('scroll', () => { clearTimeout(reader.scrollT); reader.scrollT = setTimeout(trackPosition, 350); }, { passive: true });
     $('#rPage').addEventListener('click', (e) => {
+      const nx = e.target.closest('[data-go]'); if (nx) { reader.s = Number(nx.dataset.go); reader.target = 1; drawSurah(); return; }
       const ay = e.target.closest('.ayah'); if (ay) ayahSheet(reader.s, Number(ay.dataset.a));
-      const nx = e.target.closest('[data-go]'); if (nx) { reader.s = Number(nx.dataset.go); reader.target = 1; drawSurah(); }
     });
   }
   reader.open = true;
+  document.body.classList.add('reading');
   document.body.style.overflow = 'hidden';
   drawSurah();
 }
 function hideReader() {
   if (!reader.el) return;
   reader.el.remove(); reader.el = null; reader.open = false;
+  document.body.classList.remove('reading');
   document.body.style.overflow = '';
+}
+function cartouche(name) {
+  return `<div class="cartouche"><svg viewBox="0 0 340 64" aria-hidden="true">
+      <path d="M22 32L46 6H294L318 32L294 58H46Z" fill="var(--gold-soft)" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M33 32L52 12H288L307 32L288 52H52Z" fill="none" stroke="currentColor" stroke-width=".8"/>
+      <g transform="translate(12 32)" fill="var(--paper)" stroke="currentColor" stroke-width="1.2"><rect x="-7" y="-7" width="14" height="14"/><rect x="-7" y="-7" width="14" height="14" transform="rotate(45)"/></g>
+      <g transform="translate(328 32)" fill="var(--paper)" stroke="currentColor" stroke-width="1.2"><rect x="-7" y="-7" width="14" height="14"/><rect x="-7" y="-7" width="14" height="14" transform="rotate(45)"/></g>
+    </svg><b>سورة ${esc(name)}</b></div>`;
 }
 function drawSurah() {
   const s = reader.s;
@@ -812,14 +916,19 @@ function drawSurah() {
   $('#rSub').textContent = `الجزء ${JUZ_NAMES[juzOf(s, reader.target || 1) - 1]}`;
   const juzStarts = {};
   JUZ.forEach(([js, ja], i) => { if (js === s && i > 0) juzStarts[ja] = i + 1; });
-  let html = `<header class="surah-head"><b>سورة ${esc(name)}</b><span>${type === 'm' ? 'مكية' : 'مدنية'} · ${ayahWord(verses.length)} · ترتيبها ${arNum(s)}</span></header>`;
+  let html = `<div class="frame" aria-hidden="true">${['tl', 'tr', 'bl', 'br'].map((c) => `<i class="${c}">${ROSETTE}</i>`).join('')}</div>`;
+  html += cartouche(name);
+  html += `<div class="surah-meta">${type === 'm' ? 'مكية' : 'مدنية'} · ${ayahWord(verses.length)} · ترتيبها في المصحف ${arNum(s)}</div>`;
   if (s !== 1 && s !== 9) html += '<p class="basmala">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</p>';
   html += '<div class="mushaf">' + verses.map((v, i) => {
     const a = i + 1;
     const jm = juzStarts[a] ? `<span class="juz-mark">الجزء ${JUZ_NAMES[juzStarts[a] - 1]}</span>` : '';
     return `${jm}<span class="ayah${isMarked(s, a) ? ' marked' : ''}" data-a="${a}">${esc(v)}<span class="an">۝${arNum(a)}</span></span> `;
   }).join('') + '</div>';
-  html += `<div class="next-surah">${s > 1 ? `<button class="btn" type="button" data-go="${s - 1}">${I.prev} ${esc(Q[s - 2][0])}</button>` : ''}${s < 114 ? `<button class="btn primary" type="button" data-go="${s + 1}">السورة التالية: ${esc(Q[s][0])} ${I.next}</button>` : ''}</div>`;
+  html += '<nav class="page-nav">';
+  if (s < 114) html += `<button class="btn primary" type="button" data-go="${s + 1}">${esc(Q[s][0])} ${I.next}</button>`;
+  if (s > 1) html += `<button class="btn" type="button" data-go="${s - 1}">${I.prev} ${esc(Q[s - 2][0])}</button>`;
+  html += '</nav>';
   $('#rPage').innerHTML = html;
   const sc = $('#rScroll');
   const tgt = reader.target > 1 ? $(`.ayah[data-a="${reader.target}"]`) : null;
@@ -842,10 +951,10 @@ function ayahSheet(s, a) {
   const marked = isMarked(s, a);
   sheet(`<h3>سورة ${esc(Q[s - 1][0])} · الآية ${arNum(a)}</h3>
     <div class="quote">${esc(text)}</div>
-    <div class="sheet-actions">
-      <button class="btn" id="aPlay" type="button">${I.play} الاستماع من هذه الآية</button>
-      <button class="btn" id="aMark" type="button">${I.mark} ${marked ? 'إزالة العلامة' : 'إضافة علامة'}</button>
-      <button class="btn" id="aCopy" type="button">${I.copy} نسخ الآية</button>
+    <div class="actions">
+      <button id="aPlay" type="button">${I.play} الاستماع من هذه الآية</button>
+      <button id="aMark" type="button">${I.mark} ${marked ? 'إزالة العلامة' : 'إضافة علامة'}</button>
+      <button id="aCopy" type="button">${I.copy} نسخ الآية</button>
     </div>`, (el) => {
     $('#aPlay', el).onclick = () => { closeSheet(); playAyah(s, a); };
     $('#aMark', el).onclick = () => {
@@ -868,10 +977,12 @@ function fallbackCopy(t, done) {
 }
 function readerMenu() {
   sheet(`<h3>إعدادات القراءة</h3>
-    <div class="set-row"><div><b>حجم الخط</b><small>يُحفظ تلقائيًا</small></div>
-      <div class="stepper"><button type="button" id="fsMinus" aria-label="تصغير">${I.minus}</button><output id="fsOut">${S.qsize}</output><button type="button" id="fsPlus" aria-label="تكبير">${I.plus}</button></div></div>
-    <div class="set-row stack"><div class="field"><label for="recSel">القارئ</label><select class="input" id="recSel">${RECITERS.map((r) => `<option value="${r[0]}" ${r[0] === S.reciter ? 'selected' : ''}>${r[1]}</option>`).join('')}</select></div></div>
-    <div class="set-row"><div><b>تشغيل السورة من بدايتها</b><small>تلاوة متواصلة آية بعد آية</small></div><button class="btn primary small" id="playAll" type="button">${I.play} تشغيل</button></div>`,
+    <div class="group" style="box-shadow:none;background:var(--surface-2)">
+      <div class="row plain"><div class="r-body"><b>حجم الخط</b><small>يُحفظ تلقائيًا</small></div>
+        <div class="stepper"><button type="button" id="fsMinus" aria-label="تصغير الخط">${I.minus}</button><output id="fsOut">${S.qsize}</output><button type="button" id="fsPlus" aria-label="تكبير الخط">${I.plus}</button></div></div>
+      <div class="row plain"><div class="r-body"><b>القارئ</b></div><select class="input" id="recSel" aria-label="القارئ">${RECITERS.map((r) => `<option value="${r[0]}" ${r[0] === S.reciter ? 'selected' : ''}>${r[1]}</option>`).join('')}</select></div>
+      <div class="row plain"><div class="r-body"><b>تلاوة السورة كاملة</b><small>آية بعد آية من البداية</small></div><button class="btn primary small" id="playAll" type="button">${I.play} تشغيل</button></div>
+    </div>`,
   (el) => {
     const upd = (d) => { S.qsize = Math.min(48, Math.max(20, S.qsize + d)); save(); applyTheme(); $('#fsOut', el).textContent = S.qsize; };
     $('#fsMinus', el).onclick = () => upd(-2);
@@ -884,48 +995,58 @@ function readerMenu() {
 /* ---------- Qibla ---------- */
 function dialSvg(bearing) {
   let ticks = '';
-  for (let d = 0; d < 360; d += 5) {
-    const major = d % 30 === 0;
-    const r1 = major ? 128 : 134;
-    ticks += `<line x1="150" y1="${150 - r1}" x2="150" y2="${150 - 142}" transform="rotate(${d} 150 150)" stroke="currentColor" stroke-opacity="${major ? .7 : .3}" stroke-width="${major ? 2 : 1}"/>`;
+  for (let d = 0; d < 360; d += 3) {
+    const major = d % 30 === 0, mid = d % 15 === 0;
+    const r1 = major ? 126 : mid ? 132 : 136;
+    ticks += `<line x1="150" y1="${150 - r1}" x2="150" y2="${150 - 141}" transform="rotate(${d} 150 150)" stroke="currentColor" stroke-opacity="${major ? .85 : mid ? .5 : .25}" stroke-width="${major ? 2 : 1}"/>`;
+  }
+  let nums = '';
+  for (let d = 30; d < 360; d += 30) {
+    if (d % 90 === 0) continue;
+    nums += `<text x="${(150 + 108 * Math.sin(rad(d))).toFixed(1)}" y="${(154 - 108 * Math.cos(rad(d))).toFixed(1)}" text-anchor="middle" font-size="11" fill="currentColor" fill-opacity=".55" font-family="var(--f-body)">${d}</text>`;
   }
   const labels = [['ش', 0], ['ق', 90], ['ج', 180], ['غ', 270]].map(([t, d]) =>
-    `<text x="${(150 + 108 * Math.sin(rad(d))).toFixed(1)}" y="${(157 - 108 * Math.cos(rad(d))).toFixed(1)}" text-anchor="middle" font-size="19" font-weight="700" fill="${d === 0 ? 'var(--warn)' : 'currentColor'}" font-family="var(--f-display)">${t}</text>`).join('');
+    `<text x="${(150 + 106 * Math.sin(rad(d))).toFixed(1)}" y="${(157 - 106 * Math.cos(rad(d))).toFixed(1)}" text-anchor="middle" font-size="20" font-weight="700" fill="${d === 0 ? 'var(--danger)' : 'currentColor'}" font-family="var(--f-display)">${t}</text>`).join('');
   return `<svg viewBox="0 0 300 300" aria-hidden="true" style="color:var(--ink)">
-    <circle cx="150" cy="150" r="146" fill="var(--surface-2)" stroke="var(--line)" stroke-width="2"/>
-    <circle cx="150" cy="150" r="100" fill="none" stroke="var(--line)" stroke-dasharray="2 5"/>
-    ${ticks}${labels}
+    <circle cx="150" cy="150" r="147" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
+    <g opacity=".5" fill="none" stroke="var(--gold)" stroke-width=".8"><rect x="96" y="96" width="108" height="108"/><rect x="96" y="96" width="108" height="108" transform="rotate(45 150 150)"/><circle cx="150" cy="150" r="54"/></g>
+    ${ticks}${nums}${labels}
     <g transform="rotate(${bearing} 150 150)">
-      <line x1="150" y1="150" x2="150" y2="54" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
-      <g transform="translate(150 66)">
-        <rect x="-15" y="-15" width="30" height="30" rx="3" fill="#161616" stroke="var(--brass)" stroke-width="1.5"/>
-        <rect x="-15" y="-7" width="30" height="5" fill="var(--brass)"/>
+      <path d="M150 150L144 70L150 52L156 70Z" fill="var(--emerald)"/>
+      <g transform="translate(150 38)">
+        <rect x="-13" y="-13" width="26" height="26" rx="3" fill="#141414" stroke="var(--gold)" stroke-width="1.4"/>
+        <rect x="-13" y="-6" width="26" height="4" fill="var(--gold)"/>
       </g>
     </g>
-    <circle cx="150" cy="150" r="9" fill="var(--accent)"/><circle cx="150" cy="150" r="3.5" fill="var(--surface)"/>
+    <circle cx="150" cy="150" r="10" fill="var(--emerald)"/><circle cx="150" cy="150" r="4" fill="var(--surface)"/>
   </svg>`;
 }
 function renderQibla() {
   const b = qiblaBearing();
   const dist = distKm(S.loc, KAABA);
   app.innerHTML = `
-  <header class="topbar wrap"><h1>اتجاه القبلة</h1></header>
+  <header class="pagehead wrap"><h1>اتجاه القبلة</h1></header>
   <main class="view wrap">
-    <section class="card compass-card">
-      <div class="compass" id="compass"><div class="pointer" aria-hidden="true"></div><div class="dial" id="dial">${dialSvg(b)}</div></div>
-      <div class="qibla-deg">${Math.round(b)}°</div>
-      <div class="qibla-hint" id="qHint">زاوية القبلة من الشمال الجغرافي، مع اتجاه عقارب الساعة.</div>
+    <section class="qibla">
+      <div class="compass" id="compass">
+        <svg class="lubber" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 30L2 4Q12 -2 22 4Z" fill="currentColor"/></svg>
+        <div class="glow"></div>
+        <div class="dial" id="dial">${dialSvg(b)}</div>
+      </div>
+      <div class="q-deg">${Math.round(b)}°</div>
+      <div class="q-hint" id="qHint">زاوية القبلة من الشمال الجغرافي، باتجاه عقارب الساعة.</div>
       <button class="btn primary" id="startCompass" type="button">${I.compass} تشغيل البوصلة</button>
-      <div class="qibla-facts">
+      <div class="facts">
         <div><b>${Math.round(b)}°</b><span>زاوية القبلة</span></div>
         <div><b>${Math.round(dist).toLocaleString('en')}</b><span>كم إلى الكعبة</span></div>
         <div><b id="headingOut">—</b><span>اتجاه الهاتف</span></div>
       </div>
+      <p class="note">ضع الهاتف مسطّحًا بعيدًا عن المعادن، وأدِره حتى يلتقي المؤشر العلوي برمز الكعبة. إن اضطرب الاتجاه فحرّك الهاتف على شكل الرقم 8 للمعايرة. الموقع: ${esc(S.loc.name)}.</p>
     </section>
-    <p class="note">ضع الهاتف مسطّحًا وبعيدًا عن المعادن والمغناطيس، ثم أدِره حتى يلتقي المؤشر العلوي برمز الكعبة. إذا بدا الاتجاه غير مستقر فحرّك الهاتف على شكل الرقم 8 لمعايرة البوصلة. الموقع المستخدم: ${esc(S.loc.name)} (${S.loc.lat.toFixed(3)}, ${S.loc.lng.toFixed(3)}).</p>
   </main>`;
   $('#startCompass').onclick = () => startCompass(b);
 }
+
 function startCompass(bearing) {
   const btn = $('#startCompass'); const hint = $('#qHint');
   const begin = () => {
@@ -1001,73 +1122,79 @@ function locate(silent) {
 function renderPrefs() {
   const sw = (id, on, label) => `<label class="switch"><input type="checkbox" id="${id}" ${on ? 'checked' : ''} aria-label="${esc(label)}"><span></span></label>`;
   const seg = (name, val, opts) => `<div class="seg" role="group" data-seg="${name}">${opts.map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${String(val) === String(v)}">${l}</button>`).join('')}</div>`;
+  const ic = (cls, svg) => `<span class="r-ic ${cls}">${svg}</span>`;
   const notifState = !('Notification' in window) ? 'unsupported' : Notification.permission;
+  const SV = {
+    method: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3v18M5 8h14M7 8l-3 7h6zM17 8l-3 7h6z"/></svg>',
+    sun: ICONS.asr, globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>',
+    moon: ICONS.isha, clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+    sound: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>',
+    theme: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg>',
+  };
   app.innerHTML = `
-  <header class="topbar wrap"><h1>الإعدادات</h1></header>
+  <header class="pagehead wrap"><h1>الإعدادات</h1></header>
   <main class="view wrap">
-    <h2 class="section-title">الموقع</h2>
-    <section class="card set-group">
-      <div class="set-row"><div><b>${esc(S.loc.name)}</b><small>${esc(S.loc.country || '')} ${S.loc.lat.toFixed(4)}, ${S.loc.lng.toFixed(4)} · ${esc(S.loc.tz)}</small></div>
+    <p class="group-title">الموقع</p>
+    <section class="group">
+      <div class="row">${ic('c1', I.pin)}<div class="r-body"><b>${esc(S.loc.name)}</b><small>${esc(S.loc.country ? S.loc.country + ' · ' : '')}${S.loc.lat.toFixed(4)}, ${S.loc.lng.toFixed(4)}</small></div>
         <button class="btn small primary" id="gpsBtn" type="button">${I.gps} موقعي</button></div>
-      <div class="set-row stack">
-        <div class="field"><label for="citySearch">أو اختر مدينة</label><input class="input" id="citySearch" type="search" placeholder="ابحث: وهران، الرياض، باريس…" autocomplete="off"></div>
+      <div class="row plain"><div class="r-full">
+        <div class="search-box">${I.search}<input class="input" id="citySearch" type="search" placeholder="ابحث عن مدينة: وهران، الرياض، باريس…" autocomplete="off" aria-label="البحث عن مدينة" style="box-shadow:none;background:var(--surface-2)"></div>
         <div class="city-results" id="cityResults" hidden></div>
-      </div>
-      <div class="set-row stack">
-        <span class="lbl muted" style="font-size:13px">إحداثيات يدوية</span>
+      </div></div>
+      <div class="row plain"><div class="r-full">
+        <span class="muted" style="font-size:13px">أو أدخل الإحداثيات يدويًا</span>
         <div class="grid-2">
           <input class="input" id="latIn" inputmode="decimal" placeholder="خط العرض" value="${S.loc.lat.toFixed(4)}" aria-label="خط العرض" dir="ltr">
           <input class="input" id="lngIn" inputmode="decimal" placeholder="خط الطول" value="${S.loc.lng.toFixed(4)}" aria-label="خط الطول" dir="ltr">
         </div>
         <button class="btn small" id="manualBtn" type="button">اعتماد الإحداثيات</button>
-      </div>
+      </div></div>
     </section>
 
-    <h2 class="section-title">طريقة الحساب</h2>
-    <section class="card set-group">
-      <div class="set-row stack"><div class="field"><label for="methodSel">الجهة المعتمدة</label>
-        <select class="input" id="methodSel">${Object.entries(METHODS).map(([k, m]) => `<option value="${k}" ${k === S.method ? 'selected' : ''}>${esc(m.label)}</option>`).join('')}</select></div></div>
-      <div class="set-row"><div><b>وقت العصر</b><small>الجمهور: ظل المثل · الحنفية: ظل المثلين</small></div>${seg('madhab', S.madhab, [['shafi', 'الجمهور'], ['hanafi', 'الحنفي']])}</div>
-      <div class="set-row stack"><div class="field"><label for="hlSel">خطوط العرض العليا</label>
-        <select class="input" id="hlSel">
-          <option value="auto" ${S.highLat === 'auto' ? 'selected' : ''}>تلقائي (موصى به)</option>
+    <p class="group-title">طريقة الحساب</p>
+    <section class="group">
+      <div class="row">${ic('c2', SV.method)}<div class="r-body"><b>الجهة المعتمدة</b><small id="methodSmall">${esc(METHODS[S.method].label)}</small></div>
+        <div class="r-full"><select class="input" id="methodSel" aria-label="الجهة المعتمدة">${Object.entries(METHODS).map(([k, m]) => `<option value="${k}" ${k === S.method ? 'selected' : ''}>${esc(m.label)}</option>`).join('')}</select></div></div>
+      <div class="row">${ic('c5', SV.sun)}<div class="r-body"><b>وقت العصر</b><small>الجمهور: ظل المثل · الحنفية: ظل المثلين</small></div>${seg('madhab', S.madhab, [['shafi', 'الجمهور'], ['hanafi', 'الحنفي']])}</div>
+      <div class="row">${ic('c3', SV.globe)}<div class="r-body"><b>خطوط العرض العليا</b><small>للبلدان الشمالية حيث يطول الشفق</small></div>
+        <select class="input" id="hlSel" aria-label="خطوط العرض العليا">
+          <option value="auto" ${S.highLat === 'auto' ? 'selected' : ''}>تلقائي</option>
           <option value="middleofthenight" ${S.highLat === 'middleofthenight' ? 'selected' : ''}>منتصف الليل</option>
           <option value="seventhofthenight" ${S.highLat === 'seventhofthenight' ? 'selected' : ''}>سُبع الليل</option>
           <option value="twilightangle" ${S.highLat === 'twilightangle' ? 'selected' : ''}>زاوية الشفق</option>
-        </select></div></div>
-      <div class="set-row stack"><div><b>تعديل يدوي بالدقائق</b><small>لمطابقة توقيت مسجدك أو الرزنامة المحلية</small></div>
-        ${PRAYERS.map((p) => `<div class="set-row" style="padding-block:6px;border:0"><span>${p.name}</span><div class="stepper"><button type="button" data-off="${p.key}" data-d="-1" aria-label="إنقاص دقيقة من ${p.name}">${I.minus}</button><output id="off-${p.key}">${S.offsets[p.key] > 0 ? '+' : ''}${S.offsets[p.key]}</output><button type="button" data-off="${p.key}" data-d="1" aria-label="إضافة دقيقة إلى ${p.name}">${I.plus}</button></div></div>`).join('')}
-      </div>
-      <div class="set-row"><div><b>تعديل التاريخ الهجري</b><small>حسب رؤية الهلال في بلدك</small></div>
+        </select></div>
+      <div class="row">${ic('c6', SV.clock)}<div class="r-body"><b>تعديل المواقيت بالدقائق</b><small>لمطابقة توقيت مسجدك</small></div>
+        <div class="r-full offsets">${PRAYERS.map((p) => `<div><span>${p.name}</span><div class="stepper"><button type="button" data-off="${p.key}" data-d="-1" aria-label="إنقاص دقيقة من ${p.name}">${I.minus}</button><output id="off-${p.key}">${S.offsets[p.key] > 0 ? '+' : ''}${S.offsets[p.key]}</output><button type="button" data-off="${p.key}" data-d="1" aria-label="إضافة دقيقة إلى ${p.name}">${I.plus}</button></div></div>`).join('')}</div></div>
+      <div class="row">${ic('c4', SV.moon)}<div class="r-body"><b>تعديل التاريخ الهجري</b><small>حسب رؤية الهلال في بلدك</small></div>
         <div class="stepper"><button type="button" id="hjMinus" aria-label="يوم أقل">${I.minus}</button><output id="hjOut">${S.hijriAdj > 0 ? '+' : ''}${S.hijriAdj}</output><button type="button" id="hjPlus" aria-label="يوم أكثر">${I.plus}</button></div></div>
     </section>
 
-    <h2 class="section-title">الأذان والتنبيهات</h2>
-    <section class="card set-group">
-      ${FARD.map((k) => `<div class="set-row"><div><b>أذان ${pName(k)}</b></div>${sw('ad-' + k, S.adhan[k], 'أذان ' + pName(k))}</div>`).join('')}
-      <div class="set-row stack"><div class="field"><span class="lbl">صوت الأذان</span>${seg('sound', S.sound, [['tone', 'نغمة هادئة'], ['file', 'تسجيل من جهازي'], ['silent', 'تنبيه صامت']])}</div>
-        <div id="fileRow" ${S.sound === 'file' ? '' : 'hidden'}>
-          <input type="file" id="adhanFile" accept="audio/*" hidden>
-          <button class="btn small" id="pickFile" type="button">اختيار ملف أذان (MP3)</button>
-          <small class="muted" id="fileName" style="margin-inline-start:8px">${S.soundName ? esc(S.soundName) : 'لم يُختر ملف بعد'}</small>
-        </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn small" id="testAdhan" type="button">${I.play} تجربة الأذان</button><button class="btn small ghost" id="stopTest" type="button">إيقاف</button></div>
-      </div>
-      <div class="set-row stack"><div class="field"><label for="remSel">تذكير قبل الأذان</label>
-        <select class="input" id="remSel">${[0, 5, 10, 15, 20, 30].map((m) => `<option value="${m}" ${S.reminder === m ? 'selected' : ''}>${m ? 'قبل ' + minutesWord(m) : 'بدون تذكير'}</option>`).join('')}</select></div></div>
-      <div class="set-row"><div><b>إشعارات النظام</b><small>${notifState === 'granted' ? 'مفعّلة' : notifState === 'denied' ? 'محظورة من إعدادات المتصفح' : notifState === 'unsupported' ? 'غير مدعومة في هذا المتصفح' : 'تظهر عند حلول وقت الصلاة'}</small></div>
+    <p class="group-title">الأذان</p>
+    <section class="group">
+      ${FARD.map((k) => `<div class="row"><span class="r-ic c1">${ICONS[k]}</span><div class="r-body"><b>${pName(k)}</b></div>${sw('ad-' + k, S.adhan[k], 'أذان ' + pName(k))}</div>`).join('')}
+    </section>
+    <section class="group">
+      <div class="row">${ic('c2', SV.sound)}<div class="r-body"><b>صوت الأذان</b><small id="soundSmall">${S.sound === 'file' ? esc(S.soundName || 'لم يُختر ملف بعد') : S.sound === 'silent' ? 'إشعار دون صوت' : 'نغمة هادئة مدمجة'}</small></div>
+        <div class="r-full">${seg('sound', S.sound, [['tone', 'نغمة'], ['file', 'تسجيل من جهازي'], ['silent', 'صامت']])}
+          <div id="fileRow" ${S.sound === 'file' ? '' : 'hidden'}><input type="file" id="adhanFile" accept="audio/*" hidden><button class="btn small" id="pickFile" type="button">اختيار ملف أذان (MP3)</button></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn small" id="testAdhan" type="button">${I.play} تجربة</button><button class="btn small ghost" id="stopTest" type="button">إيقاف</button></div>
+        </div></div>
+      <div class="row">${ic('c6', I.bellOn)}<div class="r-body"><b>تذكير قبل الأذان</b></div>
+        <select class="input" id="remSel" aria-label="تذكير قبل الأذان">${[0, 5, 10, 15, 20, 30].map((m) => `<option value="${m}" ${S.reminder === m ? 'selected' : ''}>${m ? 'قبل ' + minutesWord(m) : 'بدون'}</option>`).join('')}</select></div>
+      <div class="row">${ic('c5', I.bellOn)}<div class="r-body"><b>إشعارات النظام</b><small>${notifState === 'granted' ? 'مفعّلة' : notifState === 'denied' ? 'محظورة من إعدادات المتصفح' : notifState === 'unsupported' ? 'غير مدعومة في هذا المتصفح' : 'تنبيه عند حلول وقت الصلاة'}</small></div>
         ${notifState === 'default' ? '<button class="btn small" id="notifBtn" type="button">تفعيل</button>' : ''}</div>
-      <div class="set-row"><small>يعمل الأذان ما دام التطبيق مفتوحًا (ولو في الخلفية). ثبّت التطبيق على الشاشة الرئيسية من قائمة المتصفح ليفتح كتطبيق مستقل ويعمل دون إنترنت.</small></div>
+    </section>
+    <p class="about" style="text-align:start;margin-top:-8px">يعمل الأذان ما دام التطبيق مفتوحًا ولو في الخلفية. أضِف التطبيق إلى الشاشة الرئيسية من قائمة المتصفح ليفتح كتطبيق مستقل ويعمل دون إنترنت.</p>
+
+    <p class="group-title">المظهر والتلاوة</p>
+    <section class="group">
+      <div class="row">${ic('c6', SV.theme)}<div class="r-body"><b>السمة</b></div>${seg('theme', S.theme, [['auto', 'تلقائي'], ['light', 'فاتح'], ['dark', 'داكن']])}</div>
+      <div class="row">${ic('c3', SV.clock)}<div class="r-body"><b>تنسيق الوقت</b></div>${seg('h24', S.h24, [['true', '24 ساعة'], ['false', '12 ساعة']])}</div>
+      <div class="row">${ic('c1', I.book)}<div class="r-body"><b>القارئ</b></div><select class="input" id="recSel2" aria-label="القارئ">${RECITERS.map((r) => `<option value="${r[0]}" ${r[0] === S.reciter ? 'selected' : ''}>${r[1]}</option>`).join('')}</select></div>
     </section>
 
-    <h2 class="section-title">المظهر</h2>
-    <section class="card set-group">
-      <div class="set-row"><div><b>السمة</b></div>${seg('theme', S.theme, [['auto', 'تلقائي'], ['light', 'فاتح'], ['dark', 'داكن']])}</div>
-      <div class="set-row"><div><b>تنسيق الوقت</b></div>${seg('h24', S.h24, [['true', '24 ساعة'], ['false', '12 ساعة']])}</div>
-      <div class="set-row stack"><div class="field"><label for="recSel2">قارئ التلاوة</label><select class="input" id="recSel2">${RECITERS.map((r) => `<option value="${r[0]}" ${r[0] === S.reciter ? 'selected' : ''}>${r[1]}</option>`).join('')}</select></div></div>
-    </section>
-
-    <p class="about">مِحراب — تُحسب المواقيت على جهازك بمكتبة Adhan (رخصة MIT). نص المصحف برواية حفص بالرسم العثماني من مشروع Tanzil عبر حزمة quran-json (CC BY-SA 4.0)، وخط «أميري قرآن» (رخصة SIL OFL). التلاوات تُبث من خدمة Islamic Network وتحتاج إلى اتصال بالإنترنت.</p>
+    <p class="about">مِحراب · تُحسب المواقيت على جهازك بمكتبة Adhan (MIT). نص المصحف برواية حفص بالرسم العثماني من مشروع Tanzil عبر حزمة quran-json (CC BY-SA 4.0)، بخط «أميري قرآن» (SIL OFL). التلاوات من خدمة Islamic Network وتحتاج إلى اتصال بالإنترنت.</p>
   </main>`;
 
   $('#gpsBtn').onclick = () => locate();
@@ -1077,7 +1204,7 @@ function renderPrefs() {
     if (!q) { cr.hidden = true; return; }
     const res = CITIES.filter((c) => c[0].includes(q) || c[1].includes(q)).slice(0, 30);
     cr.hidden = false;
-    cr.innerHTML = res.length ? res.map((c) => `<button type="button" data-i="${CITIES.indexOf(c)}"><span>${esc(c[0])}</span><small>${esc(c[1])}</small></button>`).join('') : '<div class="empty">لا توجد مدينة بهذا الاسم. استخدم «موقعي» أو الإحداثيات اليدوية.</div>';
+    cr.innerHTML = res.length ? res.map((c) => `<button type="button" data-i="${CITIES.indexOf(c)}"><span>${esc(c[0])}</span><small>${esc(c[1])}</small></button>`).join('') : '<div class="empty">لا توجد مدينة بهذا الاسم. استخدم «موقعي» أو الإحداثيات.</div>';
   });
   cr.addEventListener('click', (e) => {
     const b = e.target.closest('button[data-i]'); if (!b) return;
@@ -1093,13 +1220,13 @@ function renderPrefs() {
     setLoc({ lat, lng, name: near && near.d < 35 ? near.c[0] : 'موقع مخصص', country: near && near.d < 600 ? near.c[1] : '', tz: near && near.d < 600 ? near.c[4] : deviceTz, auto: false });
     renderPrefs();
   };
-  $('#methodSel').onchange = (e) => { S.method = e.target.value; S.methodManual = true; save(); toast('تم تحديث طريقة الحساب'); };
+  $('#methodSel').onchange = (e) => { S.method = e.target.value; S.methodManual = true; save(); $('#methodSmall').textContent = METHODS[S.method].label; toast('تم تحديث طريقة الحساب'); };
   $('#hlSel').onchange = (e) => { S.highLat = e.target.value; save(); };
   $$('[data-off]').forEach((b) => b.onclick = () => {
     const k = b.dataset.off; S.offsets[k] = Math.max(-30, Math.min(30, (S.offsets[k] || 0) + Number(b.dataset.d))); save();
     $('#off-' + k).textContent = (S.offsets[k] > 0 ? '+' : '') + S.offsets[k];
   });
-  const hj = (d) => { S.hijriAdj = Math.max(-2, Math.min(2, S.hijriAdj + d)); save(); $('#hjOut').textContent = (S.hijriAdj > 0 ? '+' : '') + S.hijriAdj; };
+  const hj = (d) => { S.hijriAdj = Math.max(-2, Math.min(2, S.hijriAdj + d)); save(); fmtCacheClear(); $('#hjOut').textContent = (S.hijriAdj > 0 ? '+' : '') + S.hijriAdj; };
   $('#hjMinus').onclick = () => hj(-1); $('#hjPlus').onclick = () => hj(1);
   FARD.forEach((k) => { $('#ad-' + k).onchange = (e) => { S.adhan[k] = e.target.checked; save(); }; });
   $$('[data-seg]').forEach((g) => g.addEventListener('click', (e) => {
@@ -1110,13 +1237,16 @@ function renderPrefs() {
     $$('button', g).forEach((x) => x.setAttribute('aria-pressed', x === b));
     if (name === 'theme') applyTheme();
     if (name === 'h24') fmtCacheClear();
-    if (name === 'sound') $('#fileRow').hidden = v !== 'file';
+    if (name === 'sound') {
+      $('#fileRow').hidden = v !== 'file';
+      $('#soundSmall').textContent = v === 'file' ? (S.soundName || 'لم يُختر ملف بعد') : v === 'silent' ? 'إشعار دون صوت' : 'نغمة هادئة مدمجة';
+    }
   }));
   $('#pickFile').onclick = () => $('#adhanFile').click();
   $('#adhanFile').onchange = async (e) => {
     const f = e.target.files && e.target.files[0]; if (!f) return;
     if (f.size > 15 * 1024 * 1024) { toast('الملف كبير جدًا. اختر ملفًا أصغر من 15 ميغابايت.'); return; }
-    try { await idbPut('adhan', f); S.soundName = f.name; S.sound = 'file'; save(); $('#fileName').textContent = f.name; toast('حُفظ صوت الأذان على جهازك'); }
+    try { await idbPut('adhan', f); S.soundName = f.name; S.sound = 'file'; save(); $('#soundSmall').textContent = f.name; toast('حُفظ صوت الأذان على جهازك'); }
     catch (err) { toast('تعذر حفظ الملف في هذا المتصفح.'); }
   };
   $('#testAdhan').onclick = () => { arm(); playAdhan(); };
@@ -1135,6 +1265,7 @@ function route(force) {
   if (isRead) r = 'quran';
   if (!VIEWS[r]) r = 'home';
   if (current !== r || force === true) {
+    closeSheet();
     if (compassCleanup) { compassCleanup(); compassCleanup = null; }
     current = r; setTab(r);
     VIEWS[r]();
