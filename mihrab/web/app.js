@@ -192,7 +192,8 @@ if (!S.loc) {
   S.method = byTz[5];
 }
 if (!METHODS[S.method]) S.method = 'mwl';
-const save = () => { LS.set('settings', S); invalidate(); };
+const NATIVE = window.MihrabNative || null;
+const save = () => { LS.set('settings', S); invalidate(); pushNativeSchedule(); };
 
 /* ---------- prayer time engine ---------- */
 let cache = {};
@@ -236,6 +237,29 @@ function state(now = new Date()) {
 }
 const isFriday = (t) => new Date(Date.UTC(t.y, t.m - 1, t.d)).getUTCDay() === 5;
 const pName = (k, friday) => (k === 'dhuhr' && friday ? 'الجمعة' : PRAYERS.find((p) => p.key === k).name);
+
+/* ---------- native alarms (Android app) ---------- */
+function pushNativeSchedule() {
+  if (!NATIVE) return;
+  try {
+    const now = Date.now(); const out = [];
+    let t = ymd(new Date(), S.loc.tz);
+    for (let i = 0; i < 30; i++, t = addDays(t, 1)) {
+      const tt = dayTimes(t); const fri = isFriday(t);
+      for (const k of FARD) {
+        if (!S.adhan[k]) continue;
+        const at = tt[k].getTime();
+        if (at > now) out.push({ t: at, title: `حان وقت صلاة ${pName(k, fri)}`, body: `${fmtTime(tt[k])} · ${S.loc.name}`, adhan: S.sound !== 'silent' });
+        if (S.reminder > 0) {
+          const rt = at - S.reminder * 60000;
+          if (rt > now) out.push({ t: rt, title: `بقي ${minutesWord(S.reminder)} على صلاة ${pName(k, fri)}`, body: `الأذان عند ${fmtTime(tt[k])}`, adhan: false });
+        }
+      }
+    }
+    out.sort((a, b) => a.t - b.t);
+    NATIVE.schedule(JSON.stringify(out));
+  } catch (e) { /* bridge unavailable */ }
+}
 
 /* ---------- formatting ---------- */
 const fmtCache = {};
@@ -693,7 +717,7 @@ function verseOfDay(t) {
 function renderHome() {
   const st = state();
   const now = new Date();
-  const showArm = FARD.some((k) => S.adhan[k]) && !audioArmed && !(navigator.userActivation && navigator.userActivation.hasBeenActive);
+  const showArm = !NATIVE && FARD.some((k) => S.adhan[k]) && !audioArmed && !(navigator.userActivation && navigator.userActivation.hasBeenActive);
   app.innerHTML = `
   <section class="sky" id="sky" data-phase="${phaseOf(now, st)}" aria-live="polite">
     ${starsSvg()}
@@ -1182,10 +1206,10 @@ function renderPrefs() {
         </div></div>
       <div class="row">${ic('c6', I.bellOn)}<div class="r-body"><b>تذكير قبل الأذان</b></div>
         <select class="input" id="remSel" aria-label="تذكير قبل الأذان">${[0, 5, 10, 15, 20, 30].map((m) => `<option value="${m}" ${S.reminder === m ? 'selected' : ''}>${m ? 'قبل ' + minutesWord(m) : 'بدون'}</option>`).join('')}</select></div>
-      <div class="row">${ic('c5', I.bellOn)}<div class="r-body"><b>إشعارات النظام</b><small>${notifState === 'granted' ? 'مفعّلة' : notifState === 'denied' ? 'محظورة من إعدادات المتصفح' : notifState === 'unsupported' ? 'غير مدعومة في هذا المتصفح' : 'تنبيه عند حلول وقت الصلاة'}</small></div>
-        ${notifState === 'default' ? '<button class="btn small" id="notifBtn" type="button">تفعيل</button>' : ''}</div>
+      ${NATIVE ? '' : `<div class="row">${ic('c5', I.bellOn)}<div class="r-body"><b>إشعارات النظام</b><small>${notifState === 'granted' ? 'مفعّلة' : notifState === 'denied' ? 'محظورة من إعدادات المتصفح' : notifState === 'unsupported' ? 'غير مدعومة في هذا المتصفح' : 'تنبيه عند حلول وقت الصلاة'}</small></div>
+        ${notifState === 'default' ? '<button class="btn small" id="notifBtn" type="button">تفعيل</button>' : ''}</div>`}
     </section>
-    <p class="about" style="text-align:start;margin-top:-8px">يعمل الأذان ما دام التطبيق مفتوحًا ولو في الخلفية. أضِف التطبيق إلى الشاشة الرئيسية من قائمة المتصفح ليفتح كتطبيق مستقل ويعمل دون إنترنت.</p>
+    <p class="about" style="text-align:start;margin-top:-8px">${NATIVE ? 'يصلك الأذان في وقته حتى لو كان التطبيق مغلقًا. التسجيل الذي تختاره من جهازك يُسمع داخل التطبيق، وإشعار الهاتف يستعمل صوت الأذان المدمج.' : 'يعمل الأذان ما دام التطبيق مفتوحًا ولو في الخلفية. أضِف التطبيق إلى الشاشة الرئيسية من قائمة المتصفح ليفتح كتطبيق مستقل ويعمل دون إنترنت.'}</p>
 
     <p class="group-title">المظهر والتلاوة</p>
     <section class="group">
@@ -1287,7 +1311,8 @@ function tick() {
 applyTheme();
 route();
 tickTimer = setInterval(tick, 1000);
-document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(); });
+document.addEventListener('visibilitychange', () => { if (!document.hidden) { tick(); pushNativeSchedule(); } });
+pushNativeSchedule();
 loadQuran().catch(() => {});
 
 // Refresh GPS position silently when the permission was already granted.
@@ -1297,7 +1322,7 @@ if (S.loc.gps || S.loc.auto) {
   } catch (e) { /* ignore */ }
 }
 
-if ('serviceWorker' in navigator && location.protocol === 'https:' ) {
+if (!NATIVE && 'serviceWorker' in navigator && location.protocol === 'https:') {
   window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
 }
 })();
