@@ -16,3 +16,11 @@ ANDROID_SDK=/path/to/sdk KEYSTORE=/path/mihrab-release.jks KS_PASS=... VERSION_C
 ```
 
 Keep the same keystore for every release, otherwise phones refuse to install the update over the old version.
+
+## Credits
+
+- Prayer times: [Adhan](https://github.com/batoulapps/adhan-js) (MIT).
+- Quran text: Tanzil Uthmani via `quran-json` (CC BY-SA 4.0); font Amiri Quran (SIL OFL).
+- `web/audio/adhan-1.mp3`: "Beautiful adhan" from Wikimedia Commons, CC0.
+- `web/audio/adhan-2.mp3`: "The Adhan - Muslim Call to Prayer - Aaqib Azeez" from Wikimedia Commons, CC BY-SA 4.0. Loudness-normalized and re-encoded.
+- Municipality names: OpenStreetMap Nominatim (data © OpenStreetMap contributors, ODbL).

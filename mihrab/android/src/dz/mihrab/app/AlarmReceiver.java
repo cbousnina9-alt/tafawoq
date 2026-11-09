@@ -16,19 +16,29 @@ public class AlarmReceiver extends BroadcastReceiver {
         if (fresh && !MainActivity.visible) {
             Alarms.ensureChannels(c);
             boolean adhan = intent.getBooleanExtra("adhan", false);
-            Intent open = new Intent(c, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-            PendingIntent pi = PendingIntent.getActivity(c, 1, open, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
-            Notification n = new Notification.Builder(c, adhan ? Alarms.CH_ADHAN : Alarms.CH_REMIND)
-                .setSmallIcon(R.drawable.ic_stat)
-                .setColor(0xFF0B5A4A)
-                .setContentTitle(intent.getStringExtra("title"))
-                .setContentText(intent.getStringExtra("body"))
-                .setCategory(adhan ? Notification.CATEGORY_ALARM : Notification.CATEGORY_REMINDER)
-                .setContentIntent(pi)
-                .setAutoCancel(true)
-                .build();
-            NotificationManager nm = (NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE);
-            nm.notify(adhan ? 100 : 101, n);
+            String title = intent.getStringExtra("title"), body = intent.getStringExtra("body");
+            boolean started = false;
+            if (adhan) {
+                Intent svc = new Intent(c, AdhanService.class)
+                    .putExtra("title", title).putExtra("body", body)
+                    .putExtra("sound", intent.getStringExtra("sound"));
+                try { c.startForegroundService(svc); started = true; } catch (Exception ignored) { }
+            }
+            if (!started) {
+                Intent open = new Intent(c, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                PendingIntent pi = PendingIntent.getActivity(c, 1, open, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
+                Notification n = new Notification.Builder(c, adhan ? Alarms.CH_ADHAN : Alarms.CH_REMIND)
+                    .setSmallIcon(R.drawable.ic_stat)
+                    .setColor(0xFF0B5A4A)
+                    .setContentTitle(title)
+                    .setContentText(body)
+                    .setCategory(adhan ? Notification.CATEGORY_ALARM : Notification.CATEGORY_REMINDER)
+                    .setContentIntent(pi)
+                    .setAutoCancel(true)
+                    .build();
+                NotificationManager nm = (NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE);
+                nm.notify(adhan ? 100 : 101, n);
+            }
         }
         Alarms.scheduleNext(c);
     }

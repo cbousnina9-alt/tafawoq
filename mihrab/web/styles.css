@@ -59,6 +59,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { height: 100%; }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
@@ -347,7 +348,7 @@ table.month td small { color: var(--muted); display: block; font-size: 11px; fon
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
 
 /* ---------- Qibla ---------- */
-.qibla { display: grid; justify-items: center; gap: 16px; text-align: center; padding-top: 6px; }
+.qibla { display: grid; justify-items: center; gap: 16px; text-align: center; padding-top: 6px; overflow-x: clip; }
 .compass { position: relative; width: min(84vw, 330px); aspect-ratio: 1; max-width: 100%; }
 .compass .dial { position: absolute; inset: 0; transition: transform .12s linear; }
 .compass svg { width: 100%; height: 100%; display: block; }

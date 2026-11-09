@@ -16,7 +16,16 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import android.util.Base64;
+
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,6 +36,7 @@ public class MainActivity extends Activity {
     private static final int REQ_NOTIFY = 2;
 
     private WebView web;
+    private Compass compass;
     private GeolocationPermissions.Callback geoCallback;
     private String geoOrigin;
 
@@ -84,6 +94,7 @@ public class MainActivity extends Activity {
             }
         });
 
+        compass = new Compass(this, web);
         web.addJavascriptInterface(new Bridge(), "MihrabNative");
 
         if (Build.VERSION.SDK_INT >= 33 && checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
@@ -119,8 +130,9 @@ public class MainActivity extends Activity {
         return "application/octet-stream";
     }
 
-    @Override protected void onResume() { super.onResume(); visible = true; web.onResume(); }
-    @Override protected void onPause() { visible = false; web.onPause(); super.onPause(); }
+    @Override protected void onResume() { super.onResume(); visible = true; web.onResume(); compass.resume(); }
+    @Override protected void onPause() { visible = false; compass.pause(); web.onPause(); super.onPause(); }
+    @Override protected void onDestroy() { compass.stop(); super.onDestroy(); }
     @Override protected void onSaveInstanceState(Bundle out) { super.onSaveInstanceState(out); web.saveState(out); }
 
     @Override
@@ -134,6 +146,52 @@ public class MainActivity extends Activity {
         public void schedule(String json) {
             Alarms.save(MainActivity.this, json);
             Alarms.scheduleNext(MainActivity.this);
+        }
+
+        @JavascriptInterface
+        public void stopAdhan() {
+            if (!AdhanService.playing) return;
+            try { startService(new Intent(MainActivity.this, AdhanService.class).setAction(AdhanService.ACTION_STOP)); } catch (Exception ignored) { }
+        }
+
+        @JavascriptInterface
+        public boolean startCompass(double lat, double lng) {
+            return compass.start(lat, lng);
+        }
+
+        @JavascriptInterface
+        public void stopCompass() { compass.stop(); }
+
+        @JavascriptInterface
+        public boolean saveSound(String base64) {
+            try (FileOutputStream out = new FileOutputStream(new File(getFilesDir(), "custom_adhan"))) {
+                out.write(Base64.decode(base64, Base64.DEFAULT));
+                return true;
+            } catch (Exception e) { return false; }
+        }
+
+        /** Place-name lookup; only OpenStreetMap's reverse geocoder is reachable from here. */
+        @JavascriptInterface
+        public void httpGet(final String id, final String url) {
+            new Thread(() -> {
+                boolean ok = false; String body;
+                try {
+                    Uri u = Uri.parse(url);
+                    if (!"https".equals(u.getScheme()) || !"nominatim.openstreetmap.org".equals(u.getHost())) throw new Exception("host not allowed");
+                    HttpURLConnection c = (HttpURLConnection) new URL(url).openConnection();
+                    c.setRequestProperty("User-Agent", "Mihrab/1.1 (Android prayer times app)");
+                    c.setConnectTimeout(10000); c.setReadTimeout(10000);
+                    int code = c.getResponseCode();
+                    InputStream in = code < 400 ? c.getInputStream() : c.getErrorStream();
+                    ByteArrayOutputStream buf = new ByteArrayOutputStream();
+                    byte[] b = new byte[8192]; int n;
+                    while (in != null && (n = in.read(b)) > 0) buf.write(b, 0, n);
+                    body = buf.toString("UTF-8");
+                    ok = code == 200;
+                } catch (Exception e) { body = String.valueOf(e.getMessage()); }
+                final String js = "window.__mihrabResolve&&window.__mihrabResolve(" + JSONObject.quote(id) + "," + ok + "," + JSONObject.quote(body) + ")";
+                web.post(() -> web.evaluateJavascript(js, null));
+            }).start();
         }
     }
 }

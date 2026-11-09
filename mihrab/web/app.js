@@ -172,6 +172,14 @@ const RECITERS = [
 // First ayah of each juz' [surah, ayah]
 const JUZ = [[1,1],[2,142],[2,253],[3,93],[4,24],[4,148],[5,82],[6,111],[7,88],[8,41],[9,93],[11,6],[12,53],[15,1],[17,1],[18,75],[21,1],[23,1],[25,21],[27,56],[29,46],[33,31],[36,28],[39,32],[41,47],[46,1],[51,31],[58,1],[67,1],[78,1]];
 const JUZ_NAMES = ['الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع','الثامن','التاسع','العاشر','الحادي عشر','الثاني عشر','الثالث عشر','الرابع عشر','الخامس عشر','السادس عشر','السابع عشر','الثامن عشر','التاسع عشر','العشرون','الحادي والعشرون','الثاني والعشرون','الثالث والعشرون','الرابع والعشرون','الخامس والعشرون','السادس والعشرون','السابع والعشرون','الثامن والعشرون','التاسع والعشرون','الثلاثون'];
+const SOUNDS = [
+  ['adhan1', 'أذان بصوت مؤذن (٢:٣٥ دقيقة)'],
+  ['adhan2', 'أذان بصوت مؤذن آخر (١:٢٥ دقيقة)'],
+  ['tone', 'نغمة هادئة'],
+  ['file', 'تسجيل أختاره من جهازي'],
+  ['silent', 'بدون صوت (إشعار فقط)'],
+];
+const SOUND_FILES = { adhan1: 'audio/adhan-1.mp3', adhan2: 'audio/adhan-2.mp3' };
 const KAABA = { lat: 21.422487, lng: 39.826206 };
 
 /* ---------- settings ---------- */
@@ -181,11 +189,12 @@ const DEFAULTS = {
   offsets: { fajr: 0, sunrise: 0, dhuhr: 0, asr: 0, maghrib: 0, isha: 0 },
   hijriAdj: 0, h24: true,
   adhan: { fajr: true, dhuhr: true, asr: true, maghrib: true, isha: true },
-  reminder: 0, sound: 'tone', soundName: '', reciter: 'ar.alafasy', qsize: 28, theme: 'auto',
+  reminder: 0, sound: 'adhan1', soundName: '', reciter: 'ar.alafasy', qsize: 28, theme: 'auto',
 };
 const S = Object.assign({}, DEFAULTS, LS.get('settings', {}));
 S.offsets = Object.assign({}, DEFAULTS.offsets, S.offsets || {});
 S.adhan = Object.assign({}, DEFAULTS.adhan, S.adhan || {});
+if (!S.v2) { if (S.sound === 'tone') S.sound = 'adhan1'; S.v2 = true; }
 if (!S.loc) {
   const byTz = CITIES.find((c) => c[4] === deviceTz) || CITIES[0];
   S.loc = { lat: byTz[2], lng: byTz[3], name: byTz[0], country: byTz[1], tz: byTz[4], auto: true };
@@ -249,7 +258,7 @@ function pushNativeSchedule() {
       for (const k of FARD) {
         if (!S.adhan[k]) continue;
         const at = tt[k].getTime();
-        if (at > now) out.push({ t: at, title: `حان وقت صلاة ${pName(k, fri)}`, body: `${fmtTime(tt[k])} · ${S.loc.name}`, adhan: S.sound !== 'silent' });
+        if (at > now) out.push({ t: at, title: `حان وقت صلاة ${pName(k, fri)}`, body: `${fmtTime(tt[k])} · ${S.loc.name}`, adhan: true, sound: S.sound });
         if (S.reminder > 0) {
           const rt = at - S.reminder * 60000;
           if (rt > now) out.push({ t: rt, title: `بقي ${minutesWord(S.reminder)} على صلاة ${pName(k, fri)}`, body: `الأذان عند ${fmtTime(tt[k])}`, adhan: false });
@@ -424,6 +433,14 @@ async function idbGet(k) { const db = await idb(); return new Promise((res, rej)
 
 async function playAdhan() {
   stopAdhan();
+  if (SOUND_FILES[S.sound]) {
+    const au = new Audio(SOUND_FILES[S.sound]);
+    au.play().catch(() => toast('المس الشاشة مرة ليُسمح بتشغيل صوت الأذان'));
+    const stop = () => { au.pause(); au.currentTime = 0; };
+    au.onended = () => { if (adhanStop === stop) adhanStop = null; };
+    adhanStop = stop;
+    return;
+  }
   if (S.sound === 'file') {
     try {
       const blob = await idbGet('adhan');
@@ -441,7 +458,7 @@ async function playAdhan() {
   if (S.sound === 'silent') return;
   adhanStop = synthAdhan();
 }
-function stopAdhan() { if (adhanStop) { adhanStop(); adhanStop = null; } }
+function stopAdhan() { if (adhanStop) { adhanStop(); adhanStop = null; } if (NATIVE && NATIVE.stopAdhan) { try { NATIVE.stopAdhan(); } catch (e) { /* ignore */ } } }
 
 async function notify(title, body) {
   if (!('Notification' in window) || Notification.permission !== 'granted') return;
@@ -481,7 +498,7 @@ function checkAdhan(st, now) {
     if (diff >= 0 && diff < 5 * 60000 && !fired[id]) {
       fired[id] = 1; changed = true;
       showAdhan(k, st.friday);
-      playAdhan();
+      if (!NATIVE || diff < 20000) playAdhan();
       notify(`حان وقت صلاة ${pName(k, st.friday)}`, `${fmtTime(st.today[k])} — ${S.loc.name}`);
     }
     if (S.reminder > 0) {
@@ -1059,7 +1076,7 @@ function renderQibla() {
       </div>
       <div class="q-deg">${Math.round(b)}°</div>
       <div class="q-hint" id="qHint">زاوية القبلة من الشمال الجغرافي، باتجاه عقارب الساعة.</div>
-      <button class="btn primary" id="startCompass" type="button">${I.compass} تشغيل البوصلة</button>
+      <button class="btn primary" id="startCompass" type="button" hidden>${I.compass} تشغيل البوصلة</button>
       <div class="facts">
         <div><b>${Math.round(b)}°</b><span>زاوية القبلة</span></div>
         <div><b>${Math.round(dist).toLocaleString('en')}</b><span>كم إلى الكعبة</span></div>
@@ -1068,15 +1085,57 @@ function renderQibla() {
       <p class="note">ضع الهاتف مسطّحًا بعيدًا عن المعادن، وأدِره حتى يلتقي المؤشر العلوي برمز الكعبة. إن اضطرب الاتجاه فحرّك الهاتف على شكل الرقم 8 للمعايرة. الموقع: ${esc(S.loc.name)}.</p>
     </section>
   </main>`;
-  $('#startCompass').onclick = () => startCompass(b);
+  $('#startCompass').onclick = () => startCompass(b, true);
+  startCompass(b, false);
 }
 
-function startCompass(bearing) {
+function startCompass(bearing, fromTap) {
   const btn = $('#startCompass'); const hint = $('#qHint');
+  if (compassCleanup) { compassCleanup(); compassCleanup = null; }
+  let got = false, cum = null, last = null, sx = 0, sy = 0, wasAligned = false, calibrate = false;
+  const show = (hd) => {
+    sx = sx * 0.75 + Math.cos(rad(hd)) * 0.25; sy = sy * 0.75 + Math.sin(rad(hd)) * 0.25;
+    const sm = (Math.atan2(sy, sx) * 180 / Math.PI + 360) % 360;
+    if (last == null) { cum = sm; } else { cum += ((sm - last + 540) % 360) - 180; }
+    last = sm;
+    if (!got) { got = true; if (btn) btn.hidden = true; }
+    const dial = $('#dial'); if (!dial) return;
+    dial.style.transform = `rotate(${-cum}deg)`;
+    $('#headingOut').textContent = Math.round(sm) + '°';
+    const diff = ((bearing - sm + 540) % 360) - 180;
+    const aligned = Math.abs(diff) < 4;
+    $('#compass').classList.toggle('aligned', aligned);
+    hint.classList.toggle('ok', aligned);
+    hint.textContent = aligned ? 'أنت متجه إلى القبلة'
+      : (diff > 0 ? `استدر يمينًا ${Math.round(diff)}°` : `استدر يسارًا ${Math.round(-diff)}°`)
+        + (calibrate ? ' · البوصلة تحتاج إلى معايرة: حرّك الهاتف على شكل 8' : '');
+    if (aligned && !wasAligned && navigator.vibrate) navigator.vibrate(60);
+    wasAligned = aligned;
+  };
+  let wake = null;
+  try { if (navigator.wakeLock) navigator.wakeLock.request('screen').then((w) => { wake = w; }).catch(() => {}); } catch (e) { /* ignore */ }
+  const noSensor = () => {
+    if (got) return;
+    hint.textContent = 'لم يُعثر على مستشعر بوصلة في هذا الجهاز. استخدم الزاوية المعروضة مع بوصلة أخرى.';
+    if (btn) btn.hidden = false;
+  };
+  hint.textContent = 'جارٍ قراءة البوصلة…';
+
+  // Android app: the phone's own sensors, corrected to true north.
+  if (NATIVE && NATIVE.startCompass) {
+    window.__mihrabHeading = (deg, accuracy) => { calibrate = accuracy < 2; show(deg); };
+    let ok = false;
+    try { ok = NATIVE.startCompass(S.loc.lat, S.loc.lng); } catch (e) { ok = false; }
+    const to = setTimeout(noSensor, 3000);
+    if (!ok) noSensor();
+    compassCleanup = () => { try { NATIVE.stopCompass(); } catch (e) { /* ignore */ } window.__mihrabHeading = null; clearTimeout(to); if (wake) wake.release().catch(() => {}); };
+    return;
+  }
+
+  // Browser
+  if (typeof DeviceOrientationEvent === 'undefined') { hint.textContent = 'هذا المتصفح لا يدعم مستشعر الاتجاه.'; return; }
+  const needsTap = typeof DeviceOrientationEvent.requestPermission === 'function';
   const begin = () => {
-    if (btn) btn.hidden = true;
-    hint.textContent = 'جارٍ قراءة المستشعر…';
-    let got = false, cum = null, last = null, sx = 0, sy = 0, wasAligned = false;
     const evName = ('ondeviceorientationabsolute' in window) ? 'deviceorientationabsolute' : 'deviceorientation';
     const onO = (e) => {
       let hd = null;
@@ -1084,38 +1143,25 @@ function startCompass(bearing) {
       else if ((e.absolute || evName === 'deviceorientationabsolute') && e.alpha != null) hd = 360 - e.alpha;
       if (hd == null) return;
       const so = (screen.orientation && screen.orientation.angle) || window.orientation || 0;
-      hd = (hd + so + 360) % 360;
-      sx = sx * 0.75 + Math.cos(rad(hd)) * 0.25; sy = sy * 0.75 + Math.sin(rad(hd)) * 0.25;
-      const sm = (Math.atan2(sy, sx) * 180 / Math.PI + 360) % 360;
-      if (last == null) { cum = sm; } else { cum += ((sm - last + 540) % 360) - 180; }
-      last = sm; got = true;
-      const dial = $('#dial'); if (!dial) return;
-      dial.style.transform = `rotate(${-cum}deg)`;
-      $('#headingOut').textContent = Math.round(sm) + '°';
-      const diff = ((bearing - sm + 540) % 360) - 180;
-      const aligned = Math.abs(diff) < 4;
-      $('#compass').classList.toggle('aligned', aligned);
-      hint.classList.toggle('ok', aligned);
-      hint.textContent = aligned ? 'أنت متجه إلى القبلة' : (diff > 0 ? `استدر يمينًا ${Math.round(diff)}°` : `استدر يسارًا ${Math.round(-diff)}°`);
-      if (aligned && !wasAligned && navigator.vibrate) navigator.vibrate(60);
-      wasAligned = aligned;
+      show((hd + so + 360) % 360);
     };
     window.addEventListener(evName, onO);
-    let wake = null;
-    try { if (navigator.wakeLock) navigator.wakeLock.request('screen').then((w) => { wake = w; }).catch(() => {}); } catch (e) { /* ignore */ }
-    const to = setTimeout(() => {
-      if (!got) {
-        hint.textContent = 'لم يُعثر على مستشعر بوصلة في هذا الجهاز. استخدم الزاوية المعروضة مع بوصلة أخرى أو على الخريطة.';
-        if (btn) btn.hidden = false;
-      }
-    }, 3000);
+    const to = setTimeout(noSensor, 3000);
     compassCleanup = () => { window.removeEventListener(evName, onO); clearTimeout(to); if (wake) wake.release().catch(() => {}); };
   };
-  if (typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
+  if (needsTap && !fromTap) {
+    // Some browsers grant this without a tap; iPhone asks only after one.
+    DeviceOrientationEvent.requestPermission().then((r) => {
+      if (r === 'granted') begin(); else throw new Error(r);
+    }).catch(() => {
+      hint.textContent = 'اضغط «تشغيل البوصلة» للسماح باستعمال مستشعر الاتجاه.';
+      if (btn) btn.hidden = false;
+    });
+    return;
+  }
+  if (needsTap) {
     DeviceOrientationEvent.requestPermission().then((r) => { if (r === 'granted') begin(); else hint.textContent = 'لم يُسمح بالوصول إلى مستشعر الاتجاه. فعّله من إعدادات المتصفح.'; })
       .catch(() => { hint.textContent = 'تعذر طلب إذن المستشعر.'; });
-  } else if (typeof DeviceOrientationEvent === 'undefined') {
-    hint.textContent = 'هذا المتصفح لا يدعم مستشعر الاتجاه.';
   } else begin();
 }
 
@@ -1125,23 +1171,65 @@ function setLoc(loc, quiet) {
   if (!quiet) toast(`الموقع: ${loc.name}`);
 }
 function fmtCacheClear() { for (const k of Object.keys(fmtCache)) delete fmtCache[k]; }
+
+/* Municipality name for a position (OpenStreetMap). Cached; the city list is the offline fallback. */
+const nativeWaits = {};
+let nativeSeq = 0;
+window.__mihrabResolve = (id, ok, payload) => {
+  const w = nativeWaits[id]; if (!w) return;
+  delete nativeWaits[id];
+  if (ok) w.res(payload); else w.rej(new Error(payload || 'native error'));
+};
+function nativeHttpGet(url) {
+  return new Promise((res, rej) => {
+    const id = 'n' + (++nativeSeq);
+    nativeWaits[id] = { res, rej };
+    setTimeout(() => { if (nativeWaits[id]) { delete nativeWaits[id]; rej(new Error('timeout')); } }, 15000);
+    NATIVE.httpGet(id, url);
+  });
+}
+async function placeName(lat, lng) {
+  const k = lat.toFixed(3) + ',' + lng.toFixed(3);
+  const cache = LS.get('geo', {});
+  if (cache[k]) return cache[k];
+  const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat.toFixed(5)}&lon=${lng.toFixed(5)}&zoom=10&addressdetails=1&accept-language=ar`;
+  let j;
+  if (NATIVE && NATIVE.httpGet) j = JSON.parse(await nativeHttpGet(url));
+  else { const r = await fetch(url); if (!r.ok) throw new Error('geo ' + r.status); j = await r.json(); }
+  const a = j.address || {};
+  const local = j.name || a.suburb || a.city || a.town || a.village || a.municipality;
+  if (!local) throw new Error('no name');
+  const dz = a.country_code === 'dz';
+  let region = a.state || a.region || '';
+  if (dz && region && !/^ولاية/.test(region)) region = 'ولاية ' + region;
+  const res = { name: dz && !/^بلدية/.test(local) ? 'بلدية ' + local : local, region, country: a.country || '' };
+  const keys = Object.keys(cache); if (keys.length > 30) delete cache[keys[0]];
+  cache[k] = res; LS.set('geo', cache);
+  return res;
+}
 function locate(silent) {
   if (!navigator.geolocation) { if (!silent) toast('تحديد الموقع غير متاح في هذا المتصفح. اختر مدينتك من القائمة.'); return; }
   if (!silent) toast('جارٍ تحديد موقعك…', 8000);
   navigator.geolocation.getCurrentPosition((p) => {
     const lat = p.coords.latitude, lng = p.coords.longitude;
-    if (silent && S.loc.gps && distKm(S.loc, { lat, lng }) < 2) return;
+    if (silent && S.loc.gps && distKm(S.loc, { lat, lng }) < 2 && S.loc.region) return;
     const near = nearestCity(lat, lng);
     let name = 'موقعي الحالي';
     if (near && near.d < 35) name = near.c[0];
     else if (near && near.d < 150) name = `قرب ${near.c[0]}`;
     if (!S.methodManual && near && near.d < 600) S.method = near.c[5];
-    setLoc({ lat, lng, name, country: near && near.d < 600 ? near.c[1] : '', tz: deviceTz, auto: false, gps: true }, silent);
+    setLoc({ lat, lng, name, country: near && near.d < 600 ? near.c[1] : '', tz: deviceTz, auto: false, gps: true }, true);
     route(true);
+    placeName(lat, lng).then((pl) => {
+      if (S.loc.lat !== lat || S.loc.lng !== lng) return;
+      S.loc = Object.assign({}, S.loc, { name: pl.name, region: pl.region, country: pl.country });
+      save(); route(true);
+      if (!silent) toast(`موقعك: ${pl.name}${pl.region ? '، ' + pl.region : ''}`, 4000);
+    }).catch(() => { if (!silent) toast(`الموقع: ${name}`); });
   }, (err) => {
     if (silent) return;
     toast(err.code === 1 ? 'لم يُسمح بالوصول إلى الموقع. اختر مدينتك من الإعدادات.' : 'تعذر تحديد الموقع. حاول مجددًا أو اختر مدينتك.', 4000);
-  }, { enableHighAccuracy: false, timeout: 15000, maximumAge: 6 * 3600 * 1000 });
+  }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 10 * 60 * 1000 });
 }
 function renderPrefs() {
   const sw = (id, on, label) => `<label class="switch"><input type="checkbox" id="${id}" ${on ? 'checked' : ''} aria-label="${esc(label)}"><span></span></label>`;
@@ -1160,7 +1248,7 @@ function renderPrefs() {
   <main class="view wrap">
     <p class="group-title">الموقع</p>
     <section class="group">
-      <div class="row">${ic('c1', I.pin)}<div class="r-body"><b>${esc(S.loc.name)}</b><small>${esc(S.loc.country ? S.loc.country + ' · ' : '')}${S.loc.lat.toFixed(4)}, ${S.loc.lng.toFixed(4)}</small></div>
+      <div class="row">${ic('c1', I.pin)}<div class="r-body"><b>${esc(S.loc.name)}</b><small>${esc([S.loc.region, S.loc.country].filter(Boolean).join('، '))}${S.loc.region || S.loc.country ? '<br>' : ''}<span dir="ltr">${S.loc.lat.toFixed(4)}, ${S.loc.lng.toFixed(4)}</span></small></div>
         <button class="btn small primary" id="gpsBtn" type="button">${I.gps} موقعي</button></div>
       <div class="row plain"><div class="r-full">
         <div class="search-box">${I.search}<input class="input" id="citySearch" type="search" placeholder="ابحث عن مدينة: وهران، الرياض، باريس…" autocomplete="off" aria-label="البحث عن مدينة" style="box-shadow:none;background:var(--surface-2)"></div>
@@ -1199,10 +1287,11 @@ function renderPrefs() {
       ${FARD.map((k) => `<div class="row"><span class="r-ic c1">${ICONS[k]}</span><div class="r-body"><b>${pName(k)}</b></div>${sw('ad-' + k, S.adhan[k], 'أذان ' + pName(k))}</div>`).join('')}
     </section>
     <section class="group">
-      <div class="row">${ic('c2', SV.sound)}<div class="r-body"><b>صوت الأذان</b><small id="soundSmall">${S.sound === 'file' ? esc(S.soundName || 'لم يُختر ملف بعد') : S.sound === 'silent' ? 'إشعار دون صوت' : 'نغمة هادئة مدمجة'}</small></div>
-        <div class="r-full">${seg('sound', S.sound, [['tone', 'نغمة'], ['file', 'تسجيل من جهازي'], ['silent', 'صامت']])}
+      <div class="row">${ic('c2', SV.sound)}<div class="r-body"><b>صوت الأذان</b><small id="soundSmall">${S.sound === 'file' ? esc(S.soundName || 'لم يُختر ملف بعد') : 'لكل الصلوات'}</small></div>
+        <div class="r-full">
+          <select class="input" id="soundSel" aria-label="صوت الأذان">${SOUNDS.map(([v, l]) => `<option value="${v}" ${S.sound === v ? 'selected' : ''}>${l}</option>`).join('')}</select>
           <div id="fileRow" ${S.sound === 'file' ? '' : 'hidden'}><input type="file" id="adhanFile" accept="audio/*" hidden><button class="btn small" id="pickFile" type="button">اختيار ملف أذان (MP3)</button></div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn small" id="testAdhan" type="button">${I.play} تجربة</button><button class="btn small ghost" id="stopTest" type="button">إيقاف</button></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn small" id="testAdhan" type="button">${I.play} استماع</button><button class="btn small ghost" id="stopTest" type="button">إيقاف</button></div>
         </div></div>
       <div class="row">${ic('c6', I.bellOn)}<div class="r-body"><b>تذكير قبل الأذان</b></div>
         <select class="input" id="remSel" aria-label="تذكير قبل الأذان">${[0, 5, 10, 15, 20, 30].map((m) => `<option value="${m}" ${S.reminder === m ? 'selected' : ''}>${m ? 'قبل ' + minutesWord(m) : 'بدون'}</option>`).join('')}</select></div>
@@ -1218,7 +1307,7 @@ function renderPrefs() {
       <div class="row">${ic('c1', I.book)}<div class="r-body"><b>القارئ</b></div><select class="input" id="recSel2" aria-label="القارئ">${RECITERS.map((r) => `<option value="${r[0]}" ${r[0] === S.reciter ? 'selected' : ''}>${r[1]}</option>`).join('')}</select></div>
     </section>
 
-    <p class="about">مِحراب · تُحسب المواقيت على جهازك بمكتبة Adhan (MIT). نص المصحف برواية حفص بالرسم العثماني من مشروع Tanzil عبر حزمة quran-json (CC BY-SA 4.0)، بخط «أميري قرآن» (SIL OFL). التلاوات من خدمة Islamic Network وتحتاج إلى اتصال بالإنترنت.</p>
+    <p class="about">مِحراب · تُحسب المواقيت على جهازك بمكتبة Adhan (MIT). تسجيلات الأذان من Wikimedia Commons: الأول «Beautiful adhan» (CC0)، والثاني بصوت عاقب عزيز (CC BY-SA 4.0). أسماء البلديات من OpenStreetMap (ODbL). نص المصحف برواية حفص بالرسم العثماني من مشروع Tanzil عبر حزمة quran-json (CC BY-SA 4.0)، بخط «أميري قرآن» (SIL OFL). التلاوات من خدمة Islamic Network وتحتاج إلى اتصال بالإنترنت.</p>
   </main>`;
 
   $('#gpsBtn').onclick = () => locate();
@@ -1261,15 +1350,24 @@ function renderPrefs() {
     $$('button', g).forEach((x) => x.setAttribute('aria-pressed', x === b));
     if (name === 'theme') applyTheme();
     if (name === 'h24') fmtCacheClear();
-    if (name === 'sound') {
-      $('#fileRow').hidden = v !== 'file';
-      $('#soundSmall').textContent = v === 'file' ? (S.soundName || 'لم يُختر ملف بعد') : v === 'silent' ? 'إشعار دون صوت' : 'نغمة هادئة مدمجة';
-    }
   }));
+  $('#soundSel').onchange = (e) => {
+    stopAdhan();
+    S.sound = e.target.value; save();
+    $('#fileRow').hidden = S.sound !== 'file';
+    $('#soundSmall').textContent = S.sound === 'file' ? (S.soundName || 'لم يُختر ملف بعد') : 'لكل الصلوات';
+  };
   $('#pickFile').onclick = () => $('#adhanFile').click();
   $('#adhanFile').onchange = async (e) => {
     const f = e.target.files && e.target.files[0]; if (!f) return;
-    if (f.size > 15 * 1024 * 1024) { toast('الملف كبير جدًا. اختر ملفًا أصغر من 15 ميغابايت.'); return; }
+    const max = NATIVE ? 8 : 15;
+    if (f.size > max * 1024 * 1024) { toast(`الملف كبير جدًا. اختر ملفًا أصغر من ${max} ميغابايت.`); return; }
+    if (NATIVE && NATIVE.saveSound) {
+      try {
+        const b64 = await new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(',')[1] || ''); r.onerror = rej; r.readAsDataURL(f); });
+        if (!NATIVE.saveSound(b64)) throw new Error('save');
+      } catch (err) { toast('تعذر حفظ الملف في التطبيق.'); return; }
+    }
     try { await idbPut('adhan', f); S.soundName = f.name; S.sound = 'file'; save(); $('#soundSmall').textContent = f.name; toast('حُفظ صوت الأذان على جهازك'); }
     catch (err) { toast('تعذر حفظ الملف في هذا المتصفح.'); }
   };

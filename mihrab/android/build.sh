@@ -6,8 +6,8 @@ cd "$(dirname "$0")"
 SDK="${ANDROID_SDK:?set ANDROID_SDK}"
 BT="$SDK/build-tools/35.0.0"
 JAR="$SDK/platforms/android-35/android.jar"
-VERSION_CODE="${VERSION_CODE:-1}"
-VERSION_NAME="${VERSION_NAME:-1.0}"
+VERSION_CODE="${VERSION_CODE:-2}"
+VERSION_NAME="${VERSION_NAME:-1.1}"
 OUT=build
 rm -rf "$OUT" && mkdir -p "$OUT/assets/www" "$OUT/gen" "$OUT/classes" "$OUT/dex"
 
@@ -19,7 +19,7 @@ rm -f "$OUT/assets/www/sw.js"
 "$BT/aapt2" link -o "$OUT/base.apk" -I "$JAR" --manifest AndroidManifest.xml \
   -A "$OUT/assets" --java "$OUT/gen" "$OUT/res.zip" \
   --min-sdk-version 26 --target-sdk-version 34 \
-  --version-code "$VERSION_CODE" --version-name "$VERSION_NAME" --auto-add-overlay
+  --version-code "$VERSION_CODE" --version-name "$VERSION_NAME" --auto-add-overlay -0 mp3 -0 ogg
 
 javac -nowarn -source 11 -target 11 -classpath "$JAR" -d "$OUT/classes" \
   $(find src "$OUT/gen" -name '*.java') 2>&1 | grep -v 'bootstrap classpath' || true

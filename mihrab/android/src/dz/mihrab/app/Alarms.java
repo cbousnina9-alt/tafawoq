@@ -17,6 +17,7 @@ import org.json.JSONObject;
 final class Alarms {
     static final String CH_ADHAN = "adhan_v1";
     static final String CH_REMIND = "reminder_v1";
+    static final String CH_ADHAN_PLAY = "adhan_play_v2";
     private static final String PREFS = "mihrab";
 
     static void save(Context c, String json) {
@@ -43,6 +44,7 @@ final class Alarms {
                 i.putExtra("title", o.optString("title"));
                 i.putExtra("body", o.optString("body"));
                 i.putExtra("adhan", o.optBoolean("adhan", false));
+                i.putExtra("sound", o.optString("sound", "adhan1"));
                 i.putExtra("t", t);
                 PendingIntent pi = PendingIntent.getBroadcast(c, 0, i, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
                 boolean exact = Build.VERSION.SDK_INT < 31 || am.canScheduleExactAlarms();
@@ -56,13 +58,21 @@ final class Alarms {
     static void ensureChannels(Context c) {
         NotificationManager nm = (NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE);
         if (nm.getNotificationChannel(CH_ADHAN) == null) {
-            NotificationChannel ch = new NotificationChannel(CH_ADHAN, "الأذان", NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel ch = new NotificationChannel(CH_ADHAN, "الأذان (احتياطي)", NotificationManager.IMPORTANCE_HIGH);
             ch.setDescription("تنبيه بصوت الأذان عند دخول وقت كل صلاة");
             Uri sound = Uri.parse("android.resource://" + c.getPackageName() + "/" + R.raw.adhan);
             AudioAttributes aa = new AudioAttributes.Builder()
                 .setUsage(AudioAttributes.USAGE_ALARM)
                 .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION).build();
             ch.setSound(sound, aa);
+            ch.enableVibration(true);
+            ch.setVibrationPattern(new long[]{0, 300, 150, 300});
+            nm.createNotificationChannel(ch);
+        }
+        if (nm.getNotificationChannel(CH_ADHAN_PLAY) == null) {
+            NotificationChannel ch = new NotificationChannel(CH_ADHAN_PLAY, "أذان الصلوات", NotificationManager.IMPORTANCE_HIGH);
+            ch.setDescription("إشعار دخول وقت الصلاة أثناء تشغيل الأذان");
+            ch.setSound(null, null);
             ch.enableVibration(true);
             ch.setVibrationPattern(new long[]{0, 300, 150, 300});
             nm.createNotificationChannel(ch);
