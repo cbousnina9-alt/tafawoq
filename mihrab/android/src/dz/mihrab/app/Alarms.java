@@ -45,6 +45,7 @@ final class Alarms {
                 i.putExtra("body", o.optString("body"));
                 i.putExtra("adhan", o.optBoolean("adhan", false));
                 i.putExtra("sound", o.optString("sound", "adhan1"));
+                i.putExtra("open", o.optString("open", ""));
                 i.putExtra("t", t);
                 PendingIntent pi = PendingIntent.getBroadcast(c, 0, i, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
                 boolean exact = Build.VERSION.SDK_INT < 31 || am.canScheduleExactAlarms();

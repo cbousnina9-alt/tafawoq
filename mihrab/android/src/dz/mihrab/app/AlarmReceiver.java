@@ -26,6 +26,8 @@ public class AlarmReceiver extends BroadcastReceiver {
             }
             if (!started) {
                 Intent open = new Intent(c, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                String page = intent.getStringExtra("open");
+                if (page != null && !page.isEmpty()) open.putExtra("open", page);
                 PendingIntent pi = PendingIntent.getActivity(c, 1, open, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
                 Notification n = new Notification.Builder(c, adhan ? Alarms.CH_ADHAN : Alarms.CH_REMIND)
                     .setSmallIcon(R.drawable.ic_stat)

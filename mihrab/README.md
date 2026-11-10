@@ -23,4 +23,5 @@ Keep the same keystore for every release, otherwise phones refuse to install the
 - Quran text: Tanzil Uthmani via `quran-json` (CC BY-SA 4.0); font Amiri Quran (SIL OFL).
 - `web/audio/adhan-1.mp3`: "Beautiful adhan" from Wikimedia Commons, CC0.
 - `web/audio/adhan-2.mp3`: "The Adhan - Muslim Call to Prayer - Aaqib Azeez" from Wikimedia Commons, CC BY-SA 4.0. Loudness-normalized and re-encoded.
+- Adhkar: Hisn al-Muslim by Sa'id ibn Ali ibn Wahf al-Qahtani, text from [asellam/HisnElMuslim](https://github.com/asellam/HisnElMuslim) (MIT). Quranic duas are cut from `web/quran.json`. Rebuild `web/adhkar.json` with `python3 tools/build_adhkar.py path/to/hisn.json`.
 - Municipality names: OpenStreetMap Nominatim (data © OpenStreetMap contributors, ODbL).

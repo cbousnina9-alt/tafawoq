@@ -101,8 +101,23 @@ public class MainActivity extends Activity {
             requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, REQ_NOTIFY);
         }
 
-        if (state != null) web.restoreState(state);
-        else web.loadUrl("https://" + HOST + "/index.html#home");
+        String page = pageFrom(getIntent());
+        if (state != null && page == null) web.restoreState(state);
+        else web.loadUrl("https://" + HOST + "/index.html#" + (page != null ? "dhikr-" + page : "home"));
+    }
+
+    /** Page a notification asked to open (letters and digits only). */
+    static String pageFrom(Intent i) {
+        String p = i == null ? null : i.getStringExtra("open");
+        return p != null && p.matches("[a-z0-9]{1,16}") ? p : null;
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        String page = pageFrom(intent);
+        if (page != null) web.evaluateJavascript("window.__mihrabOpen&&window.__mihrabOpen('" + page + "')", null);
     }
 
     private boolean hasLocation() {
