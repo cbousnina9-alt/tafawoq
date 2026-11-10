@@ -1,5 +1,5 @@
 /* مِحراب — offline cache */
-const VERSION = 'mihrab-v3';
+const VERSION = 'mihrab-v4';
 const CORE = [
   './', 'index.html', 'styles.css', 'app.js', 'adhan.min.js', 'quran.json', 'manifest.webmanifest',
   'icon.svg', 'icon-192.png', 'icon-512.png', 'icon-180.png',

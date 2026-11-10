@@ -53,6 +53,22 @@ const I = {
   chevDown: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>',
   bellFill: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0" fill="none"/></svg>',
   coins: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><ellipse cx="9" cy="7" rx="6" ry="2.5"/><path d="M3 7v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V7M3 11v4c0 1.4 2.7 2.5 6 2.5 1 0 2-.1 2.8-.3"/><circle cx="17" cy="16" r="4.5"/></svg>',
+  markFill: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4z"/></svg>',
+  sliders: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg>',
+  skipNext: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6.5v11a1 1 0 0 0 1.5.86l8.5-5.5a1 1 0 0 0 0-1.72L7.5 5.64A1 1 0 0 0 6 6.5z"/><rect x="17" y="6" width="2.4" height="12" rx="1"/></svg>',
+  skipPrev: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 6.5v11a1 1 0 0 1-1.5.86L8 12.86a1 1 0 0 1 0-1.72l8.5-5.5A1 1 0 0 1 18 6.5z"/><rect x="4.6" y="6" width="2.4" height="12" rx="1"/></svg>',
+  info: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg>',
+  gear: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>',
+  refresh: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.3-5.6L4 8.7"/><path d="M4 4v4.7h4.7"/></svg>',
+  phone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/></svg>',
+  kaaba: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M4 8l8-4 8 4v10l-8 3-8-3z"/><path d="M4 8l8 3 8-3M12 11v10M4 12l8 3 8-3"/></svg>',
+  scale: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0z"/></svg>',
+  palette: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 3a9 9 0 0 0 0 18c1.2 0 1.6-.9 1.2-1.8-.5-1.1.2-2.2 1.4-2.2H17a4 4 0 0 0 4-4c0-5.5-4-10-9-10z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10" cy="7" r="1.2"/><circle cx="15" cy="7.5" r="1.2"/></svg>',
+  headset: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>',
+  folder: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>',
+  vibrate: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="8" height="16" rx="1.6"/><path d="M4 9v6M2 10.5v3M20 9v6M22 10.5v3"/></svg>',
+  globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
   check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
   copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg>',
   gps: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>',
@@ -177,11 +193,11 @@ const RECITERS = [
 const JUZ = [[1,1],[2,142],[2,253],[3,93],[4,24],[4,148],[5,82],[6,111],[7,88],[8,41],[9,93],[11,6],[12,53],[15,1],[17,1],[18,75],[21,1],[23,1],[25,21],[27,56],[29,46],[33,31],[36,28],[39,32],[41,47],[46,1],[51,31],[58,1],[67,1],[78,1]];
 const JUZ_NAMES = ['الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع','الثامن','التاسع','العاشر','الحادي عشر','الثاني عشر','الثالث عشر','الرابع عشر','الخامس عشر','السادس عشر','السابع عشر','الثامن عشر','التاسع عشر','العشرون','الحادي والعشرون','الثاني والعشرون','الثالث والعشرون','الرابع والعشرون','الخامس والعشرون','السادس والعشرون','السابع والعشرون','الثامن والعشرون','التاسع والعشرون','الثلاثون'];
 const SOUNDS = [
-  ['adhan1', 'أذان بصوت مؤذن (٢:٣٥ دقيقة)'],
-  ['adhan2', 'أذان بصوت مؤذن آخر (١:٢٥ دقيقة)'],
+  ['adhan1', 'الأذان الأول'],
+  ['adhan2', 'الأذان الثاني (أقصر)'],
   ['tone', 'نغمة هادئة'],
-  ['file', 'تسجيل أختاره من جهازي'],
-  ['silent', 'بدون صوت (إشعار فقط)'],
+  ['file', 'تسجيل من جهازي'],
+  ['silent', 'بدون صوت'],
 ];
 const SOUND_FILES = { adhan1: 'audio/adhan-1.mp3', adhan2: 'audio/adhan-2.mp3' };
 const KAABA = { lat: 21.422487, lng: 39.826206 };
@@ -595,69 +611,144 @@ function toggleMark(s, a) {
   LS.set('bookmarks', bookmarks);
 }
 
-/* ---------- recitation player ---------- */
-const P = { audio: null, s: 0, a: 0, playing: false, tries: [] };
+/* ---------- recitation player (gapless: the next ayah loads while this one plays) ---------- */
+const P = { s: 0, a: 0, playing: false, cur: null, curTries: [], nxt: null, nxtKey: '', nxtTries: [] };
 function audioFor(s, a) {
   const rec = RECITERS.find((r) => r[0] === S.reciter) || RECITERS[0];
   const brs = [rec[2], 128, 64, 192, 48, 32].filter((v, i, arr) => arr.indexOf(v) === i);
   return brs.map((br) => `https://cdn.islamic.network/quran/audio/${br}/${rec[0]}/${OFF[s - 1] + a}.mp3`);
 }
+function followingAyah(s, a) {
+  if (!Q) return null;
+  if (a < Q[s - 1][2].length) return { s, a: a + 1 };
+  if (s < 114) return { s: s + 1, a: 1 };
+  return null;
+}
+function newAudio() { const au = new Audio(); au.preload = 'auto'; return au; }
+function wireAudio(au, tries) {
+  au.onended = () => { if (au === P.cur) advanceAyah(); };
+  au.onplaying = () => { if (au === P.cur) preloadNext(); };
+  au.ontimeupdate = () => { if (au === P.cur) playerProgress(); };
+  au.onerror = () => {
+    if (au !== P.cur || !P.playing) return;
+    const n = tries.shift();
+    if (n) { au.src = n; au.play().catch(() => {}); }
+    else { P.playing = false; renderPlayer(); toast('تعذر تحميل التلاوة. تحقق من الاتصال بالإنترنت.'); }
+  };
+}
+function preloadNext() {
+  const f = followingAyah(P.s, P.a);
+  if (!f) return;
+  const k = f.s + ':' + f.a;
+  if (P.nxtKey === k && P.nxt) return;
+  const tries = audioFor(f.s, f.a);
+  const au = newAudio();
+  au.onerror = () => { if (au !== P.nxt) return; const n = P.nxtTries.shift(); if (n) { au.src = n; au.load(); } };
+  au.src = tries.shift(); au.load();
+  P.nxt = au; P.nxtKey = k; P.nxtTries = tries;
+}
+function dropAudio(au) { if (!au) return; au.onended = au.onerror = au.onplaying = au.ontimeupdate = null; try { au.pause(); au.removeAttribute('src'); au.load(); } catch (e) { /* ignore */ } }
 function playAyah(s, a) {
-  if (!P.audio) {
-    P.audio = new Audio();
-    P.audio.preload = 'auto';
-    P.audio.addEventListener('ended', () => nextAyah());
-    P.audio.addEventListener('error', () => {
-      if (!P.playing) return;
-      const nxt = P.tries.shift();
-      if (nxt) { P.audio.src = nxt; P.audio.play().catch(() => {}); }
-      else { P.playing = false; renderPlayer(); toast('تعذر تحميل التلاوة. تحقق من الاتصال بالإنترنت.'); }
-    });
-  }
   stopAdhan();
+  dropAudio(P.cur); dropAudio(P.nxt); P.nxt = null; P.nxtKey = '';
   P.s = s; P.a = a; P.playing = true;
-  P.tries = audioFor(s, a);
-  P.audio.src = P.tries.shift();
-  P.audio.play().catch(() => {});
+  const tries = audioFor(s, a);
+  P.cur = newAudio(); P.curTries = tries;
+  wireAudio(P.cur, tries);
+  P.cur.src = tries.shift();
+  P.cur.play().catch(() => {});
+  afterAyahChange();
+}
+function advanceAyah() {
+  const f = followingAyah(P.s, P.a);
+  if (!f) { stopPlayer(); return; }
+  const k = f.s + ':' + f.a;
+  if (P.nxt && P.nxtKey === k) {
+    const old = P.cur;
+    P.cur = P.nxt; P.curTries = P.nxtTries; P.nxt = null; P.nxtKey = '';
+    wireAudio(P.cur, P.curTries);
+    P.s = f.s; P.a = f.a;
+    P.cur.play().catch(() => {});
+    dropAudio(old);
+    afterAyahChange();
+  } else {
+    playAyah(f.s, f.a);
+  }
+}
+function afterAyahChange() {
+  if (reader.open && reader.s !== P.s) { reader.s = P.s; reader.target = P.a; drawSurah(); }
   markPlaying(); renderPlayer(); mediaSession();
 }
-function nextAyah() {
-  if (!Q) return;
+function prevAyah() {
+  if (!P.s) return;
   let { s, a } = P;
-  if (a < Q[s - 1][2].length) a++;
-  else if (s < 114) { s++; a = 1; }
-  else { stopPlayer(); return; }
-  if (reader.open && reader.s !== s) { openSurah(s, a, { keepPlayer: true }); }
+  if (a > 1) a--; else if (s > 1) { s--; a = Q[s - 1][2].length; }
   playAyah(s, a);
 }
 function togglePlay() {
-  if (!P.audio) return;
-  if (P.playing) { P.audio.pause(); P.playing = false; } else { P.audio.play().catch(() => {}); P.playing = true; }
+  if (!P.cur) { const a = lastRead && lastRead.s === reader.s ? lastRead.a : 1; playAyah(reader.s, a); return; }
+  if (P.playing) { P.cur.pause(); P.playing = false; } else { P.cur.play().catch(() => {}); P.playing = true; }
   renderPlayer();
 }
 function stopPlayer() {
-  if (P.audio) { P.audio.pause(); P.audio.removeAttribute('src'); P.audio.load(); }
-  P.playing = false; P.s = 0;
+  dropAudio(P.cur); dropAudio(P.nxt);
+  P.cur = null; P.nxt = null; P.nxtKey = ''; P.playing = false; P.s = 0;
   markPlaying(); renderPlayer();
 }
 function markPlaying() {
   $$('.ayah.playing').forEach((e) => e.classList.remove('playing'));
   if (!P.s || !reader.open || reader.s !== P.s) return;
   const el = $(`.ayah[data-a="${P.a}"]`);
-  if (el) { el.classList.add('playing'); el.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }
+  if (!el) return;
+  el.classList.add('playing');
+  // Follow the recitation without jumping: only scroll when the ayah leaves the comfortable band.
+  const sc = $('#rScroll'); if (!sc) return;
+  const r = el.getBoundingClientRect(), b = sc.getBoundingClientRect();
+  if (r.top < b.top + b.height * 0.12 || r.bottom > b.top + b.height * 0.72) {
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    sc.scrollTo({ top: sc.scrollTop + (r.top - b.top) - b.height * 0.28, behavior: reduce ? 'auto' : 'smooth' });
+  }
+}
+const WAVE = Array.from({ length: 42 }, (_, i) => 30 + Math.round(60 * Math.abs(Math.sin(i * 1.7) * Math.cos(i * 0.6))));
+function playerProgress() {
+  const bar = $('.player .wave'); if (!bar) return;
+  const n = P.cur && P.cur.duration ? Math.round(Math.min(1, P.cur.currentTime / P.cur.duration) * WAVE.length) : 0;
+  if (bar.dataset.n === String(n)) return;
+  bar.dataset.n = String(n);
+  Array.from(bar.children).forEach((b, i) => b.classList.toggle('on', i < n));
 }
 function renderPlayer() {
   let bar = $('.player');
-  if (!P.s) { if (bar) bar.remove(); return; }
+  const show = reader.open || P.s;
+  if (!show) { if (bar) bar.remove(); return; }
   if (!bar) { bar = document.createElement('div'); bar.className = 'player'; document.body.appendChild(bar); }
   const rec = RECITERS.find((r) => r[0] === S.reciter) || RECITERS[0];
+  const where = P.s ? `سورة ${esc(surahName(P.s))} · الآية ${arNum(P.a)}` : 'اضغط للاستماع إلى السورة';
+  const marked = P.s ? isMarked(P.s, P.a) : false;
   bar.innerHTML = `<div class="inner">
-    <button class="round" id="pToggle" type="button" aria-label="${P.playing ? 'إيقاف مؤقت' : 'تشغيل'}">${P.playing ? I.pause : I.play}</button>
-    <div class="info"><b>سورة ${esc(surahName(P.s))} — الآية ${arNum(P.a)}</b><span>${esc(rec[1])}</span></div>
-    <button class="icon-btn" id="pStop" type="button" aria-label="إغلاق المشغل">${I.close}</button>
+    <div class="pl-top">
+      <button class="pl-mini" id="pMark" type="button" aria-label="علامة على الآية" ${P.s ? '' : 'disabled'}>${marked ? I.markFill : I.mark}</button>
+      <div class="info"><b>${esc(rec[1])}</b><span>${where}</span></div>
+      <button class="pl-mini" id="pStop" type="button" aria-label="إيقاف التلاوة" ${P.s ? '' : 'hidden'}>${I.close}</button>
+    </div>
+    <div class="wave" aria-hidden="true">${WAVE.map((h) => `<i style="height:${h}%"></i>`).join('')}</div>
+    <div class="pl-ctrl">
+      <button class="pl-btn" id="pNext" type="button" aria-label="الآية التالية">${I.skipNext}</button>
+      <button class="round" id="pToggle" type="button" aria-label="${P.playing ? 'إيقاف مؤقت' : 'تشغيل'}">${P.playing ? I.pause : I.play}</button>
+      <button class="pl-btn" id="pPrev" type="button" aria-label="الآية السابقة">${I.skipPrev}</button>
+    </div>
   </div>`;
   $('#pToggle', bar).onclick = togglePlay;
   $('#pStop', bar).onclick = stopPlayer;
+  $('#pNext', bar).onclick = () => (P.s ? advanceAyah() : togglePlay());
+  $('#pPrev', bar).onclick = prevAyah;
+  $('#pMark', bar).onclick = () => {
+    if (!P.s) return;
+    toggleMark(P.s, P.a); renderPlayer();
+    const sp = reader.s === P.s && $(`.ayah[data-a="${P.a}"]`); if (sp) sp.classList.toggle('marked', isMarked(P.s, P.a));
+    toast(isMarked(P.s, P.a) ? 'أضيفت العلامة' : 'أزيلت العلامة');
+  };
+  playerProgress();
 }
 function mediaSession() {
   if (!('mediaSession' in navigator)) return;
@@ -666,7 +757,8 @@ function mediaSession() {
     navigator.mediaSession.metadata = new MediaMetadata({ title: `سورة ${surahName(P.s)} — ${arNum(P.a)}`, artist: rec[1], album: 'القرآن الكريم', artwork: [{ src: 'icon-512.png', sizes: '512x512', type: 'image/png' }] });
     navigator.mediaSession.setActionHandler('pause', togglePlay);
     navigator.mediaSession.setActionHandler('play', togglePlay);
-    navigator.mediaSession.setActionHandler('nexttrack', nextAyah);
+    navigator.mediaSession.setActionHandler('nexttrack', advanceAyah);
+    navigator.mediaSession.setActionHandler('previoustrack', prevAyah);
   } catch (e) { /* unsupported */ }
 }
 
@@ -789,6 +881,8 @@ const ILL = {
   rahl: `<svg class="ill" viewBox="0 0 140 110" aria-hidden="true"><path d="M34 104L98 56M106 104L42 56" stroke="url(#gWood)" stroke-width="9" stroke-linecap="round"/><path d="M34 104L98 56" stroke="#B98552" stroke-width="2" stroke-linecap="round" opacity=".6"/><g transform="rotate(-10 70 50)"><rect x="30" y="58" width="80" height="8" rx="2" fill="#F1E7CF"/><rect x="28" y="12" width="84" height="52" rx="5" fill="#165C49" stroke="#C9A85A" stroke-width="2"/><rect x="35" y="18" width="70" height="40" rx="3" fill="none" stroke="#C9A85A" stroke-width="1"/><circle cx="70" cy="38" r="13" fill="#0F4A3C" stroke="#D6B46C" stroke-width="1.6"/><g fill="none" stroke="#E2C27C" stroke-width="1.2"><rect x="63" y="31" width="14" height="14"/><rect x="63" y="31" width="14" height="14" transform="rotate(45 70 38)"/></g></g></svg>`,
   zakat: `<svg class="ill" viewBox="0 0 120 80" aria-hidden="true"><ellipse cx="44" cy="68" rx="22" ry="6" fill="#C89B45"/><rect x="22" y="56" width="44" height="12" fill="#D9AE58"/><ellipse cx="44" cy="56" rx="22" ry="6" fill="#EBC977"/><ellipse cx="44" cy="52" rx="22" ry="6" fill="#C89B45"/><rect x="22" y="40" width="44" height="12" fill="#D9AE58"/><ellipse cx="44" cy="40" rx="22" ry="6" fill="#F0D58E"/><path d="M78 74V40" stroke="#1F6A52" stroke-width="3" stroke-linecap="round"/><path d="M66 44h24" stroke="#1F6A52" stroke-width="3" stroke-linecap="round"/><path d="M66 44l-6 14h12zM90 44l-6 14h12z" fill="none" stroke="#1F6A52" stroke-width="2" stroke-linejoin="round"/><path d="M60 58a6 3 0 0 0 12 0M84 58a6 3 0 0 0 12 0" fill="#CFE2D6"/><rect x="70" y="72" width="16" height="4" rx="2" fill="#1F6A52"/></svg>`,
   beads: beadsSvg(),
+  compass: `<svg class="ill" viewBox="0 0 120 92" aria-hidden="true"><circle cx="60" cy="10" r="6" fill="none" stroke="#C9A85A" stroke-width="3"/><rect x="56" y="13" width="8" height="7" rx="2" fill="#C9A85A"/><circle cx="60" cy="54" r="36" fill="url(#gGold)"/><circle cx="60" cy="54" r="31" fill="#FBF6EA"/><circle cx="60" cy="54" r="31" fill="none" stroke="#1F6A52" stroke-width="2"/><g stroke="#1F6A52" stroke-width="1.6" stroke-linecap="round"><path d="M60 26v5M60 77v5M32 54h5M83 54h5"/></g><path d="M60 54l-4-18 4-6 4 6z" fill="#1F6A52"/><path d="M60 54l4 18-4 6-4-6z" fill="#C9A85A"/><rect x="69" y="31" width="10" height="9" rx="1" fill="#1A1A1A"/><rect x="69" y="33.5" width="10" height="1.6" fill="#D6B46C"/><circle cx="60" cy="54" r="3" fill="#C9A85A"/></svg>`,
+  calendar: `<svg class="ill" viewBox="0 0 120 92" aria-hidden="true"><path d="M24 84l8-62h64l-8 62z" fill="#0F4A3C" opacity=".25"/><rect x="22" y="20" width="76" height="64" rx="6" fill="#FBF6EA" stroke="#D9CDB0"/><rect x="22" y="20" width="76" height="16" rx="6" fill="#1F6A52"/><rect x="22" y="30" width="76" height="6" fill="#1F6A52"/><g fill="#C9A85A"><rect x="36" y="12" width="5" height="14" rx="2.5"/><rect x="58" y="12" width="5" height="14" rx="2.5"/><rect x="80" y="12" width="5" height="14" rx="2.5"/></g><g fill="#DCE7DF"><rect x="30" y="44" width="10" height="8" rx="1.5"/><rect x="44" y="44" width="10" height="8" rx="1.5"/><rect x="58" y="44" width="10" height="8" rx="1.5"/><rect x="72" y="44" width="10" height="8" rx="1.5"/><rect x="30" y="56" width="10" height="8" rx="1.5"/><rect x="44" y="56" width="10" height="8" rx="1.5"/><rect x="72" y="56" width="10" height="8" rx="1.5"/><rect x="30" y="68" width="10" height="8" rx="1.5"/><rect x="44" y="68" width="10" height="8" rx="1.5"/><rect x="58" y="68" width="10" height="8" rx="1.5"/></g><rect x="58" y="56" width="10" height="8" rx="1.5" fill="#1F6A52"/></svg>`,
 };
 const ARCH_PATH = 'M2 300V120C2 80 42 60 98 46 150 33 186 20 200 3c14 17 50 30 102 43 56 14 96 34 96 74v180Z';
 const HISN_ICONS = [
@@ -848,7 +942,8 @@ function renderHome() {
     <div class="tools">
       <button class="tool" id="zakatTile" type="button"><span class="t-ill">${ILL.zakat}</span><b>حاسبة الزكاة</b></button>
       <button class="tool" id="tasbihHome" type="button"><span class="t-ill">${beadsSvg()}</span><b>السبحة</b></button>
-      <button class="tool" id="qiblaTile" type="button"><span class="t-ill t-ic2">${I.compass}</span><b>القبلة ${Math.round(qiblaBearing())}°</b></button>
+      <button class="tool" id="qiblaTile" type="button"><span class="t-ill">${ILL.compass}</span><b>القبلة ${Math.round(qiblaBearing())}°</b></button>
+      <button class="tool" id="monthTile" type="button"><span class="t-ill">${ILL.calendar}</span><b>جدول الشهر</b></button>
     </div>
     <div id="verseSlot"></div>
   </main>`;
@@ -857,6 +952,7 @@ function renderHome() {
   $('#placeBtn').onclick = () => { location.hash = 'prefs'; };
   $('#qiblaTile').onclick = () => { location.hash = 'qibla'; };
   $('#zakatTile').onclick = () => { location.hash = 'zakat'; };
+  $('#monthTile').onclick = () => openMonth();
   $('#tasbihHome').onclick = () => { location.hash = 'tasbih'; };
   $('#adhkarTile').onclick = () => { location.hash = 'dhikr-' + contextualAdhkar(state(), new Date()); };
   $('#contRead').onclick = () => { loadQuran().then(() => openSurah(lastRead ? lastRead.s : 1, lastRead ? lastRead.a : 1)).catch(quranErr); };
@@ -911,33 +1007,6 @@ function updateHero(st) {
   }
 }
 
-function openMonth(offset = 0) {
-  const base = ymd(new Date(), S.loc.tz);
-  let y = base.y, m = base.m + offset;
-  while (m < 1) { m += 12; y--; } while (m > 12) { m -= 12; y++; }
-  const days = new Date(Date.UTC(y, m, 0)).getUTCDate();
-  const monthName = new Intl.DateTimeFormat('ar-u-nu-latn', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m - 1, 15)));
-  let rows = '';
-  for (let d = 1; d <= days; d++) {
-    const t = { y, m, d };
-    const tt = dayTimes(t);
-    const isToday = y === base.y && m === base.m && d === base.d;
-    rows += `<tr class="${isToday ? 'today' : ''} ${isFriday(t) ? 'fri' : ''}"><td>${esc(fmt('wd', tt.dhuhr))} ${d}<small>${esc(fmt('hijriShort', tt.dhuhr))}</small></td>${PRAYERS.map((p) => `<td>${esc(fmtTime(tt[p.key]))}</td>`).join('')}</tr>`;
-  }
-  sheet(`<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-      <button class="icon-btn" id="mPrev" type="button" aria-label="الشهر السابق">${I.prev}</button>
-      <h3 style="flex:1;text-align:center;margin:0">${esc(monthName)}</h3>
-      <button class="icon-btn" id="mNext" type="button" aria-label="الشهر التالي">${I.next}</button>
-    </div>
-    <p class="muted" style="margin:0 0 10px;font-size:13px;text-align:center">${esc(S.loc.name)} · ${esc(METHODS[S.method].label)}</p>
-    <div class="table-wrap"><table class="month"><thead><tr><th>اليوم</th>${PRAYERS.map((p) => `<th>${p.name}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`,
-  (el) => {
-    $('#mPrev', el).onclick = () => openMonth(offset - 1);
-    $('#mNext', el).onclick = () => openMonth(offset + 1);
-    const tr = $('tr.today', el); if (tr) tr.scrollIntoView({ block: 'center' });
-  });
-}
-
 /* ---------- Quran ---------- */
 let qtab = LS.get('qtab', 'surah');
 let qsearch = '';
@@ -945,7 +1014,7 @@ function quranErr() { toast('تعذر تحميل نص المصحف. أعد ال�
 function renderQuran() {
   app.innerHTML = `
   ${brand()}
-  ${pageTitle('القرآن الكريم', 'رفيق وردك اليومي')}
+  ${pageTitle('القرآن الكريم', 'متابعة تلاوتك اليومية')}
   <main class="view wrap">
     <div id="contWrap"></div>
     <div class="search-box">${I.search}<input class="input" id="qsearchTop" type="search" placeholder="ابحث عن سورة أو آية" value="${esc(qsearch)}" autocomplete="off" aria-label="البحث في القرآن"></div>
@@ -974,10 +1043,10 @@ function renderQBody() {
   if (qtab === 'surah') {
     body.innerHTML = `<ul class="list">${Q.map((s, i) => `<li><button type="button" data-s="${i + 1}">${starBadge(i + 1)}<span><span class="s-title">${esc(s[0])}</span><span class="s-meta">${ayahWord(s[2].length)} · ${s[1] === 'm' ? 'مكية' : 'مدنية'}</span></span><span class="chev">${I.next}</span></button></li>`).join('')}</ul>`;
   } else if (qtab === 'juz') {
-    body.innerHTML = `<ul class="list">${JUZ.map(([s, a], i) => `<li><button type="button" data-s="${s}" data-a="${a}">${starBadge(i + 1)}<span style="min-width:0"><span class="s-title">الجزء ${JUZ_NAMES[i]}</span><span class="s-snip">${esc(Q[s - 1][2][a - 1].split(' ').slice(0, 6).join(' '))}</span></span><span class="s-meta">${esc(Q[s - 1][0])} ${arNum(a)}</span></button></li>`).join('')}</ul>`;
+    body.innerHTML = `<ul class="list">${JUZ.map(([s, a], i) => `<li><button type="button" data-s="${s}" data-a="${a}">${starBadge(i + 1)}<span style="min-width:0"><span class="s-title">الجزء ${JUZ_NAMES[i]}</span><span class="s-meta">${esc(Q[s - 1][0])}${a > 1 ? ` · من الآية ${arNum(a)}` : ''}</span></span><span class="chev">${I.next}</span></button></li>`).join('')}</ul>`;
   } else if (qtab === 'marks') {
     body.innerHTML = bookmarks.length
-      ? `<ul class="list">${bookmarks.map((b) => `<li><button type="button" data-s="${b.s}" data-a="${b.a}"><span class="star" style="color:var(--emerald)">${I.mark}</span><span style="min-width:0"><span class="s-title">سورة ${esc(Q[b.s - 1][0])} · الآية ${arNum(b.a)}</span><span class="s-snip">${esc(Q[b.s - 1][2][b.a - 1])}</span></span><span class="chev">${I.next}</span></button></li>`).join('')}</ul>`
+      ? `<div class="mark-list">${bookmarks.map((b, i) => `<div class="mark-card${i === 0 ? ' latest' : ''}"><button class="mk-open" type="button" data-s="${b.s}" data-a="${b.a}"><span class="mk-ic">${i === 0 ? I.markFill : I.mark}</span><span class="mk-body"><small>سورة ${esc(Q[b.s - 1][0])} · الآية ${arNum(b.a)}</small><b>${esc(Q[b.s - 1][2][b.a - 1].split(' ').slice(0, 7).join(' '))}${Q[b.s - 1][2][b.a - 1].split(' ').length > 7 ? '…' : ''}</b></span></button><button class="mk-del" type="button" data-del="${b.s}:${b.a}" aria-label="حذف العلامة">${I.close}</button></div>`).join('')}</div><p class="foot-note">احفظ موضعك للعودة إليه بسهولة</p>`
       : `<div class="empty">${I.mark}لا توجد علامات بعد.<br>المس أي آية أثناء القراءة واختر «إضافة علامة».</div>`;
   } else {
     const box = body;
@@ -989,14 +1058,32 @@ function renderQBody() {
       const res = searchQuran(qsearch);
       box.innerHTML = (surahHits.length ? `<ul class="list" style="margin-bottom:12px">${surahHits.map(([i, n]) => `<li><button type="button" data-s="${i}">${starBadge(i)}<span><span class="s-title">سورة ${esc(n)}</span><span class="s-meta">${ayahWord(Q[i - 1][2].length)}</span></span><span class="chev">${I.next}</span></button></li>`).join('')}</ul>` : '')
         + (res.length
-          ? `<p class="muted" style="margin:0 6px 8px;font-size:13px">${res.length >= 150 ? 'أول ١٥٠ نتيجة في الآيات' : `${arNum(res.length)} نتيجة في الآيات`}</p><div class="list">` + res.map(([s, a]) => `<button class="result" type="button" data-s="${s}" data-a="${a}"><span class="ref">${esc(Q[s - 1][0])} · ${arNum(a)}</span><div class="txt">${esc(Q[s - 1][2][a - 1])}</div></button>`).join('') + '</div>'
+          ? `<p class="foot-note top">نتائج البحث · ${res.length >= 150 ? 'أول ١٥٠' : arNum(res.length)}</p><div class="res-list">` + res.map(([s, a]) => `<button class="res-card" type="button" data-s="${s}" data-a="${a}"><span class="mk-body"><small>سورة ${esc(Q[s - 1][0])} · الآية ${arNum(a)}</small><b>${highlightSnippet(Q[s - 1][2][a - 1], qsearch)}</b></span><span class="open-l">فتح الآية ${I.next}</span></button>`).join('') + '</div>'
           : (surahHits.length ? '' : '<div class="empty">لا توجد نتائج مطابقة.</div>'));
     }
   }
   body.onclick = (e) => {
+    const del = e.target.closest('[data-del]');
+    if (del) { const [ds, da] = del.dataset.del.split(':').map(Number); toggleMark(ds, da); renderQBody(); toast('أزيلت العلامة'); return; }
     const b = e.target.closest('button[data-s]'); if (!b) return;
     openSurah(Number(b.dataset.s), Number(b.dataset.a || 1));
   };
+}
+/* Shows the words around the first match, with the matched words marked. */
+function highlightSnippet(text, q) {
+  const words = text.split(' ');
+  const nw = words.map(norm);
+  const nq = norm(q);
+  const span = nq.split(' ').length;
+  let hit = -1;
+  for (let i = 0; i < nw.length && hit < 0; i++) if (nw.slice(i, i + span).join(' ').includes(nq)) hit = i;
+  if (hit < 0) return esc(words.slice(0, 9).join(' ')) + (words.length > 9 ? '…' : '');
+  const from = Math.max(0, hit - 3), to = Math.min(words.length, hit + span + 5);
+  const out = words.slice(from, to).map((w, k) => {
+    const i = from + k;
+    return i >= hit && i < hit + span ? `<mark>${esc(w)}</mark>` : esc(w);
+  }).join(' ');
+  return (from > 0 ? '… ' : '') + out + (to < words.length ? ' …' : '');
 }
 
 /* ---------- Reader ---------- */
@@ -1005,19 +1092,24 @@ function openSurah(s, a = 1) {
   reader.s = s; reader.target = a;
   if (location.hash !== '#read') { location.hash = 'read'; } else { showReader(); }
 }
+/* Shared top of full-screen pages: brand mark and a title card. */
+function readerTop(backId, title, sub, actions, extra) {
+  return `<div class="reader-bar">${brand()}<div class="wrap"><div class="rcard">
+      <button class="icon-btn" id="${backId}" type="button" aria-label="رجوع">${I.back}</button>
+      <div class="ttl"><b>${title}</b><span id="${backId}Sub">${sub || ''}</span></div>
+      <div class="r-act">${actions || ''}</div>
+    </div>${extra || ''}</div></div>`;
+}
 function showReader() {
   if (!Q) { loadQuran().then(showReader).catch(quranErr); return; }
   if (!reader.el) {
     reader.el = document.createElement('div');
-    reader.el.className = 'reader';
-    reader.el.innerHTML = `<div class="reader-bar"><div class="inner wrap">
-        <button class="icon-btn" id="rBack" type="button" aria-label="رجوع إلى الفهرس">${I.back}</button>
-        <div class="ttl"><b id="rTitle"></b><span id="rSub"></span></div>
+    reader.el.className = 'reader qreader';
+    reader.el.innerHTML = readerTop('rBack', '<span id="rTitle"></span>', '', `
         <button class="icon-btn tf-toggle" id="rTafsir" type="button" aria-pressed="${!!S.tafsirMode}" aria-label="عرض التفسير الميسر">تفسير</button>
-        <button class="icon-btn" id="rPlay" type="button" aria-label="تشغيل تلاوة السورة">${I.play}</button>
-        <button class="icon-btn" id="rMenu" type="button" aria-label="إعدادات القراءة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></button>
-      </div></div>
-      <div class="reader-scroll" id="rScroll"><div class="wrap"><article class="page" id="rPage"></article></div></div>`;
+        <button class="icon-btn" id="rMark" type="button" aria-label="علامة على موضع القراءة">${I.mark}</button>
+        <button class="icon-btn" id="rMenu" type="button" aria-label="إعدادات القراءة">${I.sliders}</button>`)
+      + '<div class="reader-scroll" id="rScroll"><div class="wrap"><article class="page" id="rPage"></article></div></div>';
     document.body.appendChild(reader.el);
     $('#rBack').onclick = () => (history.length > 1 ? history.back() : (location.hash = 'quran'));
     $('#rMenu').onclick = readerMenu;
@@ -1026,7 +1118,12 @@ function showReader() {
       S.tafsirMode = !S.tafsirMode; save(); reader.target = a; drawSurah();
       toast(S.tafsirMode ? 'عرض التفسير الميسّر' : 'عرض المصحف');
     };
-    $('#rPlay').onclick = () => playAyah(reader.s, lastRead && lastRead.s === reader.s ? lastRead.a : 1);
+    $('#rMark').onclick = () => {
+      const a = lastRead && lastRead.s === reader.s ? lastRead.a : 1;
+      toggleMark(reader.s, a); syncReaderMark();
+      const sp = $(`.ayah[data-a="${a}"]`); if (sp) sp.classList.toggle('marked', isMarked(reader.s, a));
+      toast(isMarked(reader.s, a) ? `أضيفت علامة على الآية ${arNum(a)}` : 'أزيلت العلامة');
+    };
     $('#rScroll').addEventListener('scroll', () => { clearTimeout(reader.scrollT); reader.scrollT = setTimeout(trackPosition, 350); }, { passive: true });
     $('#rPage').addEventListener('click', (e) => {
       const nx = e.target.closest('[data-go]'); if (nx) { reader.s = Number(nx.dataset.go); reader.target = 1; drawSurah(); return; }
@@ -1037,12 +1134,20 @@ function showReader() {
   document.body.classList.add('reading');
   document.body.style.overflow = 'hidden';
   drawSurah();
+  renderPlayer();
+}
+function syncReaderMark() {
+  const b = $('#rMark'); if (!b) return;
+  const a = lastRead && lastRead.s === reader.s ? lastRead.a : 1;
+  const on = isMarked(reader.s, a);
+  b.innerHTML = on ? I.markFill : I.mark; b.setAttribute('aria-pressed', String(on));
 }
 function hideReader() {
   if (!reader.el) return;
   reader.el.remove(); reader.el = null; reader.open = false;
   document.body.classList.remove('reading');
   document.body.style.overflow = '';
+  renderPlayer();
 }
 function cartouche(name) {
   return `<div class="cartouche"><svg viewBox="0 0 340 64" aria-hidden="true">
@@ -1056,10 +1161,10 @@ function drawSurah() {
   const s = reader.s;
   const [name, type, verses] = Q[s - 1];
   $('#rTitle').textContent = `سورة ${name}`;
-  $('#rSub').textContent = `الجزء ${JUZ_NAMES[juzOf(s, reader.target || 1) - 1]}`;
+  $('#rBackSub').textContent = `الجزء ${JUZ_NAMES[juzOf(s, reader.target || 1) - 1]}`;
   const juzStarts = {};
   JUZ.forEach(([js, ja], i) => { if (js === s && i > 0) juzStarts[ja] = i + 1; });
-  let html = `<div class="frame" aria-hidden="true">${['tl', 'tr', 'bl', 'br'].map((c) => `<i class="${c}">${ROSETTE}</i>`).join('')}</div>`;
+  let html = corners();
   html += cartouche(name);
   html += `<div class="surah-meta">${type === 'm' ? 'مكية' : 'مدنية'} · ${ayahWord(verses.length)} · ترتيبها في المصحف ${arNum(s)}</div>`;
   if (s !== 1 && s !== 9) html += '<p class="basmala">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</p>';
@@ -1098,9 +1203,9 @@ function trackPosition() {
   const sc = $('#rScroll'); const r = sc.getBoundingClientRect();
   const el = document.elementFromPoint(r.left + r.width / 2, r.top + Math.min(160, r.height / 3));
   const ay = el && el.closest && el.closest('.ayah');
-  if (ay) { const a = Number(ay.dataset.a); setLastRead(reader.s, a); $('#rSub').textContent = `الجزء ${JUZ_NAMES[juzOf(reader.s, a) - 1]} · الآية ${arNum(a)}`; }
+  if (ay) { const a = Number(ay.dataset.a); setLastRead(reader.s, a); $('#rBackSub').textContent = `الجزء ${JUZ_NAMES[juzOf(reader.s, a) - 1]} · الآية ${arNum(a)}`; }
 }
-function setLastRead(s, a) { lastRead = { s, a }; LS.set('lastRead', lastRead); }
+function setLastRead(s, a) { lastRead = { s, a }; LS.set('lastRead', lastRead); syncReaderMark(); }
 function ayahSheet(s, a) {
   const text = Q[s - 1][2][a - 1];
   const marked = isMarked(s, a);
@@ -1161,59 +1266,120 @@ function readerMenu() {
 /* ---------- Qibla ---------- */
 function dialSvg(bearing) {
   let ticks = '';
-  for (let d = 0; d < 360; d += 3) {
-    const major = d % 30 === 0, mid = d % 15 === 0;
-    const r1 = major ? 126 : mid ? 132 : 136;
-    ticks += `<line x1="150" y1="${150 - r1}" x2="150" y2="${150 - 141}" transform="rotate(${d} 150 150)" stroke="currentColor" stroke-opacity="${major ? .85 : mid ? .5 : .25}" stroke-width="${major ? 2 : 1}"/>`;
+  for (let d = 0; d < 360; d += 5) {
+    const major = d % 30 === 0;
+    ticks += `<line x1="150" y1="${major ? 30 : 34}" x2="150" y2="${major ? 44 : 40}" transform="rotate(${d} 150 150)" stroke="${major ? 'var(--emerald)' : 'var(--gold)'}" stroke-width="${major ? 2.4 : 1.2}" stroke-linecap="round"/>`;
   }
-  let nums = '';
-  for (let d = 30; d < 360; d += 30) {
-    if (d % 90 === 0) continue;
-    nums += `<text x="${(150 + 108 * Math.sin(rad(d))).toFixed(1)}" y="${(154 - 108 * Math.cos(rad(d))).toFixed(1)}" text-anchor="middle" font-size="11" fill="currentColor" fill-opacity=".55" font-family="var(--f-body)">${d}</text>`;
+  const labels = [['شمال', 0], ['شرق', 90], ['جنوب', 180], ['غرب', 270]].map(([t, d]) =>
+    `<text x="${(150 + 86 * Math.sin(rad(d))).toFixed(1)}" y="${(156 - 86 * Math.cos(rad(d))).toFixed(1)}" text-anchor="middle" font-size="17" font-weight="700" fill="var(--ink)" font-family="var(--f-display)">${t}</text>`).join('');
+  let rose = '';
+  for (let k = 0; k < 4; k++) {
+    rose += `<g transform="rotate(${k * 90} 150 150)"><path d="M150 150L150 86L159 141Z" fill="var(--emerald)"/><path d="M150 150L150 86L141 141Z" fill="var(--paper)" stroke="var(--emerald)" stroke-width=".8"/></g>`;
+    rose += `<g transform="rotate(${k * 90 + 45} 150 150)"><path d="M150 150L150 112L155 145Z" fill="var(--gold)"/><path d="M150 150L150 112L145 145Z" fill="var(--gold-soft)"/></g>`;
   }
-  const labels = [['ش', 0], ['ق', 90], ['ج', 180], ['غ', 270]].map(([t, d]) =>
-    `<text x="${(150 + 106 * Math.sin(rad(d))).toFixed(1)}" y="${(157 - 106 * Math.cos(rad(d))).toFixed(1)}" text-anchor="middle" font-size="20" font-weight="700" fill="${d === 0 ? 'var(--danger)' : 'currentColor'}" font-family="var(--f-display)">${t}</text>`).join('');
-  return `<svg viewBox="0 0 300 300" aria-hidden="true" style="color:var(--ink)">
-    <circle cx="150" cy="150" r="147" fill="var(--surface)" stroke="var(--line)" stroke-width="2"/>
-    <g opacity=".5" fill="none" stroke="var(--gold)" stroke-width=".8"><rect x="96" y="96" width="108" height="108"/><rect x="96" y="96" width="108" height="108" transform="rotate(45 150 150)"/><circle cx="150" cy="150" r="54"/></g>
-    ${ticks}${nums}${labels}
+  return `<svg viewBox="0 0 300 300" aria-hidden="true">
+    <circle cx="150" cy="150" r="146" fill="var(--paper)" stroke="var(--gold)" stroke-width="5"/>
+    <circle cx="150" cy="150" r="136" fill="none" stroke="var(--gold-2)" stroke-width="1.2"/>
+    ${ticks}${labels}
+    <g opacity=".85">${rose}</g>
     <g transform="rotate(${bearing} 150 150)">
-      <path d="M150 150L144 70L150 52L156 70Z" fill="var(--emerald)"/>
-      <g transform="translate(150 38)">
-        <rect x="-13" y="-13" width="26" height="26" rx="3" fill="#141414" stroke="var(--gold)" stroke-width="1.4"/>
-        <rect x="-13" y="-6" width="26" height="4" fill="var(--gold)"/>
-      </g>
+      <path d="M150 150L144 92 150 66 156 92Z" fill="var(--emerald)"/>
+      <circle cx="150" cy="50" r="18" fill="#141414" stroke="var(--gold)" stroke-width="2.2"/>
+      <path d="M141 46l9-5 9 5v10l-9 4-9-4z" fill="#2a2a2a" stroke="#e2c27c" stroke-width="1"/><path d="M141 49l9 4 9-4" fill="none" stroke="#e2c27c" stroke-width="1.6"/>
     </g>
-    <circle cx="150" cy="150" r="10" fill="var(--emerald)"/><circle cx="150" cy="150" r="4" fill="var(--surface)"/>
+    <circle cx="150" cy="150" r="11" fill="url(#gGold)" stroke="#9c7631" stroke-width="1"/><circle cx="150" cy="150" r="4" fill="#fff6dd"/>
   </svg>`;
 }
 function renderQibla() {
   const b = qiblaBearing();
   const dist = distKm(S.loc, KAABA);
+  const place = [S.loc.name, S.loc.region || S.loc.country].filter(Boolean).join('، ');
   app.innerHTML = `
   ${brand()}
-  ${pageTitle('اتجاه القبلة', 'وجّه هاتفك نحو الكعبة المشرفة')}
-  <main class="view wrap">
-    <section class="qibla">
+  <div class="ptitle wrap"><h1 class="ruled">اتجاه القبلة</h1></div>
+  <main class="view wrap qibla">
+    <button class="loc-pill center" id="qPlace" type="button">${I.pin}<span>${esc(place)}</span>${I.chevDown}</button>
+    <section class="q-arch">
+      <svg class="q-arch-line" viewBox="0 0 400 420" preserveAspectRatio="none" aria-hidden="true"><path d="M8 420V170C8 110 60 80 130 62 178 50 190 30 200 8c10 22 22 42 70 54 70 18 122 48 122 108v250" fill="none" stroke="var(--gold-2)" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>
+      <span class="q-pill">اتجاه القبلة</span>
       <div class="compass" id="compass">
         <svg class="lubber" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 30L2 4Q12 -2 22 4Z" fill="currentColor"/></svg>
         <div class="glow"></div>
         <div class="dial" id="dial">${dialSvg(b)}</div>
       </div>
-      <div class="q-deg">${Math.round(b)}°</div>
-      <div class="q-hint" id="qHint">زاوية القبلة من الشمال الجغرافي، باتجاه عقارب الساعة.</div>
-      <button class="btn primary" id="startCompass" type="button" hidden>${I.compass} تشغيل البوصلة</button>
-      <div class="facts">
-        <div><b>${Math.round(b)}°</b><span>زاوية القبلة</span></div>
-        <div><b>${Math.round(dist).toLocaleString('en')}</b><span>كم إلى الكعبة</span></div>
-        <div><b id="headingOut">—</b><span>اتجاه الهاتف</span></div>
-      </div>
-      <p class="note">ضع الهاتف مسطّحًا بعيدًا عن المعادن، وأدِره حتى يلتقي المؤشر العلوي برمز الكعبة. إن اضطرب الاتجاه فحرّك الهاتف على شكل الرقم 8 للمعايرة. الموقع: ${esc(S.loc.name)}.</p>
     </section>
+    <p class="q-cap">زاوية القبلة</p>
+    <div class="q-deg">${Math.round(b)}°</div>
+    <p class="q-sub">من الشمال الجغرافي، مع اتجاه عقارب الساعة</p>
+    <div class="q-hint" id="qHint"></div>
+    <button class="btn primary" id="startCompass" type="button" hidden>${I.compass} تشغيل البوصلة</button>
+    <div class="facts">
+      <div>${I.phone}<span>اتجاه الهاتف</span><b id="headingOut">—</b><small id="headState">ينتظر المستشعر</small></div>
+      <div>${I.kaaba}<span>إلى الكعبة</span><b>${Math.round(dist).toLocaleString('en')} كم</b></div>
+      <div>${I.compass}<span>زاوية القبلة</span><b>${Math.round(b)}°</b></div>
+    </div>
+    <p class="tip">${I.phone}<span>ضع الهاتف مسطّحًا بعيدًا عن المعادن والمغناطيس.</span></p>
+    <button class="btn primary wide" id="calib" type="button">${I.gps} معايرة البوصلة</button>
   </main>`;
+  $('#qPlace').onclick = () => { location.hash = 'prefs-loc'; };
   $('#startCompass').onclick = () => startCompass(b, true);
+  $('#calib').onclick = () => sheet(`<h3>معايرة البوصلة</h3>
+    <svg class="calib-art" viewBox="0 0 200 110" aria-hidden="true"><path d="M100 55c-20-30-70-30-70 0s50 30 70 0 70-30 70 0-50 30-70 0" fill="none" stroke="var(--gold)" stroke-width="3" stroke-dasharray="6 6"/><rect x="88" y="34" width="24" height="42" rx="5" fill="var(--emerald)"/><rect x="92" y="39" width="16" height="30" rx="2" fill="var(--paper)"/></svg>
+    <ol class="steps"><li>أمسك الهاتف وحرّكه في الهواء على شكل الرقم 8، ثلاث مرات أو أكثر.</li><li>ابتعد عن الأجهزة الكهربائية والمعادن والمغناطيس (غطاء الهاتف المغناطيسي أيضًا).</li><li>ضع الهاتف مسطّحًا، وانتظر حتى يستقر الاتجاه.</li></ol>`);
   startCompass(b, false);
 }
+
+/* ---------- Month timetable ---------- */
+let monthOffset = 0;
+function renderMonth() {
+  const base = ymd(new Date(), S.loc.tz);
+  let y = base.y, m = base.m + monthOffset;
+  while (m < 1) { m += 12; y--; } while (m > 12) { m -= 12; y++; }
+  const days = new Date(Date.UTC(y, m, 0)).getUTCDate();
+  const monthName = new Intl.DateTimeFormat('ar-u-nu-latn', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m - 1, 15)));
+  const wd = new Intl.DateTimeFormat('ar', { weekday: 'short', timeZone: 'UTC' });
+  const isThis = y === base.y && m === base.m;
+  const focusDay = isThis ? base.d : 1;
+  const start = Math.max(1, Math.min(focusDay - 3, days - 6));
+  const strip = Array.from({ length: Math.min(7, days) }, (_, i) => start + i).map((d) => {
+    const dt = new Date(Date.UTC(y, m - 1, d));
+    return `<button type="button" data-day="${d}" aria-pressed="${isThis && d === base.d}"><small>${esc(wd.format(dt))}</small><b>${d}</b></button>`;
+  }).join('');
+  let rows = '';
+  for (let d = 1; d <= days; d++) {
+    const t = { y, m, d };
+    const tt = dayTimes(t);
+    const today = isThis && d === base.d;
+    rows += `<tr id="md-${d}" class="${today ? 'today' : ''} ${isFriday(t) ? 'fri' : ''}"><td><b>${d}</b>${today ? '<small>اليوم</small>' : `<small>${esc(wd.format(new Date(Date.UTC(y, m - 1, d))))}</small>`}</td>${PRAYERS.map((p) => `<td>${esc(fmtTime(tt[p.key]))}</td>`).join('')}</tr>`;
+  }
+  const place = [S.loc.name, S.loc.region || S.loc.country].filter(Boolean).join('، ');
+  app.innerHTML = `
+  ${brand()}
+  <div class="ptitle wrap"><h1 class="ruled">جدول الشهر</h1></div>
+  <main class="view wrap month-view">
+    <button class="loc-pill center" id="mPlace" type="button">${I.pin}<span>${esc(place)}</span>${I.chevDown}</button>
+    <div class="m-head">
+      <div class="m-bar"><button type="button" id="mPrev" aria-label="الشهر السابق">${I.prev}</button><b>${esc(monthName)}</b><button type="button" id="mNext" aria-label="الشهر التالي">${I.next}</button></div>
+      <button class="m-today" type="button" id="mToday" aria-label="الشهر الحالي">${I.cal}</button>
+    </div>
+    <div class="m-strip">${strip}</div>
+    <section class="m-table"><div class="table-wrap"><table class="month"><thead><tr><th>اليوم</th>${PRAYERS.map((p) => `<th>${p.name}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></section>
+    <p class="tip quiet">${I.info}<span>المواقيت حسب طريقة الحساب المختارة: ${esc(METHODS[S.method].label)}</span></p>
+  </main>`;
+  $('#mPlace').onclick = () => { location.hash = 'prefs-loc'; };
+  $('#mPrev').onclick = () => { monthOffset--; renderMonth(); };
+  $('#mNext').onclick = () => { monthOffset++; renderMonth(); };
+  $('#mToday').onclick = () => { monthOffset = 0; renderMonth(); };
+  $('.m-strip').onclick = (e) => {
+    const b = e.target.closest('[data-day]'); if (!b) return;
+    $$('.m-strip button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    const r = $('#md-' + b.dataset.day); if (r) { centerRow(r, true); r.classList.remove('flash'); void r.offsetWidth; r.classList.add('flash'); }
+  };
+  // Scroll only the table, so the page header stays in view.
+  function centerRow(r, smooth) { const box = $('.m-table'); if (!box) return; box.scrollTo({ top: r.offsetTop - box.clientHeight / 2 + r.offsetHeight / 2, behavior: smooth ? 'smooth' : 'auto' }); }
+  if (isThis) { const r = $('#md-' + base.d); if (r && base.d > 6) requestAnimationFrame(() => centerRow(r, false)); }
+}
+function openMonth() { monthOffset = 0; location.hash = 'month'; }
 
 function startCompass(bearing, fromTap) {
   const btn = $('#startCompass'); const hint = $('#qHint');
@@ -1225,6 +1391,7 @@ function startCompass(bearing, fromTap) {
     if (last == null) { cum = sm; } else { cum += ((sm - last + 540) % 360) - 180; }
     last = sm;
     if (!got) { got = true; if (btn) btn.hidden = true; }
+    const hs = $('#headState'); if (hs) hs.textContent = calibrate ? 'يحتاج معايرة' : 'مستقر';
     const dial = $('#dial'); if (!dial) return;
     dial.style.transform = `rotate(${-cum}deg)`;
     $('#headingOut').textContent = Math.round(sm) + '°';
@@ -1243,6 +1410,7 @@ function startCompass(bearing, fromTap) {
   const noSensor = () => {
     if (got) return;
     hint.textContent = 'لم يُعثر على مستشعر بوصلة في هذا الجهاز. استخدم الزاوية المعروضة مع بوصلة أخرى.';
+    const hs = $('#headState'); if (hs) hs.textContent = 'غير متوفر';
     if (btn) btn.hidden = false;
   };
   hint.textContent = 'جارٍ قراءة البوصلة…';
@@ -1291,12 +1459,7 @@ function startCompass(bearing, fromTap) {
   } else begin();
 }
 
-/* ---------- Settings ---------- */
-function setLoc(loc, quiet) {
-  S.loc = loc; save(); fmtCacheClear();
-  if (!quiet) toast(`الموقع: ${loc.name}`);
-}
-function fmtCacheClear() { for (const k of Object.keys(fmtCache)) delete fmtCache[k]; }
+/* ---------- Location lookup ---------- */
 
 /* Municipality name for a position (OpenStreetMap). Cached; the city list is the offline fallback. */
 const nativeWaits = {};
@@ -1357,140 +1520,157 @@ function locate(silent) {
     toast(err.code === 1 ? 'لم يُسمح بالوصول إلى الموقع. اختر مدينتك من الإعدادات.' : 'تعذر تحديد الموقع. حاول مجددًا أو اختر مدينتك.', 4000);
   }, { enableHighAccuracy: true, timeout: 20000, maximumAge: 10 * 60 * 1000 });
 }
+/* ---------- Settings ---------- */
+const APP_VERSION = '1.4';
+function setLoc(loc, quiet) {
+  S.loc = loc; save(); fmtCacheClear();
+  if (!quiet) toast(`الموقع: ${loc.name}`);
+}
+function fmtCacheClear() { for (const k of Object.keys(fmtCache)) delete fmtCache[k]; }
+function pickerSheet(title, options, value, onPick) {
+  sheet(`<h3>${esc(title)}</h3><div class="pick">${options.map(([v, l, sub]) => `<button type="button" data-v="${esc(v)}" aria-pressed="${String(v) === String(value)}"><span><b>${esc(l)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</span><span class="tick-ic">${I.check}</span></button>`).join('')}</div>`, (el) => {
+    $('.pick', el).onclick = (e) => { const b = e.target.closest('[data-v]'); if (!b) return; closeSheet(); onPick(b.dataset.v); };
+    const sel = $('.pick [aria-pressed="true"]', el); if (sel) sel.scrollIntoView({ block: 'center' });
+  });
+}
+const sw = (id, on, label) => `<label class="switch"><input type="checkbox" id="${id}" ${on ? 'checked' : ''} aria-label="${esc(label)}"><span></span></label>`;
+const segH = (name, val, opts) => `<div class="seg" role="group" data-seg="${name}">${opts.map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${String(val) === String(v)}">${l}</button>`).join('')}</div>`;
+function prefsHead(sub) {
+  return `${brand()}
+  <div class="ptitle wrap"><h1 class="ruled">الإعدادات <span class="gear">${I.gear}</span></h1></div>
+  ${sub ? `<div class="wrap sub-banner-row"><button class="icon-btn" id="prefsBack" type="button" aria-label="رجوع إلى الإعدادات">${I.back}</button><p class="verse-banner small">${SPARK}<span>${sub}</span>${SPARK}</p></div>` : ''}`;
+}
+function bindSegs(root) {
+  $$('[data-seg]', root).forEach((g) => g.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-v]'); if (!b) return;
+    const name = g.dataset.seg; let v = b.dataset.v;
+    if (name === 'h24') v = v === 'true';
+    S[name] = v; save();
+    $$('button', g).forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    if (name === 'theme') applyTheme();
+    if (name === 'h24') fmtCacheClear();
+  }));
+}
+function themeArt(kind) {
+  const mosque = (c, d) => `<g fill="${c}"><path d="M30 46c0-11 8-17 15-20 7 3 15 9 15 20z"/><rect x="28" y="45" width="34" height="13"/><rect x="18" y="26" width="4" height="32"/><rect x="68" y="26" width="4" height="32"/><path d="M17.5 27l2.5-7 2.5 7zM67.5 27l2.5-7 2.5 7z"/></g><path d="M41 58v-6a4 4 0 0 1 8 0v6z" fill="${d}"/>`;
+  if (kind === 'light') return `<svg viewBox="0 0 90 64" aria-hidden="true"><rect width="90" height="64" rx="10" fill="#F7F4EC"/><circle cx="45" cy="16" r="4" fill="#E2C27C"/>${mosque('#1F6A52', '#F7F4EC')}</svg>`;
+  if (kind === 'dark') return `<svg viewBox="0 0 90 64" aria-hidden="true"><rect width="90" height="64" rx="10" fill="#0D3A2F"/><circle cx="62" cy="14" r="5" fill="#E2C27C"/><circle cx="64.5" cy="12.5" r="4.2" fill="#0D3A2F"/>${mosque('#5CBB9C', '#0D3A2F')}</svg>`;
+  return `<svg viewBox="0 0 90 64" aria-hidden="true"><defs><clipPath id="thHalf"><rect x="45" width="45" height="64"/></clipPath></defs><rect width="90" height="64" rx="10" fill="#F7F4EC"/>${mosque('#1F6A52', '#F7F4EC')}<g clip-path="url(#thHalf)"><rect width="90" height="64" rx="10" fill="#0D3A2F"/>${mosque('#5CBB9C', '#0D3A2F')}</g><circle cx="66" cy="14" r="4" fill="#E2C27C"/></svg>`;
+}
 function renderPrefs() {
-  const sw = (id, on, label) => `<label class="switch"><input type="checkbox" id="${id}" ${on ? 'checked' : ''} aria-label="${esc(label)}"><span></span></label>`;
-  const seg = (name, val, opts) => `<div class="seg" role="group" data-seg="${name}">${opts.map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${String(val) === String(v)}">${l}</button>`).join('')}</div>`;
-  const ic = (cls, svg) => `<span class="r-ic ${cls}">${svg}</span>`;
-  const notifState = !('Notification' in window) ? 'unsupported' : Notification.permission;
-  const SV = {
-    method: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3v18M5 8h14M7 8l-3 7h6zM17 8l-3 7h6z"/></svg>',
-    sun: ICONS.asr, globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>',
-    moon: ICONS.isha, clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
-    sound: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>',
-    theme: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg>',
-  };
+  const place = [S.loc.name, S.loc.region || S.loc.country].filter(Boolean).join('، ');
+  const rec = (RECITERS.find((r) => r[0] === S.reciter) || RECITERS[0])[1];
+  const link = (href, icon, title, sub) => `<a class="srow" href="#${href}">${icon}<span class="r-body"><b>${title}</b><small>${esc(sub)}</small></span><span class="chev">${I.next}</span></a>`;
   app.innerHTML = `
-  ${brand()}
-  ${pageTitle('الإعدادات')}
-  <main class="view wrap">
-    <p class="group-title">الموقع</p>
-    <section class="group">
-      <div class="row">${ic('c1', I.pin)}<div class="r-body"><b>${esc(S.loc.name)}</b><small>${esc([S.loc.region, S.loc.country].filter(Boolean).join('، '))}${S.loc.region || S.loc.country ? '<br>' : ''}<span dir="ltr">${S.loc.lat.toFixed(4)}, ${S.loc.lng.toFixed(4)}</span></small></div>
-        <button class="btn small primary" id="gpsBtn" type="button">${I.gps} موقعي</button></div>
-      <div class="row plain"><div class="r-full">
-        <div class="search-box">${I.search}<input class="input" id="citySearch" type="search" placeholder="ابحث عن مدينة: وهران، الرياض، باريس…" autocomplete="off" aria-label="البحث عن مدينة" style="box-shadow:none;background:var(--surface-2)"></div>
-        <div class="city-results" id="cityResults" hidden></div>
-      </div></div>
-      <div class="row plain"><div class="r-full">
-        <span class="muted" style="font-size:13px">أو أدخل الإحداثيات يدويًا</span>
-        <div class="grid-2">
-          <input class="input" id="latIn" inputmode="decimal" placeholder="خط العرض" value="${S.loc.lat.toFixed(4)}" aria-label="خط العرض" dir="ltr">
-          <input class="input" id="lngIn" inputmode="decimal" placeholder="خط الطول" value="${S.loc.lng.toFixed(4)}" aria-label="خط الطول" dir="ltr">
-        </div>
-        <button class="btn small" id="manualBtn" type="button">اعتماد الإحداثيات</button>
-      </div></div>
+  ${prefsHead('')}
+  <main class="view wrap prefs">
+    <section class="app-card"><span class="app-ic">${LOGO}</span><span><b>مِحراب</b><small>الإصدار ${APP_VERSION}</small></span></section>
+    ${link('prefs-loc', I.pin, 'الموقع', place)}
+    ${link('prefs-loc', I.scale, 'طريقة الحساب', METHODS[S.method].label)}
+    ${link('prefs-adhan', I.bellOn, 'الأذان والتنبيهات', 'الصوت، التذكير ومواقيت الأذان')}
+    <section class="scard"><div class="scard-h">${BEADS}<b>تذكير الأذكار</b></div>
+      <div class="two-sw"><label>${sw('remAm', S.remindMorning, 'تذكير أذكار الصباح')}<span>الصباح</span></label><label>${sw('remPm', S.remindEvening, 'تذكير أذكار المساء')}<span>المساء</span></label></div></section>
+    <section class="scard"><a class="scard-h" href="#prefs-look">${ICONS.isha}<b>المظهر والتلاوة</b><span class="chev">${I.next}</span></a>
+      <div class="theme-mini">${[['light', 'فاتح', ICONS.dhuhr], ['dark', 'داكن', ICONS.isha], ['auto', 'تلقائي', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg>']].map(([v, l, ic]) => `<button type="button" data-theme-v="${v}" aria-pressed="${S.theme === v}">${ic}<span>${l}</span></button>`).join('')}</div></section>
+    <section class="scard list-card">
+      ${link('prefs-look', I.headset, 'القارئ', rec)}
+      ${link('prefs-look', I.clock, 'تنسيق الوقت', S.h24 ? '24 ساعة' : '12 ساعة')}
     </section>
-
-    <p class="group-title">طريقة الحساب</p>
-    <section class="group">
-      <div class="row">${ic('c2', SV.method)}<div class="r-body"><b>الجهة المعتمدة</b><small id="methodSmall">${esc(METHODS[S.method].label)}</small></div>
-        <div class="r-full"><select class="input" id="methodSel" aria-label="الجهة المعتمدة">${Object.entries(METHODS).map(([k, m]) => `<option value="${k}" ${k === S.method ? 'selected' : ''}>${esc(m.label)}</option>`).join('')}</select></div></div>
-      <div class="row">${ic('c5', SV.sun)}<div class="r-body"><b>وقت العصر</b><small>الجمهور: ظل المثل · الحنفية: ظل المثلين</small></div>${seg('madhab', S.madhab, [['shafi', 'الجمهور'], ['hanafi', 'الحنفي']])}</div>
-      <div class="row">${ic('c3', SV.globe)}<div class="r-body"><b>خطوط العرض العليا</b><small>للبلدان الشمالية حيث يطول الشفق</small></div>
-        <select class="input" id="hlSel" aria-label="خطوط العرض العليا">
-          <option value="auto" ${S.highLat === 'auto' ? 'selected' : ''}>تلقائي</option>
-          <option value="middleofthenight" ${S.highLat === 'middleofthenight' ? 'selected' : ''}>منتصف الليل</option>
-          <option value="seventhofthenight" ${S.highLat === 'seventhofthenight' ? 'selected' : ''}>سُبع الليل</option>
-          <option value="twilightangle" ${S.highLat === 'twilightangle' ? 'selected' : ''}>زاوية الشفق</option>
-        </select></div>
-      <div class="row">${ic('c6', SV.clock)}<div class="r-body"><b>تعديل المواقيت بالدقائق</b><small>لمطابقة توقيت مسجدك</small></div>
-        <div class="r-full offsets">${PRAYERS.map((p) => `<div><span>${p.name}</span><div class="stepper"><button type="button" data-off="${p.key}" data-d="-1" aria-label="إنقاص دقيقة من ${p.name}">${I.minus}</button><output id="off-${p.key}">${S.offsets[p.key] > 0 ? '+' : ''}${S.offsets[p.key]}</output><button type="button" data-off="${p.key}" data-d="1" aria-label="إضافة دقيقة إلى ${p.name}">${I.plus}</button></div></div>`).join('')}</div></div>
-      <div class="row">${ic('c4', SV.moon)}<div class="r-body"><b>تعديل التاريخ الهجري</b><small>حسب رؤية الهلال في بلدك</small></div>
-        <div class="stepper"><button type="button" id="hjMinus" aria-label="يوم أقل">${I.minus}</button><output id="hjOut">${S.hijriAdj > 0 ? '+' : ''}${S.hijriAdj}</output><button type="button" id="hjPlus" aria-label="يوم أكثر">${I.plus}</button></div></div>
-    </section>
-
-    <p class="group-title">الأذان</p>
-    <section class="group">
-      ${FARD.map((k) => `<div class="row"><span class="r-ic c1">${ICONS[k]}</span><div class="r-body"><b>${pName(k)}</b></div>${sw('ad-' + k, S.adhan[k], 'أذان ' + pName(k))}</div>`).join('')}
-    </section>
-    <section class="group">
-      <div class="row">${ic('c2', SV.sound)}<div class="r-body"><b>صوت الأذان</b><small id="soundSmall">${S.sound === 'file' ? esc(S.soundName || 'لم يُختر ملف بعد') : 'لكل الصلوات'}</small></div>
-        <div class="r-full">
-          <select class="input" id="soundSel" aria-label="صوت الأذان">${SOUNDS.map(([v, l]) => `<option value="${v}" ${S.sound === v ? 'selected' : ''}>${l}</option>`).join('')}</select>
-          <div id="fileRow" ${S.sound === 'file' ? '' : 'hidden'}><input type="file" id="adhanFile" accept="audio/*" hidden><button class="btn small" id="pickFile" type="button">اختيار ملف أذان (MP3)</button></div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn small" id="testAdhan" type="button">${I.play} استماع</button><button class="btn small ghost" id="stopTest" type="button">إيقاف</button></div>
-        </div></div>
-      <div class="row">${ic('c6', I.bellOn)}<div class="r-body"><b>تذكير قبل الأذان</b></div>
-        <select class="input" id="remSel" aria-label="تذكير قبل الأذان">${[0, 5, 10, 15, 20, 30].map((m) => `<option value="${m}" ${S.reminder === m ? 'selected' : ''}>${m ? 'قبل ' + minutesWord(m) : 'بدون'}</option>`).join('')}</select></div>
-      ${NATIVE ? '' : `<div class="row">${ic('c5', I.bellOn)}<div class="r-body"><b>إشعارات النظام</b><small>${notifState === 'granted' ? 'مفعّلة' : notifState === 'denied' ? 'محظورة من إعدادات المتصفح' : notifState === 'unsupported' ? 'غير مدعومة في هذا المتصفح' : 'تنبيه عند حلول وقت الصلاة'}</small></div>
-        ${notifState === 'default' ? '<button class="btn small" id="notifBtn" type="button">تفعيل</button>' : ''}</div>`}
-    </section>
-    <p class="about" style="text-align:start;margin-top:-8px">${NATIVE ? 'يصلك الأذان في وقته حتى لو كان التطبيق مغلقًا. التسجيل الذي تختاره من جهازك يُسمع داخل التطبيق، وإشعار الهاتف يستعمل صوت الأذان المدمج.' : 'يعمل الأذان ما دام التطبيق مفتوحًا ولو في الخلفية. أضِف التطبيق إلى الشاشة الرئيسية من قائمة المتصفح ليفتح كتطبيق مستقل ويعمل دون إنترنت.'}</p>
-
-    <p class="group-title">تذكير الأذكار</p>
-    <section class="group">
-      <div class="row"><span class="r-ic c2">${ICONS.dhuhr}</span><div class="r-body"><b>أذكار الصباح</b><small>بعد أذان الفجر بـ٢٥ دقيقة</small></div>${sw('remAm', S.remindMorning, 'تذكير بأذكار الصباح')}</div>
-      <div class="row"><span class="r-ic c4">${ICONS.isha}</span><div class="r-body"><b>أذكار المساء</b><small>بعد أذان العصر بـ٢٥ دقيقة</small></div>${sw('remPm', S.remindEvening, 'تذكير بأذكار المساء')}</div>
-    </section>
-
-    <p class="group-title">المظهر والتلاوة</p>
-    <section class="group">
-      <div class="row">${ic('c6', SV.theme)}<div class="r-body"><b>السمة</b></div>${seg('theme', S.theme, [['auto', 'تلقائي'], ['light', 'فاتح'], ['dark', 'داكن']])}</div>
-      <div class="row">${ic('c3', SV.clock)}<div class="r-body"><b>تنسيق الوقت</b></div>${seg('h24', S.h24, [['true', '24 ساعة'], ['false', '12 ساعة']])}</div>
-      <div class="row">${ic('c1', I.book)}<div class="r-body"><b>القارئ</b></div><select class="input" id="recSel2" aria-label="القارئ">${RECITERS.map((r) => `<option value="${r[0]}" ${r[0] === S.reciter ? 'selected' : ''}>${r[1]}</option>`).join('')}</select></div>
-    </section>
-
-    <p class="about">مِحراب · تُحسب المواقيت على جهازك بمكتبة Adhan (MIT). تسجيلات الأذان من Wikimedia Commons: الأول «Beautiful adhan» (CC0)، والثاني بصوت عاقب عزيز (CC BY-SA 4.0). أسماء البلديات من OpenStreetMap (ODbL). الأذكار من كتاب «حصن المسلم» للشيخ سعيد بن علي بن وهف القحطاني (النص من asellam/HisnElMuslim، MIT). نص المصحف برواية حفص بالرسم العثماني من مشروع Tanzil عبر حزمة quran-json (CC BY-SA 4.0)، بخط «أميري قرآن» (SIL OFL). التلاوات من خدمة Islamic Network وتحتاج إلى اتصال بالإنترنت.</p>
+    <p class="about">مِحراب · تُحسب المواقيت على جهازك بمكتبة Adhan (MIT). نص المصحف برواية حفص من مشروع Tanzil (CC BY-SA 4.0) بخط «أميري قرآن». التفسير الميسّر لمجمع الملك فهد. الأذكار من «حصن المسلم» (asellam/HisnElMuslim، MIT). تسجيلات الأذان من Wikimedia Commons (CC0 و CC BY-SA 4.0). أسماء البلديات من OpenStreetMap. التلاوات من Islamic Network وتحتاج إلى إنترنت.</p>
   </main>`;
-
+  $('#remAm').onchange = (e) => { S.remindMorning = e.target.checked; save(); };
+  $('#remPm').onchange = (e) => { S.remindEvening = e.target.checked; save(); };
+  $('.theme-mini').onclick = (e) => {
+    const b = e.target.closest('[data-theme-v]'); if (!b) return;
+    S.theme = b.dataset.themeV; save(); applyTheme();
+    $$('.theme-mini button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  };
+}
+function renderPrefsLoc() {
+  const quick = () => CITIES.filter((c) => c[1] === (S.loc.country || 'الجزائر')).slice(0, 6);
+  const cityRows = (list) => list.map((c) => `<button type="button" data-i="${CITIES.indexOf(c)}">${I.pin}<span><b>${esc(c[0])}</b><small>${esc(c[1])}</small></span><span class="chev">${I.next}</span></button>`).join('');
+  app.innerHTML = `
+  ${prefsHead('الموقع وطريقة الحساب')}
+  <main class="view wrap prefs">
+    <section class="loc-card"><span class="loc-ill">${ILL.prayer}</span><span class="r-body"><b>${I.pin} ${esc([S.loc.name, S.loc.region || S.loc.country].filter(Boolean).join('، '))}</b><small>${S.loc.gps ? 'موقعك الحالي' : S.loc.auto ? 'مدينة افتراضية' : 'مدينة مختارة'}</small></span><button class="btn small primary" id="gpsBtn" type="button">${I.gps} تحديد موقعي</button></section>
+    <div class="search-box">${I.search}<input class="input" id="citySearch" type="search" placeholder="ابحث عن مدينة" autocomplete="off" aria-label="البحث عن مدينة"></div>
+    <div class="city-list" id="cityResults">${cityRows(quick())}</div>
+    <section class="scard">
+      <button class="srow" id="methodRow" type="button">${I.scale}<span class="r-body"><b>طريقة الحساب</b><small>${esc(METHODS[S.method].label)}</small></span><span class="chev">${I.next}</span></button>
+      <div class="srow static">${ICONS.asr}<span class="r-body"><b>وقت العصر</b><small>الجمهور: ظل المثل · الحنفية: ظل المثلين</small></span></div>
+      ${segH('madhab', S.madhab, [['shafi', 'الجمهور'], ['hanafi', 'الحنفي']])}
+      <button class="srow" id="hlRow" type="button">${I.globe}<span class="r-body"><b>خطوط العرض العليا</b><small>${{ auto: 'تلقائي', middleofthenight: 'منتصف الليل', seventhofthenight: 'سُبع الليل', twilightangle: 'زاوية الشفق' }[S.highLat]}</small></span><span class="chev">${I.next}</span></button>
+    </section>
+    <section class="scard">
+      <div class="srow static">${I.sliders}<span class="r-body"><b>تعديل المواقيت بالدقائق</b><small>لمطابقة توقيت مسجدك</small></span></div>
+      <div class="offsets">${PRAYERS.map((p) => `<div><span class="o-ic">${ICONS[p.key]}</span><span>${p.name}</span><div class="stepper"><button type="button" data-off="${p.key}" data-d="1" aria-label="إضافة دقيقة إلى ${p.name}">${I.plus}</button><output id="off-${p.key}">${S.offsets[p.key] > 0 ? '+' : ''}${S.offsets[p.key]}</output><button type="button" data-off="${p.key}" data-d="-1" aria-label="إنقاص دقيقة من ${p.name}">${I.minus}</button></div></div>`).join('')}</div>
+      <div class="srow static">${I.cal}<span class="r-body"><b>تعديل التاريخ الهجري</b><small>حسب رؤية الهلال في بلدك</small></span>
+        <div class="stepper"><button type="button" id="hjPlus" aria-label="يوم أكثر">${I.plus}</button><output id="hjOut">${S.hijriAdj > 0 ? '+' : ''}${S.hijriAdj}</output><button type="button" id="hjMinus" aria-label="يوم أقل">${I.minus}</button></div></div>
+    </section>
+  </main>`;
+  $('#prefsBack').onclick = () => (history.length > 1 ? history.back() : (location.hash = 'prefs'));
   $('#gpsBtn').onclick = () => locate();
   const cs = $('#citySearch'), cr = $('#cityResults');
   cs.addEventListener('input', () => {
     const q = cs.value.trim();
-    if (!q) { cr.hidden = true; return; }
-    const res = CITIES.filter((c) => c[0].includes(q) || c[1].includes(q)).slice(0, 30);
-    cr.hidden = false;
-    cr.innerHTML = res.length ? res.map((c) => `<button type="button" data-i="${CITIES.indexOf(c)}"><span>${esc(c[0])}</span><small>${esc(c[1])}</small></button>`).join('') : '<div class="empty">لا توجد مدينة بهذا الاسم. استخدم «موقعي» أو الإحداثيات.</div>';
+    const res = q ? CITIES.filter((c) => c[0].includes(q) || c[1].includes(q)).slice(0, 30) : quick();
+    cr.innerHTML = res.length ? cityRows(res) : '<div class="empty">لا توجد مدينة بهذا الاسم. استخدم «تحديد موقعي».</div>';
   });
   cr.addEventListener('click', (e) => {
     const b = e.target.closest('button[data-i]'); if (!b) return;
     const c = CITIES[Number(b.dataset.i)];
     if (!S.methodManual) S.method = c[5];
-    setLoc({ lat: c[2], lng: c[3], name: c[0], country: c[1], tz: c[4], auto: false });
-    renderPrefs();
+    setLoc({ lat: c[2], lng: c[3], name: c[0], country: c[1], region: '', tz: c[4], auto: false });
+    renderPrefsLoc();
   });
-  $('#manualBtn').onclick = () => {
-    const lat = parseFloat($('#latIn').value.replace(',', '.')), lng = parseFloat($('#lngIn').value.replace(',', '.'));
-    if (!(Math.abs(lat) <= 90 && Math.abs(lng) <= 180)) { toast('أدخل إحداثيات صحيحة: العرض بين -90 و90، والطول بين -180 و180.', 4000); return; }
-    const near = nearestCity(lat, lng);
-    setLoc({ lat, lng, name: near && near.d < 35 ? near.c[0] : 'موقع مخصص', country: near && near.d < 600 ? near.c[1] : '', tz: near && near.d < 600 ? near.c[4] : deviceTz, auto: false });
-    renderPrefs();
-  };
-  $('#methodSel').onchange = (e) => { S.method = e.target.value; S.methodManual = true; save(); $('#methodSmall').textContent = METHODS[S.method].label; toast('تم تحديث طريقة الحساب'); };
-  $('#hlSel').onchange = (e) => { S.highLat = e.target.value; save(); };
+  $('#methodRow').onclick = () => pickerSheet('طريقة الحساب', Object.entries(METHODS).map(([k, m]) => [k, m.label]), S.method, (v) => { S.method = v; S.methodManual = true; save(); renderPrefsLoc(); toast('تم تحديث طريقة الحساب'); });
+  $('#hlRow').onclick = () => pickerSheet('خطوط العرض العليا', [['auto', 'تلقائي', 'موصى به'], ['middleofthenight', 'منتصف الليل'], ['seventhofthenight', 'سُبع الليل'], ['twilightangle', 'زاوية الشفق']], S.highLat, (v) => { S.highLat = v; save(); renderPrefsLoc(); });
+  bindSegs(app);
   $$('[data-off]').forEach((b) => b.onclick = () => {
     const k = b.dataset.off; S.offsets[k] = Math.max(-30, Math.min(30, (S.offsets[k] || 0) + Number(b.dataset.d))); save();
     $('#off-' + k).textContent = (S.offsets[k] > 0 ? '+' : '') + S.offsets[k];
   });
   const hj = (d) => { S.hijriAdj = Math.max(-2, Math.min(2, S.hijriAdj + d)); save(); fmtCacheClear(); $('#hjOut').textContent = (S.hijriAdj > 0 ? '+' : '') + S.hijriAdj; };
   $('#hjMinus').onclick = () => hj(-1); $('#hjPlus').onclick = () => hj(1);
+}
+function renderPrefsAdhan() {
+  const notifState = !('Notification' in window) ? 'unsupported' : Notification.permission;
+  const soundSub = { adhan1: 'دقيقتان و٣٥ ثانية', adhan2: 'دقيقة و٢٥ ثانية', tone: 'نغمة قصيرة مدمجة', file: S.soundName || 'لم يُختر ملف بعد', silent: 'إشعار فقط' };
+  app.innerHTML = `
+  ${prefsHead('الأذان والتنبيهات')}
+  <main class="view wrap prefs">
+    <section class="scard">${FARD.map((k) => `<div class="srow static"><span class="g-ic">${ICONS[k]}</span><span class="r-body"><b>${pName(k)}</b></span>${sw('ad-' + k, S.adhan[k], 'أذان ' + pName(k))}</div>`).join('')}</section>
+    <section class="scard">
+      <div class="scard-h">${I.headset}<b>صوت الأذان</b></div>
+      <div class="sound-list">${SOUNDS.map(([v, l]) => `<div class="sound${S.sound === v ? ' on' : ''}" data-v="${v}">
+        <button class="snd-pick" type="button" data-pick="${v}" aria-pressed="${S.sound === v}"><span class="tick-ic">${I.check}</span><span><b>${l}</b><small>${esc(soundSub[v])}</small></span></button>
+        ${v !== 'silent' && v !== 'file' ? `<button class="snd-play" type="button" data-play="${v}" aria-label="استماع">${I.play}</button>` : ''}
+        ${S.sound === v && v !== 'silent' ? `<div class="wave small" aria-hidden="true">${WAVE.map((h) => `<i style="height:${h}%"></i>`).join('')}</div>` : ''}
+      </div>`).join('')}</div>
+      <input type="file" id="adhanFile" accept="audio/*" hidden>
+      <button class="srow" id="pickFile" type="button">${I.folder}<span class="r-body"><b>اختيار ملف أذان</b><small>${esc(S.soundName || 'MP3 من هاتفك')}</small></span><span class="chev">${I.next}</span></button>
+      <button class="srow" id="remRow" type="button">${I.bellOn}<span class="r-body"><b>تذكير قبل الأذان</b><small>${S.reminder ? 'قبل ' + minutesWord(S.reminder) : 'بدون'}</small></span><span class="chev">${I.next}</span></button>
+      ${NATIVE ? '' : `<div class="srow static">${I.bellOn}<span class="r-body"><b>إشعارات النظام</b><small>${notifState === 'granted' ? 'مفعّلة' : notifState === 'denied' ? 'محظورة من إعدادات المتصفح' : notifState === 'unsupported' ? 'غير مدعومة في هذا المتصفح' : 'تنبيه عند حلول وقت الصلاة'}</small></span>${notifState === 'default' ? '<button class="btn small" id="notifBtn" type="button">تفعيل</button>' : ''}</div>`}
+    </section>
+    <section class="scard">
+      <div class="scard-h">${BEADS}<b>تذكير الأذكار</b></div>
+      <div class="srow static"><span class="g-ic">${ICONS.sunrise}</span><span class="r-body"><b>أذكار الصباح</b><small>بعد الفجر بـ٢٥ دقيقة</small></span>${sw('remAm', S.remindMorning, 'تذكير أذكار الصباح')}</div>
+      <div class="srow static"><span class="g-ic">${ICONS.isha}</span><span class="r-body"><b>أذكار المساء</b><small>بعد العصر بـ٢٥ دقيقة</small></span>${sw('remPm', S.remindEvening, 'تذكير أذكار المساء')}</div>
+    </section>
+    <p class="about" style="text-align:start">${NATIVE ? 'يصلك الأذان في وقته حتى لو كان التطبيق مغلقًا، ويُسمع على مستوى صوت المنبّه. في الوضع الصامت يصل الإشعار دون صوت.' : 'يعمل الأذان ما دام التطبيق مفتوحًا ولو في الخلفية.'}</p>
+  </main>`;
+  $('#prefsBack').onclick = () => (history.length > 1 ? history.back() : (location.hash = 'prefs'));
   FARD.forEach((k) => { $('#ad-' + k).onchange = (e) => { S.adhan[k] = e.target.checked; save(); }; });
   $('#remAm').onchange = (e) => { S.remindMorning = e.target.checked; save(); };
   $('#remPm').onchange = (e) => { S.remindEvening = e.target.checked; save(); };
-  $$('[data-seg]').forEach((g) => g.addEventListener('click', (e) => {
-    const b = e.target.closest('button[data-v]'); if (!b) return;
-    const name = g.dataset.seg; let v = b.dataset.v;
-    if (name === 'h24') v = v === 'true';
-    S[name] = v; save();
-    $$('button', g).forEach((x) => x.setAttribute('aria-pressed', x === b));
-    if (name === 'theme') applyTheme();
-    if (name === 'h24') fmtCacheClear();
-  }));
-  $('#soundSel').onchange = (e) => {
-    stopAdhan();
-    S.sound = e.target.value; save();
-    $('#fileRow').hidden = S.sound !== 'file';
-    $('#soundSmall').textContent = S.sound === 'file' ? (S.soundName || 'لم يُختر ملف بعد') : 'لكل الصلوات';
+  $('.sound-list').onclick = (e) => {
+    const pk = e.target.closest('[data-pick]'); const pl = e.target.closest('[data-play]');
+    if (pl) {
+      const prev = S.sound; S.sound = pl.dataset.play; arm(); playAdhan(); S.sound = prev;
+      toast('اضغط مرة أخرى على «إيقاف» من أي مكان لإيقافه', 2000);
+      return;
+    }
+    if (pk) { stopAdhan(); S.sound = pk.dataset.pick; save(); if (S.sound === 'file' && !S.soundName) $('#adhanFile').click(); renderPrefsAdhan(); }
   };
   $('#pickFile').onclick = () => $('#adhanFile').click();
   $('#adhanFile').onchange = async (e) => {
@@ -1503,15 +1683,47 @@ function renderPrefs() {
         if (!NATIVE.saveSound(b64)) throw new Error('save');
       } catch (err) { toast('تعذر حفظ الملف في التطبيق.'); return; }
     }
-    try { await idbPut('adhan', f); S.soundName = f.name; S.sound = 'file'; save(); $('#soundSmall').textContent = f.name; toast('حُفظ صوت الأذان على جهازك'); }
+    try { await idbPut('adhan', f); S.soundName = f.name; S.sound = 'file'; save(); toast('حُفظ صوت الأذان على جهازك'); renderPrefsAdhan(); }
     catch (err) { toast('تعذر حفظ الملف في هذا المتصفح.'); }
   };
-  $('#testAdhan').onclick = () => { arm(); playAdhan(); };
-  $('#stopTest').onclick = stopAdhan;
-  $('#remSel').onchange = (e) => { S.reminder = Number(e.target.value); save(); };
-  $('#recSel2').onchange = (e) => { S.reciter = e.target.value; save(); };
-  const nb = $('#notifBtn');
-  if (nb) nb.onclick = () => Notification.requestPermission().then(() => renderPrefs());
+  $('#remRow').onclick = () => pickerSheet('تذكير قبل الأذان', [0, 5, 10, 15, 20, 30].map((m) => [m, m ? 'قبل ' + minutesWord(m) : 'بدون تذكير']), S.reminder, (v) => { S.reminder = Number(v); save(); renderPrefsAdhan(); });
+  const nb = $('#notifBtn'); if (nb) nb.onclick = () => Notification.requestPermission().then(() => renderPrefsAdhan());
+}
+function renderPrefsLook() {
+  const rec = RECITERS.find((r) => r[0] === S.reciter) || RECITERS[0];
+  app.innerHTML = `
+  ${prefsHead('المظهر والتلاوة')}
+  <main class="view wrap prefs">
+    <section class="scard">
+      <div class="scard-h">${I.palette}<b>السمة</b></div>
+      <div class="theme-tiles">${[['light', 'فاتح'], ['dark', 'داكن'], ['auto', 'تلقائي']].map(([v, l]) => `<button type="button" data-theme-v="${v}" aria-pressed="${S.theme === v}">${themeArt(v)}<span>${l}</span><span class="radio"></span></button>`).join('')}</div>
+    </section>
+    <section class="scard">
+      <div class="scard-h">${I.clock}<b>تنسيق الوقت</b></div>
+      ${segH('h24', S.h24, [['true', '24 ساعة'], ['false', '12 ساعة']])}
+    </section>
+    <section class="scard">
+      <div class="scard-h">${I.headset}<b>القارئ</b></div>
+      <button class="srow" id="recRow" type="button"><span class="tick-ic on">${I.check}</span><span class="r-body"><b>${esc(rec[1])}</b><small>التلاوة تحتاج إلى إنترنت</small></span><span class="chev">${I.next}</span></button>
+    </section>
+    <section class="scard">
+      <div class="scard-h">${I.book}<b>إعدادات القراءة</b></div>
+      <div class="srow static"><span class="r-body"><b>حجم الخط</b></span><div class="stepper"><button type="button" id="fsPlus" aria-label="تكبير الخط">${I.plus}</button><output id="fsOut">${arNum(S.qsize)}</output><button type="button" id="fsMinus" aria-label="تصغير الخط">${I.minus}</button></div></div>
+      <p class="verse-banner font-prev">${SPARK}<span>بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</span>${SPARK}</p>
+      <div class="srow static"><span class="r-body"><b>التفسير الميسّر تحت كل آية</b><small>يعمل دون إنترنت</small></span>${sw('tfMode', S.tafsirMode, 'عرض التفسير الميسر')}</div>
+    </section>
+  </main>`;
+  $('#prefsBack').onclick = () => (history.length > 1 ? history.back() : (location.hash = 'prefs'));
+  $('.theme-tiles').onclick = (e) => {
+    const b = e.target.closest('[data-theme-v]'); if (!b) return;
+    S.theme = b.dataset.themeV; save(); applyTheme();
+    $$('.theme-tiles button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  };
+  bindSegs(app);
+  $('#recRow').onclick = () => pickerSheet('القارئ', RECITERS.map((r) => [r[0], r[1]]), S.reciter, (v) => { S.reciter = v; save(); renderPrefsLook(); if (P.s) playAyah(P.s, P.a); });
+  const upd = (d) => { S.qsize = Math.min(48, Math.max(20, S.qsize + d)); save(); applyTheme(); $('#fsOut').textContent = arNum(S.qsize); };
+  $('#fsMinus').onclick = () => upd(-2); $('#fsPlus').onclick = () => upd(2);
+  $('#tfMode').onchange = (e) => { S.tafsirMode = e.target.checked; save(); };
 }
 
 /* ---------- Adhkar ---------- */
@@ -1609,61 +1821,94 @@ function renderAdhkar() {
   }).catch(() => { $('#adkGrid').innerHTML = '<div class="empty">تعذر تحميل الأذكار. أعد فتح الصفحة.</div>'; });
 }
 
-/* Dhikr reader: one card per dhikr, tap to count. */
-const dk = { el: null, id: null };
+/* Dhikr reader: the current dhikr is large with its counter; finishing it moves on by itself. */
+const dk = { el: null, id: null, focus: 0 };
+const CORNER = '<svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M3 37V12a9 9 0 0 1 9-9h25"/><path d="M9 37V17a8 8 0 0 1 8-8h20"/><path d="M15 15c3-3 7-2 7 2s-5 4-6 1"/></g></svg>';
+const corners = () => `<span class="corners" aria-hidden="true"><i class="tl">${CORNER}</i><i class="tr">${CORNER}</i></span>`;
 function showDhikr(id) {
   if (!ADK) { loadAdhkar().then(() => showDhikr(id)).catch(() => toast('تعذر تحميل الأذكار.')); return; }
   const c = adkCat(id); if (!c) { location.hash = 'adhkar'; return; }
-  if (!dk.el) {
-    dk.el = document.createElement('div');
-    dk.el.className = 'reader dhikr';
-    document.body.appendChild(dk.el);
-  }
-  dk.id = id;
+  if (!dk.el) { dk.el = document.createElement('div'); dk.el.className = 'reader dhikr'; document.body.appendChild(dk.el); }
   document.body.classList.add('reading');
   document.body.style.overflow = 'hidden';
-  const pr = adkProgress().p[id] || {};
-  const isQ = (it) => it.q;
-  dk.el.innerHTML = `<div class="reader-bar"><div class="inner wrap">
-      <button class="icon-btn" id="dkBack" type="button" aria-label="رجوع إلى الأذكار">${I.back}</button>
-      <div class="ttl"><b>${esc(c.title)}</b><span id="dkSub"></span></div>
-      <button class="icon-btn" id="dkReset" type="button" aria-label="إعادة العدّ من البداية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.3-5.6L4 8.7"/><path d="M4 4v4.7h4.7"/></svg></button>
-    </div><div class="dk-progress" aria-hidden="true"><i id="dkBar"></i></div></div>
-    <div class="reader-scroll" id="dkScroll"><div class="wrap dk-list">
-      ${c.items.map((it, i) => {
-        const left = Math.max(0, it.n - (pr[i] || 0));
-        return `<article class="dk${left === 0 ? ' done' : ''}" data-i="${i}">
-          <p class="dk-t${isQ(it) ? ' q' : ''}">${esc(it.t)}</p>
-          <div class="dk-foot">
-            <button class="dk-count" type="button" aria-label="عدّ: المتبقي ${left}">${left === 0 ? I.check : `<span>${arNum(left)}</span>`}</button>
-            <span class="dk-rep">${repWord(it.n)}</span>
-            <span class="spacer"></span>
-            ${it.r ? `<button class="dk-mini" type="button" data-act="src" aria-expanded="false">${isQ(it) ? 'الموضع' : 'المصدر'}</button>` : ''}
+  const firstOpen = () => { const pr = adkProgress().p[id] || {}; const i = c.items.findIndex((it, k) => (pr[k] || 0) < it.n); return i < 0 ? 0 : i; };
+  if (dk.id !== id) { dk.id = id; dk.focus = firstOpen(); }
+  const left = (i) => Math.max(0, c.items[i].n - ((adkProgress().p[id] || {})[i] || 0));
+  dk.el.innerHTML = readerTop('dkBack', esc(c.title), '', `<button class="icon-btn" id="dkReset" type="button" aria-label="إعادة العدّ من البداية">${I.refresh}</button>`, '<div class="dk-progress" aria-hidden="true"><i id="dkBar"></i></div>')
+    + `<div class="reader-scroll" id="dkScroll"><div class="wrap dk-list" id="dkList"></div></div>
+    <div class="dk-dock"><div class="inner">
+      <button class="btn primary" id="dkNext" type="button">الذكر التالي ${I.next}</button>
+      <div class="dk-hint"><span>اضغط على العدّاد أو على النص مع كل ذكر</span><span class="dk-mini-bar"><i id="dkBar2"></i></span><small id="dkCount"></small></div>
+    </div></div>`;
+  const draw = () => {
+    $('#dkList', dk.el).innerHTML = c.items.map((it, i) => {
+      const l = left(i), done = l === 0, on = i === dk.focus;
+      if (on) {
+        return `<article class="dk on${done ? ' done' : ''}" data-i="${i}">${corners()}
+          <p class="dk-t${it.q ? ' q' : ''}">${esc(it.t)}</p>
+          <p class="dk-rep">${repWord(it.n)}</p>
+          <button class="dk-count" type="button" aria-label="سبّح: المتبقي ${l}">${done ? I.check : `<b>${arNum(l)}</b>`}<small>${done ? 'تمّ' : 'المتبقي'}</small></button>
+          <div class="dk-tools">
+            ${it.r ? `<button class="dk-mini" type="button" data-act="src" aria-expanded="false">${I.info} ${it.q ? 'الموضع' : 'المصدر'}</button>` : '<span></span>'}
             <button class="dk-mini" type="button" data-act="copy" aria-label="نسخ">${I.copy}</button>
           </div>
           ${it.r ? `<p class="dk-ref" hidden>${esc(it.r)}</p>` : ''}
         </article>`;
-      }).join('')}
-      <p class="about">${esc(c.src === 'القرآن الكريم' ? 'من نص المصحف الشريف في التطبيق.' : 'من كتاب حصن المسلم للشيخ سعيد بن علي بن وهف القحطاني.')}</p>
-    </div></div>`;
-  const update = () => {
+      }
+      return `<article class="dk${done ? ' done' : ''}" data-i="${i}">
+        <p class="dk-t${it.q ? ' q' : ''}">${esc(it.t)}</p>
+        <span class="dk-chip">${done ? I.check : ''}<b>${arNum(done ? it.n : l)}</b></span>
+      </article>`;
+    }).join('') + `<p class="about">${esc(c.src === 'القرآن الكريم' ? 'من نص المصحف الشريف في التطبيق.' : 'من كتاب حصن المسلم للشيخ سعيد بن علي بن وهف القحطاني.')}</p>`;
     const done = adkDone(id), total = c.items.length;
-    $('#dkSub').textContent = done === total ? 'أتممتها، تقبّل الله منك' : `${arNum(done)} من ${arNum(total)}`;
-    $('#dkBar').style.width = (done / total * 100).toFixed(1) + '%';
+    $('#dkBackSub', dk.el).textContent = done === total ? 'أتممتها، تقبّل الله منك' : `${arNum(done)} من ${arNum(total)}`;
+    const pct = (done / total * 100).toFixed(1) + '%';
+    $('#dkBar', dk.el).style.width = pct; $('#dkBar2', dk.el).style.width = pct;
+    $('#dkCount', dk.el).textContent = `${arNum(done)} من ${arNum(total)}`;
+    $('#dkNext', dk.el).disabled = dk.focus >= total - 1 && left(dk.focus) === 0;
   };
-  update();
+  const focusOn = (i, smooth) => {
+    dk.focus = i; draw();
+    const el = $(`.dk[data-i="${i}"]`, dk.el);
+    if (el) el.scrollIntoView({ block: 'start', behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto' });
+  };
+  const nextOpen = (from) => {
+    const pr = adkProgress().p[id] || {};
+    for (let k = from + 1; k < c.items.length; k++) if ((pr[k] || 0) < c.items[k].n) return k;
+    return from + 1 < c.items.length ? from + 1 : -1;
+  };
+  const count = (i) => {
+    const it = c.items[i];
+    const all = adkProgress(); const p = all.p[id] || (all.p[id] = {});
+    if ((p[i] || 0) >= it.n) return;
+    p[i] = (p[i] || 0) + 1; LS.set('dhikrDay', all);
+    const l = it.n - p[i];
+    const btn = $(`.dk[data-i="${i}"] .dk-count`, dk.el);
+    if (l > 0) {
+      if (btn) { btn.innerHTML = `<b>${arNum(l)}</b><small>المتبقي</small>`; btn.classList.remove('tick'); void btn.offsetWidth; btn.classList.add('tick'); }
+      if (navigator.vibrate) navigator.vibrate(12);
+      return;
+    }
+    if (navigator.vibrate) navigator.vibrate(40);
+    if (adkDone(id) === c.items.length) { draw(); toast('أتممت ' + c.title + '، تقبّل الله منك', 3200); return; }
+    if (btn) { btn.innerHTML = `${I.check}<small>تمّ</small>`; btn.classList.add('tick'); }
+    // Move on without stopping.
+    const n = nextOpen(i);
+    setTimeout(() => { if (dk.id === id && n >= 0) focusOn(n, true); }, 260);
+  };
+  draw();
+  requestAnimationFrame(() => { const el = $(`.dk[data-i="${dk.focus}"]`, dk.el); if (el && dk.focus > 0) el.scrollIntoView({ block: 'start' }); });
   $('#dkBack', dk.el).onclick = () => (history.length > 1 ? history.back() : (location.hash = 'adhkar'));
   $('#dkReset', dk.el).onclick = () => {
     const all = adkProgress(); delete all.p[id]; LS.set('dhikrDay', all);
-    showDhikr(id); toast('بدأ العدّ من جديد');
+    focusOn(0, false); toast('بدأ العدّ من جديد');
   };
-  $('#dkScroll', dk.el).onclick = (e) => {
+  $('#dkNext', dk.el).onclick = () => { const n = nextOpen(dk.focus); if (n >= 0) focusOn(n, true); };
+  $('#dkList', dk.el).onclick = (e) => {
     const card = e.target.closest('.dk'); if (!card) return;
     const i = Number(card.dataset.i); const it = c.items[i];
     const act = e.target.closest('[data-act]');
-    if (act && act.dataset.act === 'src') {
-      const ref = $('.dk-ref', card); ref.hidden = !ref.hidden; act.setAttribute('aria-expanded', String(!ref.hidden)); return;
-    }
+    if (act && act.dataset.act === 'src') { const ref = $('.dk-ref', card); ref.hidden = !ref.hidden; act.setAttribute('aria-expanded', String(!ref.hidden)); return; }
     if (act && act.dataset.act === 'copy') {
       const t = it.t + (it.r && it.q ? `\n﴿${it.r}﴾` : '');
       const done = () => toast('نُسخ النص');
@@ -1671,26 +1916,9 @@ function showDhikr(id) {
       return;
     }
     if (window.getSelection && String(window.getSelection()).length > 0) return;
-    const all = adkProgress(); const p = all.p[id] || (all.p[id] = {});
-    if ((p[i] || 0) >= it.n) return;
-    p[i] = (p[i] || 0) + 1; LS.set('dhikrDay', all);
-    const left = it.n - p[i];
-    const btn = $('.dk-count', card);
-    btn.innerHTML = left === 0 ? I.check : `<span>${arNum(left)}</span>`;
-    btn.setAttribute('aria-label', `عدّ: المتبقي ${left}`);
-    btn.classList.remove('tick'); void btn.offsetWidth; btn.classList.add('tick');
-    if (left === 0) {
-      card.classList.add('done');
-      if (navigator.vibrate) navigator.vibrate(40);
-      update();
-      const next = card.nextElementSibling;
-      if (next && next.classList.contains('dk') && !next.classList.contains('done')) {
-        setTimeout(() => next.scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }), 250);
-      }
-      if (adkDone(id) === c.items.length) toast('أتممت ' + c.title + '، تقبّل الله منك', 3200);
-    } else if (navigator.vibrate) navigator.vibrate(12);
+    if (i !== dk.focus) { focusOn(i, true); return; }
+    count(i);
   };
-  $('#dkScroll', dk.el).scrollTop = 0;
 }
 function hideDhikr() {
   if (!dk.el) return;
@@ -1700,51 +1928,52 @@ function hideDhikr() {
 
 /* Tasbih counter */
 const TASBIH_PHRASES = ['سُبْحَانَ اللَّهِ', 'الْحَمْدُ لِلَّهِ', 'اللَّهُ أَكْبَرُ', 'لَا إِلَهَ إِلَّا اللَّهُ', 'أَسْتَغْفِرُ اللَّهَ', 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ', 'لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ', 'اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ'];
+const TASBIH_SHORT = ['سبحان الله', 'الحمد لله', 'الله أكبر', 'لا إله إلا الله', 'أستغفر الله', 'سبحان الله وبحمده', 'لا حول ولا قوة إلا بالله', 'الصلاة على النبي ﷺ'];
 const ts = { el: null };
 function tasbihState() {
   const s = LS.get('tasbih', null) || {};
   const d = todayKey();
-  return { p: s.p || 0, target: s.target === undefined ? 33 : s.target, count: s.count || 0, total: s.d === d ? (s.total || 0) : 0, d };
+  return { p: s.p || 0, target: s.target === undefined ? 33 : s.target, count: s.count || 0, total: s.d === d ? (s.total || 0) : 0, d, vib: s.vib !== false };
 }
 function showTasbih() {
   if (!ts.el) { ts.el = document.createElement('div'); ts.el.className = 'reader tasbih'; document.body.appendChild(ts.el); }
   document.body.classList.add('reading'); document.body.style.overflow = 'hidden';
   const st = tasbihState();
-  const R = 118, C = 2 * Math.PI * R;
-  ts.el.innerHTML = `<div class="reader-bar"><div class="inner wrap">
-      <button class="icon-btn" id="tsBack" type="button" aria-label="رجوع">${I.back}</button>
-      <div class="ttl"><b>السبحة</b><span id="tsTotal"></span></div>
-      <button class="icon-btn" id="tsReset" type="button" aria-label="تصفير العدّاد"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.3-5.6L4 8.7"/><path d="M4 4v4.7h4.7"/></svg></button>
-    </div></div>
-    <div class="reader-scroll"><div class="wrap ts-body">
-      <div class="ts-phrases" role="group" aria-label="الذكر">${TASBIH_PHRASES.map((t, i) => `<button type="button" data-p="${i}" aria-pressed="${st.p === i}">${t}</button>`).join('')}</div>
+  const R = 116, C = 2 * Math.PI * R;
+  ts.el.innerHTML = readerTop('tsBack', 'السبحة', '', `<button class="pill-btn" id="tsReset" type="button">${I.refresh} إعادة الضبط</button>`)
+    + `<div class="reader-scroll"><div class="wrap ts-body">
+      <span class="ts-total" id="tsTotal"></span>
+      <div class="ts-beads">${beadsSvg()}</div>
       <p class="ts-phrase" id="tsPhrase">${TASBIH_PHRASES[st.p]}</p>
       <button class="ts-ring" id="tsTap" type="button" aria-label="سبّح">
-        <svg viewBox="0 0 260 260" aria-hidden="true"><circle cx="130" cy="130" r="${R}" class="ts-track"/><circle cx="130" cy="130" r="${R}" class="ts-fill" id="tsFill" stroke-dasharray="${C}" stroke-dashoffset="${C}" transform="rotate(-90 130 130)"/></svg>
+        <svg viewBox="0 0 260 260" aria-hidden="true"><circle cx="130" cy="130" r="${R}" class="ts-track"/><circle cx="130" cy="130" r="${R}" class="ts-fill" id="tsFill" stroke-dasharray="${C}" stroke-dashoffset="${C}" transform="rotate(-90 130 130)"/><circle id="tsDot" r="8" cx="130" cy="${130 - R}" class="ts-dot"/></svg>
         <span class="ts-num" id="tsNum">0</span>
         <span class="ts-of" id="tsOf"></span>
       </button>
-      <div class="seg ts-target" role="group" aria-label="الهدف">${[[33, '٣٣'], [99, '٩٩'], [100, '١٠٠'], [0, 'بلا حد']].map(([v, l]) => `<button type="button" data-t="${v}" aria-pressed="${st.target === v}">${l}</button>`).join('')}</div>
-      <p class="note">اضغط على الدائرة لكل تسبيحة. يهتز الهاتف عند إتمام العدد.</p>
+      <p class="ts-hint">اضغط للتسبيح</p>
+      <div class="ts-target" role="group" aria-label="العدد">${[[33, '٣٣'], [99, '٩٩'], [100, '١٠٠'], [0, 'بلا حد']].map(([v, l]) => `<button type="button" data-t="${v}" aria-pressed="${st.target === v}">${l}</button>`).join('')}</div>
+      <div class="ts-phrases" role="group" aria-label="الذكر">${TASBIH_SHORT.map((t, i) => `<button type="button" data-p="${i}" aria-pressed="${st.p === i}">${t}</button>`).join('')}</div>
+      <div class="group ts-vib"><div class="row plain">${I.vibrate}<div class="r-body"><b>الاهتزاز</b><small>اهتزاز خفيف مع كل تسبيحة وأقوى عند تمام العدد</small></div><label class="switch"><input type="checkbox" id="tsVib" ${st.vib ? 'checked' : ''} aria-label="الاهتزاز"><span></span></label></div></div>
     </div></div>`;
+  const put = (patch) => LS.set('tasbih', Object.assign(tasbihState(), patch));
   const draw = (bump) => {
     const s = tasbihState();
-    $('#tsNum').textContent = s.count;
-    $('#tsOf').textContent = s.target ? `من ${s.target}` : '';
+    $('#tsNum').textContent = arNum(s.count);
+    $('#tsOf').textContent = s.target ? `من ${arNum(s.target)}` : 'بلا حد';
     const frac = s.target ? Math.min(1, s.count / s.target) : (s.count % 33) / 33;
     $('#tsFill').setAttribute('stroke-dashoffset', String(C * (1 - frac)));
-    $('#tsTotal').textContent = `اليوم: ${arNum(s.total)}`;
+    const ang = frac * 2 * Math.PI - Math.PI / 2;
+    $('#tsDot').setAttribute('cx', (130 + R * Math.cos(ang)).toFixed(1)); $('#tsDot').setAttribute('cy', (130 + R * Math.sin(ang)).toFixed(1));
+    $('#tsTotal').textContent = `مجموع اليوم ${arNum(s.total)}`;
     if (bump) { const n = $('#tsNum'); n.classList.remove('tick'); void n.offsetWidth; n.classList.add('tick'); }
   };
-  const put = (patch) => LS.set('tasbih', Object.assign(tasbihState(), patch));
   draw(false);
   $('#tsTap').addEventListener('click', () => {
     const s = tasbihState();
     let count = s.count + 1;
     if (s.target && count > s.target) count = 1;
     put({ count, total: s.total + 1 });
-    if (s.target && count === s.target) { if (navigator.vibrate) navigator.vibrate([60, 60, 120]); }
-    else if (navigator.vibrate) navigator.vibrate(10);
+    if (s.vib && navigator.vibrate) navigator.vibrate(s.target && count === s.target ? [60, 60, 120] : 10);
     draw(true);
   });
   $('.ts-phrases', ts.el).onclick = (e) => {
@@ -1760,7 +1989,8 @@ function showTasbih() {
     $$('.ts-target button', ts.el).forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
     draw(false);
   };
-  $('#tsReset').onclick = () => { put({ count: 0 }); draw(false); };
+  $('#tsVib').onchange = (e) => put({ vib: e.target.checked });
+  $('#tsReset').onclick = () => { put({ count: 0 }); draw(false); toast('صُفّر العدّاد'); };
   $('#tsBack').onclick = () => (history.length > 1 ? history.back() : (location.hash = 'adhkar'));
 }
 function hideTasbih() {
@@ -1796,11 +2026,7 @@ function showZakat() {
   document.body.classList.add('reading'); document.body.style.overflow = 'hidden';
   const z = Object.assign({ cur: COUNTRY_CUR[S.loc.country] || 'DZD', basis: 'gold', goldPrice: '', silverPrice: '', cash: '', gold: '', karat: '21', silver: '', trade: '', owed: '', debts: '' }, LS.get('zakat', {}));
   const field = (id, label, hint, unit) => `<label class="zf" for="z-${id}"><span class="zf-l">${label}${hint ? `<small>${hint}</small>` : ''}</span><span class="zf-in"><input class="input" id="z-${id}" inputmode="decimal" dir="ltr" value="${esc(z[id])}" placeholder="0" autocomplete="off"><em data-unit="${unit}">${unit === 'cur' ? '' : unit}</em></span></label>`;
-  zk.el.innerHTML = `<div class="reader-bar"><div class="inner wrap">
-      <button class="icon-btn" id="zkBack" type="button" aria-label="رجوع">${I.back}</button>
-      <div class="ttl"><b>حاسبة الزكاة</b><span>زكاة المال والذهب والفضة وعروض التجارة</span></div>
-      <span style="width:42px"></span>
-    </div></div>
+  zk.el.innerHTML = readerTop('zkBack', 'حاسبة الزكاة', 'المال والذهب والفضة وعروض التجارة') + `
     <div class="reader-scroll"><div class="wrap zk-body">
       <section class="group zk-sec">
         <h3>النصاب</h3>
@@ -1878,7 +2104,8 @@ function pushWidgetData() {
 }
 
 /* ---------- router ---------- */
-const VIEWS = { home: renderHome, quran: renderQuran, adhkar: renderAdhkar, qibla: renderQibla, prefs: renderPrefs };
+const VIEWS = { home: renderHome, quran: renderQuran, adhkar: renderAdhkar, qibla: renderQibla, prefs: renderPrefs, month: renderMonth, 'prefs-loc': renderPrefsLoc, 'prefs-adhan': renderPrefsAdhan, 'prefs-look': renderPrefsLook };
+const tabOf = (r) => (r.startsWith('prefs') ? 'prefs' : r === 'month' ? 'home' : r);
 function route(force) {
   let r = location.hash.replace('#', '') || 'home';
   const isRead = r === 'read';
@@ -1892,7 +2119,7 @@ function route(force) {
   if (current !== r || force === true) {
     closeSheet();
     if (compassCleanup) { compassCleanup(); compassCleanup = null; }
-    current = r; setTab(r);
+    current = r; setTab(tabOf(r));
     VIEWS[r]();
     window.scrollTo(0, 0);
   }
