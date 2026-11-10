@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>مِحراب</title>
 <meta name="description" content="مواقيت الصلاة والأذان، المصحف الشريف كاملًا مع التلاوة، وبوصلة القبلة. يعمل دون إنترنت.">
-<meta name="theme-color" content="#0b3f3a">
+<meta name="theme-color" content="#f7f4ec">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -14,10 +14,24 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="مِحراب">
 <link rel="preload" href="fonts/plex-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/reem-kufi-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/amiri-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gSun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBE3A0"/><stop offset="1" stop-color="#E5A84B"/></linearGradient>
+    <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2D995"/><stop offset="1" stop-color="#C79A45"/></linearGradient>
+    <linearGradient id="gDome" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A8C6E"/><stop offset="1" stop-color="#145140"/></linearGradient>
+    <linearGradient id="gNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A6A56"/><stop offset="1" stop-color="#0F3D31"/></linearGradient>
+    <linearGradient id="gArch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16594A"/><stop offset=".55" stop-color="#0F4A3C"/><stop offset="1" stop-color="#0B3C30"/></linearGradient>
+    <linearGradient id="gWood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A6703E"/><stop offset="1" stop-color="#6E4524"/></linearGradient>
+    <radialGradient id="gBead" cx=".35" cy=".32" r=".75"><stop offset="0" stop-color="#4E9C7F"/><stop offset=".6" stop-color="#17573F"/><stop offset="1" stop-color="#0B3529"/></radialGradient>
+    <mask id="mMoonE" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="80"><rect width="120" height="80" fill="#fff"/><circle cx="69" cy="27" r="19" fill="#000"/></mask>
+    <mask id="mMoonS" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="80"><rect width="120" height="80" fill="#fff"/><circle cx="71" cy="30" r="8.6" fill="#000"/></mask>
+    <clipPath id="cWin"><path d="M32 76V42C32 26 45 16 60 11c15 5 28 15 28 31v34Z"/></clipPath>
+  </defs>
+</svg>
 <div class="app" id="app">
   <noscript><p class="wrap">يحتاج التطبيق إلى تفعيل JavaScript.</p></noscript>
 </div>

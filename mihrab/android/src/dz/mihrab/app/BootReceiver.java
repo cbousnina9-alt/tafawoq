@@ -8,5 +8,6 @@ public class BootReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context c, Intent intent) {
         Alarms.scheduleNext(c);
+        PrayerWidget.updateAll(c);
     }
 }

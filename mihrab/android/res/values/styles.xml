@@ -4,8 +4,11 @@
         <item name="android:windowBackground">@color/splash</item>
         <item name="android:statusBarColor">@color/splash</item>
         <item name="android:navigationBarColor">@color/splash</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
         <item name="android:colorAccent">@color/accent</item>
     </style>
-    <color name="splash">#0B3F3A</color>
+    <color name="splash">#F7F4EC</color>
+    <color name="icon_bg">#0D4034</color>
     <color name="accent">#0B5A4A</color>
 </resources>

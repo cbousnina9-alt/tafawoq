@@ -1,23 +1,20 @@
 # Design — Mihrab
 
-Mode: Operate. Canon direction (category standard, executed with care), chosen by the user.
+Mode: Operate. Visual direction pinned by the user's mockup (three phone screens: المواقيت، المصحف، الأذكار والأدعية).
 
 ## Color
-- Masjid emerald `--emerald` (#0b5a4a light / #3fae93 dark) for the current prayer, primary actions and the active tab.
-- Illumination gold `--gold` (#b0862f / #e0b862) for ornament: star badges, ayah markers, mushaf frame, prayer icons.
-- Cool stone ground `--bg` #f2f4f1 with white surfaces; dark theme on near-black green #07110e.
-- Sky header colours are time-driven (`data-phase`: night, dawn, morning, day, afternoon, sunset, dusk), computed from the day's prayer times.
+- Warm cream ground `--bg` #f7f4ec with white cards and a fine `--line` #e9e3d6 border.
+- Mosque green: `--emerald` #0f4a3c for titles, active states and the selected tab; `--deep` #0d4034 for the dark feature cards (next-prayer arch, continue reading, tasbih, verse of the day, zakat result).
+- Mihrab gold `--gold` #b48d45 for line icons, rules beside titles, star badges and the arch outline.
+- Dark theme mirrors it on #0a1411 with lighter green and gold.
 
 ## Type
-- Display: Reem Kufi (kufic) for page titles and the next-prayer name.
-- UI: IBM Plex Sans Arabic, tabular numerals for all times.
-- Quran: Amiri Quran, with U+06DD ayah markers.
+- Display: Amiri Bold for the brand, page titles, the next prayer name and the countdown digits.
+- UI: IBM Plex Sans Arabic, bold for prayer and surah names.
+- Quran and adhkar: Amiri Quran.
 
 ## Signature
-Home opens on a sky whose colour follows the real time of day, with a sun or crescent moon and a mosque silhouette (lit windows after dark); the prayer list rises over it as a sheet.
-
-## Ornament
-8-point star (khatam) used as: surah-number badges, a faint tessellation on emerald cards (verse of the day, continue reading), mushaf frame corner rosettes, and the surah-title cartouche. Never as section dividers or emoji.
+Every tab opens on the gold mihrab logo and «مِحراب», over faint arcade arches. Home leads with a pointed mihrab-arch card in deep green with a gold edge and a mosque silhouette, holding the next prayer and its countdown; the prayer list sits under it with the next prayer highlighted by a pale green row and a green edge bar.
 
 ## Components
-Rounded white cards with soft offset shadows; grouped settings lists with coloured icon tiles; pill segmented controls; bottom sheets for actions; floating dark audio player; tab bar with an emerald pill on the active icon.
+Brand header; centred page title with a subtitle between gold rules; illustrated cards (vector illustrations: rising sun, crescent in clouds, mosque, pillow under night dome, sunrise window, open book, Quran on a rahl, tasbih beads, coins and scale); green segmented control; lists with gold 8-point star badges and chevrons; tab bar whose active item sits in a pale green rounded tile.

@@ -1,9 +1,9 @@
 /* مِحراب — offline cache */
-const VERSION = 'mihrab-v2';
+const VERSION = 'mihrab-v3';
 const CORE = [
   './', 'index.html', 'styles.css', 'app.js', 'adhan.min.js', 'quran.json', 'manifest.webmanifest',
   'icon.svg', 'icon-192.png', 'icon-512.png', 'icon-180.png',
-  'fonts/amiri-quran.woff2', 'fonts/reem-kufi-500.woff2', 'fonts/reem-kufi-700.woff2',
+  'fonts/amiri-quran.woff2', 'fonts/amiri-700.woff2', 'fonts/amiri-latin-700.woff2', 'fonts/amiri-400.woff2', 'fonts/amiri-latin-400.woff2', 'adhkar.json', 'tafsir.json',
   'fonts/plex-400.woff2', 'fonts/plex-500.woff2', 'fonts/plex-600.woff2', 'fonts/plex-latin-400.woff2', 'fonts/plex-latin-500.woff2',
 ];
 self.addEventListener('install', (e) => {

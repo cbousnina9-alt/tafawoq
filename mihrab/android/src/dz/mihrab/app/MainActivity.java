@@ -164,6 +164,21 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public void setWidget(String json) { PrayerWidget.save(MainActivity.this, json); }
+
+        /** Status and navigation bars follow the page's light or dark theme. */
+        @JavascriptInterface
+        public void setBars(final boolean dark) {
+            runOnUiThread(() -> {
+                int color = dark ? 0xFF0A1411 : 0xFFF7F4EC;
+                getWindow().setStatusBarColor(color);
+                getWindow().setNavigationBarColor(color);
+                int flags = dark ? 0 : (android.view.View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+                getWindow().getDecorView().setSystemUiVisibility(flags);
+            });
+        }
+
+        @JavascriptInterface
         public void stopAdhan() {
             if (!AdhanService.playing) return;
             try { startService(new Intent(MainActivity.this, AdhanService.class).setAction(AdhanService.ACTION_STOP)); } catch (Exception ignored) { }

@@ -43,5 +43,6 @@ public class AlarmReceiver extends BroadcastReceiver {
             }
         }
         Alarms.scheduleNext(c);
+        PrayerWidget.updateAll(c);
     }
 }
