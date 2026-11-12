@@ -22,7 +22,7 @@ rm -f "$OUT/assets/www/sw.js"
   --version-code "$VERSION_CODE" --version-name "$VERSION_NAME" --auto-add-overlay -0 mp3 -0 ogg
 
 javac -nowarn -source 11 -target 11 -classpath "$JAR" -d "$OUT/classes" \
-  $(find src "$OUT/gen" -name '*.java') 2>&1 | grep -v 'bootstrap classpath' || true
+  $(find src "$OUT/gen" -name '*.java') 2> "$OUT/javac.log" || { grep -v 'bootstrap classpath' "$OUT/javac.log"; echo "javac failed"; exit 1; }
 "$BT/d8" --release --min-api 26 --lib "$JAR" --output "$OUT/dex" $(find "$OUT/classes" -name '*.class')
 
 cp "$OUT/base.apk" "$OUT/unaligned.apk"
