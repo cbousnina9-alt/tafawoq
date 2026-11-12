@@ -26,4 +26,6 @@ Keep the same keystore for every release, otherwise phones refuse to install the
 - Adhkar: Hisn al-Muslim by Sa'id ibn Ali ibn Wahf al-Qahtani, text from [asellam/HisnElMuslim](https://github.com/asellam/HisnElMuslim) (MIT). Quranic duas are cut from `web/quran.json`. Rebuild `web/adhkar.json` with `python3 tools/build_adhkar.py path/to/hisn.json`.
 - Tafsir: Tafsir al-Muyassar (King Fahd Glorious Quran Printing Complex), text from [spa5k/tafsir_api](https://github.com/spa5k/tafsir_api) (MIT; sourced from Quran.com's QUL). Rebuild `web/tafsir.json` with `python3 tools/build_tafsir.py path/to/tafsir/ar-tafsir-muyassar`.
 - Fonts: Amiri and Amiri Quran (SIL OFL), IBM Plex Sans Arabic (SIL OFL).
+- The 99 Names (`web/names.json`): the well-known list narrated by al-Tirmidhi, with short meanings written for this app.
+- Recitation: streamed per ayah from Islamic Network's CDN; the Android app caches played files under its cache directory (`AudioCache.java`, 300 MB cap) and serves them to the page at `/_audio/`.
 - Municipality names: OpenStreetMap Nominatim (data © OpenStreetMap contributors, ODbL).

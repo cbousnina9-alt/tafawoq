@@ -2,7 +2,9 @@ package dz.mihrab.app;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
@@ -37,6 +39,13 @@ public class MainActivity extends Activity {
 
     private WebView web;
     private Compass compass;
+    private boolean recitation = false;
+    private final BroadcastReceiver media = new BroadcastReceiver() {
+        @Override public void onReceive(Context c, Intent i) {
+            String cmd = i.getStringExtra("cmd");
+            if (cmd != null && cmd.matches("[a-z]+") && web != null) web.evaluateJavascript("window.__mihrabMedia&&window.__mihrabMedia('" + cmd + "')", null);
+        }
+    };
     private GeolocationPermissions.Callback geoCallback;
     private String geoOrigin;
 
@@ -63,6 +72,7 @@ public class MainActivity extends Activity {
                 if (!HOST.equals(u.getHost())) return null;
                 String path = u.getPath();
                 if (path == null || path.equals("/") || path.isEmpty()) path = "/index.html";
+                if (path.startsWith("/_audio/")) return AudioCache.serve(MainActivity.this, path.substring(8));
                 try {
                     InputStream in = getAssets().open("www" + path);
                     WebResourceResponse r = new WebResourceResponse(mime(path), null, in);
@@ -95,6 +105,8 @@ public class MainActivity extends Activity {
         });
 
         compass = new Compass(this, web);
+        IntentFilter mf = new IntentFilter(RecitationService.ACTION_MEDIA);
+        if (Build.VERSION.SDK_INT >= 33) registerReceiver(media, mf, Context.RECEIVER_NOT_EXPORTED); else registerReceiver(media, mf);
         web.addJavascriptInterface(new Bridge(), "MihrabNative");
 
         if (Build.VERSION.SDK_INT >= 33 && checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
@@ -146,8 +158,14 @@ public class MainActivity extends Activity {
     }
 
     @Override protected void onResume() { super.onResume(); visible = true; web.onResume(); compass.resume(); }
-    @Override protected void onPause() { visible = false; compass.pause(); web.onPause(); super.onPause(); }
-    @Override protected void onDestroy() { compass.stop(); super.onDestroy(); }
+    /** The page keeps running while recitation plays, so it continues with the screen off. */
+    @Override protected void onPause() { visible = false; compass.pause(); if (!recitation) web.onPause(); super.onPause(); }
+    @Override protected void onDestroy() {
+        compass.stop();
+        try { unregisterReceiver(media); } catch (Exception ignored) { }
+        try { startService(new Intent(this, RecitationService.class).putExtra("stop", true)); } catch (Exception ignored) { }
+        super.onDestroy();
+    }
     @Override protected void onSaveInstanceState(Bundle out) { super.onSaveInstanceState(out); web.saveState(out); }
 
     @Override
@@ -165,6 +183,24 @@ public class MainActivity extends Activity {
 
         @JavascriptInterface
         public void setWidget(String json) { PrayerWidget.save(MainActivity.this, json); }
+
+        /** Called by the page whenever recitation starts, pauses or stops. */
+        @JavascriptInterface
+        public void setPlaying(String json) {
+            try {
+                if (json == null || json.isEmpty()) {
+                    recitation = false;
+                    startService(new Intent(MainActivity.this, RecitationService.class).putExtra("stop", true));
+                    return;
+                }
+                JSONObject o = new JSONObject(json);
+                recitation = true;
+                Intent i = new Intent(MainActivity.this, RecitationService.class)
+                    .putExtra("playing", o.optBoolean("playing", true))
+                    .putExtra("title", o.optString("title")).putExtra("text", o.optString("text"));
+                if (Build.VERSION.SDK_INT >= 26) startForegroundService(i); else startService(i);
+            } catch (Exception ignored) { }
+        }
 
         /** Status and navigation bars follow the page's light or dark theme. */
         @JavascriptInterface
