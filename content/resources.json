@@ -1,5 +1,257 @@
 [
  {
+  "id": "1as/english/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "1as",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/1as/english/exam/t1-4.pdf",
+  "solution": "/files/1as/english/exam/t1-4-sol.pdf",
+  "size": 82927,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 4) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 4) — السنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: reading: A lost phone، reference words، the past simple and the past continuous، linking words: when, while، written expression: telling a past event. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/history-geo/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "1as",
+  "subject": "history-geo",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/1as/history-geo/exam/t1-4.pdf",
+  "solution": "/files/1as/history-geo/exam/t1-4-sol.pdf",
+  "size": 73756,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 4) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 4) — السنة الأولى ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الدولة الرستمية، المظاهر الحضارية في تيهرت، الجغرافيا: الإحداثيات الجغرافية، فارق التوقيت، المقالة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/history-geo/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "2as",
+  "subject": "history-geo",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/2as/history-geo/exam/t1-4.pdf",
+  "solution": "/files/2as/history-geo/exam/t1-4-sol.pdf",
+  "size": 72145,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 4) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 4) — السنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الحرب العالمية الثانية 1939–1945، أسبابها ونتائجها، تأسيس هيئة الأمم المتحدة، الجغرافيا: مشكلة الغذاء في العالم، المقالة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/physics/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "2as",
+  "subject": "physics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/2as/physics/exam/t1-4.pdf",
+  "solution": "/files/2as/physics/exam/t1-4-sol.pdf",
+  "size": 74769,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية (النموذج 4) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الفيزيائية (النموذج 4) — السنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: عمل الثقل وعمل قوة الاحتكاك، الطاقة الحركية والطاقة الكامنة الثقالية، مبرهنة الطاقة الحركية، الحصيلة الطاقوية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/science/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "2as",
+  "subject": "science",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/2as/science/exam/t1-4.pdf",
+  "solution": "/files/2as/science/exam/t1-4-sol.pdf",
+  "size": 74735,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الطبيعية (النموذج 4) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الطبيعية (النموذج 4) — السنة الثانية ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: الدورة الخلوية ومراحلها، تطوّر كمية ADN، الانقسام الخيطي المتساوي، الصبغي وبنيته، التمرين الإدماجي. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/english/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "3as",
+  "subject": "english",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/3as/english/exam/t1-4.pdf",
+  "solution": "/files/3as/english/exam/t1-4-sol.pdf",
+  "size": 84836,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 4) — السنة الثالثة ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الإنجليزية (النموذج 4) — السنة الثالثة ثانوي (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: reading: Fair trade، ethics in business، the passive voice، it is high time + past، written expression: an opinion essay. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/french/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "3as",
+  "subject": "french",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/3as/french/exam/t1-4.pdf",
+  "solution": "/files/3as/french/exam/t1-4-sol.pdf",
+  "size": 83304,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 4) — السنة الثالثة ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في اللغة الفرنسية (النموذج 4) — السنة الثالثة ثانوي (المدة: ساعتان ونصف). موضوع مقترح مع الحل المفصل يتناول: texte historique: le 1er novembre 1954، objectivité et indices temporels، le discours rapporté، les temps du récit historique، compte rendu objectif. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/history-geo/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "3as",
+  "subject": "history-geo",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3as/history-geo/exam/t1-3.pdf",
+  "solution": "/files/3as/history-geo/exam/t1-3-sol.pdf",
+  "size": 75401,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 3) — السنة الثالثة ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ والجغرافيا (النموذج 3) — السنة الثالثة ثانوي (المدة: 3 ساعات). موضوع مقترح مع الحل المفصل يتناول: التاريخ: الحرب الباردة (1947–1991)، مصطلحات وشخصيات وتواريخ، الجغرافيا: الولايات المتحدة الأمريكية قوة اقتصادية، المقالة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/islamic/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "3as",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/3as/islamic/exam/t1-4.pdf",
+  "solution": "/files/3as/islamic/exam/t1-4-sol.pdf",
+  "size": 75637,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في العلوم الإسلامية (النموذج 4) — السنة الثالثة ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في العلوم الإسلامية (النموذج 4) — السنة الثالثة ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: المساواة أمام أحكام الشريعة: سورة الحجرات 13، مقاصد الشريعة: حفظ النفس والعقل، القيم في القرآن، الوضعية الإدماجية. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "5ap/geography/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "5ap",
+  "subject": "geography",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/5ap/geography/exam/t1-4.pdf",
+  "solution": "/files/5ap/geography/exam/t1-4-sol.pdf",
+  "size": 73110,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الجغرافيا (النموذج 4) — السنة الخامسة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الجغرافيا (النموذج 4) — السنة الخامسة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: الثروات الطبيعية في الجزائر، المحروقات والمعادن، الثروة المائية، وضعية: الاقتصاد في الطاقة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "5ap/history/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "5ap",
+  "subject": "history",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/5ap/history/exam/t1-4.pdf",
+  "solution": "/files/5ap/history/exam/t1-4-sol.pdf",
+  "size": 74761,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التاريخ (النموذج 4) — السنة الخامسة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التاريخ (النموذج 4) — السنة الخامسة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: اندلاع الثورة التحريرية: أول نوفمبر 1954، بيان أول نوفمبر، استرجاع السيادة الوطنية 1962، الخط الزمني. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "5ap/islamic/exam-t1-3",
+  "slug": "exam-t1-3",
+  "level": "5ap",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/5ap/islamic/exam/t1-3.pdf",
+  "solution": "/files/5ap/islamic/exam/t1-3-sol.pdf",
+  "size": 75320,
+  "pages": 1,
+  "added": "2026-11-18",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية (النموذج 3) — السنة الخامسة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية (النموذج 3) — السنة الخامسة ابتدائي (المدة: 45 دقيقة). موضوع مقترح مع الحل المفصل يتناول: سورة قريش، أركان الصلاة، بِرّ الوالدين، السيرة: الهجرة إلى المدينة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "1as/arabic/exam-t1-4",
   "slug": "exam-t1-4",
   "level": "1as",
