@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/index-files.mjs && next build",
+    "build": "node scripts/index-files.mjs && next build && node scripts/prune-export.mjs",
     "start": "next start",
     "index": "node scripts/index-files.mjs",
     "postinstall": "node scripts/copy-pdfjs.mjs",

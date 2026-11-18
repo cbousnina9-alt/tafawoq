@@ -52,3 +52,10 @@ git add -A && git commit -m "Add N papers: ..." && git push origin main
 Cloudflare Pages deploys `main` automatically. Confirm with
 `gh api repos/cbousnina9-alt/tafawoq/commits/<sha>/check-runs` (status `completed`, conclusion `success`). If no
 check run appears after a few minutes, push an empty commit (`git commit --allow-empty -m "Trigger deploy"`).
+
+## Deployment file limit
+
+Cloudflare Pages accepts at most **20,000 files** per deployment. `npm run build` runs
+`scripts/prune-export.mjs` after the export, which removes the duplicate `__next._full.txt` files and prints the
+remaining count (each new paper adds about 17 files). If the count approaches 20,000, the deploy will fail with
+"Build failed" — tell the owner rather than deleting content.
