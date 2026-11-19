@@ -1,5 +1,257 @@
 [
  {
+  "id": "1am/civic/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "1am",
+  "subject": "civic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/1am/civic/exam/t1-4.pdf",
+  "solution": "/files/1am/civic/exam/t1-4-sol.pdf",
+  "size": 74963,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية المدنية (النموذج 4) — السنة الأولى متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية المدنية (النموذج 4) للسنة الأولى متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الأسرة: تعريفها ونوعاها، وظائف الأسرة، حقوق الطفل وواجباته داخل الأسرة، التضامن الأسري، الوضعية الإدماجية: مرض الأب. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "1as/informatics/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "1as",
+  "subject": "informatics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/1as/informatics/exam/t1-4.pdf",
+  "solution": "/files/1as/informatics/exam/t1-4-sol.pdf",
+  "size": 82520,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي — جذع مشترك (النموذج 4) — السنة الأولى ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي — جذع مشترك (النموذج 4) للسنة الأولى ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الخوارزمية: تعريفها وخصائصها، المتغيرات والثوابت، الإسناد والإدخال والإخراج، تتبّع خوارزمية، البنية الشرطية: إذا … وإلا. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2ap/islamic/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "2ap",
+  "subject": "islamic",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/2ap/islamic/test/t1-3.pdf",
+  "solution": "/files/2ap/islamic/test/t1-3-sol.pdf",
+  "size": 76492,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التربية الإسلامية (النموذج 3) — السنة الثانية ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التربية الإسلامية (النموذج 3) للسنة الثانية ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: سورة العصر، رسولنا محمد ﷺ: اسمه ونسبه ومولده، آداب السلام. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "2as/arabic/test-t1-4",
+  "slug": "test-t1-4",
+  "level": "2as",
+  "subject": "arabic",
+  "type": "test",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/2as/arabic/test/t1-4.pdf",
+  "solution": "/files/2as/arabic/test/t1-4-sol.pdf",
+  "size": 87025,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 4) — السنة الثانية ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة العربية (النموذج 4) للسنة الثانية ثانوي (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الشعر العباسي: البحتري — من السينية في وصف إيوان كسرى، شعر وصف الآثار والتأمّل، الشرح والفكرة العامة، أسلوب الشرط بـ«لو» والطباق، الاستعارة المكنية، التقطيع: البحر الخفيف. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3am/islamic/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "3am",
+  "subject": "islamic",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/3am/islamic/exam/t1-4.pdf",
+  "solution": "/files/3am/islamic/exam/t1-4-sol.pdf",
+  "size": 87869,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية (النموذج 4) — السنة الثالثة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في التربية الإسلامية (النموذج 4) للسنة الثالثة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: الأمانة في الإسلام، آية النساء 58، حديث: آية المنافق ثلاث، مظاهر الأمانة وثمارها، الوضعية الإدماجية: محفظة ضائعة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/english/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "3ap",
+  "subject": "english",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3ap/english/test/t1-3.pdf",
+  "solution": "/files/3ap/english/test/t1-3-sol.pdf",
+  "size": 76816,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية (النموذج 3) — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية (النموذج 3) للسنة الثالثة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: reading: My pets، animals: a cat, a dog, a bird, a fish، I have got …، numbers 1 to 10. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3ap/geography/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "3ap",
+  "subject": "geography",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/3ap/geography/test/t1-3.pdf",
+  "solution": "/files/3ap/geography/test/t1-3-sol.pdf",
+  "size": 71813,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في الجغرافيا (النموذج 3) — السنة الثالثة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في الجغرافيا (النموذج 3) للسنة الثالثة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: وسائل النقل: البرية والبحرية والجوية، القريب والبعيد: مقارنة المسافات، الاتجاهات الأصلية بالاعتماد على الشمس. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/english/test-t1-4",
+  "slug": "test-t1-4",
+  "level": "3as",
+  "subject": "english",
+  "type": "test",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/3as/english/test/t1-4.pdf",
+  "solution": "/files/3as/english/test/t1-4-sol.pdf",
+  "size": 86912,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية — السنة الثالثة ثانوي (النموذج 4) مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية — السنة الثالثة ثانوي (النموذج 4) (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: reading: Ancient civilizations — Mesopotamia and the birth of writing، comprehension and reference، the past perfect with after، concession: although / despite، written expression: what we owe to ancient civilizations. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "3as/law/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "3as",
+  "subject": "law",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/3as/law/exam/t1-4.pdf",
+  "solution": "/files/3as/law/exam/t1-4-sol.pdf",
+  "size": 74762,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في القانون (النموذج 4) — تسيير واقتصاد — السنة الثالثة ثانوي مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في القانون (النموذج 4) — تسيير واقتصاد للسنة الثالثة ثانوي (المدة: ساعتان). موضوع مقترح مع الحل المفصل يتناول: شركة التوصية البسيطة: تعريفها، الشريك المتضامن والشريك الموصي، شركة المحاصة: خصائصها، شركات الأشخاص والاعتبار الشخصي، حالة تطبيقية: ديون شركة توصية بسيطة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4am/informatics/exam-t1-4",
+  "slug": "exam-t1-4",
+  "level": "4am",
+  "subject": "informatics",
+  "type": "exam",
+  "trimester": 1,
+  "n": 4,
+  "file": "/files/4am/informatics/exam/t1-4.pdf",
+  "solution": "/files/4am/informatics/exam/t1-4-sol.pdf",
+  "size": 79311,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي (النموذج 4) — السنة الرابعة متوسط مع الحل"
+  },
+  "description": {
+   "ar": "اختبار الفصل الأول في الإعلام الآلي (النموذج 4) للسنة الرابعة متوسط (المدة: ساعة). موضوع مقترح مع الحل المفصل يتناول: العرض التقديمي: الشرائح وعناصرها، الانتقالات والحركات، المجدول: الدالة NB.SI (COUNTIF)، الدالتان MOYENNE و SI، الوضعية: كشف نتائج. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/english/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "4ap",
+  "subject": "english",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/4ap/english/test/t1-3.pdf",
+  "solution": "/files/4ap/english/test/t1-3-sol.pdf",
+  "size": 77788,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية (النموذج 3) — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في اللغة الإنجليزية (النموذج 3) للسنة الرابعة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: reading: My house، rooms of the house: kitchen, bedroom, bathroom, living room، there is / there are، spelling. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
+  "id": "4ap/history/test-t1-3",
+  "slug": "test-t1-3",
+  "level": "4ap",
+  "subject": "history",
+  "type": "test",
+  "trimester": 1,
+  "n": 3,
+  "file": "/files/4ap/history/test/t1-3.pdf",
+  "solution": "/files/4ap/history/test/t1-3-sol.pdf",
+  "size": 72248,
+  "pages": 1,
+  "added": "2026-11-19",
+  "html": true,
+  "title": {
+   "ar": "فرض الفصل الأول في التاريخ (النموذج 3) — السنة الرابعة ابتدائي مع الحل"
+  },
+  "description": {
+   "ar": "فرض الفصل الأول في التاريخ (النموذج 3) للسنة الرابعة ابتدائي (المدة: 30 دقيقة). موضوع مقترح مع الحل المفصل يتناول: أدوات قياس الزمن قديمًا وحديثًا، شجرة العائلة، التاريخ الشخصي: ترتيب الأحداث وحساب المدة. للمعاينة والتحميل المجاني PDF."
+  }
+ },
+ {
   "id": "1as/english/exam-t1-4",
   "slug": "exam-t1-4",
   "level": "1as",
