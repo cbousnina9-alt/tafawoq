@@ -39,11 +39,15 @@ export function abs(path: string) {
   return `${site.url}${path.startsWith('/') ? path : '/' + path}`;
 }
 
-// روابط hreflang لكل اللغات لنفس المسار (بدون بادئة اللغة)
-export function alternates(locale: Locale, pathNoLocale: string, available: readonly Locale[] = locales) {
+// روابط hreflang: افتراضيًا العربية فقط، لأن الواجهات الأخرى غير مفهرسة (نفس المحتوى)
+export function alternates(locale: Locale, pathNoLocale: string, available: readonly Locale[] = ['ar']) {
   const p = pathNoLocale === '/' ? '' : pathNoLocale;
   const languages: Record<string, string> = {};
   for (const l of available) languages[l === 'ar' ? 'ar-DZ' : l === 'fr' ? 'fr-DZ' : 'en'] = abs(`/${l}${p}`);
   if (available.includes('ar')) languages['x-default'] = abs(`/ar${p}`);
   return { canonical: abs(`/${locale}${p}`), languages };
 }
+
+// الفهرسة: الواجهة العربية فقط (الفرنسية والإنجليزية تعرضان نفس الأوراق العربية)
+export const robotsFor = (locale: Locale, hasContent = true) =>
+  hasContent && locale === 'ar' ? { index: true, follow: true } : { index: false, follow: true };

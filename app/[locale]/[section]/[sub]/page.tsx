@@ -11,7 +11,7 @@ import { categories, levelById, levels, stages, subjects, trimesters, types } fr
 import { articles, articlesOf, resourcesOf } from '@/lib/content';
 import { t } from '@/lib/i18n';
 import { subjectSeo } from '@/lib/seo';
-import { abs, alternates, locales, site, type Locale } from '@/lib/site';
+import { abs, alternates, locales, site, type Locale, robotsFor } from '@/lib/site';
 
 type P = { params: Promise<{ locale: Locale; section: string; sub: string }> };
 
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   if (lv) {
     const s = subjectSeo(locale, lv, sub);
     const has = resourcesOf(lv.id, sub).length > 0;
-    return { title: s.title, description: s.description, alternates: alternates(locale, `/${section}/${sub}`), robots: has ? undefined : { index: false, follow: true } };
+    return { title: s.title, description: s.description, alternates: alternates(locale, `/${section}/${sub}`), robots: robotsFor(locale, Boolean(has)) };
   }
   const a = articles().find((x) => x.category === section && x.slug === sub && x.lang === locale);
   if (!a) return {};
@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     title: a.title,
     description: a.description,
     alternates: alternates(locale, `/${section}/${sub}`, [a.lang]),
+    robots: { index: true, follow: true },
     openGraph: { type: 'article', title: a.title, description: a.description, publishedTime: a.date, modifiedTime: a.updated || a.date , siteName: 'تفوّق', images: [{ url: '/og-tafawoq.png', width: 1200, height: 630 }] },
   };
 }

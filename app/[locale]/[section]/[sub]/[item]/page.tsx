@@ -13,7 +13,7 @@ import { Breadcrumbs, JsonLd } from '@/components/Seo';
 import { levelById, subjects, trimesters, types } from '@/lib/catalog';
 import { findResource, formatSize, renderedOf, resourceDescription, resources, resourcesOf, resourceTitle } from '@/lib/content';
 import { t } from '@/lib/i18n';
-import { abs, alternates, locales, site, type Locale } from '@/lib/site';
+import { abs, alternates, locales, site, type Locale, robotsFor } from '@/lib/site';
 
 type P = { params: Promise<{ locale: Locale; section: string; sub: string; item: string }> };
 
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     title,
     description: resourceDescription(locale, r),
     alternates: alternates(locale, `/${section}/${sub}/${item}`),
-    robots: r.sample ? { index: false, follow: true } : undefined,
+    robots: robotsFor(locale, !r.sample),
     openGraph: { title, description: resourceDescription(locale, r), type: 'article' , siteName: 'تفوّق', images: [{ url: '/og-tafawoq.png', width: 1200, height: 630 }] },
   };
 }

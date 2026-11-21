@@ -9,7 +9,7 @@ import { categories, categoryIds, levelById, levels, stages, stageIds, subjects,
 import { articlesOf, countOf, resourcesOf } from '@/lib/content';
 import { t } from '@/lib/i18n';
 import { levelSeo, stageSeo } from '@/lib/seo';
-import { abs, alternates, locales, site, type Locale } from '@/lib/site';
+import { abs, alternates, locales, site, type Locale, robotsFor } from '@/lib/site';
 
 type P = { params: Promise<{ locale: Locale; section: string }> };
 
@@ -39,12 +39,12 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const lv = levelById(section);
   if (lv) {
     const s = levelSeo(locale, lv);
-    return { title: s.title, description: s.description, alternates: alternates(locale, `/${section}`), robots: countOf(lv.id) ? undefined : { index: false, follow: true } };
+    return { title: s.title, description: s.description, alternates: alternates(locale, `/${section}`), robots: robotsFor(locale, Boolean(countOf(lv.id))) };
   }
-  if (section === 'library') return { title: libraryText[locale].h1, description: libraryText[locale].desc, alternates: alternates(locale, '/library', locales.filter((x) => articlesOf(x).length > 0)) };
+  if (section === 'library') return { title: libraryText[locale].h1, description: libraryText[locale].desc, alternates: alternates(locale, '/library', locales.filter((x) => articlesOf(x).length > 0)), robots: articlesOf(locale).length > 0 ? { index: true, follow: true } : { index: false, follow: true } };
   const c = categories[section];
   const has = articlesOf(locale, section).length > 0;
-  return { title: c.name[locale], description: c.desc[locale], alternates: alternates(locale, `/${section}`, locales.filter((x) => articlesOf(x, section).length > 0)), robots: has ? undefined : { index: false, follow: true } };
+  return { title: c.name[locale], description: c.desc[locale], alternates: alternates(locale, `/${section}`, locales.filter((x) => articlesOf(x, section).length > 0)), robots: has ? { index: true, follow: true } : { index: false, follow: true } };
 }
 
 export default async function SectionPage({ params }: P) {

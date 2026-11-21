@@ -11,7 +11,7 @@ import AdsScript from '@/components/AdsScript';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { t } from '@/lib/i18n';
-import { dirOf, isLocale, locales, site, type Locale } from '@/lib/site';
+import { dirOf, isLocale, locales, site, type Locale, robotsFor } from '@/lib/site';
 
 export const dynamicParams = false;
 export const generateStaticParams = () => locales.map((locale) => ({ locale }));
@@ -31,6 +31,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     twitter: { card: 'summary_large_image' },
     icons: { icon: '/icon.svg', apple: '/apple-icon.png' },
     manifest: '/manifest.webmanifest',
+    // الواجهات الفرنسية والإنجليزية تعرض نفس الأوراق العربية: لا نفهرسها حتى لا تُعدّ محتوى مكرّرًا
+    robots: robotsFor(locale),
     other: site.adsenseClient ? { 'google-adsense-account': site.adsenseClient } : undefined,
   };
 }

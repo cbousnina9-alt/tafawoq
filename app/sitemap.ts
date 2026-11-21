@@ -10,7 +10,7 @@ const langs = (p: string, only: readonly Locale[] = locales) =>
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const out: MetadataRoute.Sitemap = [];
-  const add = (p: string, priority: number, freq: 'daily' | 'weekly' | 'monthly', lastModified: Date = now, only: readonly Locale[] = locales) => {
+  const add = (p: string, priority: number, freq: 'daily' | 'weekly' | 'monthly', lastModified: Date = now, only: readonly Locale[] = ['ar']) => {
     for (const l of only) out.push({ url: abs(`/${l}${p}`), lastModified, changeFrequency: freq, priority, alternates: { languages: langs(p, only) } });
   };
 
